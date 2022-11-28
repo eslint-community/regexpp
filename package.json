@@ -60,7 +60,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mysticatea/regexpp.git"
+    "url": "https://github.com/eslint-community/regexpp"
   },
   "keywords": [
     "regexp",
@@ -81,10 +81,10 @@
     "es2020",
     "annexB"
   ],
-  "author": "Toru Nagashima (https://github.com/mysticatea)",
+  "author": "Toru Nagashima",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mysticatea/regexpp/issues"
+    "url": "https://github.com/eslint-community/regexpp/issues"
   },
-  "homepage": "https://github.com/mysticatea/regexpp#readme"
+  "homepage": "https://github.com/eslint-community/regexpp#readme"
 }

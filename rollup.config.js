@@ -9,7 +9,6 @@ export default [
             format: "cjs",
             sourcemap: true,
             sourcemapFile: "index.js.map",
-            banner: `/*! @author Toru Nagashima <https://github.com/mysticatea> */`,
         },
         plugins: [sourcemaps(), resolve()],
     },
