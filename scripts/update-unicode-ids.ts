@@ -9,8 +9,8 @@ const ID_CONTINUE = /^([0-9a-z]+)(?:\.\.([0-9a-z]+))?[^;]*; ID_Continue /iu
 const BORDER = 0x7f
 const logger = console
 
-    // Main
-;(async () => {
+// Main
+const main = async () => {
     let banner = ""
     const idStartSet: Set<string> = new Set()
     const idStartSmall: [number, number][] = []
@@ -119,7 +119,9 @@ function restoreRanges(data: string): number[] {
     await save(code)
 
     logger.log("Completed!")
-})().catch(error => {
+}
+
+main().catch(error => {
     logger.error(error.stack)
     process.exitCode = 1
 })

@@ -20,13 +20,13 @@ export class Reader {
     private _s = ""
     private _i = 0
     private _end = 0
-    private _cp1: number = -1
+    private _cp1 = -1
     private _w1 = 1
-    private _cp2: number = -1
+    private _cp2 = -1
     private _w2 = 1
-    private _cp3: number = -1
+    private _cp3 = -1
     private _w3 = 1
-    private _cp4: number = -1
+    private _cp4 = -1
 
     public get source(): string {
         return this._s

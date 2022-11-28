@@ -1,6 +1,11 @@
 root: true
 extends:
   - plugin:@mysticatea/es2018
+parserOptions:
+  project: tsconfig.eslint.json
+settings:
+  node:
+    tryExtensions: [".js", ".json", ".mjs", ".node", ".ts", ".tsx", ".vue"]
 
 rules:
   # tsc does.
