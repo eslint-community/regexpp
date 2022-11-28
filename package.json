@@ -1,6 +1,6 @@
 {
   "name": "@eslint-community/regexpp",
-  "version": "3.2.0",
+  "version": "0.0.0-semantically-released",
   "description": "Regular expression parser for ECMAScript.",
   "engines": {
     "node": ">=8"
