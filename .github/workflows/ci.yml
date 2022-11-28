@@ -3,29 +3,54 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
   schedule:
     - cron: 0 0 * * 0
 
 jobs:
-  test:
-    name: Test
+  lint:
+    name: ⬣ Lint
     runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📥 Install dependencies
+        run: npm install
+
+      - name: ▶️ Run lint script
+        run: npm run lint
+
+  test:
+    name:
+      🧪 Test (Node@${{ matrix.node }})
     strategy:
       matrix:
-        node: [12.x, 10.x, 8.x]
+        node: [8.0.0, 8, 10, 12, 14, 16, 18]
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Install Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v1
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup Node v${{ matrix.node }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - name: Install Packages
+
+      - name: 📥 Install dependencies
         run: npm install
-      - name: Test
-        run: npm test
-      - name: Send Coverage
-        run: npm run -s codecov
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: ▶️ Run test script
+        run: npm run test
+      - name: ⬆️ Upload coverage report
+        uses: codecov/codecov-action@v3
