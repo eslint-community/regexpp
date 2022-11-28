@@ -57,11 +57,9 @@ jobs:
       - name: 📥 Install dependencies
         run: npm install
 
-      - name: 🏗 Build
-        run: npm run build
-
       - name: ▶️ Run test script
         run: npm run test
+
       - name: ⬆️ Upload coverage report
         uses: codecov/codecov-action@v3
 
