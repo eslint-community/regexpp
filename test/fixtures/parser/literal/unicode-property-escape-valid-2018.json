@@ -24,6 +24,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\p",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -49,7 +50,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -73,6 +75,7 @@
               "start": 1,
               "end": 4,
               "raw": "\\p{",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -106,7 +109,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -130,6 +134,7 @@
               "start": 1,
               "end": 9,
               "raw": "\\p{ASCII",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -203,7 +208,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -227,6 +233,7 @@
               "start": 1,
               "end": 10,
               "raw": "\\p{ASCII}",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -308,7 +315,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -332,6 +340,7 @@
               "start": 1,
               "end": 10,
               "raw": "\\p{ASCII}",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -340,6 +349,7 @@
                   "end": 10,
                   "raw": "\\p{ASCII}",
                   "kind": "property",
+                  "strings": false,
                   "key": "ASCII",
                   "value": null,
                   "negate": false
@@ -360,7 +370,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -384,6 +395,7 @@
               "start": 1,
               "end": 10,
               "raw": "\\p{Emoji}",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -392,6 +404,7 @@
                   "end": 10,
                   "raw": "\\p{Emoji}",
                   "kind": "property",
+                  "strings": false,
                   "key": "Emoji",
                   "value": null,
                   "negate": false
@@ -412,7 +425,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -436,6 +450,7 @@
               "start": 1,
               "end": 28,
               "raw": "\\p{General_Category=Letter}",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -444,6 +459,7 @@
                   "end": 28,
                   "raw": "\\p{General_Category=Letter}",
                   "kind": "property",
+                  "strings": false,
                   "key": "General_Category",
                   "value": "Letter",
                   "negate": false
@@ -464,7 +480,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -488,6 +505,7 @@
               "start": 1,
               "end": 20,
               "raw": "\\p{Script=Hiragana}",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -496,6 +514,7 @@
                   "end": 20,
                   "raw": "\\p{Script=Hiragana}",
                   "kind": "property",
+                  "strings": false,
                   "key": "Script",
                   "value": "Hiragana",
                   "negate": false
@@ -516,7 +535,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -540,6 +560,7 @@
               "start": 1,
               "end": 43,
               "raw": "[\\p{Script=Hiragana}\\-\\p{Script=Katakana}]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -547,6 +568,7 @@
                   "start": 1,
                   "end": 43,
                   "raw": "[\\p{Script=Hiragana}\\-\\p{Script=Katakana}]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -556,6 +578,7 @@
                       "end": 21,
                       "raw": "\\p{Script=Hiragana}",
                       "kind": "property",
+                      "strings": false,
                       "key": "Script",
                       "value": "Hiragana",
                       "negate": false
@@ -575,6 +598,7 @@
                       "end": 42,
                       "raw": "\\p{Script=Katakana}",
                       "kind": "property",
+                      "strings": false,
                       "key": "Script",
                       "value": "Katakana",
                       "negate": false
@@ -597,7 +621,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -621,6 +646,7 @@
               "start": 1,
               "end": 11,
               "raw": "\\P{Letter}",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -629,6 +655,7 @@
                   "end": 11,
                   "raw": "\\P{Letter}",
                   "kind": "property",
+                  "strings": false,
                   "key": "General_Category",
                   "value": "Letter",
                   "negate": true
@@ -649,7 +676,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     }

@@ -1,0 +1,236 @@
+{
+  "options": {
+    "strict": false,
+    "ecmaVersion": 2024
+  },
+  "patterns": {
+    "/[\\&\\-\\!\\#\\%\\,\\:\\;\\<\\=\\>\\@\\`\\~]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 33,
+        "raw": "/[\\&\\-\\!\\#\\%\\,\\:\\;\\<\\=\\>\\@\\`\\~]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 31,
+          "raw": "[\\&\\-\\!\\#\\%\\,\\:\\;\\<\\=\\>\\@\\`\\~]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 31,
+              "raw": "[\\&\\-\\!\\#\\%\\,\\:\\;\\<\\=\\>\\@\\`\\~]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "CharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 31,
+                  "raw": "[\\&\\-\\!\\#\\%\\,\\:\\;\\<\\=\\>\\@\\`\\~]",
+                  "unicodeSets": true,
+                  "negate": false,
+                  "elements": [
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 4,
+                      "raw": "\\&",
+                      "value": 38
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 4,
+                      "end": 6,
+                      "raw": "\\-",
+                      "value": 45
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 8,
+                      "raw": "\\!",
+                      "value": 33
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 8,
+                      "end": 10,
+                      "raw": "\\#",
+                      "value": 35
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 10,
+                      "end": 12,
+                      "raw": "\\%",
+                      "value": 37
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 12,
+                      "end": 14,
+                      "raw": "\\,",
+                      "value": 44
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 14,
+                      "end": 16,
+                      "raw": "\\:",
+                      "value": 58
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 16,
+                      "end": 18,
+                      "raw": "\\;",
+                      "value": 59
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 18,
+                      "end": 20,
+                      "raw": "\\<",
+                      "value": 60
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 20,
+                      "end": 22,
+                      "raw": "\\=",
+                      "value": 61
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 22,
+                      "end": 24,
+                      "raw": "\\>",
+                      "value": 62
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 24,
+                      "end": 26,
+                      "raw": "\\@",
+                      "value": 64
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 26,
+                      "end": 28,
+                      "raw": "\\`",
+                      "value": 96
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 28,
+                      "end": 30,
+                      "raw": "\\~",
+                      "value": 126
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 32,
+          "end": 33,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\b]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 7,
+        "raw": "/[\\b]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 5,
+          "raw": "[\\b]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 5,
+              "raw": "[\\b]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "CharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 5,
+                  "raw": "[\\b]",
+                  "unicodeSets": true,
+                  "negate": false,
+                  "elements": [
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 4,
+                      "raw": "\\b",
+                      "value": 8
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 6,
+          "end": 7,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    }
+  }
+}

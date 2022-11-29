@@ -9,3 +9,5 @@ export type EcmaVersion =
     | 2021
     | 2022
     | 2023
+    | 2024
+export const latestEcmaVersion = 2024

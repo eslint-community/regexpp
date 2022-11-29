@@ -24,6 +24,7 @@
               "start": 1,
               "end": 4,
               "raw": "foo",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -65,7 +66,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -89,6 +91,7 @@
               "start": 1,
               "end": 4,
               "raw": "foo",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -122,6 +125,7 @@
               "start": 5,
               "end": 8,
               "raw": "bar",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -163,7 +167,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -187,6 +192,7 @@
               "start": 1,
               "end": 1,
               "raw": "",
+              "string": false,
               "elements": []
             },
             {
@@ -195,6 +201,7 @@
               "start": 2,
               "end": 2,
               "raw": "",
+              "string": false,
               "elements": []
             },
             {
@@ -203,6 +210,7 @@
               "start": 3,
               "end": 3,
               "raw": "",
+              "string": false,
               "elements": []
             },
             {
@@ -211,6 +219,7 @@
               "start": 4,
               "end": 4,
               "raw": "",
+              "string": false,
               "elements": []
             },
             {
@@ -219,6 +228,7 @@
               "start": 5,
               "end": 5,
               "raw": "",
+              "string": false,
               "elements": []
             }
           ]
@@ -235,7 +245,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -259,6 +270,7 @@
               "start": 1,
               "end": 2,
               "raw": "^",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -276,6 +288,7 @@
               "start": 3,
               "end": 4,
               "raw": "$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -293,6 +306,7 @@
               "start": 5,
               "end": 7,
               "raw": "\\b",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -311,6 +325,7 @@
               "start": 8,
               "end": 10,
               "raw": "\\B",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -337,7 +352,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -361,6 +377,7 @@
               "start": 1,
               "end": 5,
               "raw": "(?=)",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -377,6 +394,7 @@
                       "start": 4,
                       "end": 4,
                       "raw": "",
+                      "string": false,
                       "elements": []
                     }
                   ]
@@ -397,7 +415,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -421,6 +440,7 @@
               "start": 1,
               "end": 8,
               "raw": "(?=foo)",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -437,6 +457,7 @@
                       "start": 4,
                       "end": 7,
                       "raw": "foo",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -482,7 +503,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -506,6 +528,7 @@
               "start": 1,
               "end": 5,
               "raw": "(?!)",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -522,6 +545,7 @@
                       "start": 4,
                       "end": 4,
                       "raw": "",
+                      "string": false,
                       "elements": []
                     }
                   ]
@@ -542,7 +566,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -566,6 +591,7 @@
               "start": 1,
               "end": 8,
               "raw": "(?!foo)",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -582,6 +608,7 @@
                       "start": 4,
                       "end": 7,
                       "raw": "foo",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -627,7 +654,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -651,6 +679,7 @@
               "start": 1,
               "end": 3,
               "raw": "a*",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -686,7 +715,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -710,6 +740,7 @@
               "start": 1,
               "end": 3,
               "raw": "a+",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -745,7 +776,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -769,6 +801,7 @@
               "start": 1,
               "end": 3,
               "raw": "a?",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -804,7 +837,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -828,6 +862,7 @@
               "start": 1,
               "end": 5,
               "raw": "a{1}",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -863,7 +898,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -887,6 +923,7 @@
               "start": 1,
               "end": 6,
               "raw": "a{1,}",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -922,7 +959,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -946,6 +984,7 @@
               "start": 1,
               "end": 7,
               "raw": "a{1,2}",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -981,7 +1020,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1005,6 +1045,7 @@
               "start": 1,
               "end": 4,
               "raw": "a*?",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1040,7 +1081,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1064,6 +1106,7 @@
               "start": 1,
               "end": 4,
               "raw": "a+?",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1099,7 +1142,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1123,6 +1167,7 @@
               "start": 1,
               "end": 4,
               "raw": "a??",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1158,7 +1203,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1182,6 +1228,7 @@
               "start": 1,
               "end": 6,
               "raw": "a{1}?",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1217,7 +1264,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1241,6 +1289,7 @@
               "start": 1,
               "end": 7,
               "raw": "a{1,}?",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1276,7 +1325,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1300,6 +1350,7 @@
               "start": 1,
               "end": 8,
               "raw": "a{1,2}?",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1335,7 +1386,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1359,6 +1411,7 @@
               "start": 1,
               "end": 7,
               "raw": "👍🚀❇️",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -1408,7 +1461,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1432,6 +1486,7 @@
               "start": 1,
               "end": 2,
               "raw": "^",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -1457,7 +1512,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1481,6 +1537,7 @@
               "start": 1,
               "end": 2,
               "raw": "$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -1506,7 +1563,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1530,6 +1588,7 @@
               "start": 1,
               "end": 2,
               "raw": ".",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -1555,7 +1614,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1579,6 +1639,7 @@
               "start": 1,
               "end": 1,
               "raw": "",
+              "string": false,
               "elements": []
             },
             {
@@ -1587,6 +1648,7 @@
               "start": 2,
               "end": 2,
               "raw": "",
+              "string": false,
               "elements": []
             }
           ]
@@ -1603,7 +1665,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1627,6 +1690,7 @@
               "start": 1,
               "end": 6,
               "raw": "(a)\\1",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1642,6 +1706,7 @@
                       "start": 2,
                       "end": 3,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1683,7 +1748,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1707,6 +1773,7 @@
               "start": 1,
               "end": 6,
               "raw": "\\1(a)",
+              "string": false,
               "elements": [
                 {
                   "type": "Backreference",
@@ -1731,6 +1798,7 @@
                       "start": 4,
                       "end": 5,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1763,7 +1831,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1787,6 +1856,7 @@
               "start": 1,
               "end": 34,
               "raw": "(a)(a)(a)(a)(a)(a)(a)(a)(a)(a)\\10",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1802,6 +1872,7 @@
                       "start": 2,
                       "end": 3,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1830,6 +1901,7 @@
                       "start": 5,
                       "end": 6,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1858,6 +1930,7 @@
                       "start": 8,
                       "end": 9,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1886,6 +1959,7 @@
                       "start": 11,
                       "end": 12,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1914,6 +1988,7 @@
                       "start": 14,
                       "end": 15,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1942,6 +2017,7 @@
                       "start": 17,
                       "end": 18,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1970,6 +2046,7 @@
                       "start": 20,
                       "end": 21,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1998,6 +2075,7 @@
                       "start": 23,
                       "end": 24,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2026,6 +2104,7 @@
                       "start": 26,
                       "end": 27,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2054,6 +2133,7 @@
                       "start": 29,
                       "end": 30,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2095,7 +2175,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2119,6 +2200,7 @@
               "start": 1,
               "end": 37,
               "raw": "(a)(a)(a)(a)(a)(a)(a)(a)(a)(a)(a)\\11",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -2134,6 +2216,7 @@
                       "start": 2,
                       "end": 3,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2162,6 +2245,7 @@
                       "start": 5,
                       "end": 6,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2190,6 +2274,7 @@
                       "start": 8,
                       "end": 9,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2218,6 +2303,7 @@
                       "start": 11,
                       "end": 12,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2246,6 +2332,7 @@
                       "start": 14,
                       "end": 15,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2274,6 +2361,7 @@
                       "start": 17,
                       "end": 18,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2302,6 +2390,7 @@
                       "start": 20,
                       "end": 21,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2330,6 +2419,7 @@
                       "start": 23,
                       "end": 24,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2358,6 +2448,7 @@
                       "start": 26,
                       "end": 27,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2386,6 +2477,7 @@
                       "start": 29,
                       "end": 30,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2414,6 +2506,7 @@
                       "start": 32,
                       "end": 33,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2455,7 +2548,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2479,6 +2573,7 @@
               "start": 1,
               "end": 6,
               "raw": "(?:a)",
+              "string": false,
               "elements": [
                 {
                   "type": "Group",
@@ -2493,6 +2588,7 @@
                       "start": 4,
                       "end": 5,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2522,7 +2618,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2546,6 +2643,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\d",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2572,7 +2670,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2596,6 +2695,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\D",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2622,7 +2722,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2646,6 +2747,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\s",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2672,7 +2774,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2696,6 +2799,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\S",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2722,7 +2826,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2746,6 +2851,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\w",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2772,7 +2878,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2796,6 +2903,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\W",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2822,7 +2930,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2846,6 +2955,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\f",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -2871,7 +2981,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2895,6 +3006,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\n",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -2920,7 +3032,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2944,6 +3057,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\r",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -2969,7 +3083,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -2993,6 +3108,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\t",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3018,7 +3134,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3042,6 +3159,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\v",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3067,7 +3185,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3091,6 +3210,7 @@
               "start": 1,
               "end": 4,
               "raw": "\\cA",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3116,7 +3236,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3140,6 +3261,7 @@
               "start": 1,
               "end": 4,
               "raw": "\\cz",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3165,7 +3287,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3189,6 +3312,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\0",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3214,7 +3338,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3238,6 +3363,7 @@
               "start": 1,
               "end": 7,
               "raw": "\\u1234",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3263,7 +3389,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3287,6 +3414,7 @@
               "start": 1,
               "end": 8,
               "raw": "\\u12345",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3320,7 +3448,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3344,6 +3473,7 @@
               "start": 1,
               "end": 6,
               "raw": "\\u{a}",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3369,7 +3499,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3393,6 +3524,7 @@
               "start": 1,
               "end": 7,
               "raw": "\\u{20}",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3418,7 +3550,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3442,6 +3575,7 @@
               "start": 1,
               "end": 11,
               "raw": "\\u{10FFFF}",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3467,7 +3601,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3491,6 +3626,7 @@
               "start": 1,
               "end": 13,
               "raw": "\\u{00000001}",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3516,7 +3652,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3540,6 +3677,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\^",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3565,7 +3703,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3589,6 +3728,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\$",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3614,7 +3754,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3638,6 +3779,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\.",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3663,7 +3805,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3687,6 +3830,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\+",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3712,7 +3856,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3736,6 +3881,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\?",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3761,7 +3907,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3785,6 +3932,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\(",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3810,7 +3958,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3834,6 +3983,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\)",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3859,7 +4009,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3883,6 +4034,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\[",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3908,7 +4060,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3932,6 +4085,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\]",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3957,7 +4111,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -3981,6 +4136,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\{",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4006,7 +4162,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4030,6 +4187,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\}",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4055,7 +4213,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4079,6 +4238,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\|",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4104,7 +4264,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4128,6 +4289,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\/",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4153,7 +4315,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4177,6 +4340,7 @@
               "start": 1,
               "end": 3,
               "raw": "[]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4184,6 +4348,7 @@
                   "start": 1,
                   "end": 3,
                   "raw": "[]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": []
                 }
@@ -4203,7 +4368,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4227,6 +4393,7 @@
               "start": 1,
               "end": 9,
               "raw": "[^-a-b-]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4234,6 +4401,7 @@
                   "start": 1,
                   "end": 9,
                   "raw": "[^-a-b-]",
+                  "unicodeSets": false,
                   "negate": true,
                   "elements": [
                     {
@@ -4293,7 +4461,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4317,6 +4486,7 @@
               "start": 1,
               "end": 4,
               "raw": "[-]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4324,6 +4494,7 @@
                   "start": 1,
                   "end": 4,
                   "raw": "[-]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -4352,7 +4523,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4376,6 +4548,7 @@
               "start": 1,
               "end": 4,
               "raw": "[a]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4383,6 +4556,7 @@
                   "start": 1,
                   "end": 4,
                   "raw": "[a]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -4411,7 +4585,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4435,6 +4610,7 @@
               "start": 1,
               "end": 5,
               "raw": "[--]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4442,6 +4618,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[--]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -4478,7 +4655,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4502,6 +4680,7 @@
               "start": 1,
               "end": 5,
               "raw": "[-a]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4509,6 +4688,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[-a]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -4545,7 +4725,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4569,6 +4750,7 @@
               "start": 1,
               "end": 6,
               "raw": "[-a-]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4576,6 +4758,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "[-a-]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -4620,7 +4803,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4644,6 +4828,7 @@
               "start": 1,
               "end": 5,
               "raw": "[a-]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4651,6 +4836,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[a-]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -4687,7 +4873,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4711,6 +4898,7 @@
               "start": 1,
               "end": 6,
               "raw": "[a-b]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4718,6 +4906,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "[a-b]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -4761,7 +4950,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4785,6 +4975,7 @@
               "start": 1,
               "end": 8,
               "raw": "[-a-b-]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4792,6 +4983,7 @@
                   "start": 1,
                   "end": 8,
                   "raw": "[-a-b-]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -4851,7 +5043,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4875,6 +5068,7 @@
               "start": 1,
               "end": 6,
               "raw": "[---]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4882,6 +5076,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "[---]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -4925,7 +5120,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -4949,6 +5145,7 @@
               "start": 1,
               "end": 9,
               "raw": "[a-b--/]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4956,6 +5153,7 @@
                   "start": 1,
                   "end": 9,
                   "raw": "[a-b--/]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5022,7 +5220,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5046,6 +5245,7 @@
               "start": 1,
               "end": 8,
               "raw": "[\\b-\\n]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5053,6 +5253,7 @@
                   "start": 1,
                   "end": 8,
                   "raw": "[\\b-\\n]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5096,7 +5297,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5120,6 +5322,7 @@
               "start": 1,
               "end": 7,
               "raw": "[b\\-a]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5127,6 +5330,7 @@
                   "start": 1,
                   "end": 7,
                   "raw": "[b\\-a]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5171,7 +5375,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5195,6 +5400,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\d]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5202,6 +5408,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\d]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5231,7 +5438,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5255,6 +5463,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\D]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5262,6 +5471,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\D]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5291,7 +5501,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5315,6 +5526,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\s]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5322,6 +5534,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\s]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5351,7 +5564,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5375,6 +5589,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\S]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5382,6 +5597,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\S]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5411,7 +5627,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5435,6 +5652,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\w]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5442,6 +5660,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\w]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5471,7 +5690,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5495,6 +5715,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\W]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5502,6 +5723,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\W]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5531,7 +5753,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5555,6 +5778,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\f]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5562,6 +5786,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\f]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5590,7 +5815,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5614,6 +5840,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\n]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5621,6 +5848,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\n]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5649,7 +5877,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5673,6 +5902,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\r]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5680,6 +5910,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\r]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5708,7 +5939,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5732,6 +5964,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\t]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5739,6 +5972,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\t]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5767,7 +6001,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5791,6 +6026,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\v]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5798,6 +6034,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\v]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5826,7 +6063,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5850,6 +6088,7 @@
               "start": 1,
               "end": 6,
               "raw": "[\\cA]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5857,6 +6096,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "[\\cA]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5885,7 +6125,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5909,6 +6150,7 @@
               "start": 1,
               "end": 6,
               "raw": "[\\cz]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5916,6 +6158,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "[\\cz]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -5944,7 +6187,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -5968,6 +6212,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\0]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5975,6 +6220,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\0]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6003,7 +6249,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6027,6 +6274,7 @@
               "start": 1,
               "end": 7,
               "raw": "[\\x12]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6034,6 +6282,7 @@
                   "start": 1,
                   "end": 7,
                   "raw": "[\\x12]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6062,7 +6311,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6086,6 +6336,7 @@
               "start": 1,
               "end": 8,
               "raw": "[\\x123]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6093,6 +6344,7 @@
                   "start": 1,
                   "end": 8,
                   "raw": "[\\x123]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6129,7 +6381,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6153,6 +6406,7 @@
               "start": 1,
               "end": 9,
               "raw": "[\\u1234]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6160,6 +6414,7 @@
                   "start": 1,
                   "end": 9,
                   "raw": "[\\u1234]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6188,7 +6443,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6212,6 +6468,7 @@
               "start": 1,
               "end": 10,
               "raw": "[\\u12345]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6219,6 +6476,7 @@
                   "start": 1,
                   "end": 10,
                   "raw": "[\\u12345]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6255,7 +6513,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6279,6 +6538,7 @@
               "start": 1,
               "end": 8,
               "raw": "[\\u{a}]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6286,6 +6546,7 @@
                   "start": 1,
                   "end": 8,
                   "raw": "[\\u{a}]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6314,7 +6575,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6338,6 +6600,7 @@
               "start": 1,
               "end": 9,
               "raw": "[\\u{20}]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6345,6 +6608,7 @@
                   "start": 1,
                   "end": 9,
                   "raw": "[\\u{20}]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6373,7 +6637,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6397,6 +6662,7 @@
               "start": 1,
               "end": 13,
               "raw": "[\\u{10FFFF}]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6404,6 +6670,7 @@
                   "start": 1,
                   "end": 13,
                   "raw": "[\\u{10FFFF}]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6432,7 +6699,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6456,6 +6724,7 @@
               "start": 1,
               "end": 15,
               "raw": "[\\u{00000001}]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6463,6 +6732,7 @@
                   "start": 1,
                   "end": 15,
                   "raw": "[\\u{00000001}]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6491,7 +6761,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6515,6 +6786,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\^]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6522,6 +6794,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\^]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6550,7 +6823,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6574,6 +6848,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\$]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6581,6 +6856,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\$]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6609,7 +6885,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6633,6 +6910,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\.]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6640,6 +6918,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\.]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6668,7 +6947,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6692,6 +6972,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\+]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6699,6 +6980,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\+]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6727,7 +7009,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6751,6 +7034,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\?]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6758,6 +7042,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\?]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6786,7 +7071,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6810,6 +7096,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\(]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6817,6 +7104,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\(]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6845,7 +7133,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6869,6 +7158,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\)]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6876,6 +7166,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\)]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6904,7 +7195,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6928,6 +7220,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\[]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6935,6 +7228,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\[]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -6963,7 +7257,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -6987,6 +7282,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\]]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6994,6 +7290,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\]]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7022,7 +7319,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7046,6 +7344,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\{]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7053,6 +7352,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\{]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7081,7 +7381,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7105,6 +7406,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\}]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7112,6 +7414,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\}]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7140,7 +7443,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7164,6 +7468,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\|]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7171,6 +7476,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\|]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7199,7 +7505,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7223,6 +7530,7 @@
               "start": 1,
               "end": 5,
               "raw": "[\\/]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7230,6 +7538,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[\\/]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7258,7 +7567,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7282,6 +7592,7 @@
               "start": 1,
               "end": 16,
               "raw": "[\\u0000-\\u0001]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7289,6 +7600,7 @@
                   "start": 1,
                   "end": 16,
                   "raw": "[\\u0000-\\u0001]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7332,7 +7644,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7356,6 +7669,7 @@
               "start": 1,
               "end": 14,
               "raw": "[\\u{1}-\\u{2}]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7363,6 +7677,7 @@
                   "start": 1,
                   "end": 14,
                   "raw": "[\\u{1}-\\u{2}]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7406,7 +7721,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7430,6 +7746,7 @@
               "start": 1,
               "end": 9,
               "raw": "[0-9--/]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7437,6 +7754,7 @@
                   "start": 1,
                   "end": 9,
                   "raw": "[0-9--/]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7503,7 +7821,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7527,6 +7846,7 @@
               "start": 1,
               "end": 8,
               "raw": "[🌷-🌸]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7534,6 +7854,7 @@
                   "start": 1,
                   "end": 8,
                   "raw": "[🌷-🌸]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7577,7 +7898,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7601,6 +7923,7 @@
               "start": 1,
               "end": 19,
               "raw": "[\\u0000-🌸-\\u0000]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7608,6 +7931,7 @@
                   "start": 1,
                   "end": 19,
                   "raw": "[\\u0000-🌸-\\u0000]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7667,7 +7991,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7691,6 +8016,7 @@
               "start": 1,
               "end": 26,
               "raw": "[\\u0000-\\u{1f338}-\\u0000]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7698,6 +8024,7 @@
                   "start": 1,
                   "end": 26,
                   "raw": "[\\u0000-\\u{1f338}-\\u0000]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7757,7 +8084,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7781,6 +8109,7 @@
               "start": 1,
               "end": 29,
               "raw": "[\\u0000-\\ud83c\\udf38-\\u0000]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7788,6 +8117,7 @@
                   "start": 1,
                   "end": 29,
                   "raw": "[\\u0000-\\ud83c\\udf38-\\u0000]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7847,7 +8177,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7871,6 +8202,7 @@
               "start": 1,
               "end": 31,
               "raw": "[\\uD834\\uDF06-\\uD834\\uDF08a-z]",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7878,6 +8210,7 @@
                   "start": 1,
                   "end": 31,
                   "raw": "[\\uD834\\uDF06-\\uD834\\uDF08a-z]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -7944,7 +8277,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -7968,6 +8302,7 @@
               "start": 1,
               "end": 9,
               "raw": "^[0-9]*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -7992,6 +8327,7 @@
                     "start": 2,
                     "end": 7,
                     "raw": "[0-9]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -8044,7 +8380,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -8068,6 +8405,7 @@
               "start": 1,
               "end": 9,
               "raw": "^[0-9]+$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8092,6 +8430,7 @@
                     "start": 2,
                     "end": 7,
                     "raw": "[0-9]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -8144,7 +8483,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -8168,6 +8508,7 @@
               "start": 1,
               "end": 12,
               "raw": "^[a-zA-Z]*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8192,6 +8533,7 @@
                     "start": 2,
                     "end": 10,
                     "raw": "[a-zA-Z]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -8267,7 +8609,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -8291,6 +8634,7 @@
               "start": 1,
               "end": 12,
               "raw": "^[a-zA-Z]+$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8315,6 +8659,7 @@
                     "start": 2,
                     "end": 10,
                     "raw": "[a-zA-Z]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -8390,7 +8735,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -8414,6 +8760,7 @@
               "start": 1,
               "end": 15,
               "raw": "^[0-9a-zA-Z]*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8438,6 +8785,7 @@
                     "start": 2,
                     "end": 13,
                     "raw": "[0-9a-zA-Z]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -8536,7 +8884,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -8560,6 +8909,7 @@
               "start": 1,
               "end": 28,
               "raw": "^[a-zA-Z0-9!-/:-@\\[-`{-~]*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8584,6 +8934,7 @@
                     "start": 2,
                     "end": 26,
                     "raw": "[a-zA-Z0-9!-/:-@\\[-`{-~]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -8774,7 +9125,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -8798,6 +9150,7 @@
               "start": 1,
               "end": 20,
               "raw": "^([a-zA-Z0-9]{8,})$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8821,6 +9174,7 @@
                       "start": 3,
                       "end": 18,
                       "raw": "[a-zA-Z0-9]{8,}",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -8837,6 +9191,7 @@
                             "start": 3,
                             "end": 14,
                             "raw": "[a-zA-Z0-9]",
+                            "unicodeSets": false,
                             "negate": false,
                             "elements": [
                               {
@@ -8940,7 +9295,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -8964,6 +9320,7 @@
               "start": 1,
               "end": 21,
               "raw": "^([a-zA-Z0-9]{6,8})$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8987,6 +9344,7 @@
                       "start": 3,
                       "end": 19,
                       "raw": "[a-zA-Z0-9]{6,8}",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -9003,6 +9361,7 @@
                             "start": 3,
                             "end": 14,
                             "raw": "[a-zA-Z0-9]",
+                            "unicodeSets": false,
                             "negate": false,
                             "elements": [
                               {
@@ -9106,7 +9465,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -9130,6 +9490,7 @@
               "start": 1,
               "end": 15,
               "raw": "^([0-9]{0,8})$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9153,6 +9514,7 @@
                       "start": 3,
                       "end": 13,
                       "raw": "[0-9]{0,8}",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -9169,6 +9531,7 @@
                             "start": 3,
                             "end": 8,
                             "raw": "[0-9]",
+                            "unicodeSets": false,
                             "negate": false,
                             "elements": [
                               {
@@ -9226,7 +9589,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -9250,6 +9614,7 @@
               "start": 1,
               "end": 11,
               "raw": "^[0-9]{8}$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9274,6 +9639,7 @@
                     "start": 2,
                     "end": 7,
                     "raw": "[0-9]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -9326,7 +9692,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -9350,6 +9717,7 @@
               "start": 1,
               "end": 13,
               "raw": "^https?:\\/\\/",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9449,7 +9817,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -9473,6 +9842,7 @@
               "start": 1,
               "end": 14,
               "raw": "^\\d{3}-\\d{4}$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9552,7 +9922,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -9576,6 +9947,7 @@
               "start": 1,
               "end": 23,
               "raw": "^\\d{1,3}(.\\d{1,3}){3}$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9627,6 +9999,7 @@
                         "start": 10,
                         "end": 18,
                         "raw": ".\\d{1,3}",
+                        "string": false,
                         "elements": [
                           {
                             "type": "CharacterSet",
@@ -9685,7 +10058,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -9709,6 +10083,7 @@
               "start": 1,
               "end": 29,
               "raw": "^([1-9][0-9]*|0)(\\.[0-9]+)?$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9732,6 +10107,7 @@
                       "start": 3,
                       "end": 14,
                       "raw": "[1-9][0-9]*",
+                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterClass",
@@ -9739,6 +10115,7 @@
                           "start": 3,
                           "end": 8,
                           "raw": "[1-9]",
+                          "unicodeSets": false,
                           "negate": false,
                           "elements": [
                             {
@@ -9781,6 +10158,7 @@
                             "start": 8,
                             "end": 13,
                             "raw": "[0-9]",
+                            "unicodeSets": false,
                             "negate": false,
                             "elements": [
                               {
@@ -9817,6 +10195,7 @@
                       "start": 15,
                       "end": 16,
                       "raw": "0",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -9854,6 +10233,7 @@
                         "start": 18,
                         "end": 26,
                         "raw": "\\.[0-9]+",
+                        "string": false,
                         "elements": [
                           {
                             "type": "Character",
@@ -9878,6 +10258,7 @@
                               "start": 20,
                               "end": 25,
                               "raw": "[0-9]",
+                              "unicodeSets": false,
                               "negate": false,
                               "elements": [
                                 {
@@ -9936,7 +10317,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -9960,6 +10342,7 @@
               "start": 1,
               "end": 31,
               "raw": "^-?([1-9][0-9]*|0)(\\.[0-9]+)?$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10001,6 +10384,7 @@
                       "start": 5,
                       "end": 16,
                       "raw": "[1-9][0-9]*",
+                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterClass",
@@ -10008,6 +10392,7 @@
                           "start": 5,
                           "end": 10,
                           "raw": "[1-9]",
+                          "unicodeSets": false,
                           "negate": false,
                           "elements": [
                             {
@@ -10050,6 +10435,7 @@
                             "start": 10,
                             "end": 15,
                             "raw": "[0-9]",
+                            "unicodeSets": false,
                             "negate": false,
                             "elements": [
                               {
@@ -10086,6 +10472,7 @@
                       "start": 17,
                       "end": 18,
                       "raw": "0",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -10123,6 +10510,7 @@
                         "start": 20,
                         "end": 28,
                         "raw": "\\.[0-9]+",
+                        "string": false,
                         "elements": [
                           {
                             "type": "Character",
@@ -10147,6 +10535,7 @@
                               "start": 22,
                               "end": 27,
                               "raw": "[0-9]",
+                              "unicodeSets": false,
                               "negate": false,
                               "elements": [
                                 {
@@ -10205,7 +10594,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -10229,6 +10619,7 @@
               "start": 1,
               "end": 10,
               "raw": "^[ぁ-んー]*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10253,6 +10644,7 @@
                     "start": 2,
                     "end": 8,
                     "raw": "[ぁ-んー]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -10313,7 +10705,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -10337,6 +10730,7 @@
               "start": 1,
               "end": 11,
               "raw": "^[ァ-ンヴー]*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10361,6 +10755,7 @@
                     "start": 2,
                     "end": 9,
                     "raw": "[ァ-ンヴー]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -10429,7 +10824,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -10453,6 +10849,7 @@
               "start": 1,
               "end": 13,
               "raw": "^[ｧ-ﾝﾞﾟ\\-]*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10477,6 +10874,7 @@
                     "start": 2,
                     "end": 11,
                     "raw": "[ｧ-ﾝﾞﾟ\\-]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -10553,7 +10951,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -10577,6 +10976,7 @@
               "start": 1,
               "end": 16,
               "raw": "^[^\\x20-\\x7e]*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10601,6 +11001,7 @@
                     "start": 2,
                     "end": 14,
                     "raw": "[^\\x20-\\x7e]",
+                    "unicodeSets": false,
                     "negate": true,
                     "elements": [
                       {
@@ -10653,7 +11054,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -10677,6 +11079,7 @@
               "start": 1,
               "end": 69,
               "raw": "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10701,6 +11104,7 @@
                     "start": 2,
                     "end": 33,
                     "raw": "[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -10958,6 +11362,7 @@
                     "start": 35,
                     "end": 47,
                     "raw": "[a-zA-Z0-9-]",
+                    "unicodeSets": false,
                     "negate": false,
                     "elements": [
                       {
@@ -11062,6 +11467,7 @@
                         "start": 51,
                         "end": 66,
                         "raw": "\\.[a-zA-Z0-9-]+",
+                        "string": false,
                         "elements": [
                           {
                             "type": "Character",
@@ -11086,6 +11492,7 @@
                               "start": 53,
                               "end": 65,
                               "raw": "[a-zA-Z0-9-]",
+                              "unicodeSets": false,
                               "negate": false,
                               "elements": [
                                 {
@@ -11197,7 +11604,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -11221,6 +11629,7 @@
               "start": 1,
               "end": 69,
               "raw": "^((4\\d{3})|(5[1-5]\\d{2})|(6011))([- ])?\\d{4}([- ])?\\d{4}([- ])?\\d{4}",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -11244,6 +11653,7 @@
                       "start": 3,
                       "end": 11,
                       "raw": "(4\\d{3})",
+                      "string": false,
                       "elements": [
                         {
                           "type": "CapturingGroup",
@@ -11259,6 +11669,7 @@
                               "start": 4,
                               "end": 10,
                               "raw": "4\\d{3}",
+                              "string": false,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -11300,6 +11711,7 @@
                       "start": 12,
                       "end": 25,
                       "raw": "(5[1-5]\\d{2})",
+                      "string": false,
                       "elements": [
                         {
                           "type": "CapturingGroup",
@@ -11315,6 +11727,7 @@
                               "start": 13,
                               "end": 24,
                               "raw": "5[1-5]\\d{2}",
+                              "string": false,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -11330,6 +11743,7 @@
                                   "start": 14,
                                   "end": 19,
                                   "raw": "[1-5]",
+                                  "unicodeSets": false,
                                   "negate": false,
                                   "elements": [
                                     {
@@ -11389,6 +11803,7 @@
                       "start": 26,
                       "end": 32,
                       "raw": "(6011)",
+                      "string": false,
                       "elements": [
                         {
                           "type": "CapturingGroup",
@@ -11404,6 +11819,7 @@
                               "start": 27,
                               "end": 31,
                               "raw": "6011",
+                              "string": false,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -11470,6 +11886,7 @@
                         "start": 34,
                         "end": 38,
                         "raw": "[- ]",
+                        "string": false,
                         "elements": [
                           {
                             "type": "CharacterClass",
@@ -11477,6 +11894,7 @@
                             "start": 34,
                             "end": 38,
                             "raw": "[- ]",
+                            "unicodeSets": false,
                             "negate": false,
                             "elements": [
                               {
@@ -11545,6 +11963,7 @@
                         "start": 46,
                         "end": 50,
                         "raw": "[- ]",
+                        "string": false,
                         "elements": [
                           {
                             "type": "CharacterClass",
@@ -11552,6 +11971,7 @@
                             "start": 46,
                             "end": 50,
                             "raw": "[- ]",
+                            "unicodeSets": false,
                             "negate": false,
                             "elements": [
                               {
@@ -11620,6 +12040,7 @@
                         "start": 58,
                         "end": 62,
                         "raw": "[- ]",
+                        "string": false,
                         "elements": [
                           {
                             "type": "CharacterClass",
@@ -11627,6 +12048,7 @@
                             "start": 58,
                             "end": 62,
                             "raw": "[- ]",
+                            "unicodeSets": false,
                             "negate": false,
                             "elements": [
                               {
@@ -11680,6 +12102,7 @@
               "start": 70,
               "end": 83,
               "raw": "3[4,7]\\d{13}$",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -11695,6 +12118,7 @@
                   "start": 71,
                   "end": 76,
                   "raw": "[4,7]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -11766,7 +12190,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -11790,6 +12215,7 @@
               "start": 1,
               "end": 5,
               "raw": "^\\s*",
+              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -11826,6 +12252,7 @@
               "start": 6,
               "end": 10,
               "raw": "\\s*$",
+              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -11870,7 +12297,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     }

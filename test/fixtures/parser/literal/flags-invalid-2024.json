@@ -1,0 +1,14 @@
+{
+  "options": {
+    "strict": true,
+    "ecmaVersion": 2024
+  },
+  "patterns": {
+    "/./uv": {
+      "error": {
+        "message": "Invalid regular expression: /./uv: Invalid regular expression flags",
+        "index": 3
+      }
+    }
+  }
+}

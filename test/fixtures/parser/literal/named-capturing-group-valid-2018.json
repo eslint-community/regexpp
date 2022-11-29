@@ -24,6 +24,7 @@
               "start": 1,
               "end": 4,
               "raw": "(a)",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -39,6 +40,7 @@
                       "start": 2,
                       "end": 3,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -69,7 +71,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -93,6 +96,7 @@
               "start": 1,
               "end": 6,
               "raw": "(?:a)",
+              "string": false,
               "elements": [
                 {
                   "type": "Group",
@@ -107,6 +111,7 @@
                       "start": 4,
                       "end": 5,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -136,7 +141,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -160,6 +166,7 @@
               "start": 1,
               "end": 7,
               "raw": "(?<a>)",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -175,6 +182,7 @@
                       "start": 6,
                       "end": 6,
                       "raw": "",
+                      "string": false,
                       "elements": []
                     }
                   ],
@@ -196,7 +204,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -220,6 +229,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\k",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -245,7 +255,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -269,6 +280,7 @@
               "start": 1,
               "end": 6,
               "raw": "\\k<a>",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -318,7 +330,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -342,6 +355,7 @@
               "start": 1,
               "end": 13,
               "raw": "(?<a>a)\\k<a>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -357,6 +371,7 @@
                       "start": 6,
                       "end": 7,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -398,7 +413,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -422,6 +438,7 @@
               "start": 1,
               "end": 13,
               "raw": "(?<a>a)\\k<a>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -437,6 +454,7 @@
                       "start": 6,
                       "end": 7,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -478,7 +496,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -502,6 +521,7 @@
               "start": 1,
               "end": 10,
               "raw": "(?<a>a)\\1",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -517,6 +537,7 @@
                       "start": 6,
                       "end": 7,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -558,7 +579,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -582,6 +604,7 @@
               "start": 1,
               "end": 10,
               "raw": "(?<a>a)\\1",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -597,6 +620,7 @@
                       "start": 6,
                       "end": 7,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -638,7 +662,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -662,6 +687,7 @@
               "start": 1,
               "end": 10,
               "raw": "(?<a>a)\\2",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -677,6 +703,7 @@
                       "start": 6,
                       "end": 7,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -715,7 +742,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -739,6 +767,7 @@
               "start": 1,
               "end": 15,
               "raw": "(?<a>a)(?<b>a)",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -754,6 +783,7 @@
                       "start": 6,
                       "end": 7,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -782,6 +812,7 @@
                       "start": 13,
                       "end": 14,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -812,7 +843,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -836,6 +868,7 @@
               "start": 1,
               "end": 15,
               "raw": "(?<a>a)(?<b>a)",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -851,6 +884,7 @@
                       "start": 6,
                       "end": 7,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -879,6 +913,7 @@
                       "start": 13,
                       "end": 14,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -909,7 +944,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -933,6 +969,7 @@
               "start": 1,
               "end": 13,
               "raw": "\\k<a>(?<a>a)",
+              "string": false,
               "elements": [
                 {
                   "type": "Backreference",
@@ -957,6 +994,7 @@
                       "start": 11,
                       "end": 12,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -989,7 +1027,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1013,6 +1052,7 @@
               "start": 1,
               "end": 13,
               "raw": "\\k<a>(?<a>a)",
+              "string": false,
               "elements": [
                 {
                   "type": "Backreference",
@@ -1037,6 +1077,7 @@
                       "start": 11,
                       "end": 12,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1069,7 +1110,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1093,6 +1135,7 @@
               "start": 1,
               "end": 10,
               "raw": "\\1(?<a>a)",
+              "string": false,
               "elements": [
                 {
                   "type": "Backreference",
@@ -1117,6 +1160,7 @@
                       "start": 8,
                       "end": 9,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1149,7 +1193,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1173,6 +1218,7 @@
               "start": 1,
               "end": 10,
               "raw": "\\1(?<a>a)",
+              "string": false,
               "elements": [
                 {
                   "type": "Backreference",
@@ -1197,6 +1243,7 @@
                       "start": 8,
                       "end": 9,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1229,7 +1276,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1253,6 +1301,7 @@
               "start": 1,
               "end": 19,
               "raw": "(?<$abc>a)\\k<$abc>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1268,6 +1317,7 @@
                       "start": 9,
                       "end": 10,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1309,7 +1359,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1333,6 +1384,7 @@
               "start": 1,
               "end": 13,
               "raw": "(?<あ>a)\\k<あ>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1348,6 +1400,7 @@
                       "start": 6,
                       "end": 7,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1389,7 +1442,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1413,6 +1467,7 @@
               "start": 1,
               "end": 22,
               "raw": "(?<𠮷>a)\\k<\\u{20bb7}>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1428,6 +1483,7 @@
                       "start": 7,
                       "end": 8,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1469,7 +1525,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1493,6 +1550,7 @@
               "start": 1,
               "end": 32,
               "raw": "(?<\\uD842\\uDFB7>a)\\k<\\u{20bb7}>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1508,6 +1566,7 @@
                       "start": 17,
                       "end": 18,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1549,7 +1608,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1573,6 +1633,7 @@
               "start": 1,
               "end": 32,
               "raw": "(?<\\u{20bb7}>a)\\k<\\uD842\\uDFB7>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1588,6 +1649,7 @@
                       "start": 14,
                       "end": 15,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1629,7 +1691,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1653,6 +1716,7 @@
               "start": 1,
               "end": 32,
               "raw": "(?<abc>a)\\k<\\u0061\\u0062\\u0063>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1668,6 +1732,7 @@
                       "start": 8,
                       "end": 9,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1709,7 +1774,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1733,6 +1799,7 @@
               "start": 1,
               "end": 32,
               "raw": "(?<\\u0061\\u0062\\u0063>a)\\k<abc>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1748,6 +1815,7 @@
                       "start": 23,
                       "end": 24,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1789,7 +1857,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1813,6 +1882,7 @@
               "start": 1,
               "end": 47,
               "raw": "(?<\\u0061\\u0062\\u0063>a)\\k<\\u{61}\\u{62}\\u{63}>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1828,6 +1898,7 @@
                       "start": 23,
                       "end": 24,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1869,7 +1940,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -1893,6 +1965,7 @@
               "start": 1,
               "end": 15,
               "raw": "(?<a1>a)\\k<a1>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1908,6 +1981,7 @@
                       "start": 7,
                       "end": 8,
                       "raw": "a",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1949,7 +2023,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     }

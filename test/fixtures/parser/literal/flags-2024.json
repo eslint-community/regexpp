@@ -1,16 +1,16 @@
 {
   "options": {
     "strict": true,
-    "ecmaVersion": 2022
+    "ecmaVersion": 2024
   },
   "patterns": {
-    "/./d": {
+    "/./v": {
       "ast": {
         "type": "RegExpLiteral",
         "parent": null,
         "start": 0,
         "end": 4,
-        "raw": "/./d",
+        "raw": "/./v",
         "pattern": {
           "type": "Pattern",
           "parent": "♻️..",
@@ -43,15 +43,15 @@
           "parent": "♻️..",
           "start": 3,
           "end": 4,
-          "raw": "d",
+          "raw": "v",
           "global": false,
           "ignoreCase": false,
           "multiline": false,
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": true,
-          "unicodeSets": false
+          "hasIndices": false,
+          "unicodeSets": true
         }
       }
     }

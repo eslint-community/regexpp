@@ -1,0 +1,20 @@
+{
+  "options": {
+    "strict": false,
+    "ecmaVersion": 2024
+  },
+  "patterns": {
+    "/\\P{Basic_Emoji}/v": {
+      "error": {
+        "message": "Invalid regular expression: /\\P{Basic_Emoji}/v: Invalid property name",
+        "index": 16
+      }
+    },
+    "/\\p{Basic_Emoji}/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\p{Basic_Emoji}/u: Invalid property name",
+        "index": 15
+      }
+    }
+  }
+}

@@ -24,6 +24,7 @@
               "start": 1,
               "end": 17,
               "raw": "(?<foo>A)\\k<foo>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -39,6 +40,7 @@
                       "start": 8,
                       "end": 9,
                       "raw": "A",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -80,7 +82,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -104,6 +107,7 @@
               "start": 1,
               "end": 17,
               "raw": "(?<foo>A)\\k<foo>",
+              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -119,6 +123,7 @@
                       "start": 8,
                       "end": 9,
                       "raw": "A",
+                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -160,7 +165,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     }

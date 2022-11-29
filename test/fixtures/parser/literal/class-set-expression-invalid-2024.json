@@ -1,0 +1,326 @@
+{
+  "options": {
+    "strict": false,
+    "ecmaVersion": 2024
+  },
+  "patterns": {
+    "/[(]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[(]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[)]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[)]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[[]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[]/v: Unterminated character class",
+        "index": 4
+      }
+    },
+    "/[{]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[{]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[}]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[/]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[/]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[-]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[-]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[|]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[|]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[&&]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[&&]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[!!]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[!!]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[##]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[##]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[$$]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[$$]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[%%]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[%%]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[**]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[**]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[++]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[++]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[,,]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[,,]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[..]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[..]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[::]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[::]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[;;]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[;;]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[<<]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[<<]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[==]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[==]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[>>]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[>>]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[??]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[??]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[@@]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[@@]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[ ^^]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[ ^^]/v: Invalid character in character class",
+        "index": 3
+      }
+    },
+    "/[``]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[``]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[~~]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[~~]/v: Invalid character in character class",
+        "index": 2
+      }
+    },
+    "/[A-]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[A-]/v: Invalid character in character class",
+        "index": 4
+      }
+    },
+    "/[A-/v": {
+      "error": {
+        "message": "Invalid regular expression: /[A-/v: Unterminated character class",
+        "index": 6
+      }
+    },
+    "/[A--\\q{abc|def]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[A--\\q{abc|def]/v: Unterminated class string disjunction",
+        "index": 15
+      }
+    },
+    "/[A**]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[A**]/v: Invalid character in character class",
+        "index": 3
+      }
+    },
+    "/[\\B]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[\\B]/v: Invalid escape",
+        "index": 3
+      }
+    },
+    "/[[/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[/v: Unterminated character class",
+        "index": 5
+      }
+    },
+    "/[[a/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[a/v: Unterminated character class",
+        "index": 6
+      }
+    },
+    "/[[a-/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[a-/v: Unterminated character class",
+        "index": 7
+      }
+    },
+    "/[[^a/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[^a/v: Unterminated character class",
+        "index": 7
+      }
+    },
+    "/[[[a]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[[a]/v: Unterminated character class",
+        "index": 6
+      }
+    },
+    "/[[[a]]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[[a]]/v: Unterminated character class",
+        "index": 7
+      }
+    },
+    "/[^\\p{Basic_Emoji}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\p{Basic_Emoji}]/v: Negated character class may contain strings",
+        "index": 19
+      }
+    },
+    "/[^\\q{}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\q{}]/v: Negated character class may contain strings",
+        "index": 8
+      }
+    },
+    "/[^\\q{ab}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\q{ab}]/v: Negated character class may contain strings",
+        "index": 10
+      }
+    },
+    "/[^\\q{a|bc}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\q{a|bc}]/v: Negated character class may contain strings",
+        "index": 12
+      }
+    },
+    "/[[^\\p{Basic_Emoji}]]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[^\\p{Basic_Emoji}]]/v: Negated character class may contain strings",
+        "index": 20
+      }
+    },
+    "/[[^\\q{}]]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[^\\q{}]]/v: Negated character class may contain strings",
+        "index": 9
+      }
+    },
+    "/[A&&&B]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[A&&&B]/v: Invalid character in character class",
+        "index": 5
+      }
+    },
+    "/[A&&BC]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[A&&BC]/v: Invalid character in character class",
+        "index": 6
+      }
+    },
+    "/[A--BC]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[A--BC]/v: Invalid character in character class",
+        "index": 6
+      }
+    },
+    "/[A&&]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[A&&]/v: Invalid character in character class",
+        "index": 5
+      }
+    },
+    "/[A--]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[A--]/v: Invalid character in character class",
+        "index": 5
+      }
+    },
+    "/[b-a]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[b-a]/v: Range out of order in character class",
+        "index": 5
+      }
+    },
+    "/[a-\\w]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[a-\\w]/v: Invalid escape",
+        "index": 5
+      }
+    },
+    "/[a-&&]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[a-&&]/v: Invalid character in character class",
+        "index": 4
+      }
+    },
+    "/[a-b-c]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[a-b-c]/v: Invalid character in character class",
+        "index": 5
+      }
+    }
+  }
+}

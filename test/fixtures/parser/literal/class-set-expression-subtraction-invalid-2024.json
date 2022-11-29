@@ -1,0 +1,20 @@
+{
+  "options": {
+    "strict": false,
+    "ecmaVersion": 2024
+  },
+  "patterns": {
+    "/[^[\\q{abc|d|e|f}--\\q{d|e|f}]]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^[\\q{abc|d|e|f}--\\q{d|e|f}]]/v: Negated character class may contain strings",
+        "index": 30
+      }
+    },
+    "/[^[\\q{}--\\q{d|e|f}]]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^[\\q{}--\\q{d|e|f}]]/v: Negated character class may contain strings",
+        "index": 21
+      }
+    }
+  }
+}

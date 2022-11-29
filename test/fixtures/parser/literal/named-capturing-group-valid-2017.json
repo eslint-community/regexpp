@@ -24,6 +24,7 @@
               "start": 1,
               "end": 3,
               "raw": "\\k",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -49,7 +50,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -73,6 +75,7 @@
               "start": 1,
               "end": 6,
               "raw": "\\k<a>",
+              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -122,7 +125,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     }

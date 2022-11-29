@@ -1,0 +1,1638 @@
+{
+  "options": {
+    "strict": false,
+    "ecmaVersion": 2024
+  },
+  "patterns": {
+    "/[A&&B]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 9,
+        "raw": "/[A&&B]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 7,
+          "raw": "[A&&B]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 7,
+              "raw": "[A&&B]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 7,
+                  "raw": "[A&&B]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassIntersection",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 6,
+                    "raw": "A&&B",
+                    "left": {
+                      "type": "Character",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 3,
+                      "raw": "A",
+                      "value": 65
+                    },
+                    "right": {
+                      "type": "Character",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 6,
+                      "raw": "B",
+                      "value": 66
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 8,
+          "end": 9,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[A--[0-9]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 13,
+        "raw": "/[A--[0-9]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 11,
+          "raw": "[A--[0-9]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 11,
+              "raw": "[A--[0-9]]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 11,
+                  "raw": "[A--[0-9]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 10,
+                    "raw": "A--[0-9]",
+                    "left": {
+                      "type": "Character",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 3,
+                      "raw": "A",
+                      "value": 65
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 10,
+                      "raw": "[0-9]",
+                      "unicodeSets": true,
+                      "negate": false,
+                      "elements": [
+                        {
+                          "type": "CharacterClassRange",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 9,
+                          "raw": "0-9",
+                          "min": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 6,
+                            "end": 7,
+                            "raw": "0",
+                            "value": 48
+                          },
+                          "max": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 8,
+                            "end": 9,
+                            "raw": "9",
+                            "value": 57
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 12,
+          "end": 13,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\p{Decimal_Number}--[0-9]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 30,
+        "raw": "/[\\p{Decimal_Number}--[0-9]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 28,
+          "raw": "[\\p{Decimal_Number}--[0-9]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 28,
+              "raw": "[\\p{Decimal_Number}--[0-9]]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 28,
+                  "raw": "[\\p{Decimal_Number}--[0-9]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 27,
+                    "raw": "\\p{Decimal_Number}--[0-9]",
+                    "left": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 20,
+                      "raw": "\\p{Decimal_Number}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "General_Category",
+                      "value": "Decimal_Number",
+                      "negate": false
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 22,
+                      "end": 27,
+                      "raw": "[0-9]",
+                      "unicodeSets": true,
+                      "negate": false,
+                      "elements": [
+                        {
+                          "type": "CharacterClassRange",
+                          "parent": "♻️../..",
+                          "start": 23,
+                          "end": 26,
+                          "raw": "0-9",
+                          "min": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 23,
+                            "end": 24,
+                            "raw": "0",
+                            "value": 48
+                          },
+                          "max": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 25,
+                            "end": 26,
+                            "raw": "9",
+                            "value": 57
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 29,
+          "end": 30,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\p{Script=Khmer}&&[\\p{Letter}\\p{Mark}\\p{Number}]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 53,
+        "raw": "/[\\p{Script=Khmer}&&[\\p{Letter}\\p{Mark}\\p{Number}]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 51,
+          "raw": "[\\p{Script=Khmer}&&[\\p{Letter}\\p{Mark}\\p{Number}]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 51,
+              "raw": "[\\p{Script=Khmer}&&[\\p{Letter}\\p{Mark}\\p{Number}]]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 51,
+                  "raw": "[\\p{Script=Khmer}&&[\\p{Letter}\\p{Mark}\\p{Number}]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassIntersection",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 50,
+                    "raw": "\\p{Script=Khmer}&&[\\p{Letter}\\p{Mark}\\p{Number}]",
+                    "left": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 18,
+                      "raw": "\\p{Script=Khmer}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "Script",
+                      "value": "Khmer",
+                      "negate": false
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 20,
+                      "end": 50,
+                      "raw": "[\\p{Letter}\\p{Mark}\\p{Number}]",
+                      "unicodeSets": true,
+                      "negate": false,
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 21,
+                          "end": 31,
+                          "raw": "\\p{Letter}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "General_Category",
+                          "value": "Letter",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 31,
+                          "end": 39,
+                          "raw": "\\p{Mark}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "General_Category",
+                          "value": "Mark",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 39,
+                          "end": 49,
+                          "raw": "\\p{Number}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "General_Category",
+                          "value": "Number",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 52,
+          "end": 53,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\p{White_Space}--\\p{Line_Break=Glue}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[\\p{White_Space}--\\p{Line_Break=Glue}]/v: Invalid property name",
+        "index": 37
+      }
+    },
+    "/[\\p{Emoji}--[#*0-9]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 23,
+        "raw": "/[\\p{Emoji}--[#*0-9]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 21,
+          "raw": "[\\p{Emoji}--[#*0-9]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 21,
+              "raw": "[\\p{Emoji}--[#*0-9]]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 21,
+                  "raw": "[\\p{Emoji}--[#*0-9]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 20,
+                    "raw": "\\p{Emoji}--[#*0-9]",
+                    "left": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 11,
+                      "raw": "\\p{Emoji}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "Emoji",
+                      "value": null,
+                      "negate": false
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 13,
+                      "end": 20,
+                      "raw": "[#*0-9]",
+                      "unicodeSets": true,
+                      "negate": false,
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 14,
+                          "end": 15,
+                          "raw": "#",
+                          "value": 35
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 15,
+                          "end": 16,
+                          "raw": "*",
+                          "value": 42
+                        },
+                        {
+                          "type": "CharacterClassRange",
+                          "parent": "♻️../..",
+                          "start": 16,
+                          "end": 19,
+                          "raw": "0-9",
+                          "min": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 16,
+                            "end": 17,
+                            "raw": "0",
+                            "value": 48
+                          },
+                          "max": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 18,
+                            "end": 19,
+                            "raw": "9",
+                            "value": 57
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 22,
+          "end": 23,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\p{Emoji}--\\p{ASCII}]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 25,
+        "raw": "/[\\p{Emoji}--\\p{ASCII}]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 23,
+          "raw": "[\\p{Emoji}--\\p{ASCII}]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 23,
+              "raw": "[\\p{Emoji}--\\p{ASCII}]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 23,
+                  "raw": "[\\p{Emoji}--\\p{ASCII}]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 22,
+                    "raw": "\\p{Emoji}--\\p{ASCII}",
+                    "left": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 11,
+                      "raw": "\\p{Emoji}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "Emoji",
+                      "value": null,
+                      "negate": false
+                    },
+                    "right": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 13,
+                      "end": 22,
+                      "raw": "\\p{ASCII}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "ASCII",
+                      "value": null,
+                      "negate": false
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 24,
+          "end": 25,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\p{Nonspacing_Mark}&&[\\p{Script=Inherited}\\p{Script=Common}]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 65,
+        "raw": "/[\\p{Nonspacing_Mark}&&[\\p{Script=Inherited}\\p{Script=Common}]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 63,
+          "raw": "[\\p{Nonspacing_Mark}&&[\\p{Script=Inherited}\\p{Script=Common}]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 63,
+              "raw": "[\\p{Nonspacing_Mark}&&[\\p{Script=Inherited}\\p{Script=Common}]]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 63,
+                  "raw": "[\\p{Nonspacing_Mark}&&[\\p{Script=Inherited}\\p{Script=Common}]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassIntersection",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 62,
+                    "raw": "\\p{Nonspacing_Mark}&&[\\p{Script=Inherited}\\p{Script=Common}]",
+                    "left": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 21,
+                      "raw": "\\p{Nonspacing_Mark}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "General_Category",
+                      "value": "Nonspacing_Mark",
+                      "negate": false
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 23,
+                      "end": 62,
+                      "raw": "[\\p{Script=Inherited}\\p{Script=Common}]",
+                      "unicodeSets": true,
+                      "negate": false,
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 24,
+                          "end": 44,
+                          "raw": "\\p{Script=Inherited}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "Script",
+                          "value": "Inherited",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 44,
+                          "end": 61,
+                          "raw": "\\p{Script=Common}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "Script",
+                          "value": "Common",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 64,
+          "end": 65,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[[\\p{Other}\\p{Separator}\\p{White_Space}\\p{Default_Ignorable_Code_Point}]--\\x20]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 82,
+        "raw": "/[[\\p{Other}\\p{Separator}\\p{White_Space}\\p{Default_Ignorable_Code_Point}]--\\x20]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 80,
+          "raw": "[[\\p{Other}\\p{Separator}\\p{White_Space}\\p{Default_Ignorable_Code_Point}]--\\x20]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 80,
+              "raw": "[[\\p{Other}\\p{Separator}\\p{White_Space}\\p{Default_Ignorable_Code_Point}]--\\x20]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 80,
+                  "raw": "[[\\p{Other}\\p{Separator}\\p{White_Space}\\p{Default_Ignorable_Code_Point}]--\\x20]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 79,
+                    "raw": "[\\p{Other}\\p{Separator}\\p{White_Space}\\p{Default_Ignorable_Code_Point}]--\\x20",
+                    "left": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 73,
+                      "raw": "[\\p{Other}\\p{Separator}\\p{White_Space}\\p{Default_Ignorable_Code_Point}]",
+                      "unicodeSets": true,
+                      "negate": false,
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 3,
+                          "end": 12,
+                          "raw": "\\p{Other}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "General_Category",
+                          "value": "Other",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 25,
+                          "raw": "\\p{Separator}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "General_Category",
+                          "value": "Separator",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 25,
+                          "end": 40,
+                          "raw": "\\p{White_Space}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "White_Space",
+                          "value": null,
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 40,
+                          "end": 72,
+                          "raw": "\\p{Default_Ignorable_Code_Point}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "Default_Ignorable_Code_Point",
+                          "value": null,
+                          "negate": false
+                        }
+                      ]
+                    },
+                    "right": {
+                      "type": "Character",
+                      "parent": "♻️..",
+                      "start": 75,
+                      "end": 79,
+                      "raw": "\\x20",
+                      "value": 32
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 81,
+          "end": 82,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\P{NFC_Quick_Check=No}--\\p{Script=Common}--\\p{Script=Inherited}--\\p{Script=Unknown}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[\\P{NFC_Quick_Check=No}--\\p{Script=Common}--\\p{Script=Inherited}--\\p{Script=Unknown}]/v: Invalid property name",
+        "index": 23
+      }
+    },
+    "/[\\p{Script_Extensions=Greek}&&[\\p{Letter}\\p{Mark}\\p{Decimal_Number}]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 72,
+        "raw": "/[\\p{Script_Extensions=Greek}&&[\\p{Letter}\\p{Mark}\\p{Decimal_Number}]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 70,
+          "raw": "[\\p{Script_Extensions=Greek}&&[\\p{Letter}\\p{Mark}\\p{Decimal_Number}]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 70,
+              "raw": "[\\p{Script_Extensions=Greek}&&[\\p{Letter}\\p{Mark}\\p{Decimal_Number}]]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 70,
+                  "raw": "[\\p{Script_Extensions=Greek}&&[\\p{Letter}\\p{Mark}\\p{Decimal_Number}]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassIntersection",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 69,
+                    "raw": "\\p{Script_Extensions=Greek}&&[\\p{Letter}\\p{Mark}\\p{Decimal_Number}]",
+                    "left": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 29,
+                      "raw": "\\p{Script_Extensions=Greek}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "Script_Extensions",
+                      "value": "Greek",
+                      "negate": false
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 31,
+                      "end": 69,
+                      "raw": "[\\p{Letter}\\p{Mark}\\p{Decimal_Number}]",
+                      "unicodeSets": true,
+                      "negate": false,
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 32,
+                          "end": 42,
+                          "raw": "\\p{Letter}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "General_Category",
+                          "value": "Letter",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 42,
+                          "end": 50,
+                          "raw": "\\p{Mark}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "General_Category",
+                          "value": "Mark",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 50,
+                          "end": 68,
+                          "raw": "\\p{Decimal_Number}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "General_Category",
+                          "value": "Decimal_Number",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 71,
+          "end": 72,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[[\\p{Any}--\\p{Other}]\\p{Control}]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 36,
+        "raw": "/[[\\p{Any}--\\p{Other}]\\p{Control}]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 34,
+          "raw": "[[\\p{Any}--\\p{Other}]\\p{Control}]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 34,
+              "raw": "[[\\p{Any}--\\p{Other}]\\p{Control}]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "CharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 34,
+                  "raw": "[[\\p{Any}--\\p{Other}]\\p{Control}]",
+                  "unicodeSets": true,
+                  "negate": false,
+                  "elements": [
+                    {
+                      "type": "ExpressionCharacterClass",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 22,
+                      "raw": "[\\p{Any}--\\p{Other}]",
+                      "negate": false,
+                      "expression": {
+                        "type": "ClassSubtraction",
+                        "parent": "♻️..",
+                        "start": 3,
+                        "end": 21,
+                        "raw": "\\p{Any}--\\p{Other}",
+                        "left": {
+                          "type": "CharacterSet",
+                          "parent": "♻️..",
+                          "start": 3,
+                          "end": 10,
+                          "raw": "\\p{Any}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "Any",
+                          "value": null,
+                          "negate": false
+                        },
+                        "right": {
+                          "type": "CharacterSet",
+                          "parent": "♻️..",
+                          "start": 12,
+                          "end": 21,
+                          "raw": "\\p{Other}",
+                          "kind": "property",
+                          "strings": false,
+                          "key": "General_Category",
+                          "value": "Other",
+                          "negate": false
+                        }
+                      }
+                    },
+                    {
+                      "type": "CharacterSet",
+                      "parent": "♻️../..",
+                      "start": 22,
+                      "end": 33,
+                      "raw": "\\p{Control}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "General_Category",
+                      "value": "Control",
+                      "negate": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 35,
+          "end": 36,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\p{Assigned}--\\p{Separator}]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 32,
+        "raw": "/[\\p{Assigned}--\\p{Separator}]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 30,
+          "raw": "[\\p{Assigned}--\\p{Separator}]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 30,
+              "raw": "[\\p{Assigned}--\\p{Separator}]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 30,
+                  "raw": "[\\p{Assigned}--\\p{Separator}]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 29,
+                    "raw": "\\p{Assigned}--\\p{Separator}",
+                    "left": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 14,
+                      "raw": "\\p{Assigned}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "Assigned",
+                      "value": null,
+                      "negate": false
+                    },
+                    "right": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 16,
+                      "end": 29,
+                      "raw": "\\p{Separator}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "General_Category",
+                      "value": "Separator",
+                      "negate": false
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 31,
+          "end": 32,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[[\\p{Bidi_Class=R}\\p{Bidi_Class=AL}]--\\p{Unassigned}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[[\\p{Bidi_Class=R}\\p{Bidi_Class=AL}]--\\p{Unassigned}]/v: Invalid property name",
+        "index": 18
+      }
+    },
+    "/[\\p{Letter}&&[\\p{Bidi_Class=R}\\p{Bidi_Class=AL}]]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[\\p{Letter}&&[\\p{Bidi_Class=R}\\p{Bidi_Class=AL}]]/v: Invalid property name",
+        "index": 30
+      }
+    },
+    "/[\\p{Other}--\\p{Format}--\\p{Control}]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 39,
+        "raw": "/[\\p{Other}--\\p{Format}--\\p{Control}]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 37,
+          "raw": "[\\p{Other}--\\p{Format}--\\p{Control}]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 37,
+              "raw": "[\\p{Other}--\\p{Format}--\\p{Control}]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 37,
+                  "raw": "[\\p{Other}--\\p{Format}--\\p{Control}]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 36,
+                    "raw": "\\p{Other}--\\p{Format}--\\p{Control}",
+                    "left": {
+                      "type": "ClassSubtraction",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 23,
+                      "raw": "\\p{Other}--\\p{Format}",
+                      "left": {
+                        "type": "CharacterSet",
+                        "parent": "♻️..",
+                        "start": 2,
+                        "end": 11,
+                        "raw": "\\p{Other}",
+                        "kind": "property",
+                        "strings": false,
+                        "key": "General_Category",
+                        "value": "Other",
+                        "negate": false
+                      },
+                      "right": {
+                        "type": "CharacterSet",
+                        "parent": "♻️..",
+                        "start": 13,
+                        "end": 23,
+                        "raw": "\\p{Format}",
+                        "kind": "property",
+                        "strings": false,
+                        "key": "General_Category",
+                        "value": "Format",
+                        "negate": false
+                      }
+                    },
+                    "right": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 25,
+                      "end": 36,
+                      "raw": "\\p{Control}",
+                      "kind": "property",
+                      "strings": false,
+                      "key": "General_Category",
+                      "value": "Control",
+                      "negate": false
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 38,
+          "end": 39,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\p{RGI_Emoji}--\\q{🇧🇪}]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 28,
+        "raw": "/[\\p{RGI_Emoji}--\\q{🇧🇪}]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 26,
+          "raw": "[\\p{RGI_Emoji}--\\q{🇧🇪}]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 26,
+              "raw": "[\\p{RGI_Emoji}--\\q{🇧🇪}]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 26,
+                  "raw": "[\\p{RGI_Emoji}--\\q{🇧🇪}]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 25,
+                    "raw": "\\p{RGI_Emoji}--\\q{🇧🇪}",
+                    "left": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 15,
+                      "raw": "\\p{RGI_Emoji}",
+                      "kind": "property",
+                      "strings": true,
+                      "key": "RGI_Emoji",
+                      "value": null,
+                      "negate": false
+                    },
+                    "right": {
+                      "type": "ClassStringDisjunction",
+                      "parent": "♻️..",
+                      "start": 17,
+                      "end": 25,
+                      "raw": "\\q{🇧🇪}",
+                      "alternatives": [
+                        {
+                          "type": "Alternative",
+                          "parent": "♻️../..",
+                          "start": 20,
+                          "end": 24,
+                          "raw": "🇧🇪",
+                          "string": true,
+                          "elements": [
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 20,
+                              "end": 22,
+                              "raw": "🇧",
+                              "value": 127463
+                            },
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 22,
+                              "end": 24,
+                              "raw": "🇪",
+                              "value": 127466
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 27,
+          "end": 28,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[\\p{RGI_Emoji_ZWJ_Sequence}--\\q{🇧🇪}]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 41,
+        "raw": "/[\\p{RGI_Emoji_ZWJ_Sequence}--\\q{🇧🇪}]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 39,
+          "raw": "[\\p{RGI_Emoji_ZWJ_Sequence}--\\q{🇧🇪}]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 39,
+              "raw": "[\\p{RGI_Emoji_ZWJ_Sequence}--\\q{🇧🇪}]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 39,
+                  "raw": "[\\p{RGI_Emoji_ZWJ_Sequence}--\\q{🇧🇪}]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 38,
+                    "raw": "\\p{RGI_Emoji_ZWJ_Sequence}--\\q{🇧🇪}",
+                    "left": {
+                      "type": "CharacterSet",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 28,
+                      "raw": "\\p{RGI_Emoji_ZWJ_Sequence}",
+                      "kind": "property",
+                      "strings": true,
+                      "key": "RGI_Emoji_ZWJ_Sequence",
+                      "value": null,
+                      "negate": false
+                    },
+                    "right": {
+                      "type": "ClassStringDisjunction",
+                      "parent": "♻️..",
+                      "start": 30,
+                      "end": 38,
+                      "raw": "\\q{🇧🇪}",
+                      "alternatives": [
+                        {
+                          "type": "Alternative",
+                          "parent": "♻️../..",
+                          "start": 33,
+                          "end": 37,
+                          "raw": "🇧🇪",
+                          "string": true,
+                          "elements": [
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 33,
+                              "end": 35,
+                              "raw": "🇧",
+                              "value": 127463
+                            },
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 35,
+                              "end": 37,
+                              "raw": "🇪",
+                              "value": 127466
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 40,
+          "end": 41,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[a-c\\q{W|xy|xyz}]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 20,
+        "raw": "/[a-c\\q{W|xy|xyz}]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 18,
+          "raw": "[a-c\\q{W|xy|xyz}]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 18,
+              "raw": "[a-c\\q{W|xy|xyz}]",
+              "string": false,
+              "elements": [
+                {
+                  "type": "CharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 18,
+                  "raw": "[a-c\\q{W|xy|xyz}]",
+                  "unicodeSets": true,
+                  "negate": false,
+                  "elements": [
+                    {
+                      "type": "CharacterClassRange",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 5,
+                      "raw": "a-c",
+                      "min": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 2,
+                        "end": 3,
+                        "raw": "a",
+                        "value": 97
+                      },
+                      "max": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 4,
+                        "end": 5,
+                        "raw": "c",
+                        "value": 99
+                      }
+                    },
+                    {
+                      "type": "ClassStringDisjunction",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 17,
+                      "raw": "\\q{W|xy|xyz}",
+                      "alternatives": [
+                        {
+                          "type": "Alternative",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 9,
+                          "raw": "W",
+                          "string": true,
+                          "elements": [
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 8,
+                              "end": 9,
+                              "raw": "W",
+                              "value": 87
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Alternative",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 12,
+                          "raw": "xy",
+                          "string": true,
+                          "elements": [
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 10,
+                              "end": 11,
+                              "raw": "x",
+                              "value": 120
+                            },
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 11,
+                              "end": 12,
+                              "raw": "y",
+                              "value": 121
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Alternative",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 16,
+                          "raw": "xyz",
+                          "string": true,
+                          "elements": [
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 13,
+                              "end": 14,
+                              "raw": "x",
+                              "value": 120
+                            },
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 14,
+                              "end": 15,
+                              "raw": "y",
+                              "value": 121
+                            },
+                            {
+                              "type": "Character",
+                              "parent": "♻️../..",
+                              "start": 15,
+                              "end": 16,
+                              "raw": "z",
+                              "value": 122
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 19,
+          "end": 20,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    }
+  }
+}

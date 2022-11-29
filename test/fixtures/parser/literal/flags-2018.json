@@ -24,6 +24,7 @@
               "start": 1,
               "end": 2,
               "raw": ".",
+              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -49,7 +50,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": true,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
