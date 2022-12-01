@@ -98,6 +98,7 @@
                   "start": 9,
                   "end": 20,
                   "raw": "(?:zy\\k<a>)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",

@@ -32,6 +32,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "(?:)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
