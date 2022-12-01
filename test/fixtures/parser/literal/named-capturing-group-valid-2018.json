@@ -101,6 +101,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",

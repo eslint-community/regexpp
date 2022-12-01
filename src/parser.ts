@@ -18,6 +18,7 @@ import type {
     UnicodeSetsCharacterClass,
     ExpressionCharacterClass,
     StringAlternative,
+    Modifiers,
 } from "./ast"
 import type { EcmaVersion } from "./ecma-versions"
 import { latestEcmaVersion } from "./ecma-versions"
@@ -31,6 +32,7 @@ type AppendableNode =
     | ClassStringDisjunction
     | Group
     | LookaroundAssertion
+    | Modifiers
     | Pattern
     | StringAlternative
 
@@ -211,6 +213,7 @@ class RegExpParserState {
             start,
             end: start,
             raw: "",
+            modifiers: null,
             alternatives: [],
         }
         parent.elements.push(this._node)
@@ -225,6 +228,85 @@ class RegExpParserState {
         node.end = end
         node.raw = this.source.slice(start, end)
         this._node = node.parent
+    }
+
+    public onModifiersEnter(start: number): void {
+        const parent = this._node
+        if (parent.type !== "Group") {
+            throw new Error("UnknownError")
+        }
+
+        this._node = {
+            type: "Modifiers",
+            parent,
+            start,
+            end: start,
+            raw: "",
+            add: null,
+            remove: null,
+        }
+        parent.modifiers = this._node
+    }
+
+    public onModifiersLeave(start: number, end: number): void {
+        const node = this._node
+        if (node.type !== "Modifiers" || node.parent.type !== "Group") {
+            throw new Error("UnknownError")
+        }
+
+        node.end = end
+        node.raw = this.source.slice(start, end)
+        this._node = node.parent
+    }
+
+    public onAddModifiers(
+        start: number,
+        end: number,
+        {
+            ignoreCase,
+            multiline,
+            dotAll,
+        }: { ignoreCase: boolean; multiline: boolean; dotAll: boolean },
+    ): void {
+        const parent = this._node
+        if (parent.type !== "Modifiers") {
+            throw new Error("UnknownError")
+        }
+        parent.add = {
+            type: "ModifierFlags",
+            parent,
+            start,
+            end,
+            raw: this.source.slice(start, end),
+            ignoreCase,
+            multiline,
+            dotAll,
+        }
+    }
+
+    public onRemoveModifiers(
+        start: number,
+        end: number,
+        {
+            ignoreCase,
+            multiline,
+            dotAll,
+        }: { ignoreCase: boolean; multiline: boolean; dotAll: boolean },
+    ): void {
+        const parent = this._node
+        if (parent.type !== "Modifiers") {
+            throw new Error("UnknownError")
+        }
+        parent.remove = {
+            type: "ModifierFlags",
+            parent,
+            start,
+            end,
+            raw: this.source.slice(start, end),
+            ignoreCase,
+            multiline,
+            dotAll,
+        }
     }
 
     public onCapturingGroupEnter(start: number, name: string | null): void {
@@ -765,7 +847,7 @@ export namespace RegExpParser {
          * - `2022` added `d` flag.
          * - `2023` added more valid Unicode Property Escapes.
          * - `2024` added `v` flag.
-         * - `2025` added duplicate named capturing groups.
+         * - `2025` added duplicate named capturing groups, modifiers.
          */
         ecmaVersion?: EcmaVersion
     }

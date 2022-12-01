@@ -1,3 +1,4 @@
+import type { Flags } from "./ast"
 import type { EcmaVersion } from "./ecma-versions"
 import { latestEcmaVersion } from "./ecma-versions"
 import type { GroupSpecifiers } from "./group-specifiers"
@@ -160,6 +161,24 @@ const CLASS_SET_RESERVED_PUNCTUATOR = new Set([
     TILDE,
 ])
 
+const FLAG_PROP_TO_CODEPOINT = {
+    global: LATIN_SMALL_LETTER_G,
+    ignoreCase: LATIN_SMALL_LETTER_I,
+    multiline: LATIN_SMALL_LETTER_M,
+    unicode: LATIN_SMALL_LETTER_U,
+    sticky: LATIN_SMALL_LETTER_Y,
+    dotAll: LATIN_SMALL_LETTER_S,
+    hasIndices: LATIN_SMALL_LETTER_D,
+    unicodeSets: LATIN_SMALL_LETTER_V,
+} as const
+const FLAG_CODEPOINT_TO_PROP: Record<FlagCodePoint, FlagProp> =
+    Object.fromEntries(
+        Object.entries(FLAG_PROP_TO_CODEPOINT).map(([k, v]) => [v, k]),
+    ) as never
+type FlagProp = keyof typeof FLAG_PROP_TO_CODEPOINT
+type FlagCodePoint = (typeof FLAG_PROP_TO_CODEPOINT)[FlagProp]
+type FlagsRecord = Omit<Flags, "end" | "parent" | "raw" | "start" | "type">
+
 function isSyntaxCharacter(cp: number): boolean {
     // ^ $ \ . * + ? ( ) [ ] { } |
     return SYNTAX_CHARACTER.has(cp)
@@ -244,7 +263,7 @@ export namespace RegExpValidator {
          * - `2022` added `d` flag.
          * - `2023` added more valid Unicode Property Escapes.
          * - `2024` added `v` flag.
-         * - `2025` added duplicate named capturing groups.
+         * - `2025` added duplicate named capturing groups, modifiers.
          */
         ecmaVersion?: EcmaVersion
 
@@ -367,6 +386,57 @@ export namespace RegExpValidator {
          * @param end The next 0-based index of the last character.
          */
         onGroupLeave?: (start: number, end: number) => void
+
+        /**
+         * A function that is called when the validator entered a modifiers.
+         * @param start The 0-based index of the first character.
+         */
+        onModifiersEnter?: (start: number) => void
+
+        /**
+         * A function that is called when the validator left a modifiers.
+         * @param start The 0-based index of the first character.
+         * @param end The next 0-based index of the last character.
+         */
+        onModifiersLeave?: (start: number, end: number) => void
+
+        /**
+         * A function that is called when the validator found an add modifiers.
+         * @param start The 0-based index of the first character.
+         * @param end The next 0-based index of the last character.
+         * @param flags flags.
+         * @param flags.ignoreCase `i` flag.
+         * @param flags.multiline `m` flag.
+         * @param flags.dotAll `s` flag.
+         */
+        onAddModifiers?: (
+            start: number,
+            end: number,
+            flags: {
+                ignoreCase: boolean
+                multiline: boolean
+                dotAll: boolean
+            },
+        ) => void
+
+        /**
+         * A function that is called when the validator found a remove modifiers.
+         * @param start The 0-based index of the first character.
+         * @param end The next 0-based index of the last character.
+         * @param flags flags.
+         * @param flags.ignoreCase `i` flag.
+         * @param flags.multiline `m` flag.
+         * @param flags.dotAll `s` flag.
+         */
+        onRemoveModifiers?: (
+            start: number,
+            end: number,
+            flags: {
+                ignoreCase: boolean
+                multiline: boolean
+                dotAll: boolean
+            },
+        ) => void
 
         /**
          * A function that is called when the validator entered a capturing group.
@@ -786,68 +856,8 @@ export class RegExpValidator {
         start: number,
         end: number,
     ): void {
-        const existingFlags = new Set<number>()
-        let global = false
-        let ignoreCase = false
-        let multiline = false
-        let sticky = false
-        let unicode = false
-        let dotAll = false
-        let hasIndices = false
-        let unicodeSets = false
-        for (let i = start; i < end; ++i) {
-            const flag = source.charCodeAt(i)
-
-            if (existingFlags.has(flag)) {
-                this.raise(`Duplicated flag '${source[i]}'`, { index: start })
-            }
-            existingFlags.add(flag)
-
-            if (flag === LATIN_SMALL_LETTER_G) {
-                global = true
-            } else if (flag === LATIN_SMALL_LETTER_I) {
-                ignoreCase = true
-            } else if (flag === LATIN_SMALL_LETTER_M) {
-                multiline = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_U &&
-                this.ecmaVersion >= 2015
-            ) {
-                unicode = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_Y &&
-                this.ecmaVersion >= 2015
-            ) {
-                sticky = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_S &&
-                this.ecmaVersion >= 2018
-            ) {
-                dotAll = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_D &&
-                this.ecmaVersion >= 2022
-            ) {
-                hasIndices = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_V &&
-                this.ecmaVersion >= 2024
-            ) {
-                unicodeSets = true
-            } else {
-                this.raise(`Invalid flag '${source[i]}'`, { index: start })
-            }
-        }
-        this.onRegExpFlags(start, end, {
-            global,
-            ignoreCase,
-            multiline,
-            unicode,
-            sticky,
-            dotAll,
-            hasIndices,
-            unicodeSets,
-        })
+        const flags = this.parseFlags(source, start, end)
+        this.onRegExpFlags(start, end, flags)
     }
 
     private _parseFlagsOptionToMode(
@@ -1003,6 +1013,38 @@ export class RegExpValidator {
     private onGroupLeave(start: number, end: number): void {
         if (this._options.onGroupLeave) {
             this._options.onGroupLeave(start, end)
+        }
+    }
+
+    private onModifiersEnter(start: number): void {
+        if (this._options.onModifiersEnter) {
+            this._options.onModifiersEnter(start)
+        }
+    }
+
+    private onModifiersLeave(start: number, end: number): void {
+        if (this._options.onModifiersLeave) {
+            this._options.onModifiersLeave(start, end)
+        }
+    }
+
+    private onAddModifiers(
+        start: number,
+        end: number,
+        flags: { ignoreCase: boolean; multiline: boolean; dotAll: boolean },
+    ): void {
+        if (this._options.onAddModifiers) {
+            this._options.onAddModifiers(start, end, flags)
+        }
+    }
+
+    private onRemoveModifiers(
+        start: number,
+        end: number,
+        flags: { ignoreCase: boolean; multiline: boolean; dotAll: boolean },
+    ): void {
+        if (this._options.onRemoveModifiers) {
+            this._options.onRemoveModifiers(start, end, flags)
         }
     }
 
@@ -1625,7 +1667,8 @@ export class RegExpValidator {
      *      `\\` AtomEscape[?UnicodeMode, ?UnicodeSetsMode, ?N]
      *      CharacterClass[?UnicodeMode, ?UnicodeSetsMode]
      *      `(` GroupSpecifier[?UnicodeMode] Disjunction[?UnicodeMode, ?UnicodeSetsMode, ?N] `)`
-     *      `(?:` Disjunction[?UnicodeMode, ?UnicodeSetsMode, ?N] `)`
+     *      `(?` RegularExpressionFlags `:` Disjunction[?UnicodeMode, ?UnicodeSetsMode, ?N] `)`
+     *      `(?` RegularExpressionFlags `-` RegularExpressionFlags `:` Disjunction[?UnicodeMode, ?UnicodeSetsMode, ?N] `)`
      * ```
      * @returns `true` if it consumed the next characters successfully.
      */
@@ -1635,8 +1678,8 @@ export class RegExpValidator {
             this.consumeDot() ||
             this.consumeReverseSolidusAtomEscape() ||
             Boolean(this.consumeCharacterClass()) ||
-            this.consumeUncapturingGroup() ||
-            this.consumeCapturingGroup()
+            this.consumeCapturingGroup() ||
+            this.consumeUncapturingGroup()
         )
     }
 
@@ -1676,19 +1719,80 @@ export class RegExpValidator {
     /**
      * Validate the next characters as the following alternatives if possible.
      * ```
-     *      `(?:` Disjunction[?UnicodeMode, ?UnicodeSetsMode, ?N] )
+     *      `(?` RegularExpressionFlags `:` Disjunction[?UnicodeMode, ?UnicodeSetsMode, ?N] `)`
+     *      `(?` RegularExpressionFlags `-` RegularExpressionFlags `:` Disjunction[?UnicodeMode, ?UnicodeSetsMode, ?N] `)`
+     * RegularExpressionFlags ::
+     *      [empty]
+     *      RegularExpressionFlags IdentifierPartChar
      * ```
      * @returns `true` if it consumed the next characters successfully.
      */
     private consumeUncapturingGroup(): boolean {
         const start = this.index
-        if (this.eat3(LEFT_PARENTHESIS, QUESTION_MARK, COLON)) {
+        if (this.eat2(LEFT_PARENTHESIS, QUESTION_MARK)) {
             this.onGroupEnter(start)
+            if (this.ecmaVersion >= 2024) {
+                this.consumeModifiers()
+            }
+
+            if (!this.eat(COLON)) {
+                this.rewind(start + 1) // Throw an error at the question mark position.
+                this.raise("Invalid group")
+            }
             this.consumeDisjunction()
             if (!this.eat(RIGHT_PARENTHESIS)) {
                 this.raise("Unterminated group")
             }
             this.onGroupLeave(start, this.index)
+            return true
+        }
+        return false
+    }
+
+    /**
+     * Validate the next characters as the following alternatives if possible.
+     * ```
+     *      RegularExpressionFlags
+     *      RegularExpressionFlags `-` RegularExpressionFlags
+     * ```
+     */
+    private consumeModifiers(): boolean {
+        const start = this.index
+
+        if (this.eatModifiers()) {
+            this.onModifiersEnter(start)
+            const addModifiers = this.parseModifiers(start, this.index)
+            this.onAddModifiers(start, this.index, addModifiers)
+            if (this.eat(HYPHEN_MINUS)) {
+                const modifiersStart = this.index
+                if (this.eatModifiers()) {
+                    const modifiers = this.parseModifiers(
+                        modifiersStart,
+                        this.index,
+                        addModifiers,
+                    )
+                    this.onRemoveModifiers(
+                        modifiersStart,
+                        this.index,
+                        modifiers,
+                    )
+                }
+            }
+            this.onModifiersLeave(start, this.index)
+            return true
+        } else if (this.eat(HYPHEN_MINUS)) {
+            this.onModifiersEnter(start)
+            const modifiersStart = this.index
+            if (this.eatModifiers()) {
+                const modifiers = this.parseModifiers(
+                    modifiersStart,
+                    this.index,
+                )
+                this.onRemoveModifiers(modifiersStart, this.index, modifiers)
+            } else {
+                this.raise("Invalid empty flags")
+            }
+            this.onModifiersLeave(start, this.index)
             return true
         }
         return false
@@ -1708,9 +1812,13 @@ export class RegExpValidator {
             if (this.ecmaVersion >= 2018) {
                 if (this.consumeGroupSpecifier()) {
                     name = this._lastStrValue
+                } else if (this.currentCodePoint === QUESTION_MARK) {
+                    this.rewind(start)
+                    return false
                 }
             } else if (this.currentCodePoint === QUESTION_MARK) {
-                this.raise("Invalid group")
+                this.rewind(start)
+                return false
             }
 
             this.onCapturingGroupEnter(start, name)
@@ -1734,8 +1842,9 @@ export class RegExpValidator {
      *      `\` AtomEscape[~U, ?N]
      *      `\` [lookahead = c]
      *      CharacterClass[~U]
-     *      `(?:` Disjunction[~U, ?N] `)`
      *      `(` Disjunction[~U, ?N] `)`
+     *      `(?` RegularExpressionFlags `:` Disjunction[?U, ?N] `)`
+     *      `(?` RegularExpressionFlags `-` RegularExpressionFlags `:` Disjunction[?U, ?N] `)`
      *      InvalidBracedQuantifier
      *      ExtendedPatternCharacter
      * ```
@@ -1747,8 +1856,8 @@ export class RegExpValidator {
             this.consumeReverseSolidusAtomEscape() ||
             this.consumeReverseSolidusFollowedByC() ||
             Boolean(this.consumeCharacterClass()) ||
-            this.consumeUncapturingGroup() ||
             this.consumeCapturingGroup() ||
+            this.consumeUncapturingGroup() ||
             this.consumeInvalidBracedQuantifier() ||
             this.consumeExtendedPatternCharacter()
         )
@@ -1857,6 +1966,7 @@ export class RegExpValidator {
      * @returns `true` if the group name existed.
      */
     private consumeGroupSpecifier(): boolean {
+        const start = this.index
         if (this.eat(QUESTION_MARK)) {
             if (this.eatGroupName()) {
                 if (!this._groupSpecifiers.hasInScope(this._lastStrValue)) {
@@ -1865,7 +1975,7 @@ export class RegExpValidator {
                 }
                 this.raise("Duplicate capture group name")
             }
-            this.raise("Invalid group")
+            this.rewind(start)
         }
         return false
     }
@@ -3379,5 +3489,123 @@ export class RegExpValidator {
             this.advance()
         }
         return true
+    }
+
+    /**
+     * Eat the next characters as the following alternatives.
+     * ```
+     * RegularExpressionFlags ::
+     *      [empty]
+     *      RegularExpressionFlags IdentifierPartChar
+     * ```
+     * @returns `true` if it ate the next characters successfully.
+     */
+    private eatModifiers(): boolean {
+        let ate = false
+        while (isIdentifierPartChar(this.currentCodePoint)) {
+            this.advance()
+            ate = true
+        }
+        return ate
+    }
+
+    /**
+     * Parse a regexp modifiers. E.g. "ims"
+     * @param start The start index in the source code.
+     * @param end The end index in the source code.
+     */
+    private parseModifiers(
+        start: number,
+        end: number,
+        alreadyUsedFlags?: {
+            ignoreCase: boolean
+            multiline: boolean
+            dotAll: boolean
+        },
+    ) {
+        const { ignoreCase, multiline, dotAll } = this.parseFlags(
+            this._reader.source,
+            start,
+            end,
+            {
+                modifiers: true,
+                alreadyUsedFlags,
+            },
+        )
+
+        return { ignoreCase, multiline, dotAll }
+    }
+
+    /**
+     * Parse a regexp flags. E.g. "ims"
+     * @param start The start index in the source code.
+     * @param end The end index in the source code.
+     */
+    private parseFlags(
+        source: string,
+        start: number,
+        end: number,
+        options?: {
+            modifiers?: boolean
+            alreadyUsedFlags?: Partial<FlagsRecord>
+        },
+    ): FlagsRecord {
+        const flags = {
+            global: false,
+            ignoreCase: false,
+            multiline: false,
+            unicode: false,
+            sticky: false,
+            dotAll: false,
+            hasIndices: false,
+            unicodeSets: false,
+        }
+
+        const alreadyUsedFlags = new Set<FlagCodePoint>()
+        const validFlags = new Set<FlagCodePoint>()
+        if (options?.modifiers) {
+            if (options?.alreadyUsedFlags) {
+                for (const [flagProp] of Object.entries(
+                    options.alreadyUsedFlags,
+                ).filter(([, enable]) => enable) as [FlagProp, boolean][]) {
+                    alreadyUsedFlags.add(FLAG_PROP_TO_CODEPOINT[flagProp])
+                }
+            }
+            validFlags.add(LATIN_SMALL_LETTER_I)
+            validFlags.add(LATIN_SMALL_LETTER_M)
+            validFlags.add(LATIN_SMALL_LETTER_S)
+        } else {
+            validFlags.add(LATIN_SMALL_LETTER_G)
+            validFlags.add(LATIN_SMALL_LETTER_I)
+            validFlags.add(LATIN_SMALL_LETTER_M)
+            if (this.ecmaVersion >= 2015) {
+                validFlags.add(LATIN_SMALL_LETTER_U)
+                validFlags.add(LATIN_SMALL_LETTER_Y)
+                if (this.ecmaVersion >= 2018) {
+                    validFlags.add(LATIN_SMALL_LETTER_S)
+                    if (this.ecmaVersion >= 2021) {
+                        validFlags.add(LATIN_SMALL_LETTER_D)
+                        if (this.ecmaVersion >= 2024) {
+                            validFlags.add(LATIN_SMALL_LETTER_V)
+                        }
+                    }
+                }
+            }
+        }
+        for (let i = start; i < end; ++i) {
+            const flag = source.charCodeAt(i) as FlagCodePoint
+            if (validFlags.has(flag)) {
+                const prop = FLAG_CODEPOINT_TO_PROP[flag]
+                if (flags[prop] || alreadyUsedFlags.has(flag)) {
+                    this.raise(`Duplicated flag '${source[i]}'`, {
+                        index: start,
+                    })
+                }
+                flags[prop] = true
+            } else {
+                this.raise(`Invalid flag '${source[i]}'`, { index: start })
+            }
+        }
+        return flags
     }
 }

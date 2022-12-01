@@ -41,6 +41,7 @@
                     "start": 1,
                     "end": 31,
                     "raw": "(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>)",
+                    "modifiers": null,
                     "alternatives": [
                       {
                         "type": "Alternative",
@@ -55,6 +56,7 @@
                             "start": 4,
                             "end": 25,
                             "raw": "(?:(?<x>a)|(?<x>b)|c)",
+                            "modifiers": null,
                             "alternatives": [
                               {
                                 "type": "Alternative",
@@ -219,6 +221,7 @@
                   "start": 1,
                   "end": 27,
                   "raw": "(?:(?<x>a)|(?<y>a)(?<x>b))",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -330,6 +333,7 @@
                   "start": 27,
                   "end": 46,
                   "raw": "(?:(?<z>c)|(?<z>d))",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",

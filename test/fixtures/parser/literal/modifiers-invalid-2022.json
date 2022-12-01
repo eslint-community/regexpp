@@ -1,0 +1,26 @@
+{
+  "options": {
+    "strict": false,
+    "ecmaVersion": 2022
+  },
+  "patterns": {
+    "/(?ims-ims:sub_expression)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ims-ims:sub_expression)/: Invalid group",
+        "index": 2
+      }
+    },
+    "/(?ims:sub_expression)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ims:sub_expression)/: Invalid group",
+        "index": 2
+      }
+    },
+    "/(?-ims:sub_expression)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-ims:sub_expression)/: Invalid group",
+        "index": 2
+      }
+    }
+  }
+}
