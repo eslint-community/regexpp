@@ -35,7 +35,7 @@ function cloneWithoutCircularRec(x: any, pathMap: Map<object, string>): any {
         return x
     }
     if (Array.isArray(x)) {
-        return x.map(el => cloneWithoutCircularRec(el, pathMap))
+        return x.map((el) => cloneWithoutCircularRec(el, pathMap))
     }
 
     const y = {} as any
@@ -58,7 +58,7 @@ function getRelativePath(
         return to
     }
     if (Array.isArray(to)) {
-        return to.map(el => getRelativePath(from, el, pathMap))
+        return to.map((el) => getRelativePath(from, el, pathMap))
     }
 
     const fromPath = pathMap.get(from)!
@@ -66,14 +66,15 @@ function getRelativePath(
     try {
         return `♻️${posix.relative(fromPath, toPath).replace(/\/$/u, "")}`
     } catch (err) {
-        console.error(fromPath, toPath, err.stack)
+        const error = err as Error
+        console.error(fromPath, toPath, error.stack)
         return "💥💥💥💥💥💥💥💥"
     }
 }
 
 export function cloneWithoutCircular(obj: object): object {
     const path: string[] = []
-    const pathMap: Map<object, string> = new Map()
+    const pathMap = new Map<object, string>()
     resolveLocation(obj, path, pathMap)
 
     return cloneWithoutCircularRec(obj, pathMap)

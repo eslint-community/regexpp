@@ -1,4 +1,4 @@
-import {
+import type {
     Alternative,
     Backreference,
     CapturingGroup,
@@ -12,35 +12,40 @@ import {
     Pattern,
     Quantifier,
 } from "./ast"
-import { EcmaVersion } from "./ecma-versions"
+import type { EcmaVersion } from "./ecma-versions"
 import { HyphenMinus } from "./unicode"
 import { RegExpValidator } from "./validator"
 
 type AppendableNode =
-    | Pattern
     | Alternative
-    | Group
     | CapturingGroup
     | CharacterClass
+    | Group
     | LookaroundAssertion
+    | Pattern
 
-const DummyPattern: Pattern = {} as any
-const DummyFlags: Flags = {} as any
-const DummyCapturingGroup: CapturingGroup = {} as any
+const DummyPattern: Pattern = {} as Pattern
+const DummyFlags: Flags = {} as Flags
+const DummyCapturingGroup: CapturingGroup = {} as CapturingGroup
 
 class RegExpParserState {
     public readonly strict: boolean
+
     public readonly ecmaVersion: EcmaVersion
+
     private _node: AppendableNode = DummyPattern
+
     private _flags: Flags = DummyFlags
+
     private _backreferences: Backreference[] = []
+
     private _capturingGroups: CapturingGroup[] = []
 
     public source = ""
 
     public constructor(options?: RegExpParser.Options) {
-        this.strict = Boolean(options && options.strict)
-        this.ecmaVersion = (options && options.ecmaVersion) || 2022
+        this.strict = Boolean(options?.strict)
+        this.ecmaVersion = options?.ecmaVersion ?? 2022
     }
 
     public get pattern(): Pattern {
@@ -106,7 +111,7 @@ class RegExpParserState {
             const group =
                 typeof ref === "number"
                     ? this._capturingGroups[ref - 1]
-                    : this._capturingGroups.find(g => g.name === ref)!
+                    : this._capturingGroups.find((g) => g.name === ref)!
             reference.resolved = group
             group.references.push(reference)
         }
@@ -281,7 +286,7 @@ class RegExpParserState {
     public onEdgeAssertion(
         start: number,
         end: number,
-        kind: "start" | "end",
+        kind: "end" | "start",
     ): void {
         const parent = this._node
         if (parent.type !== "Alternative") {
@@ -517,6 +522,7 @@ export namespace RegExpParser {
 
 export class RegExpParser {
     private _state: RegExpParserState
+
     private _validator: RegExpValidator
 
     /**

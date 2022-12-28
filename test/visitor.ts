@@ -1,15 +1,11 @@
 import assert from "assert"
-import {
-    AST,
-    RegExpParser,
-    parseRegExpLiteral,
-    visitRegExpAST,
-} from "../src/index"
+import type { AST, RegExpParser } from "../src/index"
+import { parseRegExpLiteral, visitRegExpAST } from "../src/index"
 import { cloneWithoutCircular } from "../scripts/clone-without-circular"
 import { Fixtures } from "./fixtures/visitor"
 
-function generateAST(source: string, options: RegExpParser.Options): any {
-    return cloneWithoutCircular(parseRegExpLiteral(source, options))
+function generateAST(source: string, options: RegExpParser.Options): AST.Node {
+    return cloneWithoutCircular(parseRegExpLiteral(source, options)) as AST.Node
 }
 
 describe("visitRegExpAST function:", () => {

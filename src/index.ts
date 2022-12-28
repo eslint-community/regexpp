@@ -12,7 +12,7 @@ export { AST, RegExpParser, RegExpValidator }
  * @returns The AST of the regular expression.
  */
 export function parseRegExpLiteral(
-    source: string | RegExp,
+    source: RegExp | string,
     options?: RegExpParser.Options,
 ): AST.RegExpLiteral {
     return new RegExpParser(options).parseLiteral(String(source))
@@ -27,7 +27,7 @@ export function validateRegExpLiteral(
     source: string,
     options?: RegExpValidator.Options,
 ): void {
-    return new RegExpValidator(options).validateLiteral(source)
+    new RegExpValidator(options).validateLiteral(source)
 }
 
 export function visitRegExpAST(
