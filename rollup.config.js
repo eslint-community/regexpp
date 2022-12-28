@@ -19,7 +19,6 @@ export default [
             format: "es",
             sourcemap: true,
             sourcemapFile: "index.mjs.map",
-            banner: `/*! @author Toru Nagashima <https://github.com/mysticatea> */`,
         },
         plugins: [sourcemaps(), resolve()],
     },
