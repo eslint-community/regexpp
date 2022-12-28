@@ -2,13 +2,21 @@
 
 class DataSet {
     private _raw2018: string
+
     private _set2018: Set<string> | undefined
+
     private _raw2019: string
+
     private _set2019: Set<string> | undefined
+
     private _raw2020: string
+
     private _set2020: Set<string> | undefined
+
     private _raw2021: string
+
     private _set2021: Set<string> | undefined
+
     public constructor(
         raw2018: string,
         raw2019: string,
@@ -20,24 +28,28 @@ class DataSet {
         this._raw2020 = raw2020
         this._raw2021 = raw2021
     }
+
     public get es2018(): Set<string> {
         return (
-            this._set2018 || (this._set2018 = new Set(this._raw2018.split(" ")))
+            this._set2018 ?? (this._set2018 = new Set(this._raw2018.split(" ")))
         )
     }
+
     public get es2019(): Set<string> {
         return (
-            this._set2019 || (this._set2019 = new Set(this._raw2019.split(" ")))
+            this._set2019 ?? (this._set2019 = new Set(this._raw2019.split(" ")))
         )
     }
+
     public get es2020(): Set<string> {
         return (
-            this._set2020 || (this._set2020 = new Set(this._raw2020.split(" ")))
+            this._set2020 ?? (this._set2020 = new Set(this._raw2020.split(" ")))
         )
     }
+
     public get es2021(): Set<string> {
         return (
-            this._set2021 || (this._set2021 = new Set(this._raw2021.split(" ")))
+            this._set2021 ?? (this._set2021 = new Set(this._raw2021.split(" ")))
         )
     }
 }

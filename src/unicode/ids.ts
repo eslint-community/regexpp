@@ -27,14 +27,14 @@ export function isIdContinue(cp: number): boolean {
 function isLargeIdStart(cp: number): boolean {
     return isInRange(
         cp,
-        largeIdStartRanges || (largeIdStartRanges = initLargeIdStartRanges()),
+        largeIdStartRanges ?? (largeIdStartRanges = initLargeIdStartRanges()),
     )
 }
 
 function isLargeIdContinue(cp: number): boolean {
     return isInRange(
         cp,
-        largeIdContinueRanges ||
+        largeIdContinueRanges ??
             (largeIdContinueRanges = initLargeIdContinueRanges()),
     )
 }
@@ -74,5 +74,5 @@ function isInRange(cp: number, ranges: number[]): boolean {
 
 function restoreRanges(data: string): number[] {
     let last = 0
-    return data.split(" ").map(s => (last += parseInt(s, 36) | 0))
+    return data.split(" ").map((s) => (last += parseInt(s, 36) | 0))
 }

@@ -1,5 +1,6 @@
 import assert from "assert"
 import { parseRegExpLiteral, RegExpParser } from "../src/index"
+import type { RegExpSyntaxError } from "../src/regexp-syntax-error"
 import { cloneWithoutCircular } from "../scripts/clone-without-circular"
 import { Fixtures } from "./fixtures/parser/literal"
 
@@ -48,8 +49,9 @@ describe("parseRegExpLiteral function:", () => {
                         try {
                             parseRegExpLiteral(source, options)
                         } catch (err) {
-                            assert.strictEqual(err.message, expected.message)
-                            assert.strictEqual(err.index, expected.index)
+                            const error = err as RegExpSyntaxError
+                            assert.strictEqual(error.message, expected.message)
+                            assert.strictEqual(error.index, expected.index)
                             return
                         }
                         assert.fail("Should fail, but succeeded.")

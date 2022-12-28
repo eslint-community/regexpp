@@ -12,14 +12,14 @@ const logger = console
 // Main
 const main = async () => {
     let banner = ""
-    const idStartSet: Set<string> = new Set()
+    const idStartSet = new Set<string>()
     const idStartSmall: [number, number][] = []
     const idStartLarge: [number, number][] = []
     const idContinueSmall: [number, number][] = []
     const idContinueLarge: [number, number][] = []
 
     logger.log("Fetching data... (%s)", DB_URL)
-    await processEachLine(line => {
+    await processEachLine((line) => {
         let m: RegExpExecArray | null = null
         if (banner === "") {
             logger.log("Processing data... (%s)", line.slice(2))
@@ -113,7 +113,7 @@ function restoreRanges(data: string): number[] {
         rules: { curly: "off" },
     })
     const result = engine.executeOnText(code, "ids.ts").results[0]
-    code = result.output || code
+    code = result.output ?? code
 
     logger.log("Writing '%s'...", FILE_PATH)
     await save(code)
@@ -121,30 +121,31 @@ function restoreRanges(data: string): number[] {
     logger.log("Completed!")
 }
 
-main().catch(error => {
+main().catch((err) => {
+    const error = err as Error
     logger.error(error.stack)
     process.exitCode = 1
 })
 
-function processEachLine(cb: (line: string) => void): Promise<void> {
+function processEachLine(processLine: (line: string) => void): Promise<void> {
     return new Promise((resolve, reject) => {
-        http.get(DB_URL, res => {
+        http.get(DB_URL, (res) => {
             let buffer = ""
             res.setEncoding("utf8")
-            res.on("data", chunk => {
+            res.on("data", (chunk) => {
                 const lines = (buffer + String(chunk)).split("\n")
                 if (lines.length === 1) {
                     buffer = lines[0]
                 } else {
                     buffer = lines.pop()!
                     for (const line of lines) {
-                        cb(line)
+                        processLine(line)
                     }
                 }
             })
             res.on("end", () => {
                 if (buffer) {
-                    cb(buffer)
+                    processLine(buffer)
                 }
                 resolve()
             })
@@ -189,8 +190,12 @@ function makeInitLargeIdRanges(ranges: [number, number][]): string {
 
 function save(content: string): Promise<void> {
     return new Promise((resolve, reject) => {
-        fs.writeFile(FILE_PATH, content, error =>
-            error ? reject(error) : resolve(),
-        )
+        fs.writeFile(FILE_PATH, content, (error) => {
+            if (error) {
+                reject(error)
+            } else {
+                resolve()
+            }
+        })
     })
 }

@@ -7,52 +7,51 @@ export type Node = BranchNode | LeafNode
  * The type which includes all branch nodes.
  */
 export type BranchNode =
-    | RegExpLiteral
-    | Pattern
     | Alternative
-    | Group
     | CapturingGroup
-    | Quantifier
     | CharacterClass
-    | LookaroundAssertion
     | CharacterClassRange
+    | Group
+    | LookaroundAssertion
+    | Pattern
+    | Quantifier
+    | RegExpLiteral
 
 /**
  * The type which includes all leaf nodes.
  */
 export type LeafNode =
-    | BoundaryAssertion
-    | CharacterSet
-    | Character
     | Backreference
+    | BoundaryAssertion
+    | Character
+    | CharacterSet
     | Flags
 
 /**
  * The type which includes all atom nodes.
  */
-export type Element = Assertion | Quantifier | QuantifiableElement
+export type Element = Assertion | QuantifiableElement | Quantifier
 
 /**
  * The type which includes all atom nodes that Quantifier node can have as children.
  */
 export type QuantifiableElement =
-    | Group
+    | Backreference
     | CapturingGroup
+    | Character
     | CharacterClass
     | CharacterSet
-    | Character
-    | Backreference
-    // Lookahead assertions is quantifiable in Annex-B.
+    | Group
     | LookaheadAssertion
 
 /**
  * The type which includes all character class atom nodes.
  */
 export type CharacterClassElement =
-    | EscapeCharacterSet
-    | UnicodePropertyCharacterSet
     | Character
     | CharacterClassRange
+    | EscapeCharacterSet
+    | UnicodePropertyCharacterSet
 
 /**
  * The type which defines common properties for all node types.
@@ -95,7 +94,7 @@ export interface Pattern extends NodeBase {
  */
 export interface Alternative extends NodeBase {
     type: "Alternative"
-    parent: Pattern | Group | CapturingGroup | LookaroundAssertion
+    parent: CapturingGroup | Group | LookaroundAssertion | Pattern
     elements: Element[]
 }
 
@@ -202,7 +201,7 @@ export type BoundaryAssertion = EdgeAssertion | WordBoundaryAssertion
 export interface EdgeAssertion extends NodeBase {
     type: "Assertion"
     parent: Alternative | Quantifier
-    kind: "start" | "end"
+    kind: "end" | "start"
 }
 
 /**
@@ -240,7 +239,7 @@ export interface AnyCharacterSet extends NodeBase {
  */
 export interface EscapeCharacterSet extends NodeBase {
     type: "CharacterSet"
-    parent: Alternative | Quantifier | CharacterClass
+    parent: Alternative | CharacterClass | Quantifier
     kind: "digit" | "space" | "word"
     negate: boolean
 }
@@ -251,7 +250,7 @@ export interface EscapeCharacterSet extends NodeBase {
  */
 export interface UnicodePropertyCharacterSet extends NodeBase {
     type: "CharacterSet"
-    parent: Alternative | Quantifier | CharacterClass
+    parent: Alternative | CharacterClass | Quantifier
     kind: "property"
     key: string
     value: string | null
@@ -265,7 +264,7 @@ export interface UnicodePropertyCharacterSet extends NodeBase {
  */
 export interface Character extends NodeBase {
     type: "Character"
-    parent: Alternative | Quantifier | CharacterClass | CharacterClassRange
+    parent: Alternative | CharacterClass | CharacterClassRange | Quantifier
     value: number // a code point.
 }
 

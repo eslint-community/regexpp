@@ -1,4 +1,6 @@
-import { AST, parseRegExpLiteral, visitRegExpAST } from "../src/index"
+import type { AST } from "../src/index"
+import { parseRegExpLiteral, visitRegExpAST } from "../src/index"
+import type { RegExpSyntaxError } from "../src/regexp-syntax-error"
 import * as Parser from "../test/fixtures/parser/literal"
 import * as Visitor from "../test/fixtures/visitor"
 import { cloneWithoutCircular } from "./clone-without-circular"
@@ -12,8 +14,9 @@ for (const filename of Object.keys(Parser.Fixtures)) {
             const ast = parseRegExpLiteral(pattern, options)
             fixture.patterns[pattern] = { ast: cloneWithoutCircular(ast) }
         } catch (err) {
+            const error = err as RegExpSyntaxError
             fixture.patterns[pattern] = {
-                error: { message: err.message, index: err.index },
+                error: { message: error.message, index: error.index },
             }
         }
     }

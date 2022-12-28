@@ -1,4 +1,4 @@
-import {
+import type {
     Alternative,
     Assertion,
     Backreference,
@@ -75,7 +75,9 @@ export class RegExpVisitor {
                 this.visitRegExpLiteral(node)
                 break
             default:
-                throw new Error(`Unknown type: ${(node as any).type}`)
+                throw new Error(
+                    `Unknown type: ${(node as Pick<Node, "type">).type}`,
+                )
         }
     }
 
@@ -88,6 +90,7 @@ export class RegExpVisitor {
             this._handlers.onAlternativeLeave(node)
         }
     }
+
     private visitAssertion(node: Assertion): void {
         if (this._handlers.onAssertionEnter) {
             this._handlers.onAssertionEnter(node)
@@ -99,6 +102,7 @@ export class RegExpVisitor {
             this._handlers.onAssertionLeave(node)
         }
     }
+
     private visitBackreference(node: Backreference): void {
         if (this._handlers.onBackreferenceEnter) {
             this._handlers.onBackreferenceEnter(node)
@@ -107,6 +111,7 @@ export class RegExpVisitor {
             this._handlers.onBackreferenceLeave(node)
         }
     }
+
     private visitCapturingGroup(node: CapturingGroup): void {
         if (this._handlers.onCapturingGroupEnter) {
             this._handlers.onCapturingGroupEnter(node)
@@ -116,6 +121,7 @@ export class RegExpVisitor {
             this._handlers.onCapturingGroupLeave(node)
         }
     }
+
     private visitCharacter(node: Character): void {
         if (this._handlers.onCharacterEnter) {
             this._handlers.onCharacterEnter(node)
@@ -124,6 +130,7 @@ export class RegExpVisitor {
             this._handlers.onCharacterLeave(node)
         }
     }
+
     private visitCharacterClass(node: CharacterClass): void {
         if (this._handlers.onCharacterClassEnter) {
             this._handlers.onCharacterClassEnter(node)
@@ -133,6 +140,7 @@ export class RegExpVisitor {
             this._handlers.onCharacterClassLeave(node)
         }
     }
+
     private visitCharacterClassRange(node: CharacterClassRange): void {
         if (this._handlers.onCharacterClassRangeEnter) {
             this._handlers.onCharacterClassRangeEnter(node)
@@ -143,6 +151,7 @@ export class RegExpVisitor {
             this._handlers.onCharacterClassRangeLeave(node)
         }
     }
+
     private visitCharacterSet(node: CharacterSet): void {
         if (this._handlers.onCharacterSetEnter) {
             this._handlers.onCharacterSetEnter(node)
@@ -151,6 +160,7 @@ export class RegExpVisitor {
             this._handlers.onCharacterSetLeave(node)
         }
     }
+
     private visitFlags(node: Flags): void {
         if (this._handlers.onFlagsEnter) {
             this._handlers.onFlagsEnter(node)
@@ -159,6 +169,7 @@ export class RegExpVisitor {
             this._handlers.onFlagsLeave(node)
         }
     }
+
     private visitGroup(node: Group): void {
         if (this._handlers.onGroupEnter) {
             this._handlers.onGroupEnter(node)
@@ -168,6 +179,7 @@ export class RegExpVisitor {
             this._handlers.onGroupLeave(node)
         }
     }
+
     private visitPattern(node: Pattern): void {
         if (this._handlers.onPatternEnter) {
             this._handlers.onPatternEnter(node)
@@ -177,6 +189,7 @@ export class RegExpVisitor {
             this._handlers.onPatternLeave(node)
         }
     }
+
     private visitQuantifier(node: Quantifier): void {
         if (this._handlers.onQuantifierEnter) {
             this._handlers.onQuantifierEnter(node)
@@ -186,6 +199,7 @@ export class RegExpVisitor {
             this._handlers.onQuantifierLeave(node)
         }
     }
+
     private visitRegExpLiteral(node: RegExpLiteral): void {
         if (this._handlers.onRegExpLiteralEnter) {
             this._handlers.onRegExpLiteralEnter(node)
@@ -200,31 +214,31 @@ export class RegExpVisitor {
 
 export namespace RegExpVisitor {
     export interface Handlers {
-        onAlternativeEnter?(node: Alternative): void
-        onAlternativeLeave?(node: Alternative): void
-        onAssertionEnter?(node: Assertion): void
-        onAssertionLeave?(node: Assertion): void
-        onBackreferenceEnter?(node: Backreference): void
-        onBackreferenceLeave?(node: Backreference): void
-        onCapturingGroupEnter?(node: CapturingGroup): void
-        onCapturingGroupLeave?(node: CapturingGroup): void
-        onCharacterEnter?(node: Character): void
-        onCharacterLeave?(node: Character): void
-        onCharacterClassEnter?(node: CharacterClass): void
-        onCharacterClassLeave?(node: CharacterClass): void
-        onCharacterClassRangeEnter?(node: CharacterClassRange): void
-        onCharacterClassRangeLeave?(node: CharacterClassRange): void
-        onCharacterSetEnter?(node: CharacterSet): void
-        onCharacterSetLeave?(node: CharacterSet): void
-        onFlagsEnter?(node: Flags): void
-        onFlagsLeave?(node: Flags): void
-        onGroupEnter?(node: Group): void
-        onGroupLeave?(node: Group): void
-        onPatternEnter?(node: Pattern): void
-        onPatternLeave?(node: Pattern): void
-        onQuantifierEnter?(node: Quantifier): void
-        onQuantifierLeave?(node: Quantifier): void
-        onRegExpLiteralEnter?(node: RegExpLiteral): void
-        onRegExpLiteralLeave?(node: RegExpLiteral): void
+        onAlternativeEnter?: (node: Alternative) => void
+        onAlternativeLeave?: (node: Alternative) => void
+        onAssertionEnter?: (node: Assertion) => void
+        onAssertionLeave?: (node: Assertion) => void
+        onBackreferenceEnter?: (node: Backreference) => void
+        onBackreferenceLeave?: (node: Backreference) => void
+        onCapturingGroupEnter?: (node: CapturingGroup) => void
+        onCapturingGroupLeave?: (node: CapturingGroup) => void
+        onCharacterEnter?: (node: Character) => void
+        onCharacterLeave?: (node: Character) => void
+        onCharacterClassEnter?: (node: CharacterClass) => void
+        onCharacterClassLeave?: (node: CharacterClass) => void
+        onCharacterClassRangeEnter?: (node: CharacterClassRange) => void
+        onCharacterClassRangeLeave?: (node: CharacterClassRange) => void
+        onCharacterSetEnter?: (node: CharacterSet) => void
+        onCharacterSetLeave?: (node: CharacterSet) => void
+        onFlagsEnter?: (node: Flags) => void
+        onFlagsLeave?: (node: Flags) => void
+        onGroupEnter?: (node: Group) => void
+        onGroupLeave?: (node: Group) => void
+        onPatternEnter?: (node: Pattern) => void
+        onPatternLeave?: (node: Pattern) => void
+        onQuantifierEnter?: (node: Quantifier) => void
+        onQuantifierLeave?: (node: Quantifier) => void
+        onRegExpLiteralEnter?: (node: RegExpLiteral) => void
+        onRegExpLiteralLeave?: (node: RegExpLiteral) => void
     }
 }

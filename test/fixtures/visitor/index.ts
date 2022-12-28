@@ -1,8 +1,9 @@
 import fs from "fs"
 import path from "path"
 
-type FixtureData = {
-    [filename: string]: {
+type FixtureData = Record<
+    string,
+    {
         options: {
             strict?: boolean
             ecmaVersion?:
@@ -16,21 +17,19 @@ type FixtureData = {
                 | 2021
                 | 2022
         }
-        patterns: {
-            [source: string]: string[]
-        }
+        patterns: Record<string, string[]>
     }
-}
+>
 const fixturesRoot = __dirname
 
 export const Fixtures: FixtureData = fs
     .readdirSync(fixturesRoot)
-    .filter(filename => path.extname(filename) === ".json")
+    .filter((filename) => path.extname(filename) === ".json")
     .reduce<FixtureData>((fixtures, filename) => {
         fixtures[filename] = JSON.parse(
             fs.readFileSync(path.join(fixturesRoot, filename), "utf8"),
-            (_, v) => (v === "$$Infinity" ? Infinity : v),
-        )
+            (_, v: unknown) => (v === "$$Infinity" ? Infinity : v),
+        ) as FixtureData[string]
         return fixtures
     }, {})
 export function save(): void {
@@ -39,7 +38,7 @@ export function save(): void {
             path.join(fixturesRoot, filename),
             JSON.stringify(
                 Fixtures[filename],
-                (_, v) => (v === Infinity ? "$$Infinity" : v),
+                (_, v: unknown) => (v === Infinity ? "$$Infinity" : v),
                 2,
             ),
         )

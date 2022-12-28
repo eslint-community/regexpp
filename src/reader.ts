@@ -17,15 +17,25 @@ const unicodeImpl = {
 
 export class Reader {
     private _impl = legacyImpl
+
     private _s = ""
+
     private _i = 0
+
     private _end = 0
+
     private _cp1 = -1
+
     private _w1 = 1
+
     private _cp2 = -1
+
     private _w2 = 1
+
     private _cp3 = -1
+
     private _w3 = 1
+
     private _cp4 = -1
 
     public get source(): string {

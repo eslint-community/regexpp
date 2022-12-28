@@ -1,6 +1,6 @@
 root: true
 extends:
-  - plugin:@mysticatea/es2018
+  - plugin:@eslint-community/mysticatea/es2018
 parserOptions:
   project: tsconfig.eslint.json
 settings:
@@ -11,7 +11,15 @@ rules:
   # tsc does.
   "no-redeclare": "off"
   # https://github.com/typescript-eslint/typescript-eslint/issues/743
-  "@mysticatea/ts/unbound-method": "off"
+  "@eslint-community/mysticatea/ts/unbound-method": "off"
+
+  # Temporary disabled rules
+  "@eslint-community/mysticatea/ts/naming-convention": "off"
+  "@eslint-community/mysticatea/ts/prefer-readonly-parameter-types": "off"
+  # Should be fixed by `@eslint-community/eslint-plugin-mysticatea`
+  "no-duplicate-imports": "off"
+  "@eslint-community/mysticatea/ts/no-duplicate-imports":
+    ["error", { includeExports: true }]
 
 overrides:
   - files: "./src/unicode/ids.ts"
@@ -20,4 +28,4 @@ overrides:
       no-misleading-character-class: "off"
   - files: "./src/unicode/property-data.ts"
     rules:
-      "@mysticatea/ts/camelcase": "off"
+      "@eslint-community/mysticatea/ts/camelcase": "off"

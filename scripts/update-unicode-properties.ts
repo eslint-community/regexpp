@@ -1,5 +1,6 @@
 import fs from "fs"
-import { JSDOM, DOMWindow } from "jsdom"
+import type { DOMWindow } from "jsdom"
+import { JSDOM } from "jsdom"
 import { CLIEngine } from "eslint"
 
 const DataSources = [
@@ -43,7 +44,7 @@ type Datum = {
 
 // Main
 ;(async () => {
-    const data: Record<number, Datum> = Object.create(null)
+    const data: Record<number, Datum> = {}
     const existing = {
         binProperties: new Set<string>(),
         gcValues: new Set<string>(),
@@ -70,12 +71,13 @@ type Datum = {
             try {
                 logger.log("Fetching data from %o", url)
                 ;({ window } = await JSDOM.fromURL(url))
-            } catch (error) {
+            } catch (err) {
+                const error = err as Error
                 if (!error || error.message !== "Error: socket hang up") {
                     throw error
                 }
                 logger.log(error.message, "then retry.")
-                await new Promise(resolve => setTimeout(resolve, 2000))
+                await new Promise((resolve) => setTimeout(resolve, 2000))
             }
         } while (window == null)
 
@@ -99,13 +101,13 @@ ${makeClassDeclarationCode(Object.keys(data))}
 const gcNameSet = new Set(["General_Category", "gc"])
 const scNameSet = new Set(["Script", "Script_Extensions", "sc", "scx"])
 const gcValueSets = new DataSet(${Object.values(data)
-        .map(d => makeDataCode(d.gcValues))
+        .map((d) => makeDataCode(d.gcValues))
         .join(",")})
 const scValueSets = new DataSet(${Object.values(data)
-        .map(d => makeDataCode(d.scValues))
+        .map((d) => makeDataCode(d.scValues))
         .join(",")})
 const binPropertySets = new DataSet(${Object.values(data)
-        .map(d => makeDataCode(d.binProperties))
+        .map((d) => makeDataCode(d.binProperties))
         .join(",")})
 
 export function isValidUnicodeProperty(version: number, name: string, value: string): boolean {
@@ -141,26 +143,27 @@ export function isValidLoneUnicodeProperty(version: number, value: string): bool
     logger.log("Formatting code...")
     const engine = new CLIEngine({ fix: true })
     const result = engine.executeOnText(code, "properties.ts").results[0]
-    code = result.output || code
+    code = result.output ?? code
 
     logger.log("Writing '%s'...", FILE_PATH)
     await save(code)
 
     logger.log("Completed!")
-})().catch(error => {
+})().catch((err) => {
+    const error = err as Error
     logger.error(error.stack)
     process.exitCode = 1
 })
 
 function collectValues(
-    window: Window,
+    window: DOMWindow,
     id: string,
     existingSet: Set<string>,
 ): string[] {
     const selector = `${id} td:nth-child(1) code`
     const nodes = window.document.querySelectorAll(selector)
-    const values = Array.from(nodes, node => node.textContent || "")
-        .filter(value => {
+    const values = Array.from(nodes, (node) => node.textContent ?? "")
+        .filter((value) => {
             if (existingSet.has(value)) {
                 return false
             }
@@ -183,15 +186,15 @@ function collectValues(
 function makeClassDeclarationCode(versions: string[]): string {
     const fields = versions
         .map(
-            v =>
+            (v) =>
                 `private _raw${v}: string\nprivate _set${v}: Set<string> | undefined`,
         )
         .join("\n")
-    const parameters = versions.map(v => `raw${v}: string`).join(", ")
-    const init = versions.map(v => `this._raw${v} = raw${v}`).join("\n")
+    const parameters = versions.map((v) => `raw${v}: string`).join(", ")
+    const init = versions.map((v) => `this._raw${v} = raw${v}`).join("\n")
     const getters = versions
         .map(
-            v =>
+            (v) =>
                 `public get es${v}(): Set<string> { return this._set${v} || (this._set${v} = new Set(this._raw${v}.split(" "))) }`,
         )
         .join("\n")
@@ -209,7 +212,7 @@ function makeClassDeclarationCode(versions: string[]): string {
 
 function makeDataCode(values: string[]): string {
     return `"${values
-        .map(value => JSON.stringify(value).slice(1, -1))
+        .map((value) => JSON.stringify(value).slice(1, -1))
         .join(" ")}"`
 }
 
@@ -227,8 +230,12 @@ function makeVerificationCode(
 
 function save(content: string): Promise<void> {
     return new Promise((resolve, reject) => {
-        fs.writeFile(FILE_PATH, content, error =>
-            error ? reject(error) : resolve(),
-        )
+        fs.writeFile(FILE_PATH, content, (error) => {
+            if (error) {
+                reject(error)
+            } else {
+                resolve()
+            }
+        })
     })
 }
