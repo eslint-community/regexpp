@@ -23,7 +23,7 @@
     "@types/eslint": "^6.8.1",
     "@types/jsdom": "^16.2.15",
     "@types/mocha": "^9.1.1",
-    "@types/node": "^12.20.55",
+    "@types/node": "^18.11.18",
     "dts-bundle": "^0.7.3",
     "eslint": "^6.8.0",
     "jsdom": "^19.0.0",
