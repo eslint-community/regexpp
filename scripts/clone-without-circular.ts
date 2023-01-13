@@ -1,3 +1,11 @@
+// Suppresses reporting of unsafe types due to frequent use of any.
+/* eslint
+    "@eslint-community/mysticatea/eslint-comments/no-use": "off",
+    "@eslint-community/mysticatea/ts/no-unsafe-argument": "off",
+    "@eslint-community/mysticatea/ts/no-unsafe-assignment": "off",
+    "@eslint-community/mysticatea/ts/no-unsafe-return": "off",
+    "@eslint-community/mysticatea/ts/no-unsafe-member-access": "off"
+*/
 import { posix } from "path"
 
 function resolveLocation(

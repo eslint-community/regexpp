@@ -12,6 +12,12 @@ rules:
   "no-redeclare": "off"
   # https://github.com/typescript-eslint/typescript-eslint/issues/743
   "@eslint-community/mysticatea/ts/unbound-method": "off"
+  # TODO: Needs a lot of refactoring.
+  "@eslint-community/mysticatea/ts/prefer-readonly-parameter-types": "off"
+  "@eslint-community/mysticatea/ts/naming-convention": "off"
+  # TODO: It should be fixed by `@eslint-community/eslint-plugin-mysticatea`.
+  "no-duplicate-imports": "off"
+  "@eslint-community/mysticatea/ts/no-duplicate-imports": ["error", { includeExports: true }]
 
 overrides:
   - files: "./src/unicode/ids.ts"

@@ -140,14 +140,14 @@ export namespace RegExpValidator {
          * A function that is called when the validator entered a RegExp literal.
          * @param start The 0-based index of the first character.
          */
-        onLiteralEnter: (start: number) => void
+        onLiteralEnter?: (start: number) => void
 
         /**
          * A function that is called when the validator left a RegExp literal.
          * @param start The 0-based index of the first character.
          * @param end The next 0-based index of the last character.
          */
-        onLiteralLeave: (start: number, end: number) => void
+        onLiteralLeave?: (start: number, end: number) => void
 
         /**
          * A function that is called when the validator found flags.
@@ -161,7 +161,7 @@ export namespace RegExpValidator {
          * @param dotAll `s` flag.
          * @param hasIndices `d` flag.
          */
-        onFlags: (
+        onFlags?: (
             start: number,
             end: number,
             global: boolean,
@@ -177,34 +177,34 @@ export namespace RegExpValidator {
          * A function that is called when the validator entered a pattern.
          * @param start The 0-based index of the first character.
          */
-        onPatternEnter: (start: number) => void
+        onPatternEnter?: (start: number) => void
 
         /**
          * A function that is called when the validator left a pattern.
          * @param start The 0-based index of the first character.
          * @param end The next 0-based index of the last character.
          */
-        onPatternLeave: (start: number, end: number) => void
+        onPatternLeave?: (start: number, end: number) => void
 
         /**
          * A function that is called when the validator entered a disjunction.
          * @param start The 0-based index of the first character.
          */
-        onDisjunctionEnter: (start: number) => void
+        onDisjunctionEnter?: (start: number) => void
 
         /**
          * A function that is called when the validator left a disjunction.
          * @param start The 0-based index of the first character.
          * @param end The next 0-based index of the last character.
          */
-        onDisjunctionLeave: (start: number, end: number) => void
+        onDisjunctionLeave?: (start: number, end: number) => void
 
         /**
          * A function that is called when the validator entered an alternative.
          * @param start The 0-based index of the first character.
          * @param index The 0-based index of alternatives in a disjunction.
          */
-        onAlternativeEnter: (start: number, index: number) => void
+        onAlternativeEnter?: (start: number, index: number) => void
 
         /**
          * A function that is called when the validator left an alternative.
@@ -212,27 +212,27 @@ export namespace RegExpValidator {
          * @param end The next 0-based index of the last character.
          * @param index The 0-based index of alternatives in a disjunction.
          */
-        onAlternativeLeave: (start: number, end: number, index: number) => void
+        onAlternativeLeave?: (start: number, end: number, index: number) => void
 
         /**
          * A function that is called when the validator entered an uncapturing group.
          * @param start The 0-based index of the first character.
          */
-        onGroupEnter: (start: number) => void
+        onGroupEnter?: (start: number) => void
 
         /**
          * A function that is called when the validator left an uncapturing group.
          * @param start The 0-based index of the first character.
          * @param end The next 0-based index of the last character.
          */
-        onGroupLeave: (start: number, end: number) => void
+        onGroupLeave?: (start: number, end: number) => void
 
         /**
          * A function that is called when the validator entered a capturing group.
          * @param start The 0-based index of the first character.
          * @param name The group name.
          */
-        onCapturingGroupEnter: (start: number, name: string | null) => void
+        onCapturingGroupEnter?: (start: number, name: string | null) => void
 
         /**
          * A function that is called when the validator left a capturing group.
@@ -240,7 +240,7 @@ export namespace RegExpValidator {
          * @param end The next 0-based index of the last character.
          * @param name The group name.
          */
-        onCapturingGroupLeave: (
+        onCapturingGroupLeave?: (
             start: number,
             end: number,
             name: string | null,
@@ -254,7 +254,7 @@ export namespace RegExpValidator {
          * @param max The maximum number of repeating.
          * @param greedy The flag to choose the longest matching.
          */
-        onQuantifier: (
+        onQuantifier?: (
             start: number,
             end: number,
             min: number,
@@ -268,7 +268,7 @@ export namespace RegExpValidator {
          * @param kind The kind of the assertion.
          * @param negate The flag which represents that the assertion is negative.
          */
-        onLookaroundAssertionEnter: (
+        onLookaroundAssertionEnter?: (
             start: number,
             kind: "lookahead" | "lookbehind",
             negate: boolean,
@@ -281,7 +281,7 @@ export namespace RegExpValidator {
          * @param kind The kind of the assertion.
          * @param negate The flag which represents that the assertion is negative.
          */
-        onLookaroundAssertionLeave: (
+        onLookaroundAssertionLeave?: (
             start: number,
             end: number,
             kind: "lookahead" | "lookbehind",
@@ -294,7 +294,7 @@ export namespace RegExpValidator {
          * @param end The next 0-based index of the last character.
          * @param kind The kind of the assertion.
          */
-        onEdgeAssertion: (
+        onEdgeAssertion?: (
             start: number,
             end: number,
             kind: "end" | "start",
@@ -307,7 +307,7 @@ export namespace RegExpValidator {
          * @param kind The kind of the assertion.
          * @param negate The flag which represents that the assertion is negative.
          */
-        onWordBoundaryAssertion: (
+        onWordBoundaryAssertion?: (
             start: number,
             end: number,
             kind: "word",
@@ -320,7 +320,7 @@ export namespace RegExpValidator {
          * @param end The next 0-based index of the last character.
          * @param kind The kind of the character set.
          */
-        onAnyCharacterSet: (start: number, end: number, kind: "any") => void
+        onAnyCharacterSet?: (start: number, end: number, kind: "any") => void
 
         /**
          * A function that is called when the validator found a character set escape.
@@ -329,7 +329,7 @@ export namespace RegExpValidator {
          * @param kind The kind of the character set.
          * @param negate The flag which represents that the character set is negative.
          */
-        onEscapeCharacterSet: (
+        onEscapeCharacterSet?: (
             start: number,
             end: number,
             kind: "digit" | "space" | "word",
@@ -345,7 +345,7 @@ export namespace RegExpValidator {
          * @param value The property value.
          * @param negate The flag which represents that the character set is negative.
          */
-        onUnicodePropertyCharacterSet: (
+        onUnicodePropertyCharacterSet?: (
             start: number,
             end: number,
             kind: "property",
@@ -360,7 +360,7 @@ export namespace RegExpValidator {
          * @param end The next 0-based index of the last character.
          * @param value The code point of the character.
          */
-        onCharacter: (start: number, end: number, value: number) => void
+        onCharacter?: (start: number, end: number, value: number) => void
 
         /**
          * A function that is called when the validator found a backreference.
@@ -368,7 +368,7 @@ export namespace RegExpValidator {
          * @param end The next 0-based index of the last character.
          * @param ref The key of the referred capturing group.
          */
-        onBackreference: (
+        onBackreference?: (
             start: number,
             end: number,
             ref: number | string,
@@ -379,7 +379,7 @@ export namespace RegExpValidator {
          * @param start The 0-based index of the first character.
          * @param negate The flag which represents that the character class is negative.
          */
-        onCharacterClassEnter: (start: number, negate: boolean) => void
+        onCharacterClassEnter?: (start: number, negate: boolean) => void
 
         /**
          * A function that is called when the validator left a character class.
@@ -387,7 +387,7 @@ export namespace RegExpValidator {
          * @param end The next 0-based index of the last character.
          * @param negate The flag which represents that the character class is negative.
          */
-        onCharacterClassLeave: (
+        onCharacterClassLeave?: (
             start: number,
             end: number,
             negate: boolean,
@@ -400,7 +400,7 @@ export namespace RegExpValidator {
          * @param min The minimum code point of the range.
          * @param max The maximum code point of the range.
          */
-        onCharacterClassRange: (
+        onCharacterClassRange?: (
             start: number,
             end: number,
             min: number,
@@ -568,7 +568,7 @@ export class RegExpValidator {
     // #region Delegate for Options
 
     private get strict() {
-        return Boolean(this._options.strict ?? this._uFlag)
+        return Boolean(this._options.strict) || this._uFlag
     }
 
     private get ecmaVersion() {

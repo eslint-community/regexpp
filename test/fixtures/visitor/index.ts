@@ -28,7 +28,7 @@ export const Fixtures: FixtureData = fs
     .reduce<FixtureData>((fixtures, filename) => {
         fixtures[filename] = JSON.parse(
             fs.readFileSync(path.join(fixturesRoot, filename), "utf8"),
-            (_, v) => (v === "$$Infinity" ? Infinity : v),
+            (_, v: unknown) => (v === "$$Infinity" ? Infinity : v),
         ) as FixtureData[string]
         return fixtures
     }, {})
@@ -38,7 +38,7 @@ export function save(): void {
             path.join(fixturesRoot, filename),
             JSON.stringify(
                 Fixtures[filename],
-                (_, v) => (v === Infinity ? "$$Infinity" : v),
+                (_, v: unknown) => (v === Infinity ? "$$Infinity" : v),
                 2,
             ),
         )

@@ -214,31 +214,31 @@ export class RegExpVisitor {
 
 export namespace RegExpVisitor {
     export interface Handlers {
-        onAlternativeEnter: (node: Alternative) => void
-        onAlternativeLeave: (node: Alternative) => void
-        onAssertionEnter: (node: Assertion) => void
-        onAssertionLeave: (node: Assertion) => void
-        onBackreferenceEnter: (node: Backreference) => void
-        onBackreferenceLeave: (node: Backreference) => void
-        onCapturingGroupEnter: (node: CapturingGroup) => void
-        onCapturingGroupLeave: (node: CapturingGroup) => void
-        onCharacterEnter: (node: Character) => void
-        onCharacterLeave: (node: Character) => void
-        onCharacterClassEnter: (node: CharacterClass) => void
-        onCharacterClassLeave: (node: CharacterClass) => void
-        onCharacterClassRangeEnter: (node: CharacterClassRange) => void
-        onCharacterClassRangeLeave: (node: CharacterClassRange) => void
-        onCharacterSetEnter: (node: CharacterSet) => void
-        onCharacterSetLeave: (node: CharacterSet) => void
-        onFlagsEnter: (node: Flags) => void
-        onFlagsLeave: (node: Flags) => void
-        onGroupEnter: (node: Group) => void
-        onGroupLeave: (node: Group) => void
-        onPatternEnter: (node: Pattern) => void
-        onPatternLeave: (node: Pattern) => void
-        onQuantifierEnter: (node: Quantifier) => void
-        onQuantifierLeave: (node: Quantifier) => void
-        onRegExpLiteralEnter: (node: RegExpLiteral) => void
-        onRegExpLiteralLeave: (node: RegExpLiteral) => void
+        onAlternativeEnter?: (node: Alternative) => void
+        onAlternativeLeave?: (node: Alternative) => void
+        onAssertionEnter?: (node: Assertion) => void
+        onAssertionLeave?: (node: Assertion) => void
+        onBackreferenceEnter?: (node: Backreference) => void
+        onBackreferenceLeave?: (node: Backreference) => void
+        onCapturingGroupEnter?: (node: CapturingGroup) => void
+        onCapturingGroupLeave?: (node: CapturingGroup) => void
+        onCharacterEnter?: (node: Character) => void
+        onCharacterLeave?: (node: Character) => void
+        onCharacterClassEnter?: (node: CharacterClass) => void
+        onCharacterClassLeave?: (node: CharacterClass) => void
+        onCharacterClassRangeEnter?: (node: CharacterClassRange) => void
+        onCharacterClassRangeLeave?: (node: CharacterClassRange) => void
+        onCharacterSetEnter?: (node: CharacterSet) => void
+        onCharacterSetLeave?: (node: CharacterSet) => void
+        onFlagsEnter?: (node: Flags) => void
+        onFlagsLeave?: (node: Flags) => void
+        onGroupEnter?: (node: Group) => void
+        onGroupLeave?: (node: Group) => void
+        onPatternEnter?: (node: Pattern) => void
+        onPatternLeave?: (node: Pattern) => void
+        onQuantifierEnter?: (node: Quantifier) => void
+        onQuantifierLeave?: (node: Quantifier) => void
+        onRegExpLiteralEnter?: (node: RegExpLiteral) => void
+        onRegExpLiteralLeave?: (node: RegExpLiteral) => void
     }
 }

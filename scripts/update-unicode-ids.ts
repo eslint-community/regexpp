@@ -127,7 +127,7 @@ main().catch((err) => {
     process.exitCode = 1
 })
 
-function processEachLine(cb: (line: string) => void): Promise<void> {
+function processEachLine(consumeLine: (line: string) => void): Promise<void> {
     return new Promise((resolve, reject) => {
         http.get(DB_URL, (res) => {
             let buffer = ""
@@ -139,13 +139,13 @@ function processEachLine(cb: (line: string) => void): Promise<void> {
                 } else {
                     buffer = lines.pop()!
                     for (const line of lines) {
-                        cb(line)
+                        consumeLine(line)
                     }
                 }
             })
             res.on("end", () => {
                 if (buffer) {
-                    cb(buffer)
+                    consumeLine(buffer)
                 }
                 resolve()
             })

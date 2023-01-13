@@ -2,6 +2,7 @@ import assert from "assert"
 import { parseRegExpLiteral, RegExpParser } from "../src/index"
 import { cloneWithoutCircular } from "../scripts/clone-without-circular"
 import { Fixtures } from "./fixtures/parser/literal"
+import type { RegExpSyntaxError } from "../src/regexp-syntax-error"
 
 function generateAST(source: string, options: RegExpParser.Options): object {
     return cloneWithoutCircular(parseRegExpLiteral(source, options))
@@ -47,7 +48,8 @@ describe("parseRegExpLiteral function:", () => {
                         )
                         try {
                             parseRegExpLiteral(source, options)
-                        } catch (err) {
+                        } catch (e: any) {
+                            const err = e as RegExpSyntaxError
                             assert.strictEqual(err.message, expected.message)
                             assert.strictEqual(err.index, expected.index)
                             return

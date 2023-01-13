@@ -29,7 +29,7 @@ const fixturesRoot = path.join(__dirname, "literal")
 for (const filename of fs.readdirSync(fixturesRoot)) {
     Fixtures[filename] = JSON.parse(
         fs.readFileSync(path.join(fixturesRoot, filename), "utf8"),
-        (_, v) => (v === "$$Infinity" ? Infinity : v),
+        (_, v: unknown) => (v === "$$Infinity" ? Infinity : v),
     ) as FixtureData[string]
 }
 
@@ -39,7 +39,7 @@ export function save(): void {
             path.join(fixturesRoot, filename),
             JSON.stringify(
                 Fixtures[filename],
-                (_, v) => (v === Infinity ? "$$Infinity" : v),
+                (_, v: unknown) => (v === Infinity ? "$$Infinity" : v),
                 2,
             ),
         )
