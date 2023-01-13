@@ -1,6 +1,6 @@
 import fs from "fs"
 import http from "http"
-import { CLIEngine } from "eslint"
+import { ESLint } from "eslint"
 
 const DB_URL = "http://unicode.org/Public/UNIDATA/DerivedCoreProperties.txt"
 const FILE_PATH = "src/unicode/ids.ts"
@@ -108,11 +108,11 @@ function restoreRanges(data: string): number[] {
 `
 
     logger.log("Formatting code...")
-    const engine = new CLIEngine({
+    const engine = new ESLint({
         fix: true,
-        rules: { curly: "off" },
+        baseConfig: { rules: { curly: "off" } },
     })
-    const result = engine.executeOnText(code, "ids.ts").results[0]
+    const [result] = await engine.lintText(code, { filePath: "ids.ts" })
     code = result.output ?? code
 
     logger.log("Writing '%s'...", FILE_PATH)

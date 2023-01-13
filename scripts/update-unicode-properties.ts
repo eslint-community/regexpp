@@ -1,7 +1,7 @@
 import fs from "fs"
 import type { DOMWindow } from "jsdom"
 import { JSDOM } from "jsdom"
-import { CLIEngine } from "eslint"
+import { ESLint } from "eslint"
 
 const DataSources = [
     {
@@ -141,8 +141,8 @@ export function isValidLoneUnicodeProperty(version: number, value: string): bool
 `
 
     logger.log("Formatting code...")
-    const engine = new CLIEngine({ fix: true })
-    const result = engine.executeOnText(code, "properties.ts").results[0]
+    const engine = new ESLint({ fix: true })
+    const [result] = await engine.lintText(code, { filePath: "properties.ts" })
     code = result.output ?? code
 
     logger.log("Writing '%s'...", FILE_PATH)
