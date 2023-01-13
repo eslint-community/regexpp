@@ -69,11 +69,11 @@ export function isIdContinue(cp: number): boolean {
 }
 
 function isLargeIdStart(cp: number): boolean {
-    return isInRange(cp, largeIdStartRanges || (largeIdStartRanges = initLargeIdStartRanges()))
+    return isInRange(cp, largeIdStartRanges ?? (largeIdStartRanges = initLargeIdStartRanges()))
 }
 
 function isLargeIdContinue(cp: number): boolean {
-    return isInRange(cp, largeIdContinueRanges || (largeIdContinueRanges = initLargeIdContinueRanges()))
+    return isInRange(cp, largeIdContinueRanges ?? (largeIdContinueRanges = initLargeIdContinueRanges()))
 }
 
 function initLargeIdStartRanges(): number[] {

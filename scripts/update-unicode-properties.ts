@@ -195,7 +195,7 @@ function makeClassDeclarationCode(versions: string[]): string {
     const getters = versions
         .map(
             (v) =>
-                `public get es${v}(): Set<string> { return this._set${v} || (this._set${v} = new Set(this._raw${v}.split(" "))) }`,
+                `public get es${v}(): Set<string> { return this._set${v} ?? (this._set${v} = new Set(this._raw${v}.split(" "))) }`,
         )
         .join("\n")
 
