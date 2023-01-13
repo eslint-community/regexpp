@@ -48,7 +48,7 @@ describe("parseRegExpLiteral function:", () => {
                         )
                         try {
                             parseRegExpLiteral(source, options)
-                        } catch (e: any) {
+                        } catch (e) {
                             const err = e as RegExpSyntaxError
                             assert.strictEqual(err.message, expected.message)
                             assert.strictEqual(err.index, expected.index)

@@ -13,7 +13,7 @@ for (const filename of Object.keys(Parser.Fixtures)) {
         try {
             const ast = parseRegExpLiteral(pattern, options)
             fixture.patterns[pattern] = { ast: cloneWithoutCircular(ast) }
-        } catch (e: any) {
+        } catch (e) {
             const err = e as RegExpSyntaxError
             fixture.patterns[pattern] = {
                 error: { message: err.message, index: err.index },
