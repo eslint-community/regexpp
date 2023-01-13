@@ -1,12 +1,3 @@
-/* Temporarily disable these rules until we fix the `any` usage */
-/* eslint
-    "@eslint-community/mysticatea/eslint-comments/no-use": "off",
-    "@eslint-community/mysticatea/ts/no-unsafe-argument": "off",
-    "@eslint-community/mysticatea/ts/no-unsafe-assignment": "off",
-    "@eslint-community/mysticatea/ts/no-unsafe-member-access": "off",
-    "@eslint-community/mysticatea/ts/no-unsafe-return": "off",
-*/
-
 import { posix } from "path"
 
 function resolveLocation(
