@@ -112,7 +112,7 @@ function restoreRanges(data: string): number[] {
         fix: true,
         baseConfig: { rules: { curly: "off" } },
     })
-    const [result] = await engine.lintText(code, { filePath: "ids.ts" })
+    const [result] = await engine.lintText(code, { filePath: FILE_PATH })
     code = result.output ?? code
 
     logger.log("Writing '%s'...", FILE_PATH)

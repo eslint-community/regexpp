@@ -142,7 +142,7 @@ export function isValidLoneUnicodeProperty(version: number, value: string): bool
 
     logger.log("Formatting code...")
     const engine = new ESLint({ fix: true })
-    const [result] = await engine.lintText(code, { filePath: "properties.ts" })
+    const [result] = await engine.lintText(code, { filePath: FILE_PATH })
     code = result.output ?? code
 
     logger.log("Writing '%s'...", FILE_PATH)
