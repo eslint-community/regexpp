@@ -2,15 +2,15 @@ import assert from "assert"
 import { parseRegExpLiteral, RegExpParser } from "../src/index"
 import type { RegExpSyntaxError } from "../src/regexp-syntax-error"
 import { cloneWithoutCircular } from "../scripts/clone-without-circular"
-import { Fixtures } from "./fixtures/parser/literal"
+import { fixturesData } from "./fixtures/parser/literal"
 
 function generateAST(source: string, options: RegExpParser.Options): object {
     return cloneWithoutCircular(parseRegExpLiteral(source, options))
 }
 
 describe("parseRegExpLiteral function:", () => {
-    for (const filename of Object.keys(Fixtures)) {
-        const fixture = Fixtures[filename]
+    for (const filename of Object.keys(fixturesData)) {
+        const fixture = fixturesData[filename]
         const options = fixture.options
 
         describe(`${filename} (options=${JSON.stringify(options)})`, () => {

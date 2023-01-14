@@ -13,7 +13,7 @@ import type {
     Quantifier,
 } from "./ast"
 import type { EcmaVersion } from "./ecma-versions"
-import { HyphenMinus } from "./unicode"
+import { HYPHEN_MINUS } from "./unicode"
 import { RegExpValidator } from "./validator"
 
 type AppendableNode =
@@ -24,18 +24,18 @@ type AppendableNode =
     | LookaroundAssertion
     | Pattern
 
-const DummyPattern: Pattern = {} as Pattern
-const DummyFlags: Flags = {} as Flags
-const DummyCapturingGroup: CapturingGroup = {} as CapturingGroup
+const DUMMY_PATTERN: Pattern = {} as Pattern
+const DUMMY_FLAGS: Flags = {} as Flags
+const DUMMY_CAPTURING_GROUP: CapturingGroup = {} as CapturingGroup
 
 class RegExpParserState {
     public readonly strict: boolean
 
     public readonly ecmaVersion: EcmaVersion
 
-    private _node: AppendableNode = DummyPattern
+    private _node: AppendableNode = DUMMY_PATTERN
 
-    private _flags: Flags = DummyFlags
+    private _flags: Flags = DUMMY_FLAGS
 
     private _backreferences: Backreference[] = []
 
@@ -422,7 +422,7 @@ class RegExpParserState {
             end,
             raw: this.source.slice(start, end),
             ref,
-            resolved: DummyCapturingGroup,
+            resolved: DUMMY_CAPTURING_GROUP,
         }
         parent.elements.push(node)
         this._backreferences.push(node)
@@ -478,7 +478,7 @@ class RegExpParserState {
             min.type !== "Character" ||
             max.type !== "Character" ||
             hyphen.type !== "Character" ||
-            hyphen.value !== HyphenMinus
+            hyphen.value !== HYPHEN_MINUS
         ) {
             throw new Error("UnknownError")
         }

@@ -3,7 +3,7 @@ import type { DOMWindow } from "jsdom"
 import { JSDOM } from "jsdom"
 import { ESLint } from "eslint"
 
-const DataSources = [
+const DATA_SOURCES = [
     {
         url: "https://262.ecma-international.org/9.0",
         version: 2018,
@@ -71,7 +71,7 @@ type Datum = {
         scValues,
         url,
         version,
-    } of DataSources) {
+    } of DATA_SOURCES) {
         logger.log("---- ECMAScript %d ----", version)
         const datum: Datum = {
             binProperties: [],

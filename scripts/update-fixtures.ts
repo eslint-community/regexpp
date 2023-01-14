@@ -5,8 +5,8 @@ import * as Parser from "../test/fixtures/parser/literal"
 import * as Visitor from "../test/fixtures/visitor"
 import { cloneWithoutCircular } from "./clone-without-circular"
 
-for (const filename of Object.keys(Parser.Fixtures)) {
-    const fixture = Parser.Fixtures[filename]
+for (const filename of Object.keys(Parser.fixturesData)) {
+    const fixture = Parser.fixturesData[filename]
     const options = fixture.options
 
     for (const pattern of Object.keys(fixture.patterns)) {
@@ -24,8 +24,8 @@ for (const filename of Object.keys(Parser.Fixtures)) {
     Parser.save()
 }
 
-for (const filename of Object.keys(Visitor.Fixtures)) {
-    const fixture = Visitor.Fixtures[filename]
+for (const filename of Object.keys(Visitor.fixturesData)) {
+    const fixture = Visitor.fixturesData[filename]
     const options = fixture.options
 
     for (const pattern of Object.keys(fixture.patterns)) {

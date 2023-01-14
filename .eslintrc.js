@@ -26,8 +26,7 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint/issues/743
         "@eslint-community/mysticatea/ts/unbound-method": "off",
 
-        // Temporary disabled rules
-        "@eslint-community/mysticatea/ts/naming-convention": "off",
+        // Temporary disabled rule: Making a type stricter requires a breaking change of the types.
         "@eslint-community/mysticatea/ts/prefer-readonly-parameter-types":
             "off",
         // Should be fixed by `@eslint-community/eslint-plugin-mysticatea`

@@ -2,64 +2,64 @@ import type { EcmaVersion } from "./ecma-versions"
 import { Reader } from "./reader"
 import { RegExpSyntaxError } from "./regexp-syntax-error"
 import {
-    Asterisk,
-    Backspace,
-    CarriageReturn,
-    CharacterTabulation,
-    CircumflexAccent,
-    Colon,
-    Comma,
-    DigitNine,
-    DigitOne,
+    ASTERISK,
+    BACKSPACE,
+    CARRIAGE_RETURN,
+    CHARACTER_TABULATION,
+    CIRCUMFLEX_ACCENT,
+    COLON,
+    COMMA,
+    DIGIT_NINE,
+    DIGIT_ONE,
     digitToInt,
-    DigitZero,
-    DollarSign,
-    EqualsSign,
-    ExclamationMark,
-    FormFeed,
-    FullStop,
-    GreaterThanSign,
-    HyphenMinus,
-    LatinCapitalLetterB,
-    LatinCapitalLetterD,
-    LatinCapitalLetterP,
-    LatinCapitalLetterS,
-    LatinCapitalLetterW,
-    LatinSmallLetterB,
-    LatinSmallLetterC,
-    LatinSmallLetterD,
-    LatinSmallLetterF,
-    LatinSmallLetterG,
-    LatinSmallLetterI,
-    LatinSmallLetterK,
-    LatinSmallLetterM,
-    LatinSmallLetterN,
-    LatinSmallLetterP,
-    LatinSmallLetterR,
-    LatinSmallLetterS,
-    LatinSmallLetterT,
-    LatinSmallLetterU,
-    LatinSmallLetterV,
-    LatinSmallLetterW,
-    LatinSmallLetterX,
-    LatinSmallLetterY,
-    LeftCurlyBracket,
-    LeftParenthesis,
-    LeftSquareBracket,
-    LessThanSign,
-    LineFeed,
-    LineTabulation,
-    LowLine,
-    PlusSign,
-    QuestionMark,
-    ReverseSolidus,
-    RightCurlyBracket,
-    RightParenthesis,
-    RightSquareBracket,
-    Solidus,
-    VerticalLine,
-    ZeroWidthJoiner,
-    ZeroWidthNonJoiner,
+    DIGIT_ZERO,
+    DOLLAR_SIGN,
+    EQUALS_SIGN,
+    EXCLAMATION_MARK,
+    FORM_FEED,
+    FULL_STOP,
+    GREATER_THAN_SIGN,
+    HYPHEN_MINUS,
+    LATIN_CAPITAL_LETTER_B,
+    LATIN_CAPITAL_LETTER_D,
+    LATIN_CAPITAL_LETTER_P,
+    LATIN_CAPITAL_LETTER_S,
+    LATIN_CAPITAL_LETTER_W,
+    LATIN_SMALL_LETTER_B,
+    LATIN_SMALL_LETTER_C,
+    LATIN_SMALL_LETTER_D,
+    LATIN_SMALL_LETTER_F,
+    LATIN_SMALL_LETTER_G,
+    LATIN_SMALL_LETTER_I,
+    LATIN_SMALL_LETTER_K,
+    LATIN_SMALL_LETTER_M,
+    LATIN_SMALL_LETTER_N,
+    LATIN_SMALL_LETTER_P,
+    LATIN_SMALL_LETTER_R,
+    LATIN_SMALL_LETTER_S,
+    LATIN_SMALL_LETTER_T,
+    LATIN_SMALL_LETTER_U,
+    LATIN_SMALL_LETTER_V,
+    LATIN_SMALL_LETTER_W,
+    LATIN_SMALL_LETTER_X,
+    LATIN_SMALL_LETTER_Y,
+    LEFT_CURLY_BRACKET,
+    LEFT_PARENTHESIS,
+    LEFT_SQUARE_BRACKET,
+    LESS_THAN_SIGN,
+    LINE_FEED,
+    LINE_TABULATION,
+    LOW_LINE,
+    PLUS_SIGN,
+    QUESTION_MARK,
+    REVERSE_SOLIDUS,
+    RIGHT_CURLY_BRACKET,
+    RIGHT_PARENTHESIS,
+    RIGHT_SQUARE_BRACKET,
+    SOLIDUS,
+    VERTICAL_LINE,
+    ZERO_WIDTH_JOINER,
+    ZERO_WIDTH_NON_JOINER,
     combineSurrogatePair,
     isDecimalDigit,
     isHexDigit,
@@ -77,39 +77,39 @@ import {
 
 function isSyntaxCharacter(cp: number): boolean {
     return (
-        cp === CircumflexAccent ||
-        cp === DollarSign ||
-        cp === ReverseSolidus ||
-        cp === FullStop ||
-        cp === Asterisk ||
-        cp === PlusSign ||
-        cp === QuestionMark ||
-        cp === LeftParenthesis ||
-        cp === RightParenthesis ||
-        cp === LeftSquareBracket ||
-        cp === RightSquareBracket ||
-        cp === LeftCurlyBracket ||
-        cp === RightCurlyBracket ||
-        cp === VerticalLine
+        cp === CIRCUMFLEX_ACCENT ||
+        cp === DOLLAR_SIGN ||
+        cp === REVERSE_SOLIDUS ||
+        cp === FULL_STOP ||
+        cp === ASTERISK ||
+        cp === PLUS_SIGN ||
+        cp === QUESTION_MARK ||
+        cp === LEFT_PARENTHESIS ||
+        cp === RIGHT_PARENTHESIS ||
+        cp === LEFT_SQUARE_BRACKET ||
+        cp === RIGHT_SQUARE_BRACKET ||
+        cp === LEFT_CURLY_BRACKET ||
+        cp === RIGHT_CURLY_BRACKET ||
+        cp === VERTICAL_LINE
     )
 }
 
 function isRegExpIdentifierStart(cp: number): boolean {
-    return isIdStart(cp) || cp === DollarSign || cp === LowLine
+    return isIdStart(cp) || cp === DOLLAR_SIGN || cp === LOW_LINE
 }
 
 function isRegExpIdentifierPart(cp: number): boolean {
     return (
         isIdContinue(cp) ||
-        cp === DollarSign ||
-        cp === LowLine ||
-        cp === ZeroWidthNonJoiner ||
-        cp === ZeroWidthJoiner
+        cp === DOLLAR_SIGN ||
+        cp === LOW_LINE ||
+        cp === ZERO_WIDTH_NON_JOINER ||
+        cp === ZERO_WIDTH_JOINER
     )
 }
 
 function isUnicodePropertyNameCharacter(cp: number): boolean {
-    return isLatinLetter(cp) || cp === LowLine
+    return isLatinLetter(cp) || cp === LOW_LINE
 }
 
 function isUnicodePropertyValueCharacter(cp: number): boolean {
@@ -464,7 +464,7 @@ export class RegExpValidator {
         this.reset(source, start, end)
 
         this.onLiteralEnter(start)
-        if (this.eat(Solidus) && this.eatRegExpBody() && this.eat(Solidus)) {
+        if (this.eat(SOLIDUS) && this.eatRegExpBody() && this.eat(SOLIDUS)) {
             const flagStart = this.index
             const uFlag = source.includes("u", flagStart)
             this.validateFlags(source, flagStart, end)
@@ -505,19 +505,31 @@ export class RegExpValidator {
             }
             existingFlags.add(flag)
 
-            if (flag === LatinSmallLetterG) {
+            if (flag === LATIN_SMALL_LETTER_G) {
                 global = true
-            } else if (flag === LatinSmallLetterI) {
+            } else if (flag === LATIN_SMALL_LETTER_I) {
                 ignoreCase = true
-            } else if (flag === LatinSmallLetterM) {
+            } else if (flag === LATIN_SMALL_LETTER_M) {
                 multiline = true
-            } else if (flag === LatinSmallLetterU && this.ecmaVersion >= 2015) {
+            } else if (
+                flag === LATIN_SMALL_LETTER_U &&
+                this.ecmaVersion >= 2015
+            ) {
                 unicode = true
-            } else if (flag === LatinSmallLetterY && this.ecmaVersion >= 2015) {
+            } else if (
+                flag === LATIN_SMALL_LETTER_Y &&
+                this.ecmaVersion >= 2015
+            ) {
                 sticky = true
-            } else if (flag === LatinSmallLetterS && this.ecmaVersion >= 2018) {
+            } else if (
+                flag === LATIN_SMALL_LETTER_S &&
+                this.ecmaVersion >= 2018
+            ) {
                 dotAll = true
-            } else if (flag === LatinSmallLetterD && this.ecmaVersion >= 2022) {
+            } else if (
+                flag === LATIN_SMALL_LETTER_D &&
+                this.ecmaVersion >= 2022
+            ) {
                 hasIndices = true
             } else {
                 this.raise(`Invalid flag '${source[i]}'`)
@@ -892,15 +904,15 @@ export class RegExpValidator {
             }
             if (escaped) {
                 escaped = false
-            } else if (cp === ReverseSolidus) {
+            } else if (cp === REVERSE_SOLIDUS) {
                 escaped = true
-            } else if (cp === LeftSquareBracket) {
+            } else if (cp === LEFT_SQUARE_BRACKET) {
                 inClass = true
-            } else if (cp === RightSquareBracket) {
+            } else if (cp === RIGHT_SQUARE_BRACKET) {
                 inClass = false
             } else if (
-                (cp === Solidus && !inClass) ||
-                (cp === Asterisk && this.index === start)
+                (cp === SOLIDUS && !inClass) ||
+                (cp === ASTERISK && this.index === start)
             ) {
                 break
             }
@@ -928,13 +940,13 @@ export class RegExpValidator {
 
         const cp = this.currentCodePoint
         if (this.currentCodePoint !== -1) {
-            if (cp === RightParenthesis) {
+            if (cp === RIGHT_PARENTHESIS) {
                 this.raise("Unmatched ')'")
             }
-            if (cp === ReverseSolidus) {
+            if (cp === REVERSE_SOLIDUS) {
                 this.raise("\\ at end of pattern")
             }
-            if (cp === RightSquareBracket || cp === RightCurlyBracket) {
+            if (cp === RIGHT_SQUARE_BRACKET || cp === RIGHT_CURLY_BRACKET) {
                 this.raise("Lone quantifier brackets")
             }
             const c = String.fromCodePoint(cp)
@@ -962,19 +974,19 @@ export class RegExpValidator {
         while ((cp = this.currentCodePoint) !== -1) {
             if (escaped) {
                 escaped = false
-            } else if (cp === ReverseSolidus) {
+            } else if (cp === REVERSE_SOLIDUS) {
                 escaped = true
-            } else if (cp === LeftSquareBracket) {
+            } else if (cp === LEFT_SQUARE_BRACKET) {
                 inClass = true
-            } else if (cp === RightSquareBracket) {
+            } else if (cp === RIGHT_SQUARE_BRACKET) {
                 inClass = false
             } else if (
-                cp === LeftParenthesis &&
+                cp === LEFT_PARENTHESIS &&
                 !inClass &&
-                (this.nextCodePoint !== QuestionMark ||
-                    (this.nextCodePoint2 === LessThanSign &&
-                        this.nextCodePoint3 !== EqualsSign &&
-                        this.nextCodePoint3 !== ExclamationMark))
+                (this.nextCodePoint !== QUESTION_MARK ||
+                    (this.nextCodePoint2 === LESS_THAN_SIGN &&
+                        this.nextCodePoint3 !== EQUALS_SIGN &&
+                        this.nextCodePoint3 !== EXCLAMATION_MARK))
             ) {
                 count += 1
             }
@@ -1000,12 +1012,12 @@ export class RegExpValidator {
         this.onDisjunctionEnter(start)
         do {
             this.consumeAlternative(i++)
-        } while (this.eat(VerticalLine))
+        } while (this.eat(VERTICAL_LINE))
 
         if (this.consumeQuantifier(true)) {
             this.raise("Nothing to repeat")
         }
-        if (this.eat(LeftCurlyBracket)) {
+        if (this.eat(LEFT_CURLY_BRACKET)) {
             this.raise("Lone quantifier brackets")
         }
         this.onDisjunctionLeave(start, this.index)
@@ -1094,33 +1106,36 @@ export class RegExpValidator {
         this._lastAssertionIsQuantifiable = false
 
         // ^, $, \B \b
-        if (this.eat(CircumflexAccent)) {
+        if (this.eat(CIRCUMFLEX_ACCENT)) {
             this.onEdgeAssertion(start, this.index, "start")
             return true
         }
-        if (this.eat(DollarSign)) {
+        if (this.eat(DOLLAR_SIGN)) {
             this.onEdgeAssertion(start, this.index, "end")
             return true
         }
-        if (this.eat2(ReverseSolidus, LatinCapitalLetterB)) {
+        if (this.eat2(REVERSE_SOLIDUS, LATIN_CAPITAL_LETTER_B)) {
             this.onWordBoundaryAssertion(start, this.index, "word", true)
             return true
         }
-        if (this.eat2(ReverseSolidus, LatinSmallLetterB)) {
+        if (this.eat2(REVERSE_SOLIDUS, LATIN_SMALL_LETTER_B)) {
             this.onWordBoundaryAssertion(start, this.index, "word", false)
             return true
         }
 
         // Lookahead / Lookbehind
-        if (this.eat2(LeftParenthesis, QuestionMark)) {
+        if (this.eat2(LEFT_PARENTHESIS, QUESTION_MARK)) {
             const lookbehind =
-                this.ecmaVersion >= 2018 && this.eat(LessThanSign)
+                this.ecmaVersion >= 2018 && this.eat(LESS_THAN_SIGN)
             let negate = false
-            if (this.eat(EqualsSign) || (negate = this.eat(ExclamationMark))) {
+            if (
+                this.eat(EQUALS_SIGN) ||
+                (negate = this.eat(EXCLAMATION_MARK))
+            ) {
                 const kind = lookbehind ? "lookbehind" : "lookahead"
                 this.onLookaroundAssertionEnter(start, kind, negate)
                 this.consumeDisjunction()
-                if (!this.eat(RightParenthesis)) {
+                if (!this.eat(RIGHT_PARENTHESIS)) {
                     this.raise("Unterminated group")
                 }
                 this._lastAssertionIsQuantifiable = !lookbehind && !this.strict
@@ -1157,13 +1172,13 @@ export class RegExpValidator {
         let greedy = false
 
         // QuantifierPrefix
-        if (this.eat(Asterisk)) {
+        if (this.eat(ASTERISK)) {
             min = 0
             max = Number.POSITIVE_INFINITY
-        } else if (this.eat(PlusSign)) {
+        } else if (this.eat(PLUS_SIGN)) {
             min = 1
             max = Number.POSITIVE_INFINITY
-        } else if (this.eat(QuestionMark)) {
+        } else if (this.eat(QUESTION_MARK)) {
             min = 0
             max = 1
         } else if (this.eatBracedQuantifier(noConsume)) {
@@ -1174,7 +1189,7 @@ export class RegExpValidator {
         }
 
         // `?`
-        greedy = !this.eat(QuestionMark)
+        greedy = !this.eat(QUESTION_MARK)
 
         if (!noConsume) {
             this.onQuantifier(start, this.index, min, max, greedy)
@@ -1195,17 +1210,17 @@ export class RegExpValidator {
      */
     private eatBracedQuantifier(noError: boolean): boolean {
         const start = this.index
-        if (this.eat(LeftCurlyBracket)) {
+        if (this.eat(LEFT_CURLY_BRACKET)) {
             this._lastMinValue = 0
             this._lastMaxValue = Number.POSITIVE_INFINITY
             if (this.eatDecimalDigits()) {
                 this._lastMinValue = this._lastMaxValue = this._lastIntValue
-                if (this.eat(Comma)) {
+                if (this.eat(COMMA)) {
                     this._lastMaxValue = this.eatDecimalDigits()
                         ? this._lastIntValue
                         : Number.POSITIVE_INFINITY
                 }
-                if (this.eat(RightCurlyBracket)) {
+                if (this.eat(RIGHT_CURLY_BRACKET)) {
                     if (!noError && this._lastMaxValue < this._lastMinValue) {
                         this.raise("numbers out of order in {} quantifier")
                     }
@@ -1252,7 +1267,7 @@ export class RegExpValidator {
      * @returns `true` if it consumed the next characters successfully.
      */
     private consumeDot(): boolean {
-        if (this.eat(FullStop)) {
+        if (this.eat(FULL_STOP)) {
             this.onAnyCharacterSet(this.index - 1, this.index, "any")
             return true
         }
@@ -1268,7 +1283,7 @@ export class RegExpValidator {
      */
     private consumeReverseSolidusAtomEscape(): boolean {
         const start = this.index
-        if (this.eat(ReverseSolidus)) {
+        if (this.eat(REVERSE_SOLIDUS)) {
             if (this.consumeAtomEscape()) {
                 return true
             }
@@ -1286,10 +1301,10 @@ export class RegExpValidator {
      */
     private consumeUncapturingGroup(): boolean {
         const start = this.index
-        if (this.eat3(LeftParenthesis, QuestionMark, Colon)) {
+        if (this.eat3(LEFT_PARENTHESIS, QUESTION_MARK, COLON)) {
             this.onGroupEnter(start)
             this.consumeDisjunction()
-            if (!this.eat(RightParenthesis)) {
+            if (!this.eat(RIGHT_PARENTHESIS)) {
                 this.raise("Unterminated group")
             }
             this.onGroupLeave(start, this.index)
@@ -1307,19 +1322,19 @@ export class RegExpValidator {
      */
     private consumeCapturingGroup(): boolean {
         const start = this.index
-        if (this.eat(LeftParenthesis)) {
+        if (this.eat(LEFT_PARENTHESIS)) {
             let name: string | null = null
             if (this.ecmaVersion >= 2018) {
                 if (this.consumeGroupSpecifier()) {
                     name = this._lastStrValue
                 }
-            } else if (this.currentCodePoint === QuestionMark) {
+            } else if (this.currentCodePoint === QUESTION_MARK) {
                 this.raise("Invalid group")
             }
 
             this.onCapturingGroupEnter(start, name)
             this.consumeDisjunction()
-            if (!this.eat(RightParenthesis)) {
+            if (!this.eat(RIGHT_PARENTHESIS)) {
                 this.raise("Unterminated group")
             }
             this.onCapturingGroupLeave(start, this.index, name)
@@ -1368,12 +1383,12 @@ export class RegExpValidator {
     private consumeReverseSolidusFollowedByC(): boolean {
         const start = this.index
         if (
-            this.currentCodePoint === ReverseSolidus &&
-            this.nextCodePoint === LatinSmallLetterC
+            this.currentCodePoint === REVERSE_SOLIDUS &&
+            this.nextCodePoint === LATIN_SMALL_LETTER_C
         ) {
             this._lastIntValue = this.currentCodePoint
             this.advance()
-            this.onCharacter(start, this.index, ReverseSolidus)
+            this.onCharacter(start, this.index, REVERSE_SOLIDUS)
             return true
         }
         return false
@@ -1431,17 +1446,17 @@ export class RegExpValidator {
         const cp = this.currentCodePoint
         if (
             cp !== -1 &&
-            cp !== CircumflexAccent &&
-            cp !== DollarSign &&
-            cp !== ReverseSolidus &&
-            cp !== FullStop &&
-            cp !== Asterisk &&
-            cp !== PlusSign &&
-            cp !== QuestionMark &&
-            cp !== LeftParenthesis &&
-            cp !== RightParenthesis &&
-            cp !== LeftSquareBracket &&
-            cp !== VerticalLine
+            cp !== CIRCUMFLEX_ACCENT &&
+            cp !== DOLLAR_SIGN &&
+            cp !== REVERSE_SOLIDUS &&
+            cp !== FULL_STOP &&
+            cp !== ASTERISK &&
+            cp !== PLUS_SIGN &&
+            cp !== QUESTION_MARK &&
+            cp !== LEFT_PARENTHESIS &&
+            cp !== RIGHT_PARENTHESIS &&
+            cp !== LEFT_SQUARE_BRACKET &&
+            cp !== VERTICAL_LINE
         ) {
             this.advance()
             this.onCharacter(start, this.index, cp)
@@ -1461,7 +1476,7 @@ export class RegExpValidator {
      * @returns `true` if the group name existed.
      */
     private consumeGroupSpecifier(): boolean {
-        if (this.eat(QuestionMark)) {
+        if (this.eat(QUESTION_MARK)) {
             if (this.eatGroupName()) {
                 if (!this._groupNames.has(this._lastStrValue)) {
                     this._groupNames.add(this._lastStrValue)
@@ -1550,32 +1565,32 @@ export class RegExpValidator {
     private consumeCharacterClassEscape(): boolean {
         const start = this.index
 
-        if (this.eat(LatinSmallLetterD)) {
+        if (this.eat(LATIN_SMALL_LETTER_D)) {
             this._lastIntValue = -1
             this.onEscapeCharacterSet(start - 1, this.index, "digit", false)
             return true
         }
-        if (this.eat(LatinCapitalLetterD)) {
+        if (this.eat(LATIN_CAPITAL_LETTER_D)) {
             this._lastIntValue = -1
             this.onEscapeCharacterSet(start - 1, this.index, "digit", true)
             return true
         }
-        if (this.eat(LatinSmallLetterS)) {
+        if (this.eat(LATIN_SMALL_LETTER_S)) {
             this._lastIntValue = -1
             this.onEscapeCharacterSet(start - 1, this.index, "space", false)
             return true
         }
-        if (this.eat(LatinCapitalLetterS)) {
+        if (this.eat(LATIN_CAPITAL_LETTER_S)) {
             this._lastIntValue = -1
             this.onEscapeCharacterSet(start - 1, this.index, "space", true)
             return true
         }
-        if (this.eat(LatinSmallLetterW)) {
+        if (this.eat(LATIN_SMALL_LETTER_W)) {
             this._lastIntValue = -1
             this.onEscapeCharacterSet(start - 1, this.index, "word", false)
             return true
         }
-        if (this.eat(LatinCapitalLetterW)) {
+        if (this.eat(LATIN_CAPITAL_LETTER_W)) {
             this._lastIntValue = -1
             this.onEscapeCharacterSet(start - 1, this.index, "word", true)
             return true
@@ -1585,14 +1600,14 @@ export class RegExpValidator {
         if (
             this._uFlag &&
             this.ecmaVersion >= 2018 &&
-            (this.eat(LatinSmallLetterP) ||
-                (negate = this.eat(LatinCapitalLetterP)))
+            (this.eat(LATIN_SMALL_LETTER_P) ||
+                (negate = this.eat(LATIN_CAPITAL_LETTER_P)))
         ) {
             this._lastIntValue = -1
             if (
-                this.eat(LeftCurlyBracket) &&
+                this.eat(LEFT_CURLY_BRACKET) &&
                 this.eatUnicodePropertyValueExpression() &&
-                this.eat(RightCurlyBracket)
+                this.eat(RIGHT_CURLY_BRACKET)
             ) {
                 this.onUnicodePropertyCharacterSet(
                     start - 1,
@@ -1653,7 +1668,7 @@ export class RegExpValidator {
      */
     private consumeKGroupName(): boolean {
         const start = this.index
-        if (this.eat(LatinSmallLetterK)) {
+        if (this.eat(LATIN_SMALL_LETTER_K)) {
             if (this.eatGroupName()) {
                 const groupName = this._lastStrValue
                 this._backreferenceNames.add(groupName)
@@ -1677,11 +1692,11 @@ export class RegExpValidator {
      */
     private consumeCharacterClass(): boolean {
         const start = this.index
-        if (this.eat(LeftSquareBracket)) {
-            const negate = this.eat(CircumflexAccent)
+        if (this.eat(LEFT_SQUARE_BRACKET)) {
+            const negate = this.eat(CIRCUMFLEX_ACCENT)
             this.onCharacterClassEnter(start, negate)
             this.consumeClassRanges()
-            if (!this.eat(RightSquareBracket)) {
+            if (!this.eat(RIGHT_SQUARE_BRACKET)) {
                 this.raise("Unterminated character class")
             }
             this.onCharacterClassLeave(start, this.index, negate)
@@ -1717,10 +1732,10 @@ export class RegExpValidator {
             const min = this._lastIntValue
 
             // Consume `-`
-            if (!this.eat(HyphenMinus)) {
+            if (!this.eat(HYPHEN_MINUS)) {
                 continue
             }
-            this.onCharacter(this.index - 1, this.index, HyphenMinus)
+            this.onCharacter(this.index - 1, this.index, HYPHEN_MINUS)
 
             // Consume the second ClassAtom
             if (!this.consumeClassAtom()) {
@@ -1762,19 +1777,26 @@ export class RegExpValidator {
         const start = this.index
         const cp = this.currentCodePoint
 
-        if (cp !== -1 && cp !== ReverseSolidus && cp !== RightSquareBracket) {
+        if (
+            cp !== -1 &&
+            cp !== REVERSE_SOLIDUS &&
+            cp !== RIGHT_SQUARE_BRACKET
+        ) {
             this.advance()
             this._lastIntValue = cp
             this.onCharacter(start, this.index, this._lastIntValue)
             return true
         }
 
-        if (this.eat(ReverseSolidus)) {
+        if (this.eat(REVERSE_SOLIDUS)) {
             if (this.consumeClassEscape()) {
                 return true
             }
-            if (!this.strict && this.currentCodePoint === LatinSmallLetterC) {
-                this._lastIntValue = ReverseSolidus
+            if (
+                !this.strict &&
+                this.currentCodePoint === LATIN_SMALL_LETTER_C
+            ) {
+                this._lastIntValue = REVERSE_SOLIDUS
                 this.onCharacter(start, this.index, this._lastIntValue)
                 return true
             }
@@ -1808,15 +1830,15 @@ export class RegExpValidator {
         const start = this.index
 
         // `b`
-        if (this.eat(LatinSmallLetterB)) {
-            this._lastIntValue = Backspace
+        if (this.eat(LATIN_SMALL_LETTER_B)) {
+            this._lastIntValue = BACKSPACE
             this.onCharacter(start - 1, this.index, this._lastIntValue)
             return true
         }
 
         // [+U] `-`
-        if (this._uFlag && this.eat(HyphenMinus)) {
-            this._lastIntValue = HyphenMinus
+        if (this._uFlag && this.eat(HYPHEN_MINUS)) {
+            this._lastIntValue = HYPHEN_MINUS
             this.onCharacter(start - 1, this.index, this._lastIntValue)
             return true
         }
@@ -1826,8 +1848,8 @@ export class RegExpValidator {
         if (
             !this.strict &&
             !this._uFlag &&
-            this.currentCodePoint === LatinSmallLetterC &&
-            (isDecimalDigit((cp = this.nextCodePoint)) || cp === LowLine)
+            this.currentCodePoint === LATIN_SMALL_LETTER_C &&
+            (isDecimalDigit((cp = this.nextCodePoint)) || cp === LOW_LINE)
         ) {
             this.advance()
             this.advance()
@@ -1851,8 +1873,8 @@ export class RegExpValidator {
      * @returns `true` if it ate the next characters successfully.
      */
     private eatGroupName(): boolean {
-        if (this.eat(LessThanSign)) {
-            if (this.eatRegExpIdentifierName() && this.eat(GreaterThanSign)) {
+        if (this.eat(LESS_THAN_SIGN)) {
+            if (this.eatRegExpIdentifierName() && this.eat(GREATER_THAN_SIGN)) {
                 return true
             }
             this.raise("Invalid capture group name")
@@ -1903,7 +1925,7 @@ export class RegExpValidator {
         this.advance()
 
         if (
-            cp === ReverseSolidus &&
+            cp === REVERSE_SOLIDUS &&
             this.eatRegExpUnicodeEscapeSequence(forceUFlag)
         ) {
             cp = this._lastIntValue
@@ -1950,7 +1972,7 @@ export class RegExpValidator {
         this.advance()
 
         if (
-            cp === ReverseSolidus &&
+            cp === REVERSE_SOLIDUS &&
             this.eatRegExpUnicodeEscapeSequence(forceUFlag)
         ) {
             cp = this._lastIntValue
@@ -1984,7 +2006,7 @@ export class RegExpValidator {
      */
     private eatCControlLetter(): boolean {
         const start = this.index
-        if (this.eat(LatinSmallLetterC)) {
+        if (this.eat(LATIN_SMALL_LETTER_C)) {
             if (this.eatControlLetter()) {
                 return true
             }
@@ -2003,7 +2025,7 @@ export class RegExpValidator {
      */
     private eatZero(): boolean {
         if (
-            this.currentCodePoint === DigitZero &&
+            this.currentCodePoint === DIGIT_ZERO &&
             !isDecimalDigit(this.nextCodePoint)
         ) {
             this._lastIntValue = 0
@@ -2024,24 +2046,24 @@ export class RegExpValidator {
      * @returns `true` if it ate the next characters successfully.
      */
     private eatControlEscape(): boolean {
-        if (this.eat(LatinSmallLetterF)) {
-            this._lastIntValue = FormFeed
+        if (this.eat(LATIN_SMALL_LETTER_F)) {
+            this._lastIntValue = FORM_FEED
             return true
         }
-        if (this.eat(LatinSmallLetterN)) {
-            this._lastIntValue = LineFeed
+        if (this.eat(LATIN_SMALL_LETTER_N)) {
+            this._lastIntValue = LINE_FEED
             return true
         }
-        if (this.eat(LatinSmallLetterR)) {
-            this._lastIntValue = CarriageReturn
+        if (this.eat(LATIN_SMALL_LETTER_R)) {
+            this._lastIntValue = CARRIAGE_RETURN
             return true
         }
-        if (this.eat(LatinSmallLetterT)) {
-            this._lastIntValue = CharacterTabulation
+        if (this.eat(LATIN_SMALL_LETTER_T)) {
+            this._lastIntValue = CHARACTER_TABULATION
             return true
         }
-        if (this.eat(LatinSmallLetterV)) {
-            this._lastIntValue = LineTabulation
+        if (this.eat(LATIN_SMALL_LETTER_V)) {
+            this._lastIntValue = LINE_TABULATION
             return true
         }
         return false
@@ -2087,7 +2109,7 @@ export class RegExpValidator {
         const start = this.index
         const uFlag = forceUFlag || this._uFlag
 
-        if (this.eat(LatinSmallLetterU)) {
+        if (this.eat(LATIN_SMALL_LETTER_U)) {
             if (
                 (uFlag && this.eatRegExpUnicodeSurrogatePairEscape()) ||
                 this.eatFixedHexDigits(4) ||
@@ -2119,8 +2141,8 @@ export class RegExpValidator {
             const lead = this._lastIntValue
             if (
                 isLeadSurrogate(lead) &&
-                this.eat(ReverseSolidus) &&
-                this.eat(LatinSmallLetterU) &&
+                this.eat(REVERSE_SOLIDUS) &&
+                this.eat(LATIN_SMALL_LETTER_U) &&
                 this.eatFixedHexDigits(4)
             ) {
                 const trail = this._lastIntValue
@@ -2148,9 +2170,9 @@ export class RegExpValidator {
         const start = this.index
 
         if (
-            this.eat(LeftCurlyBracket) &&
+            this.eat(LEFT_CURLY_BRACKET) &&
             this.eatHexDigits() &&
-            this.eat(RightCurlyBracket) &&
+            this.eat(RIGHT_CURLY_BRACKET) &&
             isValidUnicode(this._lastIntValue)
         ) {
             return true
@@ -2191,15 +2213,15 @@ export class RegExpValidator {
             return false
         }
         if (this._uFlag) {
-            return isSyntaxCharacter(cp) || cp === Solidus
+            return isSyntaxCharacter(cp) || cp === SOLIDUS
         }
         if (this.strict) {
             return !isIdContinue(cp)
         }
         if (this._nFlag) {
-            return !(cp === LatinSmallLetterC || cp === LatinSmallLetterK)
+            return !(cp === LATIN_SMALL_LETTER_C || cp === LATIN_SMALL_LETTER_K)
         }
-        return cp !== LatinSmallLetterC
+        return cp !== LATIN_SMALL_LETTER_C
     }
 
     /**
@@ -2215,13 +2237,13 @@ export class RegExpValidator {
     private eatDecimalEscape(): boolean {
         this._lastIntValue = 0
         let cp = this.currentCodePoint
-        if (cp >= DigitOne && cp <= DigitNine) {
+        if (cp >= DIGIT_ONE && cp <= DIGIT_NINE) {
             do {
-                this._lastIntValue = 10 * this._lastIntValue + (cp - DigitZero)
+                this._lastIntValue = 10 * this._lastIntValue + (cp - DIGIT_ZERO)
                 this.advance()
             } while (
-                (cp = this.currentCodePoint) >= DigitZero &&
-                cp <= DigitNine
+                (cp = this.currentCodePoint) >= DIGIT_ZERO &&
+                cp <= DIGIT_NINE
             )
             return true
         }
@@ -2244,7 +2266,7 @@ export class RegExpValidator {
         const start = this.index
 
         // UnicodePropertyName `=` UnicodePropertyValue
-        if (this.eatUnicodePropertyName() && this.eat(EqualsSign)) {
+        if (this.eatUnicodePropertyName() && this.eat(EQUALS_SIGN)) {
             this._lastKeyValue = this._lastStrValue
             if (this.eatUnicodePropertyValue()) {
                 this._lastValValue = this._lastStrValue
@@ -2351,7 +2373,7 @@ export class RegExpValidator {
      */
     private eatHexEscapeSequence(): boolean {
         const start = this.index
-        if (this.eat(LatinSmallLetterX)) {
+        if (this.eat(LATIN_SMALL_LETTER_X)) {
             if (this.eatFixedHexDigits(2)) {
                 return true
             }
@@ -2460,7 +2482,7 @@ export class RegExpValidator {
         const cp = this.currentCodePoint
         if (isOctalDigit(cp)) {
             this.advance()
-            this._lastIntValue = cp - DigitZero
+            this._lastIntValue = cp - DIGIT_ZERO
             return true
         }
         this._lastIntValue = 0

@@ -24,21 +24,21 @@ type FixtureData = Record<
     }
 >
 
-export const Fixtures: FixtureData = {}
+export const fixturesData: FixtureData = {}
 const fixturesRoot = path.join(__dirname, "literal")
 for (const filename of fs.readdirSync(fixturesRoot)) {
-    Fixtures[filename] = JSON.parse(
+    fixturesData[filename] = JSON.parse(
         fs.readFileSync(path.join(fixturesRoot, filename), "utf8"),
         (_, v: unknown) => (v === "$$Infinity" ? Infinity : v),
     ) as FixtureData[string]
 }
 
 export function save(): void {
-    for (const filename of Object.keys(Fixtures)) {
+    for (const filename of Object.keys(fixturesData)) {
         fs.writeFileSync(
             path.join(fixturesRoot, filename),
             JSON.stringify(
-                Fixtures[filename],
+                fixturesData[filename],
                 (_, v: unknown) => (v === Infinity ? "$$Infinity" : v),
                 2,
             ),

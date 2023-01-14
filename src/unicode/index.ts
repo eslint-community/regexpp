@@ -4,120 +4,120 @@ export {
     isValidUnicodeProperty,
 } from "./properties"
 
-export const Null = 0x00
-export const Backspace = 0x08
-export const CharacterTabulation = 0x09
-export const LineFeed = 0x0a
-export const LineTabulation = 0x0b
-export const FormFeed = 0x0c
-export const CarriageReturn = 0x0d
-export const ExclamationMark = 0x21
-export const DollarSign = 0x24
-export const LeftParenthesis = 0x28
-export const RightParenthesis = 0x29
-export const Asterisk = 0x2a
-export const PlusSign = 0x2b
-export const Comma = 0x2c
-export const HyphenMinus = 0x2d
-export const FullStop = 0x2e
-export const Solidus = 0x2f
-export const DigitZero = 0x30
-export const DigitOne = 0x31
-export const DigitSeven = 0x37
-export const DigitNine = 0x39
-export const Colon = 0x3a
-export const LessThanSign = 0x3c
-export const EqualsSign = 0x3d
-export const GreaterThanSign = 0x3e
-export const QuestionMark = 0x3f
-export const LatinCapitalLetterA = 0x41
-export const LatinCapitalLetterB = 0x42
-export const LatinCapitalLetterD = 0x44
-export const LatinCapitalLetterF = 0x46
-export const LatinCapitalLetterP = 0x50
-export const LatinCapitalLetterS = 0x53
-export const LatinCapitalLetterW = 0x57
-export const LatinCapitalLetterZ = 0x5a
-export const LowLine = 0x5f
-export const LatinSmallLetterA = 0x61
-export const LatinSmallLetterB = 0x62
-export const LatinSmallLetterC = 0x63
-export const LatinSmallLetterD = 0x64
-export const LatinSmallLetterF = 0x66
-export const LatinSmallLetterG = 0x67
-export const LatinSmallLetterI = 0x69
-export const LatinSmallLetterK = 0x6b
-export const LatinSmallLetterM = 0x6d
-export const LatinSmallLetterN = 0x6e
-export const LatinSmallLetterP = 0x70
-export const LatinSmallLetterR = 0x72
-export const LatinSmallLetterS = 0x73
-export const LatinSmallLetterT = 0x74
-export const LatinSmallLetterU = 0x75
-export const LatinSmallLetterV = 0x76
-export const LatinSmallLetterW = 0x77
-export const LatinSmallLetterX = 0x78
-export const LatinSmallLetterY = 0x79
-export const LatinSmallLetterZ = 0x7a
-export const LeftSquareBracket = 0x5b
-export const ReverseSolidus = 0x5c
-export const RightSquareBracket = 0x5d
-export const CircumflexAccent = 0x5e
-export const LeftCurlyBracket = 0x7b
-export const VerticalLine = 0x7c
-export const RightCurlyBracket = 0x7d
-export const ZeroWidthNonJoiner = 0x200c
-export const ZeroWidthJoiner = 0x200d
-export const LineSeparator = 0x2028
-export const ParagraphSeparator = 0x2029
+export const NULL = 0x00
+export const BACKSPACE = 0x08
+export const CHARACTER_TABULATION = 0x09
+export const LINE_FEED = 0x0a
+export const LINE_TABULATION = 0x0b
+export const FORM_FEED = 0x0c
+export const CARRIAGE_RETURN = 0x0d
+export const EXCLAMATION_MARK = 0x21
+export const DOLLAR_SIGN = 0x24
+export const LEFT_PARENTHESIS = 0x28
+export const RIGHT_PARENTHESIS = 0x29
+export const ASTERISK = 0x2a
+export const PLUS_SIGN = 0x2b
+export const COMMA = 0x2c
+export const HYPHEN_MINUS = 0x2d
+export const FULL_STOP = 0x2e
+export const SOLIDUS = 0x2f
+export const DIGIT_ZERO = 0x30
+export const DIGIT_ONE = 0x31
+export const DIGIT_SEVEN = 0x37
+export const DIGIT_NINE = 0x39
+export const COLON = 0x3a
+export const LESS_THAN_SIGN = 0x3c
+export const EQUALS_SIGN = 0x3d
+export const GREATER_THAN_SIGN = 0x3e
+export const QUESTION_MARK = 0x3f
+export const LATIN_CAPITAL_LETTER_A = 0x41
+export const LATIN_CAPITAL_LETTER_B = 0x42
+export const LATIN_CAPITAL_LETTER_D = 0x44
+export const LATIN_CAPITAL_LETTER_F = 0x46
+export const LATIN_CAPITAL_LETTER_P = 0x50
+export const LATIN_CAPITAL_LETTER_S = 0x53
+export const LATIN_CAPITAL_LETTER_W = 0x57
+export const LATIN_CAPITAL_LETTER_Z = 0x5a
+export const LOW_LINE = 0x5f
+export const LATIN_SMALL_LETTER_A = 0x61
+export const LATIN_SMALL_LETTER_B = 0x62
+export const LATIN_SMALL_LETTER_C = 0x63
+export const LATIN_SMALL_LETTER_D = 0x64
+export const LATIN_SMALL_LETTER_F = 0x66
+export const LATIN_SMALL_LETTER_G = 0x67
+export const LATIN_SMALL_LETTER_I = 0x69
+export const LATIN_SMALL_LETTER_K = 0x6b
+export const LATIN_SMALL_LETTER_M = 0x6d
+export const LATIN_SMALL_LETTER_N = 0x6e
+export const LATIN_SMALL_LETTER_P = 0x70
+export const LATIN_SMALL_LETTER_R = 0x72
+export const LATIN_SMALL_LETTER_S = 0x73
+export const LATIN_SMALL_LETTER_T = 0x74
+export const LATIN_SMALL_LETTER_U = 0x75
+export const LATIN_SMALL_LETTER_V = 0x76
+export const LATIN_SMALL_LETTER_W = 0x77
+export const LATIN_SMALL_LETTER_X = 0x78
+export const LATIN_SMALL_LETTER_Y = 0x79
+export const LATIN_SMALL_LETTER_Z = 0x7a
+export const LEFT_SQUARE_BRACKET = 0x5b
+export const REVERSE_SOLIDUS = 0x5c
+export const RIGHT_SQUARE_BRACKET = 0x5d
+export const CIRCUMFLEX_ACCENT = 0x5e
+export const LEFT_CURLY_BRACKET = 0x7b
+export const VERTICAL_LINE = 0x7c
+export const RIGHT_CURLY_BRACKET = 0x7d
+export const ZERO_WIDTH_NON_JOINER = 0x200c
+export const ZERO_WIDTH_JOINER = 0x200d
+export const LINE_SEPARATOR = 0x2028
+export const PARAGRAPH_SEPARATOR = 0x2029
 
-export const MinCodePoint = 0x00
-export const MaxCodePoint = 0x10ffff
+export const MIN_CODE_POINT = 0x00
+export const MAX_CODE_POINT = 0x10ffff
 
 export function isLatinLetter(code: number): boolean {
     return (
-        (code >= LatinCapitalLetterA && code <= LatinCapitalLetterZ) ||
-        (code >= LatinSmallLetterA && code <= LatinSmallLetterZ)
+        (code >= LATIN_CAPITAL_LETTER_A && code <= LATIN_CAPITAL_LETTER_Z) ||
+        (code >= LATIN_SMALL_LETTER_A && code <= LATIN_SMALL_LETTER_Z)
     )
 }
 
 export function isDecimalDigit(code: number): boolean {
-    return code >= DigitZero && code <= DigitNine
+    return code >= DIGIT_ZERO && code <= DIGIT_NINE
 }
 
 export function isOctalDigit(code: number): boolean {
-    return code >= DigitZero && code <= DigitSeven
+    return code >= DIGIT_ZERO && code <= DIGIT_SEVEN
 }
 
 export function isHexDigit(code: number): boolean {
     return (
-        (code >= DigitZero && code <= DigitNine) ||
-        (code >= LatinCapitalLetterA && code <= LatinCapitalLetterF) ||
-        (code >= LatinSmallLetterA && code <= LatinSmallLetterF)
+        (code >= DIGIT_ZERO && code <= DIGIT_NINE) ||
+        (code >= LATIN_CAPITAL_LETTER_A && code <= LATIN_CAPITAL_LETTER_F) ||
+        (code >= LATIN_SMALL_LETTER_A && code <= LATIN_SMALL_LETTER_F)
     )
 }
 
 export function isLineTerminator(code: number): boolean {
     return (
-        code === LineFeed ||
-        code === CarriageReturn ||
-        code === LineSeparator ||
-        code === ParagraphSeparator
+        code === LINE_FEED ||
+        code === CARRIAGE_RETURN ||
+        code === LINE_SEPARATOR ||
+        code === PARAGRAPH_SEPARATOR
     )
 }
 
 export function isValidUnicode(code: number): boolean {
-    return code >= MinCodePoint && code <= MaxCodePoint
+    return code >= MIN_CODE_POINT && code <= MAX_CODE_POINT
 }
 
 export function digitToInt(code: number): number {
-    if (code >= LatinSmallLetterA && code <= LatinSmallLetterF) {
-        return code - LatinSmallLetterA + 10
+    if (code >= LATIN_SMALL_LETTER_A && code <= LATIN_SMALL_LETTER_F) {
+        return code - LATIN_SMALL_LETTER_A + 10
     }
-    if (code >= LatinCapitalLetterA && code <= LatinCapitalLetterF) {
-        return code - LatinCapitalLetterA + 10
+    if (code >= LATIN_CAPITAL_LETTER_A && code <= LATIN_CAPITAL_LETTER_F) {
+        return code - LATIN_CAPITAL_LETTER_A + 10
     }
-    return code - DigitZero
+    return code - DIGIT_ZERO
 }
 
 export function isLeadSurrogate(code: number): boolean {

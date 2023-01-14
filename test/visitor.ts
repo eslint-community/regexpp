@@ -2,15 +2,15 @@ import assert from "assert"
 import type { AST, RegExpParser } from "../src/index"
 import { parseRegExpLiteral, visitRegExpAST } from "../src/index"
 import { cloneWithoutCircular } from "../scripts/clone-without-circular"
-import { Fixtures } from "./fixtures/visitor"
+import { fixturesData } from "./fixtures/visitor"
 
 function generateAST(source: string, options: RegExpParser.Options): AST.Node {
     return cloneWithoutCircular(parseRegExpLiteral(source, options)) as AST.Node
 }
 
 describe("visitRegExpAST function:", () => {
-    for (const filename of Object.keys(Fixtures)) {
-        const fixture = Fixtures[filename]
+    for (const filename of Object.keys(fixturesData)) {
+        const fixture = fixturesData[filename]
         const options = fixture.options
 
         describe(`${filename} (options=${JSON.stringify(options)})`, () => {

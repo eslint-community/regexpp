@@ -22,7 +22,7 @@ type FixtureData = Record<
 >
 const fixturesRoot = __dirname
 
-export const Fixtures: FixtureData = fs
+export const fixturesData: FixtureData = fs
     .readdirSync(fixturesRoot)
     .filter((filename) => path.extname(filename) === ".json")
     .reduce<FixtureData>((fixtures, filename) => {
@@ -33,11 +33,11 @@ export const Fixtures: FixtureData = fs
         return fixtures
     }, {})
 export function save(): void {
-    for (const filename of Object.keys(Fixtures)) {
+    for (const filename of Object.keys(fixturesData)) {
         fs.writeFileSync(
             path.join(fixturesRoot, filename),
             JSON.stringify(
-                Fixtures[filename],
+                fixturesData[filename],
                 (_, v: unknown) => (v === Infinity ? "$$Infinity" : v),
                 2,
             ),
