@@ -62,16 +62,26 @@ class RegExpParserState {
         return this._flags
     }
 
-    public onFlags(
+    public onRegExpFlags(
         start: number,
         end: number,
-        global: boolean,
-        ignoreCase: boolean,
-        multiline: boolean,
-        unicode: boolean,
-        sticky: boolean,
-        dotAll: boolean,
-        hasIndices: boolean,
+        {
+            global,
+            ignoreCase,
+            multiline,
+            unicode,
+            sticky,
+            dotAll,
+            hasIndices,
+        }: {
+            global: boolean
+            ignoreCase: boolean
+            multiline: boolean
+            unicode: boolean
+            sticky: boolean
+            dotAll: boolean
+            hasIndices: boolean
+        },
     ): void {
         this._flags = {
             type: "Flags",

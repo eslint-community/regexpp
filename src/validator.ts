@@ -153,6 +153,31 @@ export namespace RegExpValidator {
          * A function that is called when the validator found flags.
          * @param start The 0-based index of the first character.
          * @param end The next 0-based index of the last character.
+         * @param flags.global `g` flag.
+         * @param flags.ignoreCase `i` flag.
+         * @param flags.multiline `m` flag.
+         * @param flags.unicode `u` flag.
+         * @param flags.sticky `y` flag.
+         * @param flags.dotAll `s` flag.
+         * @param flags.hasIndices `d` flag.
+         */
+        onRegExpFlags?: (
+            start: number,
+            end: number,
+            flags: {
+                global: boolean
+                ignoreCase: boolean
+                multiline: boolean
+                unicode: boolean
+                sticky: boolean
+                dotAll: boolean
+                hasIndices: boolean
+            },
+        ) => void
+        /**
+         * A function that is called when the validator found flags.
+         * @param start The 0-based index of the first character.
+         * @param end The next 0-based index of the last character.
          * @param global `g` flag.
          * @param ignoreCase `i` flag.
          * @param multiline `m` flag.
@@ -160,6 +185,8 @@ export namespace RegExpValidator {
          * @param sticky `y` flag.
          * @param dotAll `s` flag.
          * @param hasIndices `d` flag.
+         *
+         * @deprecated Use `onRegExpFlags` instead.
          */
         onFlags?: (
             start: number,
@@ -535,9 +562,7 @@ export class RegExpValidator {
                 this.raise(`Invalid flag '${source[i]}'`)
             }
         }
-        this.onFlags(
-            start,
-            end,
+        this.onFlags(start, end, {
             global,
             ignoreCase,
             multiline,
@@ -545,7 +570,7 @@ export class RegExpValidator {
             sticky,
             dotAll,
             hasIndices,
-        )
+        })
     }
 
     /**
@@ -602,25 +627,31 @@ export class RegExpValidator {
     private onFlags(
         start: number,
         end: number,
-        global: boolean,
-        ignoreCase: boolean,
-        multiline: boolean,
-        unicode: boolean,
-        sticky: boolean,
-        dotAll: boolean,
-        hasIndices: boolean,
+        flags: {
+            global: boolean
+            ignoreCase: boolean
+            multiline: boolean
+            unicode: boolean
+            sticky: boolean
+            dotAll: boolean
+            hasIndices: boolean
+        },
     ): void {
+        if (this._options.onRegExpFlags) {
+            this._options.onRegExpFlags(start, end, flags)
+        }
+        // Backward compatibility
         if (this._options.onFlags) {
             this._options.onFlags(
                 start,
                 end,
-                global,
-                ignoreCase,
-                multiline,
-                unicode,
-                sticky,
-                dotAll,
-                hasIndices,
+                flags.global,
+                flags.ignoreCase,
+                flags.multiline,
+                flags.unicode,
+                flags.sticky,
+                flags.dotAll,
+                flags.hasIndices,
             )
         }
     }
