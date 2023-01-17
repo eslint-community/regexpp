@@ -562,7 +562,7 @@ export class RegExpValidator {
                 this.raise(`Invalid flag '${source[i]}'`)
             }
         }
-        this.onFlags(start, end, {
+        this.onRegExpFlags(start, end, {
             global,
             ignoreCase,
             multiline,
@@ -624,7 +624,7 @@ export class RegExpValidator {
         }
     }
 
-    private onFlags(
+    private onRegExpFlags(
         start: number,
         end: number,
         flags: {
