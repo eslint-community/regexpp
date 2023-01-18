@@ -39,7 +39,7 @@ jobs:
     name: 🧪 Test (Node@${{ matrix.node }})
     strategy:
       matrix:
-        node: [12.0.0, 12, 14.0.0, 14, 16.0.0, 16, 18.0.0, 18, 19]
+        node: [12.0.0, 12, 14.0.0, 14, 16.0.0, 16, 17.0.0, 17, 18.0.0, 18, 19]
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
