@@ -587,7 +587,9 @@ export class RegExpValidator {
         uFlag = false,
     ): void {
         this._uFlag = uFlag && this.ecmaVersion >= 2015
-        this._nFlag = uFlag && this.ecmaVersion >= 2018
+        this._nFlag =
+            (this._options.strict || uFlag) && this.ecmaVersion >= 2018
+
         this.reset(source, start, end)
         this.consumePattern()
 
