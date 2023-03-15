@@ -2,6 +2,8 @@ import fs from "fs"
 import type { DOMWindow } from "jsdom"
 import { JSDOM } from "jsdom"
 import { ESLint } from "eslint"
+import { getLatestUnicodeGeneralCategoryValues } from "./get-latest-unicode-general-category-values"
+import { getLatestUnicodeScriptValues } from "./get-latest-unicode-script-values"
 
 const DATA_SOURCES = [
     {
@@ -43,8 +45,8 @@ const DATA_SOURCES = [
         url: "https://tc39.es/ecma262/multipage/text-processing.html",
         version: 2023,
         binProperties: "#table-binary-unicode-properties",
-        gcValues: "#table-unicode-general-category-values",
-        scValues: "#table-unicode-script-values",
+        gcValues: getLatestUnicodeGeneralCategoryValues,
+        scValues: getLatestUnicodeScriptValues,
     },
 ]
 const FILE_PATH = "src/unicode/properties.ts"
@@ -96,13 +98,21 @@ type Datum = {
         } while (window == null)
 
         logger.log("Parsing tables")
-        datum.binProperties = collectValues(
+        datum.binProperties = await collectValues(
             window,
             binProperties,
             existing.binProperties,
         )
-        datum.gcValues = collectValues(window, gcValues, existing.gcValues)
-        datum.scValues = collectValues(window, scValues, existing.scValues)
+        datum.gcValues = await collectValues(
+            window,
+            gcValues,
+            existing.gcValues,
+        )
+        datum.scValues = await collectValues(
+            window,
+            scValues,
+            existing.scValues,
+        )
 
         logger.log("Done")
     }
@@ -169,32 +179,55 @@ export function isValidLoneUnicodeProperty(version: number, value: string): bool
     process.exitCode = 1
 })
 
-function collectValues(
+async function collectValues(
     window: DOMWindow,
-    id: string,
+    idSelectorOrProvider: string | (() => AsyncIterable<string>),
     existingSet: Set<string>,
-): string[] {
-    const selector = `${id} td:nth-child(1) code`
-    const nodes = window.document.querySelectorAll(selector)
-    const values = Array.from(nodes, (node) => node.textContent ?? "")
-        .filter((value) => {
-            if (existingSet.has(value)) {
-                return false
-            }
-            existingSet.add(value)
-            return true
-        })
-        .sort(undefined)
+): Promise<string[]> {
+    const getValues =
+        typeof idSelectorOrProvider === "function"
+            ? idSelectorOrProvider
+            : function* (): Iterable<string> {
+                  const selector = `${idSelectorOrProvider} td:nth-child(1) code`
+                  const nodes = window.document.querySelectorAll(selector)
+                  if (nodes.length === 0) {
+                      throw new Error(`No nodes found for selector ${selector}`)
+                  }
+                  logger.log(
+                      "%o nodes of %o were found.",
+                      nodes.length,
+                      selector,
+                  )
+                  for (const node of Array.from(nodes)) {
+                      yield node.textContent ?? ""
+                  }
+              }
+
+    const missing = new Set(existingSet)
+    const values = new Set<string>()
+    let allCount = 0
+
+    for await (const value of getValues()) {
+        allCount++
+        missing.delete(value)
+        if (existingSet.has(value)) {
+            continue
+        }
+        existingSet.add(value)
+        values.add(value)
+    }
+
+    if (missing.size > 0) {
+        throw new Error(`Missing values: ${Array.from(missing).join(", ")}`)
+    }
 
     logger.log(
-        "%o nodes of %o were found, then %o adopted and %o ignored as duplication.",
-        nodes.length,
-        selector,
-        values.length,
-        nodes.length - values.length,
+        "%o adopted and %o ignored as duplication.",
+        values.size,
+        allCount - values.size,
     )
 
-    return values
+    return [...values].sort(undefined)
 }
 
 function makeClassDeclarationCode(versions: string[]): string {

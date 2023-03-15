@@ -1,8 +1,8 @@
 import fs from "fs"
-import http from "http"
 import { ESLint } from "eslint"
+import { fetchLines } from "./fetch-lines"
 
-const DB_URL = "http://unicode.org/Public/UNIDATA/DerivedCoreProperties.txt"
+const DB_URL = "https://unicode.org/Public/UNIDATA/DerivedCoreProperties.txt"
 const FILE_PATH = "src/unicode/ids.ts"
 const ID_START = /^([0-9a-z]+)(?:\.\.([0-9a-z]+))?[^;]*; ID_Start /iu
 const ID_CONTINUE = /^([0-9a-z]+)(?:\.\.([0-9a-z]+))?[^;]*; ID_Continue /iu
@@ -19,7 +19,7 @@ const main = async () => {
     const idContinueLarge: [number, number][] = []
 
     logger.log("Fetching data... (%s)", DB_URL)
-    await processEachLine((line) => {
+    for await (const line of fetchLines(DB_URL)) {
         let m: RegExpExecArray | null = null
         if (banner === "") {
             logger.log("Processing data... (%s)", line.slice(2))
@@ -42,7 +42,7 @@ const main = async () => {
                 idContinueLarge.push([min, max])
             }
         }
-    })
+    }
 
     logger.log("Normalizing data...")
     normalizeRanges(idStartSmall)
@@ -126,33 +126,6 @@ main().catch((err) => {
     logger.error(error.stack)
     process.exitCode = 1
 })
-
-function processEachLine(processLine: (line: string) => void): Promise<void> {
-    return new Promise((resolve, reject) => {
-        http.get(DB_URL, (res) => {
-            let buffer = ""
-            res.setEncoding("utf8")
-            res.on("data", (chunk) => {
-                const lines = (buffer + String(chunk)).split("\n")
-                if (lines.length === 1) {
-                    buffer = lines[0]
-                } else {
-                    buffer = lines.pop()!
-                    for (const line of lines) {
-                        processLine(line)
-                    }
-                }
-            })
-            res.on("end", () => {
-                if (buffer) {
-                    processLine(buffer)
-                }
-                resolve()
-            })
-            res.on("error", reject)
-        }).on("error", reject)
-    })
-}
 
 function normalizeRanges(ranges: [number, number][]): void {
     for (let i = ranges.length - 1; i >= 1; --i) {
