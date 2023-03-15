@@ -1,21 +1,13 @@
 import fs from "fs"
 import path from "path"
+import type { EcmaVersion } from "../../../src/ecma-versions"
 
 type FixtureData = Record<
     string,
     {
         options: {
             strict?: boolean
-            ecmaVersion?:
-                | 5
-                | 2015
-                | 2016
-                | 2017
-                | 2018
-                | 2019
-                | 2020
-                | 2021
-                | 2022
+            ecmaVersion?: EcmaVersion
         }
         patterns: Record<string, string[]>
     }
