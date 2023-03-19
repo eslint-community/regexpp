@@ -227,7 +227,7 @@ async function collectValues(
         allCount - values.size,
     )
 
-    return [...values].sort(undefined)
+    return [...values].sort((a, b) => a.localeCompare(b))
 }
 
 function makeClassDeclarationCode(versions: string[]): string {
