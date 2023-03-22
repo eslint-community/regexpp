@@ -588,7 +588,10 @@ export class RegExpValidator {
     ): void {
         this._uFlag = uFlag && this.ecmaVersion >= 2015
         this._nFlag =
-            uFlag && this.ecmaVersion >= 2018 || this._options.strict && this.ecmaVersion >= 2023
+            (uFlag && this.ecmaVersion >= 2018) ||
+            // Introduced as Normative Change in ES2023
+            // See https://github.com/tc39/ecma262/pull/2436
+            Boolean(this._options.strict && this.ecmaVersion >= 2023)
 
         this.reset(source, start, end)
         this.consumePattern()
