@@ -1,17 +1,10 @@
 export async function* fetchLines(url: string): AsyncIterable<string> {
     const response = await fetch(url)
-    const reader = response.body!.getReader()
     let buffer = ""
     const decoder = new TextDecoder()
-    while (true) {
-        const { done, value: chunk } = await reader.read()
-        if (done) {
-            if (chunk) {
-                buffer += decoder.decode(chunk)
-            }
-            yield buffer
-            break
-        }
+    // Already supports AsyncIterable in Node.js v18
+    const body = response.body as unknown as AsyncIterable<Uint8Array>
+    for await (const chunk of body) {
         const lines = (buffer + decoder.decode(chunk)).split("\n")
         if (lines.length === 1) {
             buffer = lines[0]
@@ -22,4 +15,5 @@ export async function* fetchLines(url: string): AsyncIterable<string> {
             }
         }
     }
+    yield buffer
 }
