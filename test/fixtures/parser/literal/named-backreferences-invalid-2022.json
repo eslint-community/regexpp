@@ -1,0 +1,14 @@
+{
+  "options": {
+    "strict": true,
+    "ecmaVersion": 2022
+  },
+  "patterns": {
+    "/(?<foo>A)\\k<foo>/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<foo>A)\\k<foo>/: Invalid escape",
+        "index": 11
+      }
+    }
+  }
+}
