@@ -48,7 +48,7 @@
     "build": "run-s build:*",
     "build:tsc": "tsc --module es2015",
     "build:rollup": "rollup -c",
-    "build:dts": "dts-bundle --name @eslint-community/regexpp --main .temp/index.d.ts --out ../index.d.ts",
+    "build:dts": "npm run -s build:tsc -- --removeComments false && dts-bundle --name @eslint-community/regexpp --main .temp/index.d.ts --out ../index.d.ts && prettier --write index.d.ts",
     "clean": "rimraf .temp index.*",
     "lint": "eslint . --ext .ts",
     "test": "nyc _mocha \"test/*.ts\" --reporter dot --timeout 10000",
