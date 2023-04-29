@@ -34,6 +34,7 @@
   "author": "Toru Nagashima",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./index.mjs",
       "default": "./index.js"
     },
