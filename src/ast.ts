@@ -114,12 +114,6 @@ export interface Alternative extends NodeBase {
     parent: CapturingGroup | Group | LookaroundAssertion | Pattern
     elements: Element[]
 }
-/** StringAlternative is only used for `\q{alt}`({@link ClassStringDisjunction}). */
-export interface StringAlternative extends NodeBase {
-    type: "StringAlternative"
-    parent: ClassStringDisjunction
-    elements: Character[]
-}
 
 /**
  * The uncapturing group.
@@ -383,6 +377,13 @@ export interface ClassStringDisjunction extends NodeBase {
     type: "ClassStringDisjunction"
     parent: ClassIntersection | ClassSubtraction | UnicodeSetsCharacterClass
     alternatives: StringAlternative[]
+}
+
+/** StringAlternative is only used for `\q{alt}`({@link ClassStringDisjunction}). */
+export interface StringAlternative extends NodeBase {
+    type: "StringAlternative"
+    parent: ClassStringDisjunction
+    elements: Character[]
 }
 
 /**

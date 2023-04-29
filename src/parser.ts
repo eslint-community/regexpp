@@ -160,23 +160,22 @@ class RegExpParserState {
     public onAlternativeEnter(start: number): void {
         const parent = this._node
         if (
-            parent.type === "Assertion" ||
-            parent.type === "CapturingGroup" ||
-            parent.type === "Group" ||
-            parent.type === "Pattern"
+            parent.type !== "Assertion" &&
+            parent.type !== "CapturingGroup" &&
+            parent.type !== "Group" &&
+            parent.type !== "Pattern"
         ) {
-            this._node = {
-                type: "Alternative",
-                parent,
-                start,
-                end: start,
-                raw: "",
-                elements: [],
-            }
-            parent.alternatives.push(this._node)
-        } else {
             throw new Error("UnknownError")
         }
+        this._node = {
+            type: "Alternative",
+            parent,
+            start,
+            end: start,
+            raw: "",
+            elements: [],
+        }
+        parent.alternatives.push(this._node)
     }
 
     public onAlternativeLeave(start: number, end: number): void {
@@ -709,19 +708,18 @@ class RegExpParserState {
 
     public onStringAlternativeEnter(start: number): void {
         const parent = this._node
-        if (parent.type === "ClassStringDisjunction") {
-            this._node = {
-                type: "StringAlternative",
-                parent,
-                start,
-                end: start,
-                raw: "",
-                elements: [],
-            }
-            parent.alternatives.push(this._node)
-        } else {
+        if (parent.type !== "ClassStringDisjunction") {
             throw new Error("UnknownError")
         }
+        this._node = {
+            type: "StringAlternative",
+            parent,
+            start,
+            end: start,
+            raw: "",
+            elements: [],
+        }
+        parent.alternatives.push(this._node)
     }
 
     public onStringAlternativeLeave(start: number, end: number): void {
