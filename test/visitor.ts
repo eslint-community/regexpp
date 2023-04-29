@@ -44,6 +44,7 @@ describe("visitRegExpAST function:", () => {
                         onPatternEnter: enter,
                         onQuantifierEnter: enter,
                         onRegExpLiteralEnter: enter,
+                        onStringAlternativeEnter: enter,
                         onAlternativeLeave: leave,
                         onAssertionLeave: leave,
                         onBackreferenceLeave: leave,
@@ -61,6 +62,7 @@ describe("visitRegExpAST function:", () => {
                         onPatternLeave: leave,
                         onQuantifierLeave: leave,
                         onRegExpLiteralLeave: leave,
+                        onStringAlternativeLeave: leave,
                     })
 
                     assert.deepStrictEqual(history, expected)
