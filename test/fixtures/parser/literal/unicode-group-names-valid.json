@@ -24,7 +24,6 @@
               "start": 1,
               "end": 19,
               "raw": "(?<\\ud835\\udc9c>.)",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -40,7 +39,6 @@
                       "start": 17,
                       "end": 18,
                       "raw": ".",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterSet",
@@ -96,7 +94,6 @@
               "start": 1,
               "end": 19,
               "raw": "(?<\\ud835\\udc9c>.)",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -112,7 +109,6 @@
                       "start": 17,
                       "end": 18,
                       "raw": ".",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterSet",
@@ -168,7 +164,6 @@
               "start": 1,
               "end": 16,
               "raw": "(?<\\u{1d49c}>.)",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -184,7 +179,6 @@
                       "start": 14,
                       "end": 15,
                       "raw": ".",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterSet",
@@ -240,7 +234,6 @@
               "start": 1,
               "end": 16,
               "raw": "(?<\\u{1d49c}>.)",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -256,7 +249,6 @@
                       "start": 14,
                       "end": 15,
                       "raw": ".",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterSet",
@@ -312,7 +304,6 @@
               "start": 1,
               "end": 9,
               "raw": "(?<𝒜>.)",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -328,7 +319,6 @@
                       "start": 7,
                       "end": 8,
                       "raw": ".",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterSet",
@@ -384,7 +374,6 @@
               "start": 1,
               "end": 9,
               "raw": "(?<𝒜>.)",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -400,7 +389,6 @@
                       "start": 7,
                       "end": 8,
                       "raw": ".",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterSet",

@@ -24,7 +24,6 @@
               "start": 1,
               "end": 16,
               "raw": "\\p{Basic_Emoji}",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",

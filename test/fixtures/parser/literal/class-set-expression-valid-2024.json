@@ -24,7 +24,6 @@
               "start": 1,
               "end": 22,
               "raw": "[\\p{Basic_Emoji}][^a]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -109,7 +108,6 @@
               "start": 1,
               "end": 10,
               "raw": "[A&&[&B]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -202,7 +200,6 @@
               "start": 1,
               "end": 8,
               "raw": "[A&&\\&]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -276,7 +273,6 @@
               "start": 1,
               "end": 9,
               "raw": "[a-bc-d]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -376,7 +372,6 @@
               "start": 1,
               "end": 3,
               "raw": "[]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -429,7 +424,6 @@
               "start": 1,
               "end": 4,
               "raw": "[^]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -482,7 +476,6 @@
               "start": 1,
               "end": 9,
               "raw": "[^\\q{a}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -501,12 +494,11 @@
                       "raw": "\\q{a}",
                       "alternatives": [
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 6,
                           "end": 7,
                           "raw": "a",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -563,7 +555,6 @@
               "start": 1,
               "end": 11,
               "raw": "[^\\q{a|b}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -582,12 +573,11 @@
                       "raw": "\\q{a|b}",
                       "alternatives": [
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 6,
                           "end": 7,
                           "raw": "a",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -600,12 +590,11 @@
                           ]
                         },
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 8,
                           "end": 9,
                           "raw": "b",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -662,7 +651,6 @@
               "start": 1,
               "end": 38,
               "raw": "[\\q{0|1\\uFE0F\\u20E3|2|3\\uFE0F\\u20E3}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -681,12 +669,11 @@
                       "raw": "\\q{0|1\\uFE0F\\u20E3|2|3\\uFE0F\\u20E3}",
                       "alternatives": [
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 5,
                           "end": 6,
                           "raw": "0",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -699,12 +686,11 @@
                           ]
                         },
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 7,
                           "end": 20,
                           "raw": "1\\uFE0F\\u20E3",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -733,12 +719,11 @@
                           ]
                         },
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 21,
                           "end": 22,
                           "raw": "2",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -751,12 +736,11 @@
                           ]
                         },
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 23,
                           "end": 36,
                           "raw": "3\\uFE0F\\u20E3",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",

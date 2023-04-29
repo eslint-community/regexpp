@@ -24,7 +24,6 @@
               "start": 1,
               "end": 4,
               "raw": "foo",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -91,7 +90,6 @@
               "start": 1,
               "end": 4,
               "raw": "foo",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -125,7 +123,6 @@
               "start": 5,
               "end": 8,
               "raw": "bar",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -192,7 +189,6 @@
               "start": 1,
               "end": 1,
               "raw": "",
-              "string": false,
               "elements": []
             },
             {
@@ -201,7 +197,6 @@
               "start": 2,
               "end": 2,
               "raw": "",
-              "string": false,
               "elements": []
             },
             {
@@ -210,7 +205,6 @@
               "start": 3,
               "end": 3,
               "raw": "",
-              "string": false,
               "elements": []
             },
             {
@@ -219,7 +213,6 @@
               "start": 4,
               "end": 4,
               "raw": "",
-              "string": false,
               "elements": []
             },
             {
@@ -228,7 +221,6 @@
               "start": 5,
               "end": 5,
               "raw": "",
-              "string": false,
               "elements": []
             }
           ]
@@ -270,7 +262,6 @@
               "start": 1,
               "end": 2,
               "raw": "^",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -288,7 +279,6 @@
               "start": 3,
               "end": 4,
               "raw": "$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -306,7 +296,6 @@
               "start": 5,
               "end": 7,
               "raw": "\\b",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -325,7 +314,6 @@
               "start": 8,
               "end": 10,
               "raw": "\\B",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -377,7 +365,6 @@
               "start": 1,
               "end": 5,
               "raw": "(?=)",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -394,7 +381,6 @@
                       "start": 4,
                       "end": 4,
                       "raw": "",
-                      "string": false,
                       "elements": []
                     }
                   ]
@@ -440,7 +426,6 @@
               "start": 1,
               "end": 8,
               "raw": "(?=foo)",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -457,7 +442,6 @@
                       "start": 4,
                       "end": 7,
                       "raw": "foo",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -528,7 +512,6 @@
               "start": 1,
               "end": 5,
               "raw": "(?!)",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -545,7 +528,6 @@
                       "start": 4,
                       "end": 4,
                       "raw": "",
-                      "string": false,
                       "elements": []
                     }
                   ]
@@ -591,7 +573,6 @@
               "start": 1,
               "end": 8,
               "raw": "(?!foo)",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -608,7 +589,6 @@
                       "start": 4,
                       "end": 7,
                       "raw": "foo",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -679,7 +659,6 @@
               "start": 1,
               "end": 3,
               "raw": "a*",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -740,7 +719,6 @@
               "start": 1,
               "end": 3,
               "raw": "a+",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -801,7 +779,6 @@
               "start": 1,
               "end": 3,
               "raw": "a?",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -862,7 +839,6 @@
               "start": 1,
               "end": 5,
               "raw": "a{1}",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -923,7 +899,6 @@
               "start": 1,
               "end": 6,
               "raw": "a{1,}",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -984,7 +959,6 @@
               "start": 1,
               "end": 7,
               "raw": "a{1,2}",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1045,7 +1019,6 @@
               "start": 1,
               "end": 4,
               "raw": "a*?",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1106,7 +1079,6 @@
               "start": 1,
               "end": 4,
               "raw": "a+?",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1167,7 +1139,6 @@
               "start": 1,
               "end": 4,
               "raw": "a??",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1228,7 +1199,6 @@
               "start": 1,
               "end": 6,
               "raw": "a{1}?",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1289,7 +1259,6 @@
               "start": 1,
               "end": 7,
               "raw": "a{1,}?",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1350,7 +1319,6 @@
               "start": 1,
               "end": 8,
               "raw": "a{1,2}?",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -1411,7 +1379,6 @@
               "start": 1,
               "end": 7,
               "raw": "👍🚀❇️",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -1486,7 +1453,6 @@
               "start": 1,
               "end": 2,
               "raw": "^",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -1537,7 +1503,6 @@
               "start": 1,
               "end": 2,
               "raw": "$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -1588,7 +1553,6 @@
               "start": 1,
               "end": 2,
               "raw": ".",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -1639,7 +1603,6 @@
               "start": 1,
               "end": 1,
               "raw": "",
-              "string": false,
               "elements": []
             },
             {
@@ -1648,7 +1611,6 @@
               "start": 2,
               "end": 2,
               "raw": "",
-              "string": false,
               "elements": []
             }
           ]
@@ -1690,7 +1652,6 @@
               "start": 1,
               "end": 6,
               "raw": "(a)\\1",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1706,7 +1667,6 @@
                       "start": 2,
                       "end": 3,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1773,7 +1733,6 @@
               "start": 1,
               "end": 6,
               "raw": "\\1(a)",
-              "string": false,
               "elements": [
                 {
                   "type": "Backreference",
@@ -1798,7 +1757,6 @@
                       "start": 4,
                       "end": 5,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1856,7 +1814,6 @@
               "start": 1,
               "end": 34,
               "raw": "(a)(a)(a)(a)(a)(a)(a)(a)(a)(a)\\10",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1872,7 +1829,6 @@
                       "start": 2,
                       "end": 3,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1901,7 +1857,6 @@
                       "start": 5,
                       "end": 6,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1930,7 +1885,6 @@
                       "start": 8,
                       "end": 9,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1959,7 +1913,6 @@
                       "start": 11,
                       "end": 12,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -1988,7 +1941,6 @@
                       "start": 14,
                       "end": 15,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2017,7 +1969,6 @@
                       "start": 17,
                       "end": 18,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2046,7 +1997,6 @@
                       "start": 20,
                       "end": 21,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2075,7 +2025,6 @@
                       "start": 23,
                       "end": 24,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2104,7 +2053,6 @@
                       "start": 26,
                       "end": 27,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2133,7 +2081,6 @@
                       "start": 29,
                       "end": 30,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2200,7 +2147,6 @@
               "start": 1,
               "end": 37,
               "raw": "(a)(a)(a)(a)(a)(a)(a)(a)(a)(a)(a)\\11",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -2216,7 +2162,6 @@
                       "start": 2,
                       "end": 3,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2245,7 +2190,6 @@
                       "start": 5,
                       "end": 6,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2274,7 +2218,6 @@
                       "start": 8,
                       "end": 9,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2303,7 +2246,6 @@
                       "start": 11,
                       "end": 12,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2332,7 +2274,6 @@
                       "start": 14,
                       "end": 15,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2361,7 +2302,6 @@
                       "start": 17,
                       "end": 18,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2390,7 +2330,6 @@
                       "start": 20,
                       "end": 21,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2419,7 +2358,6 @@
                       "start": 23,
                       "end": 24,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2448,7 +2386,6 @@
                       "start": 26,
                       "end": 27,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2477,7 +2414,6 @@
                       "start": 29,
                       "end": 30,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2506,7 +2442,6 @@
                       "start": 32,
                       "end": 33,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2573,7 +2508,6 @@
               "start": 1,
               "end": 6,
               "raw": "(?:a)",
-              "string": false,
               "elements": [
                 {
                   "type": "Group",
@@ -2588,7 +2522,6 @@
                       "start": 4,
                       "end": 5,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -2643,7 +2576,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\d",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2695,7 +2627,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\D",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2747,7 +2678,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\s",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2799,7 +2729,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\S",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2851,7 +2780,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\w",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2903,7 +2831,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\W",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -2955,7 +2882,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\f",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3006,7 +2932,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\n",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3057,7 +2982,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\r",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3108,7 +3032,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\t",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3159,7 +3082,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\v",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3210,7 +3132,6 @@
               "start": 1,
               "end": 4,
               "raw": "\\cA",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3261,7 +3182,6 @@
               "start": 1,
               "end": 4,
               "raw": "\\cz",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3312,7 +3232,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\0",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3363,7 +3282,6 @@
               "start": 1,
               "end": 7,
               "raw": "\\u1234",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3414,7 +3332,6 @@
               "start": 1,
               "end": 8,
               "raw": "\\u12345",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3473,7 +3390,6 @@
               "start": 1,
               "end": 6,
               "raw": "\\u{a}",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3524,7 +3440,6 @@
               "start": 1,
               "end": 7,
               "raw": "\\u{20}",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3575,7 +3490,6 @@
               "start": 1,
               "end": 11,
               "raw": "\\u{10FFFF}",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3626,7 +3540,6 @@
               "start": 1,
               "end": 13,
               "raw": "\\u{00000001}",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3677,7 +3590,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\^",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3728,7 +3640,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\$",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3779,7 +3690,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\.",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3830,7 +3740,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\+",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3881,7 +3790,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\?",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3932,7 +3840,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\(",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -3983,7 +3890,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\)",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4034,7 +3940,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\[",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4085,7 +3990,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\]",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4136,7 +4040,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\{",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4187,7 +4090,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\}",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4238,7 +4140,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\|",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4289,7 +4190,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\/",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -4340,7 +4240,6 @@
               "start": 1,
               "end": 3,
               "raw": "[]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4393,7 +4292,6 @@
               "start": 1,
               "end": 9,
               "raw": "[^-a-b-]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4486,7 +4384,6 @@
               "start": 1,
               "end": 4,
               "raw": "[-]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4548,7 +4445,6 @@
               "start": 1,
               "end": 4,
               "raw": "[a]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4610,7 +4506,6 @@
               "start": 1,
               "end": 5,
               "raw": "[--]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4680,7 +4575,6 @@
               "start": 1,
               "end": 5,
               "raw": "[-a]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4750,7 +4644,6 @@
               "start": 1,
               "end": 6,
               "raw": "[-a-]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4828,7 +4721,6 @@
               "start": 1,
               "end": 5,
               "raw": "[a-]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4898,7 +4790,6 @@
               "start": 1,
               "end": 6,
               "raw": "[a-b]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -4975,7 +4866,6 @@
               "start": 1,
               "end": 8,
               "raw": "[-a-b-]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5068,7 +4958,6 @@
               "start": 1,
               "end": 6,
               "raw": "[---]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5145,7 +5034,6 @@
               "start": 1,
               "end": 9,
               "raw": "[a-b--/]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5245,7 +5133,6 @@
               "start": 1,
               "end": 8,
               "raw": "[\\b-\\n]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5322,7 +5209,6 @@
               "start": 1,
               "end": 7,
               "raw": "[b\\-a]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5400,7 +5286,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\d]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5463,7 +5348,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\D]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5526,7 +5410,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\s]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5589,7 +5472,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\S]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5652,7 +5534,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\w]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5715,7 +5596,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\W]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5778,7 +5658,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\f]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5840,7 +5719,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\n]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5902,7 +5780,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\r]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -5964,7 +5841,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\t]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6026,7 +5902,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\v]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6088,7 +5963,6 @@
               "start": 1,
               "end": 6,
               "raw": "[\\cA]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6150,7 +6024,6 @@
               "start": 1,
               "end": 6,
               "raw": "[\\cz]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6212,7 +6085,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\0]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6274,7 +6146,6 @@
               "start": 1,
               "end": 7,
               "raw": "[\\x12]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6336,7 +6207,6 @@
               "start": 1,
               "end": 8,
               "raw": "[\\x123]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6406,7 +6276,6 @@
               "start": 1,
               "end": 9,
               "raw": "[\\u1234]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6468,7 +6337,6 @@
               "start": 1,
               "end": 10,
               "raw": "[\\u12345]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6538,7 +6406,6 @@
               "start": 1,
               "end": 8,
               "raw": "[\\u{a}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6600,7 +6467,6 @@
               "start": 1,
               "end": 9,
               "raw": "[\\u{20}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6662,7 +6528,6 @@
               "start": 1,
               "end": 13,
               "raw": "[\\u{10FFFF}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6724,7 +6589,6 @@
               "start": 1,
               "end": 15,
               "raw": "[\\u{00000001}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6786,7 +6650,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\^]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6848,7 +6711,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\$]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6910,7 +6772,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\.]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -6972,7 +6833,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\+]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7034,7 +6894,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\?]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7096,7 +6955,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\(]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7158,7 +7016,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\)]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7220,7 +7077,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\[]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7282,7 +7138,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\]]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7344,7 +7199,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\{]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7406,7 +7260,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7468,7 +7321,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\|]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7530,7 +7382,6 @@
               "start": 1,
               "end": 5,
               "raw": "[\\/]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7592,7 +7443,6 @@
               "start": 1,
               "end": 16,
               "raw": "[\\u0000-\\u0001]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7669,7 +7519,6 @@
               "start": 1,
               "end": 14,
               "raw": "[\\u{1}-\\u{2}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7746,7 +7595,6 @@
               "start": 1,
               "end": 9,
               "raw": "[0-9--/]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7846,7 +7694,6 @@
               "start": 1,
               "end": 8,
               "raw": "[🌷-🌸]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -7923,7 +7770,6 @@
               "start": 1,
               "end": 19,
               "raw": "[\\u0000-🌸-\\u0000]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -8016,7 +7862,6 @@
               "start": 1,
               "end": 26,
               "raw": "[\\u0000-\\u{1f338}-\\u0000]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -8109,7 +7954,6 @@
               "start": 1,
               "end": 29,
               "raw": "[\\u0000-\\ud83c\\udf38-\\u0000]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -8202,7 +8046,6 @@
               "start": 1,
               "end": 31,
               "raw": "[\\uD834\\uDF06-\\uD834\\uDF08a-z]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -8302,7 +8145,6 @@
               "start": 1,
               "end": 9,
               "raw": "^[0-9]*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8405,7 +8247,6 @@
               "start": 1,
               "end": 9,
               "raw": "^[0-9]+$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8508,7 +8349,6 @@
               "start": 1,
               "end": 12,
               "raw": "^[a-zA-Z]*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8634,7 +8474,6 @@
               "start": 1,
               "end": 12,
               "raw": "^[a-zA-Z]+$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8760,7 +8599,6 @@
               "start": 1,
               "end": 15,
               "raw": "^[0-9a-zA-Z]*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -8909,7 +8747,6 @@
               "start": 1,
               "end": 28,
               "raw": "^[a-zA-Z0-9!-/:-@\\[-`{-~]*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9150,7 +8987,6 @@
               "start": 1,
               "end": 20,
               "raw": "^([a-zA-Z0-9]{8,})$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9174,7 +9010,6 @@
                       "start": 3,
                       "end": 18,
                       "raw": "[a-zA-Z0-9]{8,}",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -9320,7 +9155,6 @@
               "start": 1,
               "end": 21,
               "raw": "^([a-zA-Z0-9]{6,8})$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9344,7 +9178,6 @@
                       "start": 3,
                       "end": 19,
                       "raw": "[a-zA-Z0-9]{6,8}",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -9490,7 +9323,6 @@
               "start": 1,
               "end": 15,
               "raw": "^([0-9]{0,8})$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9514,7 +9346,6 @@
                       "start": 3,
                       "end": 13,
                       "raw": "[0-9]{0,8}",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -9614,7 +9445,6 @@
               "start": 1,
               "end": 11,
               "raw": "^[0-9]{8}$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9717,7 +9547,6 @@
               "start": 1,
               "end": 13,
               "raw": "^https?:\\/\\/",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9842,7 +9671,6 @@
               "start": 1,
               "end": 14,
               "raw": "^\\d{3}-\\d{4}$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9947,7 +9775,6 @@
               "start": 1,
               "end": 23,
               "raw": "^\\d{1,3}(.\\d{1,3}){3}$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -9999,7 +9826,6 @@
                         "start": 10,
                         "end": 18,
                         "raw": ".\\d{1,3}",
-                        "string": false,
                         "elements": [
                           {
                             "type": "CharacterSet",
@@ -10083,7 +9909,6 @@
               "start": 1,
               "end": 29,
               "raw": "^([1-9][0-9]*|0)(\\.[0-9]+)?$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10107,7 +9932,6 @@
                       "start": 3,
                       "end": 14,
                       "raw": "[1-9][0-9]*",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterClass",
@@ -10195,7 +10019,6 @@
                       "start": 15,
                       "end": 16,
                       "raw": "0",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -10233,7 +10056,6 @@
                         "start": 18,
                         "end": 26,
                         "raw": "\\.[0-9]+",
-                        "string": false,
                         "elements": [
                           {
                             "type": "Character",
@@ -10342,7 +10164,6 @@
               "start": 1,
               "end": 31,
               "raw": "^-?([1-9][0-9]*|0)(\\.[0-9]+)?$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10384,7 +10205,6 @@
                       "start": 5,
                       "end": 16,
                       "raw": "[1-9][0-9]*",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CharacterClass",
@@ -10472,7 +10292,6 @@
                       "start": 17,
                       "end": 18,
                       "raw": "0",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -10510,7 +10329,6 @@
                         "start": 20,
                         "end": 28,
                         "raw": "\\.[0-9]+",
-                        "string": false,
                         "elements": [
                           {
                             "type": "Character",
@@ -10619,7 +10437,6 @@
               "start": 1,
               "end": 10,
               "raw": "^[ぁ-んー]*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10730,7 +10547,6 @@
               "start": 1,
               "end": 11,
               "raw": "^[ァ-ンヴー]*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10849,7 +10665,6 @@
               "start": 1,
               "end": 13,
               "raw": "^[ｧ-ﾝﾞﾟ\\-]*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -10976,7 +10791,6 @@
               "start": 1,
               "end": 16,
               "raw": "^[^\\x20-\\x7e]*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -11079,7 +10893,6 @@
               "start": 1,
               "end": 69,
               "raw": "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -11467,7 +11280,6 @@
                         "start": 51,
                         "end": 66,
                         "raw": "\\.[a-zA-Z0-9-]+",
-                        "string": false,
                         "elements": [
                           {
                             "type": "Character",
@@ -11629,7 +11441,6 @@
               "start": 1,
               "end": 69,
               "raw": "^((4\\d{3})|(5[1-5]\\d{2})|(6011))([- ])?\\d{4}([- ])?\\d{4}([- ])?\\d{4}",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -11653,7 +11464,6 @@
                       "start": 3,
                       "end": 11,
                       "raw": "(4\\d{3})",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CapturingGroup",
@@ -11669,7 +11479,6 @@
                               "start": 4,
                               "end": 10,
                               "raw": "4\\d{3}",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -11711,7 +11520,6 @@
                       "start": 12,
                       "end": 25,
                       "raw": "(5[1-5]\\d{2})",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CapturingGroup",
@@ -11727,7 +11535,6 @@
                               "start": 13,
                               "end": 24,
                               "raw": "5[1-5]\\d{2}",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -11803,7 +11610,6 @@
                       "start": 26,
                       "end": 32,
                       "raw": "(6011)",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CapturingGroup",
@@ -11819,7 +11625,6 @@
                               "start": 27,
                               "end": 31,
                               "raw": "6011",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -11886,7 +11691,6 @@
                         "start": 34,
                         "end": 38,
                         "raw": "[- ]",
-                        "string": false,
                         "elements": [
                           {
                             "type": "CharacterClass",
@@ -11963,7 +11767,6 @@
                         "start": 46,
                         "end": 50,
                         "raw": "[- ]",
-                        "string": false,
                         "elements": [
                           {
                             "type": "CharacterClass",
@@ -12040,7 +11843,6 @@
                         "start": 58,
                         "end": 62,
                         "raw": "[- ]",
-                        "string": false,
                         "elements": [
                           {
                             "type": "CharacterClass",
@@ -12102,7 +11904,6 @@
               "start": 70,
               "end": 83,
               "raw": "3[4,7]\\d{13}$",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -12215,7 +12016,6 @@
               "start": 1,
               "end": 5,
               "raw": "^\\s*",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -12252,7 +12052,6 @@
               "start": 6,
               "end": 10,
               "raw": "\\s*$",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",

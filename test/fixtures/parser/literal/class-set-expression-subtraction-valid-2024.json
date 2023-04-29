@@ -24,7 +24,6 @@
               "start": 1,
               "end": 7,
               "raw": "[A--B]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -98,7 +97,6 @@
               "start": 1,
               "end": 10,
               "raw": "[A--B--C]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -187,7 +185,6 @@
               "start": 1,
               "end": 8,
               "raw": "[^A--B]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -261,7 +258,6 @@
               "start": 1,
               "end": 8,
               "raw": "[A--B]?",
-              "string": false,
               "elements": [
                 {
                   "type": "Quantifier",
@@ -345,7 +341,6 @@
               "start": 1,
               "end": 12,
               "raw": "[\\w--[0-9]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -446,7 +441,6 @@
               "start": 1,
               "end": 12,
               "raw": "[[A--B]--C]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -543,7 +537,6 @@
               "start": 1,
               "end": 12,
               "raw": "[[A&&B]--C]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -640,7 +633,6 @@
               "start": 1,
               "end": 12,
               "raw": "[[A--B]&&C]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -737,7 +729,6 @@
               "start": 1,
               "end": 12,
               "raw": "[A--[B--C]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -834,7 +825,6 @@
               "start": 1,
               "end": 12,
               "raw": "[A--[B&&C]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -931,7 +921,6 @@
               "start": 1,
               "end": 27,
               "raw": "[\\q{abc|def|ghi}--\\q{def}]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -954,12 +943,11 @@
                       "raw": "\\q{abc|def|ghi}",
                       "alternatives": [
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 5,
                           "end": 8,
                           "raw": "abc",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -988,12 +976,11 @@
                           ]
                         },
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 9,
                           "end": 12,
                           "raw": "def",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -1022,12 +1009,11 @@
                           ]
                         },
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 13,
                           "end": 16,
                           "raw": "ghi",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -1065,12 +1051,11 @@
                       "raw": "\\q{def}",
                       "alternatives": [
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 22,
                           "end": 25,
                           "raw": "def",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -1143,7 +1128,6 @@
               "start": 1,
               "end": 22,
               "raw": "[^[\\q{a|b|c}--\\q{b}]]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -1175,12 +1159,11 @@
                           "raw": "\\q{a|b|c}",
                           "alternatives": [
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 7,
                               "end": 8,
                               "raw": "a",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1193,12 +1176,11 @@
                               ]
                             },
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 9,
                               "end": 10,
                               "raw": "b",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1211,12 +1193,11 @@
                               ]
                             },
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 11,
                               "end": 12,
                               "raw": "c",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1238,12 +1219,11 @@
                           "raw": "\\q{b}",
                           "alternatives": [
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 18,
                               "end": 19,
                               "raw": "b",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1302,7 +1282,6 @@
               "start": 1,
               "end": 24,
               "raw": "[^[\\q{a|b|c}--\\q{def}]]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -1334,12 +1313,11 @@
                           "raw": "\\q{a|b|c}",
                           "alternatives": [
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 7,
                               "end": 8,
                               "raw": "a",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1352,12 +1330,11 @@
                               ]
                             },
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 9,
                               "end": 10,
                               "raw": "b",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1370,12 +1347,11 @@
                               ]
                             },
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 11,
                               "end": 12,
                               "raw": "c",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1397,12 +1373,11 @@
                           "raw": "\\q{def}",
                           "alternatives": [
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 18,
                               "end": 21,
                               "raw": "def",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1477,7 +1452,6 @@
               "start": 1,
               "end": 21,
               "raw": "[^[\\q{a|b|c}--\\q{}]]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -1509,12 +1483,11 @@
                           "raw": "\\q{a|b|c}",
                           "alternatives": [
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 7,
                               "end": 8,
                               "raw": "a",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1527,12 +1500,11 @@
                               ]
                             },
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 9,
                               "end": 10,
                               "raw": "b",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1545,12 +1517,11 @@
                               ]
                             },
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 11,
                               "end": 12,
                               "raw": "c",
-                              "string": true,
                               "elements": [
                                 {
                                   "type": "Character",
@@ -1572,12 +1543,11 @@
                           "raw": "\\q{}",
                           "alternatives": [
                             {
-                              "type": "Alternative",
+                              "type": "StringAlternative",
                               "parent": "♻️../..",
                               "start": 18,
                               "end": 18,
                               "raw": "",
-                              "string": true,
                               "elements": []
                             }
                           ]
@@ -1627,7 +1597,6 @@
               "start": 1,
               "end": 7,
               "raw": "[A--&]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",

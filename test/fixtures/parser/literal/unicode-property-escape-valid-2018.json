@@ -24,7 +24,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\p",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -75,7 +74,6 @@
               "start": 1,
               "end": 4,
               "raw": "\\p{",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -134,7 +132,6 @@
               "start": 1,
               "end": 9,
               "raw": "\\p{ASCII",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -233,7 +230,6 @@
               "start": 1,
               "end": 10,
               "raw": "\\p{ASCII}",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -340,7 +336,6 @@
               "start": 1,
               "end": 10,
               "raw": "\\p{ASCII}",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -395,7 +390,6 @@
               "start": 1,
               "end": 10,
               "raw": "\\p{Emoji}",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -450,7 +444,6 @@
               "start": 1,
               "end": 28,
               "raw": "\\p{General_Category=Letter}",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -505,7 +498,6 @@
               "start": 1,
               "end": 20,
               "raw": "\\p{Script=Hiragana}",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -560,7 +552,6 @@
               "start": 1,
               "end": 43,
               "raw": "[\\p{Script=Hiragana}\\-\\p{Script=Katakana}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -646,7 +637,6 @@
               "start": 1,
               "end": 11,
               "raw": "\\P{Letter}",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",

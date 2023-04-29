@@ -24,7 +24,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\p",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -75,7 +74,6 @@
               "start": 1,
               "end": 4,
               "raw": "\\p{",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -134,7 +132,6 @@
               "start": 1,
               "end": 9,
               "raw": "\\p{ASCII",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -233,7 +230,6 @@
               "start": 1,
               "end": 10,
               "raw": "\\p{ASCII}",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",

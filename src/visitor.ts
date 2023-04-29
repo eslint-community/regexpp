@@ -17,6 +17,7 @@ import type {
     Pattern,
     Quantifier,
     RegExpLiteral,
+    StringAlternative,
 } from "./ast"
 
 /**
@@ -90,6 +91,9 @@ export class RegExpVisitor {
                 break
             case "RegExpLiteral":
                 this.visitRegExpLiteral(node)
+                break
+            case "StringAlternative":
+                this.visitStringAlternative(node)
                 break
             default:
                 throw new Error(
@@ -271,6 +275,16 @@ export class RegExpVisitor {
             this._handlers.onRegExpLiteralLeave(node)
         }
     }
+
+    private visitStringAlternative(node: StringAlternative): void {
+        if (this._handlers.onStringAlternativeEnter) {
+            this._handlers.onStringAlternativeEnter(node)
+        }
+        node.elements.forEach(this.visit, this)
+        if (this._handlers.onStringAlternativeLeave) {
+            this._handlers.onStringAlternativeLeave(node)
+        }
+    }
 }
 
 export namespace RegExpVisitor {
@@ -313,5 +327,7 @@ export namespace RegExpVisitor {
         onQuantifierLeave?: (node: Quantifier) => void
         onRegExpLiteralEnter?: (node: RegExpLiteral) => void
         onRegExpLiteralLeave?: (node: RegExpLiteral) => void
+        onStringAlternativeEnter?: (node: StringAlternative) => void
+        onStringAlternativeLeave?: (node: StringAlternative) => void
     }
 }

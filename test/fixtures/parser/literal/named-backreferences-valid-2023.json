@@ -24,7 +24,6 @@
               "start": 1,
               "end": 17,
               "raw": "(?<foo>A)\\k<foo>",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -40,7 +39,6 @@
                       "start": 8,
                       "end": 9,
                       "raw": "A",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -107,7 +105,6 @@
               "start": 1,
               "end": 17,
               "raw": "(?<foo>A)\\k<foo>",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -123,7 +120,6 @@
                       "start": 8,
                       "end": 9,
                       "raw": "A",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",

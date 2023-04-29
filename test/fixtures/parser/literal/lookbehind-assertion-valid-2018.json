@@ -24,7 +24,6 @@
               "start": 1,
               "end": 7,
               "raw": "(?<=a)",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -41,7 +40,6 @@
                       "start": 5,
                       "end": 6,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -96,7 +94,6 @@
               "start": 1,
               "end": 7,
               "raw": "(?<=a)",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -113,7 +110,6 @@
                       "start": 5,
                       "end": 6,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -168,7 +164,6 @@
               "start": 1,
               "end": 7,
               "raw": "(?<!a)",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -185,7 +180,6 @@
                       "start": 5,
                       "end": 6,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -240,7 +234,6 @@
               "start": 1,
               "end": 7,
               "raw": "(?<!a)",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -257,7 +250,6 @@
                       "start": 5,
                       "end": 6,
                       "raw": "a",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Character",
@@ -312,7 +304,6 @@
               "start": 1,
               "end": 18,
               "raw": "(?<=(?<a>\\w){3})f",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -329,7 +320,6 @@
                       "start": 5,
                       "end": 16,
                       "raw": "(?<a>\\w){3}",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -354,7 +344,6 @@
                                 "start": 10,
                                 "end": 12,
                                 "raw": "\\w",
-                                "string": false,
                                 "elements": [
                                   {
                                     "type": "CharacterSet",
@@ -424,7 +413,6 @@
               "start": 1,
               "end": 14,
               "raw": "((?<=\\w{3}))f",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -440,7 +428,6 @@
                       "start": 2,
                       "end": 12,
                       "raw": "(?<=\\w{3})",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Assertion",
@@ -457,7 +444,6 @@
                               "start": 6,
                               "end": 11,
                               "raw": "\\w{3}",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "Quantifier",
@@ -536,7 +522,6 @@
               "start": 1,
               "end": 18,
               "raw": "(?<a>(?<=\\w{3}))f",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -552,7 +537,6 @@
                       "start": 6,
                       "end": 16,
                       "raw": "(?<=\\w{3})",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Assertion",
@@ -569,7 +553,6 @@
                               "start": 10,
                               "end": 15,
                               "raw": "\\w{3}",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "Quantifier",
@@ -648,7 +631,6 @@
               "start": 1,
               "end": 18,
               "raw": "(?<!(?<a>\\d){3})f",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -665,7 +647,6 @@
                       "start": 5,
                       "end": 16,
                       "raw": "(?<a>\\d){3}",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -690,7 +671,6 @@
                                 "start": 10,
                                 "end": 12,
                                 "raw": "\\d",
-                                "string": false,
                                 "elements": [
                                   {
                                     "type": "CharacterSet",
@@ -760,7 +740,6 @@
               "start": 1,
               "end": 18,
               "raw": "(?<!(?<a>\\D){3})f",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -777,7 +756,6 @@
                       "start": 5,
                       "end": 16,
                       "raw": "(?<a>\\D){3}",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -802,7 +780,6 @@
                                 "start": 10,
                                 "end": 12,
                                 "raw": "\\D",
-                                "string": false,
                                 "elements": [
                                   {
                                     "type": "CharacterSet",
@@ -839,7 +816,6 @@
               "start": 19,
               "end": 20,
               "raw": "f",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -890,7 +866,6 @@
               "start": 1,
               "end": 18,
               "raw": "(?<a>(?<!\\D{3}))f",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -906,7 +881,6 @@
                       "start": 6,
                       "end": 16,
                       "raw": "(?<!\\D{3})",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Assertion",
@@ -923,7 +897,6 @@
                               "start": 10,
                               "end": 15,
                               "raw": "\\D{3}",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "Quantifier",
@@ -969,7 +942,6 @@
               "start": 19,
               "end": 20,
               "raw": "f",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -1020,7 +992,6 @@
               "start": 1,
               "end": 18,
               "raw": "(?<=(?<a>\\w){3})f",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -1037,7 +1008,6 @@
                       "start": 5,
                       "end": 16,
                       "raw": "(?<a>\\w){3}",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -1062,7 +1032,6 @@
                                 "start": 10,
                                 "end": 12,
                                 "raw": "\\w",
-                                "string": false,
                                 "elements": [
                                   {
                                     "type": "CharacterSet",
@@ -1132,7 +1101,6 @@
               "start": 1,
               "end": 14,
               "raw": "((?<=\\w{3}))f",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1148,7 +1116,6 @@
                       "start": 2,
                       "end": 12,
                       "raw": "(?<=\\w{3})",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Assertion",
@@ -1165,7 +1132,6 @@
                               "start": 6,
                               "end": 11,
                               "raw": "\\w{3}",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "Quantifier",
@@ -1244,7 +1210,6 @@
               "start": 1,
               "end": 18,
               "raw": "(?<a>(?<=\\w{3}))f",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1260,7 +1225,6 @@
                       "start": 6,
                       "end": 16,
                       "raw": "(?<=\\w{3})",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Assertion",
@@ -1277,7 +1241,6 @@
                               "start": 10,
                               "end": 15,
                               "raw": "\\w{3}",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "Quantifier",
@@ -1356,7 +1319,6 @@
               "start": 1,
               "end": 18,
               "raw": "(?<!(?<a>\\d){3})f",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -1373,7 +1335,6 @@
                       "start": 5,
                       "end": 16,
                       "raw": "(?<a>\\d){3}",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Quantifier",
@@ -1398,7 +1359,6 @@
                                 "start": 10,
                                 "end": 12,
                                 "raw": "\\d",
-                                "string": false,
                                 "elements": [
                                   {
                                     "type": "CharacterSet",
@@ -1468,7 +1428,6 @@
               "start": 1,
               "end": 18,
               "raw": "(?<a>(?<!\\D{3}))f",
-              "string": false,
               "elements": [
                 {
                   "type": "CapturingGroup",
@@ -1484,7 +1443,6 @@
                       "start": 6,
                       "end": 16,
                       "raw": "(?<!\\D{3})",
-                      "string": false,
                       "elements": [
                         {
                           "type": "Assertion",
@@ -1501,7 +1459,6 @@
                               "start": 10,
                               "end": 15,
                               "raw": "\\D{3}",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "Quantifier",
@@ -1547,7 +1504,6 @@
               "start": 19,
               "end": 20,
               "raw": "f",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -1598,7 +1554,6 @@
               "start": 1,
               "end": 25,
               "raw": "(?<=(?<fst>.)|(?<snd>.))",
-              "string": false,
               "elements": [
                 {
                   "type": "Assertion",
@@ -1615,7 +1570,6 @@
                       "start": 5,
                       "end": 14,
                       "raw": "(?<fst>.)",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CapturingGroup",
@@ -1631,7 +1585,6 @@
                               "start": 12,
                               "end": 13,
                               "raw": ".",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "CharacterSet",
@@ -1654,7 +1607,6 @@
                       "start": 15,
                       "end": 24,
                       "raw": "(?<snd>.)",
-                      "string": false,
                       "elements": [
                         {
                           "type": "CapturingGroup",
@@ -1670,7 +1622,6 @@
                               "start": 22,
                               "end": 23,
                               "raw": ".",
-                              "string": false,
                               "elements": [
                                 {
                                   "type": "CharacterSet",

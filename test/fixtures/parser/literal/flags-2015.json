@@ -24,7 +24,6 @@
               "start": 1,
               "end": 2,
               "raw": ".",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",
@@ -75,7 +74,6 @@
               "start": 1,
               "end": 2,
               "raw": ".",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterSet",

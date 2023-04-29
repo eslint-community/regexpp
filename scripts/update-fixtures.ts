@@ -56,6 +56,7 @@ for (const filename of Object.keys(Visitor.fixturesData)) {
             onPatternEnter: enter,
             onQuantifierEnter: enter,
             onRegExpLiteralEnter: enter,
+            onStringAlternativeEnter: enter,
             onAlternativeLeave: leave,
             onAssertionLeave: leave,
             onBackreferenceLeave: leave,
@@ -73,6 +74,7 @@ for (const filename of Object.keys(Visitor.fixturesData)) {
             onPatternLeave: leave,
             onQuantifierLeave: leave,
             onRegExpLiteralLeave: leave,
+            onStringAlternativeLeave: leave,
         })
 
         fixture.patterns[pattern] = history

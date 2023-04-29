@@ -24,7 +24,6 @@
               "start": 1,
               "end": 3,
               "raw": "\\k",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",
@@ -75,7 +74,6 @@
               "start": 1,
               "end": 6,
               "raw": "\\k<a>",
-              "string": false,
               "elements": [
                 {
                   "type": "Character",

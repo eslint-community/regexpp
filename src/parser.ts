@@ -19,6 +19,7 @@ import type {
     UnicodePropertyCharacterSet,
     UnicodeSetsCharacterClass,
     ExpressionCharacterClass,
+    StringAlternative,
 } from "./ast"
 import type { EcmaVersion } from "./ecma-versions"
 import { latestEcmaVersion } from "./ecma-versions"
@@ -33,6 +34,7 @@ type AppendableNode =
     | Group
     | LookaroundAssertion
     | Pattern
+    | StringAlternative
 
 const DUMMY_PATTERN: Pattern = {} as Pattern
 const DUMMY_FLAGS: Flags = {} as Flags
@@ -157,15 +159,6 @@ class RegExpParserState {
 
     public onAlternativeEnter(start: number): void {
         const parent = this._node
-        const base = {
-            type: "Alternative" as const,
-            parent: null,
-            start,
-            end: start,
-            raw: "",
-            string: false,
-            elements: [],
-        }
         if (
             parent.type === "Assertion" ||
             parent.type === "CapturingGroup" ||
@@ -173,16 +166,12 @@ class RegExpParserState {
             parent.type === "Pattern"
         ) {
             this._node = {
-                ...base,
+                type: "Alternative",
                 parent,
-                string: false,
-            }
-            parent.alternatives.push(this._node)
-        } else if (parent.type === "ClassStringDisjunction") {
-            this._node = {
-                ...base,
-                parent,
-                string: true,
+                start,
+                end: start,
+                raw: "",
+                elements: [],
             }
             parent.alternatives.push(this._node)
         } else {
@@ -203,7 +192,7 @@ class RegExpParserState {
 
     public onGroupEnter(start: number): void {
         const parent = this._node
-        if (parent.type !== "Alternative" || parent.string) {
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
@@ -231,7 +220,7 @@ class RegExpParserState {
 
     public onCapturingGroupEnter(start: number, name: string | null): void {
         const parent = this._node
-        if (parent.type !== "Alternative" || parent.string) {
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
@@ -271,7 +260,7 @@ class RegExpParserState {
         greedy: boolean,
     ): void {
         const parent = this._node
-        if (parent.type !== "Alternative" || parent.string) {
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
@@ -306,7 +295,7 @@ class RegExpParserState {
         negate: boolean,
     ): void {
         const parent = this._node
-        if (parent.type !== "Alternative" || parent.string) {
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
@@ -325,11 +314,7 @@ class RegExpParserState {
 
     public onLookaroundAssertionLeave(start: number, end: number): void {
         const node = this._node
-        if (
-            node.type !== "Assertion" ||
-            node.parent.type !== "Alternative" ||
-            node.parent.string
-        ) {
+        if (node.type !== "Assertion" || node.parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
@@ -344,7 +329,7 @@ class RegExpParserState {
         kind: "end" | "start",
     ): void {
         const parent = this._node
-        if (parent.type !== "Alternative" || parent.string) {
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
@@ -365,7 +350,7 @@ class RegExpParserState {
         negate: boolean,
     ): void {
         const parent = this._node
-        if (parent.type !== "Alternative" || parent.string) {
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
@@ -382,7 +367,7 @@ class RegExpParserState {
 
     public onAnyCharacterSet(start: number, end: number, kind: "any"): void {
         const parent = this._node
-        if (parent.type !== "Alternative" || parent.string) {
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
@@ -403,10 +388,7 @@ class RegExpParserState {
         negate: boolean,
     ): void {
         const parent = this._node
-        if (
-            (parent.type !== "Alternative" || parent.string) &&
-            parent.type !== "CharacterClass"
-        ) {
+        if (parent.type !== "Alternative" && parent.type !== "CharacterClass") {
             throw new Error("UnknownError")
         }
 
@@ -432,7 +414,7 @@ class RegExpParserState {
     ): void {
         const parent = this._node
         if (
-            ((parent.type !== "Alternative" || parent.string) &&
+            (parent.type !== "Alternative" &&
                 parent.type !== "CharacterClass") ||
             (strings && (negate || value))
         ) {
@@ -462,16 +444,20 @@ class RegExpParserState {
                   negate,
                   strings: false,
               }
-        ;(parent.elements as CharacterClassElement[]).push(node)
+        parent.elements.push(node)
     }
 
     public onCharacter(start: number, end: number, value: number): void {
         const parent = this._node
-        if (parent.type !== "Alternative" && parent.type !== "CharacterClass") {
+        if (
+            parent.type !== "Alternative" &&
+            parent.type !== "CharacterClass" &&
+            parent.type !== "StringAlternative"
+        ) {
             throw new Error("UnknownError")
         }
 
-        ;(parent.elements as CharacterClassElement[]).push({
+        parent.elements.push({
             type: "Character",
             parent,
             start,
@@ -487,7 +473,7 @@ class RegExpParserState {
         ref: number | string,
     ): void {
         const parent = this._node
-        if (parent.type !== "Alternative" || parent.string) {
+        if (parent.type !== "Alternative") {
             throw new Error("UnknownError")
         }
 
@@ -520,7 +506,7 @@ class RegExpParserState {
             negate,
             elements: [],
         }
-        if (parent.type === "Alternative" && !parent.string) {
+        if (parent.type === "Alternative") {
             const node: CharacterClass = {
                 ...base,
                 parent,
@@ -713,6 +699,34 @@ class RegExpParserState {
             node.type !== "ClassStringDisjunction" ||
             node.parent.type !== "CharacterClass"
         ) {
+            throw new Error("UnknownError")
+        }
+
+        node.end = end
+        node.raw = this.source.slice(start, end)
+        this._node = node.parent
+    }
+
+    public onStringAlternativeEnter(start: number): void {
+        const parent = this._node
+        if (parent.type === "ClassStringDisjunction") {
+            this._node = {
+                type: "StringAlternative",
+                parent,
+                start,
+                end: start,
+                raw: "",
+                elements: [],
+            }
+            parent.alternatives.push(this._node)
+        } else {
+            throw new Error("UnknownError")
+        }
+    }
+
+    public onStringAlternativeLeave(start: number, end: number): void {
+        const node = this._node
+        if (node.type !== "StringAlternative") {
             throw new Error("UnknownError")
         }
 

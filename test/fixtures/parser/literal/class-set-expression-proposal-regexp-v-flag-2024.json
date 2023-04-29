@@ -24,7 +24,6 @@
               "start": 1,
               "end": 7,
               "raw": "[A&&B]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -98,7 +97,6 @@
               "start": 1,
               "end": 11,
               "raw": "[A--[0-9]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -198,7 +196,6 @@
               "start": 1,
               "end": 28,
               "raw": "[\\p{Decimal_Number}--[0-9]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -302,7 +299,6 @@
               "start": 1,
               "end": 51,
               "raw": "[\\p{Script=Khmer}&&[\\p{Letter}\\p{Mark}\\p{Number}]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -425,7 +421,6 @@
               "start": 1,
               "end": 21,
               "raw": "[\\p{Emoji}--[#*0-9]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -545,7 +540,6 @@
               "start": 1,
               "end": 23,
               "raw": "[\\p{Emoji}--\\p{ASCII}]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -627,7 +621,6 @@
               "start": 1,
               "end": 63,
               "raw": "[\\p{Nonspacing_Mark}&&[\\p{Script=Inherited}\\p{Script=Common}]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -732,7 +725,6 @@
               "start": 1,
               "end": 80,
               "raw": "[[\\p{Other}\\p{Separator}\\p{White_Space}\\p{Default_Ignorable_Code_Point}]--\\x20]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -863,7 +855,6 @@
               "start": 1,
               "end": 70,
               "raw": "[\\p{Script_Extensions=Greek}&&[\\p{Letter}\\p{Mark}\\p{Decimal_Number}]]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -980,7 +971,6 @@
               "start": 1,
               "end": 34,
               "raw": "[[\\p{Any}--\\p{Other}]\\p{Control}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -1085,7 +1075,6 @@
               "start": 1,
               "end": 30,
               "raw": "[\\p{Assigned}--\\p{Separator}]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -1179,7 +1168,6 @@
               "start": 1,
               "end": 37,
               "raw": "[\\p{Other}--\\p{Format}--\\p{Control}]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -1280,7 +1268,6 @@
               "start": 1,
               "end": 26,
               "raw": "[\\p{RGI_Emoji}--\\q{🇧🇪}]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -1315,12 +1302,11 @@
                       "raw": "\\q{🇧🇪}",
                       "alternatives": [
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 20,
                           "end": 24,
                           "raw": "🇧🇪",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -1385,7 +1371,6 @@
               "start": 1,
               "end": 39,
               "raw": "[\\p{RGI_Emoji_ZWJ_Sequence}--\\q{🇧🇪}]",
-              "string": false,
               "elements": [
                 {
                   "type": "ExpressionCharacterClass",
@@ -1420,12 +1405,11 @@
                       "raw": "\\q{🇧🇪}",
                       "alternatives": [
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 33,
                           "end": 37,
                           "raw": "🇧🇪",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -1490,7 +1474,6 @@
               "start": 1,
               "end": 18,
               "raw": "[a-c\\q{W|xy|xyz}]",
-              "string": false,
               "elements": [
                 {
                   "type": "CharacterClass",
@@ -1532,12 +1515,11 @@
                       "raw": "\\q{W|xy|xyz}",
                       "alternatives": [
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 8,
                           "end": 9,
                           "raw": "W",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -1550,12 +1532,11 @@
                           ]
                         },
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 10,
                           "end": 12,
                           "raw": "xy",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",
@@ -1576,12 +1557,11 @@
                           ]
                         },
                         {
-                          "type": "Alternative",
+                          "type": "StringAlternative",
                           "parent": "♻️../..",
                           "start": 13,
                           "end": 16,
                           "raw": "xyz",
-                          "string": true,
                           "elements": [
                             {
                               "type": "Character",

@@ -568,6 +568,25 @@ export namespace RegExpValidator {
          * @param end The next 0-based index of the last character.
          */
         onClassStringDisjunctionLeave?: (start: number, end: number) => void
+
+        /**
+         * A function that is called when the validator entered a string alternative.
+         * @param start The 0-based index of the first character.
+         * @param index The 0-based index of alternatives in a disjunction.
+         */
+        onStringAlternativeEnter?: (start: number, index: number) => void
+
+        /**
+         * A function that is called when the validator left a string alternative.
+         * @param start The 0-based index of the first character.
+         * @param end The next 0-based index of the last character.
+         * @param index The 0-based index of alternatives in a disjunction.
+         */
+        onStringAlternativeLeave?: (
+            start: number,
+            end: number,
+            index: number,
+        ) => void
     }
 }
 
@@ -1116,6 +1135,22 @@ export class RegExpValidator {
     private onClassStringDisjunctionLeave(start: number, end: number): void {
         if (this._options.onClassStringDisjunctionLeave) {
             this._options.onClassStringDisjunctionLeave(start, end)
+        }
+    }
+
+    private onStringAlternativeEnter(start: number, index: number): void {
+        if (this._options.onStringAlternativeEnter) {
+            this._options.onStringAlternativeEnter(start, index)
+        }
+    }
+
+    private onStringAlternativeLeave(
+        start: number,
+        end: number,
+        index: number,
+    ): void {
+        if (this._options.onStringAlternativeLeave) {
+            this._options.onStringAlternativeLeave(start, end, index)
         }
     }
 
@@ -2557,14 +2592,14 @@ export class RegExpValidator {
         const start = this.index
 
         let count = 0
-        this.onAlternativeEnter(start, i)
+        this.onStringAlternativeEnter(start, i)
         while (
             this.currentCodePoint !== -1 &&
             this.consumeClassSetCharacter()
         ) {
             count++
         }
-        this.onAlternativeLeave(start, this.index, i)
+        this.onStringAlternativeLeave(start, this.index, i)
 
         // * Static Semantics: MayContainStrings
         // ClassString :: [empty]

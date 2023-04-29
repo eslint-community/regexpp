@@ -20,6 +20,7 @@ export type BranchNode =
     | Pattern
     | Quantifier
     | RegExpLiteral
+    | StringAlternative
 
 /**
  * The type which includes all leaf nodes.
@@ -101,34 +102,22 @@ export interface RegExpLiteral extends NodeBase {
 export interface Pattern extends NodeBase {
     type: "Pattern"
     parent: RegExpLiteral | null
-    alternatives: DisjunctionAlternative[]
+    alternatives: Alternative[]
 }
 
 /**
  * The alternative.
  * E.g. `a|b`
  */
-export type Alternative = DisjunctionAlternative | StringAlternative
-interface BaseAlternative extends NodeBase {
+export interface Alternative extends NodeBase {
     type: "Alternative"
-    parent:
-        | CapturingGroup
-        | ClassStringDisjunction
-        | Group
-        | LookaroundAssertion
-        | Pattern
-    string: boolean
-    elements: Element[]
-}
-export interface DisjunctionAlternative extends BaseAlternative {
     parent: CapturingGroup | Group | LookaroundAssertion | Pattern
-    string: false
     elements: Element[]
 }
 /** StringAlternative is only used for `\q{alt}`({@link ClassStringDisjunction}). */
-export interface StringAlternative extends BaseAlternative {
+export interface StringAlternative extends NodeBase {
+    type: "StringAlternative"
     parent: ClassStringDisjunction
-    string: true
     elements: Character[]
 }
 
@@ -138,8 +127,8 @@ export interface StringAlternative extends BaseAlternative {
  */
 export interface Group extends NodeBase {
     type: "Group"
-    parent: DisjunctionAlternative | Quantifier
-    alternatives: DisjunctionAlternative[]
+    parent: Alternative | Quantifier
+    alternatives: Alternative[]
 }
 
 /**
@@ -148,9 +137,9 @@ export interface Group extends NodeBase {
  */
 export interface CapturingGroup extends NodeBase {
     type: "CapturingGroup"
-    parent: DisjunctionAlternative | Quantifier
+    parent: Alternative | Quantifier
     name: string | null
-    alternatives: DisjunctionAlternative[]
+    alternatives: Alternative[]
     references: Backreference[]
 }
 
@@ -165,10 +154,10 @@ export type LookaroundAssertion = LookaheadAssertion | LookbehindAssertion
  */
 export interface LookaheadAssertion extends NodeBase {
     type: "Assertion"
-    parent: DisjunctionAlternative | Quantifier
+    parent: Alternative | Quantifier
     kind: "lookahead"
     negate: boolean
-    alternatives: DisjunctionAlternative[]
+    alternatives: Alternative[]
 }
 
 /**
@@ -177,10 +166,10 @@ export interface LookaheadAssertion extends NodeBase {
  */
 export interface LookbehindAssertion extends NodeBase {
     type: "Assertion"
-    parent: DisjunctionAlternative
+    parent: Alternative
     kind: "lookbehind"
     negate: boolean
-    alternatives: DisjunctionAlternative[]
+    alternatives: Alternative[]
 }
 
 /**
@@ -189,7 +178,7 @@ export interface LookbehindAssertion extends NodeBase {
  */
 export interface Quantifier extends NodeBase {
     type: "Quantifier"
-    parent: DisjunctionAlternative
+    parent: Alternative
     min: number
     max: number // can be Number.POSITIVE_INFINITY
     greedy: boolean
@@ -206,7 +195,7 @@ export type CharacterClass =
 interface BaseCharacterClass extends NodeBase {
     type: "CharacterClass"
     parent:
-        | DisjunctionAlternative
+        | Alternative
         | ExpressionCharacterClass
         | Quantifier
         | UnicodeSetsCharacterClass
@@ -215,14 +204,14 @@ interface BaseCharacterClass extends NodeBase {
     elements: CharacterClassElement[]
 }
 export interface ClassRangesCharacterClass extends BaseCharacterClass {
-    parent: DisjunctionAlternative | Quantifier
+    parent: Alternative | Quantifier
     unicodeSets: false
     elements: ClassRangesCharacterClassElement[]
 }
 /** UnicodeSetsCharacterClass is the CharacterClass when in Unicode sets mode. So it may contain strings. */
 export interface UnicodeSetsCharacterClass extends BaseCharacterClass {
     parent:
-        | DisjunctionAlternative
+        | Alternative
         | ExpressionCharacterClass
         | Quantifier
         | UnicodeSetsCharacterClass
@@ -257,7 +246,7 @@ export type BoundaryAssertion = EdgeAssertion | WordBoundaryAssertion
  */
 export interface EdgeAssertion extends NodeBase {
     type: "Assertion"
-    parent: DisjunctionAlternative | Quantifier
+    parent: Alternative | Quantifier
     kind: "end" | "start"
 }
 
@@ -267,7 +256,7 @@ export interface EdgeAssertion extends NodeBase {
  */
 export interface WordBoundaryAssertion extends NodeBase {
     type: "Assertion"
-    parent: DisjunctionAlternative | Quantifier
+    parent: Alternative | Quantifier
     kind: "word"
     negate: boolean
 }
@@ -286,7 +275,7 @@ export type CharacterSet =
  */
 export interface AnyCharacterSet extends NodeBase {
     type: "CharacterSet"
-    parent: DisjunctionAlternative | Quantifier
+    parent: Alternative | Quantifier
     kind: "any"
 }
 
@@ -297,10 +286,10 @@ export interface AnyCharacterSet extends NodeBase {
 export interface EscapeCharacterSet extends NodeBase {
     type: "CharacterSet"
     parent:
+        | Alternative
         | CharacterClass
         | ClassIntersection
         | ClassSubtraction
-        | DisjunctionAlternative
         | Quantifier
     kind: "digit" | "space" | "word"
     negate: boolean
@@ -316,10 +305,10 @@ export type UnicodePropertyCharacterSet =
 interface BaseUnicodePropertyCharacterSet extends NodeBase {
     type: "CharacterSet"
     parent:
+        | Alternative
         | CharacterClass
         | ClassIntersection
         | ClassSubtraction
-        | DisjunctionAlternative
         | Quantifier
     kind: "property"
     strings: boolean
@@ -348,7 +337,7 @@ export interface StringsUnicodePropertyCharacterSet
 export interface ExpressionCharacterClass extends NodeBase {
     type: "ExpressionCharacterClass"
     parent:
-        | DisjunctionAlternative
+        | Alternative
         | ExpressionCharacterClass
         | Quantifier
         | UnicodeSetsCharacterClass
@@ -410,6 +399,7 @@ export interface Character extends NodeBase {
         | ClassIntersection
         | ClassSubtraction
         | Quantifier
+        | StringAlternative
     value: number // a code point.
 }
 
@@ -419,7 +409,7 @@ export interface Character extends NodeBase {
  */
 export interface Backreference extends NodeBase {
     type: "Backreference"
-    parent: DisjunctionAlternative | Quantifier
+    parent: Alternative | Quantifier
     ref: number | string
     resolved: CapturingGroup
 }
