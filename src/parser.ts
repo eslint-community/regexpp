@@ -167,6 +167,7 @@ class RegExpParserState {
         ) {
             throw new Error("UnknownError")
         }
+
         this._node = {
             type: "Alternative",
             parent,
@@ -711,6 +712,7 @@ class RegExpParserState {
         if (parent.type !== "ClassStringDisjunction") {
             throw new Error("UnknownError")
         }
+
         this._node = {
             type: "StringAlternative",
             parent,
