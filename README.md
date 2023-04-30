@@ -172,6 +172,6 @@ Please use GitHub's Issues/PRs.
 - `npm run watch` runs tests with `--watch` option.
 
 [`AST.Node`]: src/ast.ts#L4
-[`RegExpParser.Options`]: src/parser.ts#L711
-[`RegExpValidator.Options`]: src/validator.ts#L219
-[`RegExpVisitor.Handlers`]: src/visitor.ts#L204
+[`RegExpParser.Options`]: src/parser.ts#L743
+[`RegExpValidator.Options`]: src/validator.ts#L220
+[`RegExpVisitor.Handlers`]: src/visitor.ts#L291
