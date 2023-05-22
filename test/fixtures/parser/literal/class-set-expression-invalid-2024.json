@@ -321,6 +321,12 @@
         "message": "Invalid regular expression: /[a-b-c]/v: Invalid character in character class",
         "index": 5
       }
+    },
+    "/\\q{a}/v": {
+      "error": {
+        "message": "Invalid regular expression: /\\q{a}/v: Invalid escape",
+        "index": 2
+      }
     }
   }
 }
