@@ -1261,6 +1261,7 @@ export class RegExpValidator {
         this._numCapturingParens = this.countCapturingParens()
         this._groupNames.clear()
         this._backreferenceNames.clear()
+        this._lastMayContainStrings = false
 
         this.onPatternEnter(start)
         this.consumeDisjunction()
