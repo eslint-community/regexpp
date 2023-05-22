@@ -2314,6 +2314,14 @@ export class RegExpValidator {
         const start = this.index
         const operand = this.consumeClassSetOperandOrClassSetRange()
         if (!operand) {
+            const cp = this.currentCodePoint
+            if (
+                cp === this.nextCodePoint &&
+                isClassSetReservedDoublePunctuatorCharacter(cp)
+            ) {
+                // Make the same message as V8.
+                this.raise("Invalid set operation in character class")
+            }
             this.raise("Invalid character in character class")
         }
 

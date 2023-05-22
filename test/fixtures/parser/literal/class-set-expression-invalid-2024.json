@@ -54,97 +54,97 @@
     },
     "/[&&]/v": {
       "error": {
-        "message": "Invalid regular expression: /[&&]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[&&]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[!!]/v": {
       "error": {
-        "message": "Invalid regular expression: /[!!]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[!!]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[##]/v": {
       "error": {
-        "message": "Invalid regular expression: /[##]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[##]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[$$]/v": {
       "error": {
-        "message": "Invalid regular expression: /[$$]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[$$]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[%%]/v": {
       "error": {
-        "message": "Invalid regular expression: /[%%]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[%%]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[**]/v": {
       "error": {
-        "message": "Invalid regular expression: /[**]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[**]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[++]/v": {
       "error": {
-        "message": "Invalid regular expression: /[++]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[++]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[,,]/v": {
       "error": {
-        "message": "Invalid regular expression: /[,,]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[,,]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[..]/v": {
       "error": {
-        "message": "Invalid regular expression: /[..]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[..]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[::]/v": {
       "error": {
-        "message": "Invalid regular expression: /[::]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[::]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[;;]/v": {
       "error": {
-        "message": "Invalid regular expression: /[;;]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[;;]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[<<]/v": {
       "error": {
-        "message": "Invalid regular expression: /[<<]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[<<]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[==]/v": {
       "error": {
-        "message": "Invalid regular expression: /[==]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[==]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[>>]/v": {
       "error": {
-        "message": "Invalid regular expression: /[>>]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[>>]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[??]/v": {
       "error": {
-        "message": "Invalid regular expression: /[??]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[??]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[@@]/v": {
       "error": {
-        "message": "Invalid regular expression: /[@@]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[@@]/v: Invalid set operation in character class",
         "index": 2
       }
     },
@@ -156,13 +156,13 @@
     },
     "/[``]/v": {
       "error": {
-        "message": "Invalid regular expression: /[``]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[``]/v: Invalid set operation in character class",
         "index": 2
       }
     },
     "/[~~]/v": {
       "error": {
-        "message": "Invalid regular expression: /[~~]/v: Invalid character in character class",
+        "message": "Invalid regular expression: /[~~]/v: Invalid set operation in character class",
         "index": 2
       }
     },
