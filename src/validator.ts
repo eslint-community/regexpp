@@ -2312,9 +2312,27 @@ export class RegExpValidator {
      */
     private consumeClassSetExpression(): void {
         const start = this.index
-        const operand = this.consumeClassSetOperandOrClassSetRange()
-        if (!operand) {
+        if (this.consumeClassSetCharacter()) {
+            if (this.consumeClassSetRangeRight(start)) {
+                // ClassUnion
+                this._lastMayContainStrings = false
+                this.consumeClassUnion()
+                return
+            }
+            // ClassSetOperand
+
+            // * Static Semantics: MayContainStrings
+            // ClassSetOperand ::
+            //         ClassSetCharacter
+            //     1. Return false.
+            this._lastMayContainStrings = false
+        } else if (!this.consumeClassSetOperand()) {
             const cp = this.currentCodePoint
+            if (cp === REVERSE_SOLIDUS) {
+                // Make the same message as V8.
+                this.advance()
+                this.raise("Invalid escape")
+            }
             if (
                 cp === this.nextCodePoint &&
                 isClassSetReservedDoublePunctuatorCharacter(cp)
@@ -2325,62 +2343,81 @@ export class RegExpValidator {
             this.raise("Invalid character in character class")
         }
 
-        const firstMayContainStrings = this._lastMayContainStrings
-        if (operand !== "ClassSetRange") {
-            if (this.eat2(AMPERSAND, AMPERSAND)) {
-                // ClassIntersection
-                let mayContainStrings = firstMayContainStrings
-                do {
-                    if (this.currentCodePoint === AMPERSAND) {
-                        this.raise("Invalid character in character class")
-                    }
-                    if (!this.consumeClassSetOperand()) {
-                        this.raise("Invalid character in character class")
-                    }
-                    this.onClassIntersection(start, this.index)
-                    mayContainStrings =
-                        mayContainStrings && this._lastMayContainStrings
-                } while (this.eat2(AMPERSAND, AMPERSAND))
+        let mayContainStrings = this._lastMayContainStrings
+        if (this.eat2(AMPERSAND, AMPERSAND)) {
+            // ClassIntersection
+            do {
+                if (this.currentCodePoint === AMPERSAND) {
+                    this.raise("Invalid character in character class")
+                }
+                if (!this.consumeClassSetOperand()) {
+                    this.raise("Invalid character in character class")
+                }
+                this.onClassIntersection(start, this.index)
+                mayContainStrings =
+                    mayContainStrings && this._lastMayContainStrings
+            } while (this.eat2(AMPERSAND, AMPERSAND))
 
-                // * Static Semantics: MayContainStrings
-                // ClassSetExpression :: ClassIntersection
-                //     1. Return MayContainStrings of the ClassIntersection.
-                // ClassIntersection :: ClassSetOperand && ClassSetOperand
-                //     1. If MayContainStrings of the first ClassSetOperand is false, return false.
-                //     2. If MayContainStrings of the second ClassSetOperand is false, return false.
-                //     3. Return true.
-                // ClassIntersection :: ClassIntersection && ClassSetOperand
-                //     1. If MayContainStrings of the ClassIntersection is false, return false.
-                //     2. If MayContainStrings of the ClassSetOperand is false, return false.
-                //     3. Return true.
-                this._lastMayContainStrings = mayContainStrings
-                return
-            }
-            if (this.eat2(HYPHEN_MINUS, HYPHEN_MINUS)) {
-                // ClassSubtraction
-                do {
-                    if (!this.consumeClassSetOperand()) {
-                        this.raise("Invalid character in character class")
-                    }
-                    this.onClassSubtraction(start, this.index)
-                } while (this.eat2(HYPHEN_MINUS, HYPHEN_MINUS))
+            // * Static Semantics: MayContainStrings
+            // ClassSetExpression :: ClassIntersection
+            //     1. Return MayContainStrings of the ClassIntersection.
+            // ClassIntersection :: ClassSetOperand && ClassSetOperand
+            //     1. If MayContainStrings of the first ClassSetOperand is false, return false.
+            //     2. If MayContainStrings of the second ClassSetOperand is false, return false.
+            //     3. Return true.
+            // ClassIntersection :: ClassIntersection && ClassSetOperand
+            //     1. If MayContainStrings of the ClassIntersection is false, return false.
+            //     2. If MayContainStrings of the ClassSetOperand is false, return false.
+            //     3. Return true.
+            this._lastMayContainStrings = mayContainStrings
+            return
+        }
+        if (this.eat2(HYPHEN_MINUS, HYPHEN_MINUS)) {
+            // ClassSubtraction
+            do {
+                if (!this.consumeClassSetOperand()) {
+                    this.raise("Invalid character in character class")
+                }
+                this.onClassSubtraction(start, this.index)
+            } while (this.eat2(HYPHEN_MINUS, HYPHEN_MINUS))
 
-                // * Static Semantics: MayContainStrings
-                // ClassSetExpression :: ClassSubtraction
-                //     1. Return MayContainStrings of the ClassSubtraction.
-                // ClassSubtraction :: ClassSetOperand -- ClassSetOperand
-                //     1. Return MayContainStrings of the first ClassSetOperand.
-                // ClassSubtraction :: ClassSubtraction -- ClassSetOperand
-                //     1. Return MayContainStrings of the ClassSubtraction.
-                this._lastMayContainStrings = firstMayContainStrings
-                return
-            }
+            // * Static Semantics: MayContainStrings
+            // ClassSetExpression :: ClassSubtraction
+            //     1. Return MayContainStrings of the ClassSubtraction.
+            // ClassSubtraction :: ClassSetOperand -- ClassSetOperand
+            //     1. Return MayContainStrings of the first ClassSetOperand.
+            // ClassSubtraction :: ClassSubtraction -- ClassSetOperand
+            //     1. Return MayContainStrings of the ClassSubtraction.
+            this._lastMayContainStrings = mayContainStrings
+            return
         }
         // ClassUnion
-        let mayContainStrings =
-            operand === "ClassSetRange" ? false : this._lastMayContainStrings
-        while (this.consumeClassSetOperandOrClassSetRange()) {
-            mayContainStrings = mayContainStrings || this._lastMayContainStrings
+        this.consumeClassUnion()
+    }
+
+    /**
+     * Validate the next characters as a RegExp `ClassUnion(opt)` production.
+     * ```
+     * ClassUnion ::
+     *     ClassSetRange ClassUnion(opt)
+     *     ClassSetOperand ClassUnion(opt)
+     * ```
+     */
+    private consumeClassUnion(): void {
+        // ClassUnion
+        let mayContainStrings = this._lastMayContainStrings
+        for (;;) {
+            const start = this.index
+            if (this.consumeClassSetCharacter()) {
+                this.consumeClassSetRangeRight(start)
+                continue
+            }
+            if (this.consumeClassSetOperand()) {
+                mayContainStrings =
+                    mayContainStrings || this._lastMayContainStrings
+                continue
+            }
+            break
         }
 
         // * Static Semantics: MayContainStrings
@@ -2397,53 +2434,35 @@ export class RegExpValidator {
     }
 
     /**
-     * Validate the next characters as a RegExp `ClassSetOperand` or `ClassSetRange` production if possible.
+     * Validate the next characters as right operand of a RegExp `ClassSetRange` production if possible.
      *
      * ```
-     * ClassSetOperand ::
-     *     ClassSetCharacter
-     *     ClassStringDisjunction
-     *     NestedClass
      * ClassSetRange ::
      *     ClassSetCharacter `-` ClassSetCharacter
      * ```
      *
-     * @returns the kind if it consumed the next characters successfully.
+     * @returns `true` if it consumed the next characters successfully.
      */
-    private consumeClassSetOperandOrClassSetRange():
-        | "ClassSetCharacter"
-        | "ClassSetRange"
-        | "ClassStringDisjunction"
-        | "NestedClass"
-        | null {
-        const start = this.index
-        const operand = this.consumeClassSetOperand()
-
-        if (
-            operand !== "ClassSetCharacter" ||
-            this.currentCodePoint !== HYPHEN_MINUS ||
-            // avoid ClassSubtraction
-            this.nextCodePoint === HYPHEN_MINUS
-        ) {
-            return operand
-        }
-        this.advance()
-
+    private consumeClassSetRangeRight(start: number) {
+        const currentStart = this.index
         const min = this._lastIntValue
-        if (!this.consumeClassSetCharacter()) {
-            this.raise("Invalid character in character class")
-        }
-        const max = this._lastIntValue
+        if (this.eat(HYPHEN_MINUS)) {
+            if (this.consumeClassSetCharacter()) {
+                const max = this._lastIntValue
 
-        // Validate
-        if (min === -1 || max === -1) {
-            this.raise("Invalid character class")
+                // Validate
+                if (min === -1 || max === -1) {
+                    this.raise("Invalid character class")
+                }
+                if (min > max) {
+                    this.raise("Range out of order in character class")
+                }
+                this.onCharacterClassRange(start, this.index, min, max)
+                return true
+            }
+            this.rewind(currentStart)
         }
-        if (min > max) {
-            this.raise("Range out of order in character class")
-        }
-        this.onCharacterClassRange(start, this.index, min, max)
-        return "ClassSetRange"
+        return false
     }
 
     /**
@@ -2455,13 +2474,9 @@ export class RegExpValidator {
      *     NestedClass
      * ```
      *
-     * @returns the kind if it consumed the next characters successfully.
+     * @returns `true` if it consumed the next characters successfully.
      */
-    private consumeClassSetOperand():
-        | "ClassSetCharacter"
-        | "ClassStringDisjunction"
-        | "NestedClass"
-        | null {
+    private consumeClassSetOperand(): boolean {
         if (this.consumeNestedClass()) {
             // * Static Semantics: MayContainStrings
             // ClassSetOperand :: NestedClass
@@ -2469,7 +2484,7 @@ export class RegExpValidator {
             //
             // Skip assignment
             // this._lastMayContainStrings = this._lastMayContainStrings
-            return "NestedClass"
+            return true
         }
         if (this.consumeClassStringDisjunction()) {
             // * Static Semantics: MayContainStrings
@@ -2478,7 +2493,7 @@ export class RegExpValidator {
             //
             // Skip assignment
             // this._lastMayContainStrings = this._lastMayContainStrings
-            return "ClassStringDisjunction"
+            return true
         }
         if (this.consumeClassSetCharacter()) {
             // * Static Semantics: MayContainStrings
@@ -2486,9 +2501,9 @@ export class RegExpValidator {
             //         ClassSetCharacter
             //     1. Return false.
             this._lastMayContainStrings = false
-            return "ClassSetCharacter"
+            return true
         }
-        return null
+        return false
     }
 
     /**
@@ -2663,7 +2678,7 @@ export class RegExpValidator {
                 this.onCharacter(start, this.index, this._lastIntValue)
                 return true
             }
-            this.raise("Invalid escape")
+            this.rewind(start)
         }
         return false
     }
