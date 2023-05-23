@@ -1886,7 +1886,7 @@ export class RegExpValidator {
      *      [+UnicodeMode] `p{` UnicodePropertyValueExpression `}`
      *      [+UnicodeMode] `P{` UnicodePropertyValueExpression `}`
      * ```
-     * @returns `true` if it consumed the next characters successfully.
+     * @returns the object if it consumed the next characters successfully.
      */
     private consumeCharacterClassEscape(): UnicodeSetsConsumeResult | null {
         const start = this.index
@@ -2063,7 +2063,7 @@ export class RegExpValidator {
      *      `[` [lookahead ≠ ^] ClassContents[?UnicodeMode, ?UnicodeSetsMode] `]`
      *      `[^` ClassContents[?UnicodeMode, ?UnicodeSetsMode] `]`
      * ```
-     * @returns `true` if it consumed the next characters successfully.
+     * @returns the object if it consumed the next characters successfully.
      */
     private consumeCharacterClass(): UnicodeSetsConsumeResult | null {
         const start = this.index
@@ -2338,8 +2338,9 @@ export class RegExpValidator {
                 (result = this.consumeClassSetOperand())
             ) {
                 this.onClassIntersection(start, this.index)
-                mayContainStrings =
-                    mayContainStrings && result.mayContainStrings
+                if (!result.mayContainStrings) {
+                    mayContainStrings = false
+                }
                 if (this.eat2(AMPERSAND, AMPERSAND)) {
                     continue
                 }
@@ -2465,7 +2466,7 @@ export class RegExpValidator {
      *     NestedClass
      * ```
      *
-     * @returns `true` if it consumed the next characters successfully.
+     * @returns the object if it consumed the next characters successfully.
      */
     private consumeClassSetOperand(): UnicodeSetsConsumeResult | null {
         let result: UnicodeSetsConsumeResult | null = null
@@ -2499,7 +2500,7 @@ export class RegExpValidator {
      *     `[^` ClassContents[+UnicodeMode, +UnicodeSetsMode] `]`
      *     `\` CharacterClassEscape[+UnicodeMode]
      * ```
-     * @returns `true` if it consumed the next characters successfully.
+     * @returns the object if it consumed the next characters successfully.
      */
     private consumeNestedClass(): UnicodeSetsConsumeResult | null {
         const start = this.index
@@ -2545,7 +2546,7 @@ export class RegExpValidator {
      *     ClassString
      *     ClassString `|` ClassStringDisjunctionContents
      * ```
-     * @returns `true` if it consumed the next characters successfully.
+     * @returns the object if it consumed the next characters successfully.
      */
     private consumeClassStringDisjunction(): UnicodeSetsConsumeResult | null {
         const start = this.index
@@ -2557,8 +2558,7 @@ export class RegExpValidator {
             let i = 0
             let mayContainStrings = false
             do {
-                const result = this.consumeClassString(i++)
-                if (result.mayContainStrings) {
+                if (this.consumeClassString(i++).mayContainStrings) {
                     mayContainStrings = true
                 }
             } while (this.eat(VERTICAL_LINE))
