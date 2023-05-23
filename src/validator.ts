@@ -590,6 +590,8 @@ export namespace RegExpValidator {
     }
 }
 
+type UnicodeSetsConsumeResult = { mayContainStrings?: boolean }
+
 /**
  * The regular expression validator.
  */
@@ -620,8 +622,6 @@ export class RegExpValidator {
     } = { key: "", value: "", strings: false }
 
     private _lastAssertionIsQuantifiable = false
-
-    private _lastMayContainStrings = false
 
     private _numCapturingParens = 0
 
@@ -1261,7 +1261,6 @@ export class RegExpValidator {
         this._numCapturingParens = this.countCapturingParens()
         this._groupNames.clear()
         this._backreferenceNames.clear()
-        this._lastMayContainStrings = false
 
         this.onPatternEnter(start)
         this.consumeDisjunction()
@@ -1580,7 +1579,7 @@ export class RegExpValidator {
             this.consumePatternCharacter() ||
             this.consumeDot() ||
             this.consumeReverseSolidusAtomEscape() ||
-            this.consumeCharacterClass() ||
+            Boolean(this.consumeCharacterClass()) ||
             this.consumeUncapturingGroup() ||
             this.consumeCapturingGroup()
         )
@@ -1692,7 +1691,7 @@ export class RegExpValidator {
             this.consumeDot() ||
             this.consumeReverseSolidusAtomEscape() ||
             this.consumeReverseSolidusFollowedByC() ||
-            this.consumeCharacterClass() ||
+            Boolean(this.consumeCharacterClass()) ||
             this.consumeUncapturingGroup() ||
             this.consumeCapturingGroup() ||
             this.consumeInvalidBracedQuantifier() ||
@@ -1889,7 +1888,7 @@ export class RegExpValidator {
      * ```
      * @returns `true` if it consumed the next characters successfully.
      */
-    private consumeCharacterClassEscape(): boolean {
+    private consumeCharacterClassEscape(): UnicodeSetsConsumeResult | null {
         const start = this.index
 
         if (this.eat(LATIN_SMALL_LETTER_D)) {
@@ -1900,8 +1899,7 @@ export class RegExpValidator {
             // CharacterClassEscape[UnicodeMode] ::
             //         d
             //     1. Return false.
-            this._lastMayContainStrings = false
-            return true
+            return {}
         }
         if (this.eat(LATIN_CAPITAL_LETTER_D)) {
             this._lastIntValue = -1
@@ -1911,8 +1909,7 @@ export class RegExpValidator {
             // CharacterClassEscape[UnicodeMode] ::
             //         D
             //     1. Return false.
-            this._lastMayContainStrings = false
-            return true
+            return {}
         }
         if (this.eat(LATIN_SMALL_LETTER_S)) {
             this._lastIntValue = -1
@@ -1922,8 +1919,7 @@ export class RegExpValidator {
             // CharacterClassEscape[UnicodeMode] ::
             //         s
             //     1. Return false.
-            this._lastMayContainStrings = false
-            return true
+            return {}
         }
         if (this.eat(LATIN_CAPITAL_LETTER_S)) {
             this._lastIntValue = -1
@@ -1933,8 +1929,7 @@ export class RegExpValidator {
             // CharacterClassEscape[UnicodeMode] ::
             //         S
             //     1. Return false.
-            this._lastMayContainStrings = false
-            return true
+            return {}
         }
         if (this.eat(LATIN_SMALL_LETTER_W)) {
             this._lastIntValue = -1
@@ -1944,8 +1939,7 @@ export class RegExpValidator {
             // CharacterClassEscape[UnicodeMode] ::
             //         w
             //     1. Return false.
-            this._lastMayContainStrings = false
-            return true
+            return {}
         }
         if (this.eat(LATIN_CAPITAL_LETTER_W)) {
             this._lastIntValue = -1
@@ -1955,8 +1949,7 @@ export class RegExpValidator {
             // CharacterClassEscape[UnicodeMode] ::
             //         W
             //     1. Return false.
-            this._lastMayContainStrings = false
-            return true
+            return {}
         }
 
         let negate = false
@@ -1999,13 +1992,12 @@ export class RegExpValidator {
                 //     2. Return false.
                 //
                 // negate==true && mayContainStrings==true is already errors, so no need to handle it.
-                this._lastMayContainStrings = this._lastProperty.strings
-                return true
+                return { mayContainStrings: this._lastProperty.strings }
             }
             this.raise("Invalid property name")
         }
 
-        return false
+        return null
     }
 
     /**
@@ -2073,19 +2065,19 @@ export class RegExpValidator {
      * ```
      * @returns `true` if it consumed the next characters successfully.
      */
-    private consumeCharacterClass(): boolean {
+    private consumeCharacterClass(): UnicodeSetsConsumeResult | null {
         const start = this.index
         if (this.eat(LEFT_SQUARE_BRACKET)) {
             const negate = this.eat(CIRCUMFLEX_ACCENT)
             this.onCharacterClassEnter(start, negate, this._unicodeSetsMode)
-            this.consumeClassContents()
+            const result = this.consumeClassContents()
             if (!this.eat(RIGHT_SQUARE_BRACKET)) {
                 if (this.currentCodePoint === -1) {
                     this.raise("Unterminated character class")
                 }
                 this.raise("Invalid character in character class")
             }
-            if (negate && this._lastMayContainStrings) {
+            if (negate && result.mayContainStrings) {
                 this.raise("Negated character class may contain strings")
             }
 
@@ -2097,13 +2089,9 @@ export class RegExpValidator {
             //     1. Return false.
             // CharacterClass :: [ ClassContents ]
             //     1. Return MayContainStrings of the ClassContents.
-            //
-            // negate==true && mayContainStrings==true is already errors, so no need to handle it.
-            // So skip assignment
-            // this._lastMayContainStrings = this._lastMayContainStrings
-            return true
+            return result
         }
-        return false
+        return null
     }
 
     /**
@@ -2123,7 +2111,7 @@ export class RegExpValidator {
      *      ClassAtomNoDash[?UnicodeMode] `-` ClassAtom[?UnicodeMode] ClassContents[?UnicodeMode, ~UnicodeSetsMode]
      * ```
      */
-    private consumeClassContents(): void {
+    private consumeClassContents(): UnicodeSetsConsumeResult {
         if (this._unicodeSetsMode) {
             if (this.currentCodePoint === RIGHT_SQUARE_BRACKET) {
                 // [empty]
@@ -2132,18 +2120,14 @@ export class RegExpValidator {
                 // ClassContents[UnicodeMode, UnicodeSetsMode] ::
                 //         [empty]
                 //     1. Return false.
-                this._lastMayContainStrings = false
-                return
+                return {}
             }
-            this.consumeClassSetExpression()
+            const result = this.consumeClassSetExpression()
 
             // * Static Semantics: MayContainStrings
             // ClassContents :: ClassSetExpression
             //     1. Return MayContainStrings of the ClassSetExpression.
-            //
-            // Skip assignment
-            // this._lastMayContainStrings = this._lastMayContainStrings
-            return
+            return result
         }
         const strict = this.strict || this._unicodeMode
         for (;;) {
@@ -2184,7 +2168,7 @@ export class RegExpValidator {
         // ClassContents[UnicodeMode, UnicodeSetsMode] ::
         //         NonemptyClassRanges[?UnicodeMode]
         //     1. Return false.
-        this._lastMayContainStrings = false
+        return {}
     }
 
     /**
@@ -2288,7 +2272,8 @@ export class RegExpValidator {
         }
 
         return (
-            this.consumeCharacterClassEscape() || this.consumeCharacterEscape()
+            Boolean(this.consumeCharacterClassEscape()) ||
+            this.consumeCharacterEscape()
         )
     }
 
@@ -2310,14 +2295,15 @@ export class RegExpValidator {
      *     ClassSubtraction `--` ClassSetOperand
      * ```
      */
-    private consumeClassSetExpression(): void {
+    private consumeClassSetExpression(): UnicodeSetsConsumeResult {
         const start = this.index
+        let mayContainStrings: boolean | undefined = false
+        let result: UnicodeSetsConsumeResult | null = null
         if (this.consumeClassSetCharacter()) {
             if (this.consumeClassSetRangeRight(start)) {
                 // ClassUnion
-                this._lastMayContainStrings = false
-                this.consumeClassUnion()
-                return
+                this.consumeClassUnion({})
+                return {}
             }
             // ClassSetOperand
 
@@ -2325,8 +2311,10 @@ export class RegExpValidator {
             // ClassSetOperand ::
             //         ClassSetCharacter
             //     1. Return false.
-            this._lastMayContainStrings = false
-        } else if (!this.consumeClassSetOperand()) {
+            mayContainStrings = false
+        } else if ((result = this.consumeClassSetOperand())) {
+            mayContainStrings = result.mayContainStrings
+        } else {
             const cp = this.currentCodePoint
             if (cp === REVERSE_SOLIDUS) {
                 // Make the same message as V8.
@@ -2343,56 +2331,55 @@ export class RegExpValidator {
             this.raise("Invalid character in character class")
         }
 
-        let mayContainStrings = this._lastMayContainStrings
         if (this.eat2(AMPERSAND, AMPERSAND)) {
             // ClassIntersection
-            do {
-                if (this.currentCodePoint === AMPERSAND) {
-                    this.raise("Invalid character in character class")
-                }
-                if (!this.consumeClassSetOperand()) {
-                    this.raise("Invalid character in character class")
-                }
+            while (
+                this.currentCodePoint !== AMPERSAND &&
+                (result = this.consumeClassSetOperand())
+            ) {
                 this.onClassIntersection(start, this.index)
                 mayContainStrings =
-                    mayContainStrings && this._lastMayContainStrings
-            } while (this.eat2(AMPERSAND, AMPERSAND))
+                    mayContainStrings && result.mayContainStrings
+                if (this.eat2(AMPERSAND, AMPERSAND)) {
+                    continue
+                }
 
-            // * Static Semantics: MayContainStrings
-            // ClassSetExpression :: ClassIntersection
-            //     1. Return MayContainStrings of the ClassIntersection.
-            // ClassIntersection :: ClassSetOperand && ClassSetOperand
-            //     1. If MayContainStrings of the first ClassSetOperand is false, return false.
-            //     2. If MayContainStrings of the second ClassSetOperand is false, return false.
-            //     3. Return true.
-            // ClassIntersection :: ClassIntersection && ClassSetOperand
-            //     1. If MayContainStrings of the ClassIntersection is false, return false.
-            //     2. If MayContainStrings of the ClassSetOperand is false, return false.
-            //     3. Return true.
-            this._lastMayContainStrings = mayContainStrings
-            return
+                // * Static Semantics: MayContainStrings
+                // ClassSetExpression :: ClassIntersection
+                //     1. Return MayContainStrings of the ClassIntersection.
+                // ClassIntersection :: ClassSetOperand && ClassSetOperand
+                //     1. If MayContainStrings of the first ClassSetOperand is false, return false.
+                //     2. If MayContainStrings of the second ClassSetOperand is false, return false.
+                //     3. Return true.
+                // ClassIntersection :: ClassIntersection && ClassSetOperand
+                //     1. If MayContainStrings of the ClassIntersection is false, return false.
+                //     2. If MayContainStrings of the ClassSetOperand is false, return false.
+                //     3. Return true.
+                return { mayContainStrings }
+            }
+
+            this.raise("Invalid character in character class")
         }
         if (this.eat2(HYPHEN_MINUS, HYPHEN_MINUS)) {
             // ClassSubtraction
-            do {
-                if (!this.consumeClassSetOperand()) {
-                    this.raise("Invalid character in character class")
-                }
+            while (this.consumeClassSetOperand()) {
                 this.onClassSubtraction(start, this.index)
-            } while (this.eat2(HYPHEN_MINUS, HYPHEN_MINUS))
-
-            // * Static Semantics: MayContainStrings
-            // ClassSetExpression :: ClassSubtraction
-            //     1. Return MayContainStrings of the ClassSubtraction.
-            // ClassSubtraction :: ClassSetOperand -- ClassSetOperand
-            //     1. Return MayContainStrings of the first ClassSetOperand.
-            // ClassSubtraction :: ClassSubtraction -- ClassSetOperand
-            //     1. Return MayContainStrings of the ClassSubtraction.
-            this._lastMayContainStrings = mayContainStrings
-            return
+                if (this.eat2(HYPHEN_MINUS, HYPHEN_MINUS)) {
+                    continue
+                }
+                // * Static Semantics: MayContainStrings
+                // ClassSetExpression :: ClassSubtraction
+                //     1. Return MayContainStrings of the ClassSubtraction.
+                // ClassSubtraction :: ClassSetOperand -- ClassSetOperand
+                //     1. Return MayContainStrings of the first ClassSetOperand.
+                // ClassSubtraction :: ClassSubtraction -- ClassSetOperand
+                //     1. Return MayContainStrings of the ClassSubtraction.
+                return { mayContainStrings }
+            }
+            this.raise("Invalid character in character class")
         }
         // ClassUnion
-        this.consumeClassUnion()
+        return this.consumeClassUnion({ mayContainStrings })
     }
 
     /**
@@ -2403,18 +2390,22 @@ export class RegExpValidator {
      *     ClassSetOperand ClassUnion(opt)
      * ```
      */
-    private consumeClassUnion(): void {
+    private consumeClassUnion(
+        leftResult: UnicodeSetsConsumeResult,
+    ): UnicodeSetsConsumeResult {
         // ClassUnion
-        let mayContainStrings = this._lastMayContainStrings
+        let mayContainStrings = leftResult.mayContainStrings
         for (;;) {
             const start = this.index
             if (this.consumeClassSetCharacter()) {
                 this.consumeClassSetRangeRight(start)
                 continue
             }
-            if (this.consumeClassSetOperand()) {
-                mayContainStrings =
-                    mayContainStrings || this._lastMayContainStrings
+            const result = this.consumeClassSetOperand()
+            if (result) {
+                if (result.mayContainStrings) {
+                    mayContainStrings = true
+                }
                 continue
             }
             break
@@ -2430,7 +2421,7 @@ export class RegExpValidator {
         //     1. If MayContainStrings of the ClassSetOperand is true, return true.
         //     2. If ClassUnion is present, return MayContainStrings of the ClassUnion.
         //     3. Return false.
-        this._lastMayContainStrings = mayContainStrings
+        return { mayContainStrings }
     }
 
     /**
@@ -2476,34 +2467,28 @@ export class RegExpValidator {
      *
      * @returns `true` if it consumed the next characters successfully.
      */
-    private consumeClassSetOperand(): boolean {
-        if (this.consumeNestedClass()) {
+    private consumeClassSetOperand(): UnicodeSetsConsumeResult | null {
+        let result: UnicodeSetsConsumeResult | null = null
+        if ((result = this.consumeNestedClass())) {
             // * Static Semantics: MayContainStrings
             // ClassSetOperand :: NestedClass
             //     1. Return MayContainStrings of the NestedClass.
-            //
-            // Skip assignment
-            // this._lastMayContainStrings = this._lastMayContainStrings
-            return true
+            return result
         }
-        if (this.consumeClassStringDisjunction()) {
+        if ((result = this.consumeClassStringDisjunction())) {
             // * Static Semantics: MayContainStrings
             // ClassSetOperand :: ClassStringDisjunction
             //     1. Return MayContainStrings of the ClassStringDisjunction.
-            //
-            // Skip assignment
-            // this._lastMayContainStrings = this._lastMayContainStrings
-            return true
+            return result
         }
         if (this.consumeClassSetCharacter()) {
             // * Static Semantics: MayContainStrings
             // ClassSetOperand ::
             //         ClassSetCharacter
             //     1. Return false.
-            this._lastMayContainStrings = false
-            return true
+            return {}
         }
-        return false
+        return null
     }
 
     /**
@@ -2516,16 +2501,16 @@ export class RegExpValidator {
      * ```
      * @returns `true` if it consumed the next characters successfully.
      */
-    private consumeNestedClass(): boolean {
+    private consumeNestedClass(): UnicodeSetsConsumeResult | null {
         const start = this.index
         if (this.eat(LEFT_SQUARE_BRACKET)) {
             const negate = this.eat(CIRCUMFLEX_ACCENT)
             this.onCharacterClassEnter(start, negate, true)
-            this.consumeClassContents()
+            const result = this.consumeClassContents()
             if (!this.eat(RIGHT_SQUARE_BRACKET)) {
                 this.raise("Unterminated character class")
             }
-            if (negate && this._lastMayContainStrings) {
+            if (negate && result.mayContainStrings) {
                 this.raise("Negated character class may contain strings")
             }
             this.onCharacterClassLeave(start, this.index, negate)
@@ -2536,25 +2521,19 @@ export class RegExpValidator {
             //     1. Return false.
             // NestedClass :: [ ClassContents ]
             //     1. Return MayContainStrings of the ClassContents.
-            //
-            // negate==true && mayContainStrings==true is already errors, so no need to handle it.
-            // So skip assignment
-            // this._lastMayContainStrings = this._lastMayContainStrings
-            return true
+            return result
         }
         if (this.eat(REVERSE_SOLIDUS)) {
-            if (this.consumeCharacterClassEscape()) {
+            const result = this.consumeCharacterClassEscape()
+            if (result) {
                 // * Static Semantics: MayContainStrings
                 // NestedClass :: \ CharacterClassEscape
                 //     1. Return MayContainStrings of the CharacterClassEscape.
-                //
-                // Skip assignment
-                // this._lastMayContainStrings = this._lastMayContainStrings
-                return true
+                return result
             }
             this.rewind(start)
         }
-        return false
+        return null
     }
 
     /**
@@ -2568,7 +2547,7 @@ export class RegExpValidator {
      * ```
      * @returns `true` if it consumed the next characters successfully.
      */
-    private consumeClassStringDisjunction(): boolean {
+    private consumeClassStringDisjunction(): UnicodeSetsConsumeResult | null {
         const start = this.index
         if (
             this.eat3(REVERSE_SOLIDUS, LATIN_SMALL_LETTER_Q, LEFT_CURLY_BRACKET)
@@ -2578,9 +2557,10 @@ export class RegExpValidator {
             let i = 0
             let mayContainStrings = false
             do {
-                this.consumeClassString(i++)
-                mayContainStrings =
-                    mayContainStrings || this._lastMayContainStrings
+                const result = this.consumeClassString(i++)
+                if (result.mayContainStrings) {
+                    mayContainStrings = true
+                }
             } while (this.eat(VERTICAL_LINE))
 
             if (this.eat(RIGHT_CURLY_BRACKET)) {
@@ -2594,12 +2574,11 @@ export class RegExpValidator {
                 // ClassStringDisjunctionContents :: ClassString | ClassStringDisjunctionContents
                 //     1. If MayContainStrings of the ClassString is true, return true.
                 //     2. Return MayContainStrings of the ClassStringDisjunctionContents.
-                this._lastMayContainStrings = mayContainStrings
-                return true
+                return { mayContainStrings }
             }
             this.raise("Unterminated class string disjunction")
         }
-        return false
+        return null
     }
 
     /**
@@ -2612,7 +2591,7 @@ export class RegExpValidator {
      *     ClassSetCharacter NonEmptyClassString(opt)
      * ```
      */
-    private consumeClassString(i: number): void {
+    private consumeClassString(i: number): UnicodeSetsConsumeResult {
         const start = this.index
 
         let count = 0
@@ -2633,7 +2612,7 @@ export class RegExpValidator {
         // NonEmptyClassString :: ClassSetCharacter NonEmptyClassString(opt)
         //     1. If NonEmptyClassString is present, return true.
         //     2. Return false.
-        this._lastMayContainStrings = count !== 1
+        return { mayContainStrings: count !== 1 }
     }
 
     /**
