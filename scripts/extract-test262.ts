@@ -14,10 +14,9 @@ const fixturesRoot = path.join(
     "../test/fixtures/parser/literal/test262",
 )
 
-const stream: Readable = new TestStream(
-    path.dirname(require.resolve("test262/package.json")),
-    { omitRuntime: true },
-)
+const test262Root = path.dirname(require.resolve("test262/package.json"))
+
+const stream: Readable = new TestStream(test262Root, { omitRuntime: true })
 
 type Test = {
     file: string
@@ -112,6 +111,10 @@ async function extractMain() {
             ]
         }
     }
+    await fs.copyFile(
+        path.join(test262Root, "LICENSE"),
+        path.join(fixturesRoot, "LICENSE"),
+    )
     for (const [filePath, fixture] of extractedFixtures) {
         if (Object.keys(fixture.patterns).length === 0) {
             continue
