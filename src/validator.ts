@@ -591,6 +591,11 @@ export namespace RegExpValidator {
 }
 
 type UnicodeSetsConsumeResult = { mayContainStrings?: boolean }
+type UnicodePropertyValueExpressionConsumeResult = {
+    key: string
+    value: string | null
+    strings?: boolean
+}
 
 /**
  * The regular expression validator.
@@ -614,12 +619,6 @@ export class RegExpValidator {
     }
 
     private _lastStrValue = ""
-
-    private _lastProperty: {
-        key: string
-        value: string | null
-        strings: boolean
-    } = { key: "", value: "", strings: false }
 
     private _lastAssertionIsQuantifiable = false
 
@@ -1888,6 +1887,7 @@ export class RegExpValidator {
      * ```
      * @returns the object if it consumed the next characters successfully.
      */
+    // eslint-disable-next-line complexity
     private consumeCharacterClassEscape(): UnicodeSetsConsumeResult | null {
         const start = this.index
 
@@ -1960,12 +1960,14 @@ export class RegExpValidator {
                 (negate = this.eat(LATIN_CAPITAL_LETTER_P)))
         ) {
             this._lastIntValue = -1
+            let result: UnicodePropertyValueExpressionConsumeResult | null =
+                null
             if (
                 this.eat(LEFT_CURLY_BRACKET) &&
-                this.eatUnicodePropertyValueExpression() &&
+                (result = this.eatUnicodePropertyValueExpression()) &&
                 this.eat(RIGHT_CURLY_BRACKET)
             ) {
-                if (negate && this._lastProperty.strings) {
+                if (negate && result.strings) {
                     this.raise("Invalid property name")
                 }
 
@@ -1973,10 +1975,10 @@ export class RegExpValidator {
                     start - 1,
                     this.index,
                     "property",
-                    this._lastProperty.key,
-                    this._lastProperty.value,
+                    result.key,
+                    result.value,
                     negate,
-                    this._lastProperty.strings,
+                    result.strings ?? false,
                 )
 
                 // * Static Semantics: MayContainStrings
@@ -1992,7 +1994,7 @@ export class RegExpValidator {
                 //     2. Return false.
                 //
                 // negate==true && mayContainStrings==true is already errors, so no need to handle it.
-                return { mayContainStrings: this._lastProperty.strings }
+                return { mayContainStrings: result.strings }
             }
             this.raise("Invalid property name")
         }
@@ -3057,9 +3059,9 @@ export class RegExpValidator {
      *      UnicodePropertyName `=` UnicodePropertyValue
      *      LoneUnicodePropertyNameOrValue
      * ```
-     * @returns `true` if it ate the next characters successfully.
+     * @returns the object if it ate the next characters successfully.
      */
-    private eatUnicodePropertyValueExpression(): boolean {
+    private eatUnicodePropertyValueExpression(): UnicodePropertyValueExpressionConsumeResult | null {
         const start = this.index
 
         // UnicodePropertyName `=` UnicodePropertyValue
@@ -3068,12 +3070,10 @@ export class RegExpValidator {
             if (this.eatUnicodePropertyValue()) {
                 const value = this._lastStrValue
                 if (isValidUnicodeProperty(this.ecmaVersion, key, value)) {
-                    this._lastProperty = {
+                    return {
                         key,
                         value: value || null,
-                        strings: false,
                     }
-                    return true
                 }
                 this.raise("Invalid property name")
             }
@@ -3090,20 +3090,16 @@ export class RegExpValidator {
                     nameOrValue,
                 )
             ) {
-                this._lastProperty = {
+                return {
                     key: "General_Category",
                     value: nameOrValue || null,
-                    strings: false,
                 }
-                return true
             }
             if (isValidLoneUnicodeProperty(this.ecmaVersion, nameOrValue)) {
-                this._lastProperty = {
+                return {
                     key: nameOrValue,
                     value: null,
-                    strings: false,
                 }
-                return true
             }
             if (
                 this._unicodeSetsMode &&
@@ -3112,16 +3108,15 @@ export class RegExpValidator {
                     nameOrValue,
                 )
             ) {
-                this._lastProperty = {
+                return {
                     key: nameOrValue,
                     value: null,
                     strings: true,
                 }
-                return true
             }
             this.raise("Invalid property name")
         }
-        return false
+        return null
     }
 
     /**
