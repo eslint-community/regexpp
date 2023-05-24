@@ -46,7 +46,7 @@ function* extractFixtureFiles(dir: string): Iterable<string> {
             )) {
                 yield path.join(dirent.name, name)
             }
-        } else {
+        } else if (dirent.name.endsWith(".json")) {
             yield dirent.name
         }
     }
