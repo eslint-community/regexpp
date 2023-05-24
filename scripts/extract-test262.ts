@@ -60,17 +60,14 @@ async function extractMain() {
     for (const test of testObjects.sort((a, b) => {
         const lengthA = a.attrs.features?.length ?? 999
         const lengthB = b.attrs.features?.length ?? 999
-        return (
-            lengthA - lengthB ||
-            (a.file > b.file ? 1 : a.file < b.file ? -1 : 0)
-        )
+        return lengthA - lengthB || compareStr(a.file, b.file)
     })) {
         let filePath: string | undefined = undefined
         if (test.attrs.features && test.attrs.features.length > 0) {
             filePath = path.join(
                 fixturesRoot,
                 `${[...test.attrs.features]
-                    .sort((a, b) => (a > b ? 1 : a < b ? -1 : 0))
+                    .sort(compareStr)
                     .join("-and-")}.json`,
             )
         } else {
@@ -121,11 +118,11 @@ async function extractMain() {
         }
         fixture._test262FileNames = [
             ...new Set(fixture._test262FileNames),
-        ].sort((a, b) => (a > b ? 1 : a < b ? -1 : 0))
+        ].sort(compareStr)
         // @ts-ignore -- ignore
         fixture.patterns = Object.fromEntries(
             Object.entries(fixture.patterns).sort((a, b) =>
-                a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0,
+                compareStr(a[0], b[0]),
             ),
         )
         await fs.mkdir(path.dirname(filePath), { recursive: true })
@@ -154,4 +151,8 @@ async function fileExists(filepath: string) {
     } catch (e) {
         return false
     }
+}
+
+function compareStr(a: string, b: string) {
+    return a > b ? 1 : a < b ? -1 : 0
 }
