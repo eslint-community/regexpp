@@ -3,7 +3,9 @@
     "test/built-ins/RegExp/prototype/Symbol.replace/coerce-unicode.js",
     "test/built-ins/RegExp/prototype/Symbol.replace/fn-coerce-replacement-err.js",
     "test/built-ins/RegExp/prototype/Symbol.replace/fn-invoke-args.js",
+    "test/built-ins/RegExp/prototype/Symbol.replace/replace-with-trailing.js",
     "test/built-ins/RegExp/prototype/Symbol.replace/replace-without-trailing.js",
+    "test/built-ins/RegExp/prototype/Symbol.replace/subst-capture-idx-1.js",
     "test/built-ins/RegExp/prototype/Symbol.replace/subst-matched.js"
   ],
   "options": {},

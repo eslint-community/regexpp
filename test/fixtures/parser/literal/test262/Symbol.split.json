@@ -1,60 +1,11 @@
 {
   "_test262FileNames": [
-    "test/built-ins/RegExp/prototype/Symbol.split/coerce-string.js",
+    "test/annexB/built-ins/RegExp/prototype/Symbol.split/toint32-limit-recompiles-source.js",
     "test/built-ins/RegExp/prototype/Symbol.split/species-ctor-ctor-undef.js",
     "test/built-ins/RegExp/prototype/Symbol.split/str-limit-capturing.js"
   ],
   "options": {},
   "patterns": {
-    "/ /": {
-      "ast": {
-        "type": "RegExpLiteral",
-        "parent": null,
-        "start": 0,
-        "end": 3,
-        "raw": "/ /",
-        "pattern": {
-          "type": "Pattern",
-          "parent": "♻️..",
-          "start": 1,
-          "end": 2,
-          "raw": " ",
-          "alternatives": [
-            {
-              "type": "Alternative",
-              "parent": "♻️../..",
-              "start": 1,
-              "end": 2,
-              "raw": " ",
-              "elements": [
-                {
-                  "type": "Character",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 2,
-                  "raw": " ",
-                  "value": 32
-                }
-              ]
-            }
-          ]
-        },
-        "flags": {
-          "type": "Flags",
-          "parent": "♻️..",
-          "start": 3,
-          "end": 3,
-          "raw": "",
-          "global": false,
-          "ignoreCase": false,
-          "multiline": false,
-          "unicode": false,
-          "sticky": false,
-          "dotAll": false,
-          "hasIndices": false
-        }
-      }
-    },
     "/[db]/": {
       "ast": {
         "type": "RegExpLiteral",
@@ -111,6 +62,55 @@
           "parent": "♻️..",
           "start": 6,
           "end": 6,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/a/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 3,
+        "raw": "/a/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "a",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "a",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "a",
+                  "value": 97
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 3,
           "raw": "",
           "global": false,
           "ignoreCase": false,

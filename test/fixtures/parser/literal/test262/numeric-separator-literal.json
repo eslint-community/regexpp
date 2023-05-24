@@ -1,0 +1,14 @@
+{
+  "_test262FileNames": [
+    "test/language/literals/regexp/unicode-escape-nls-err.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/\\u{1F_639}/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\u{1F_639}/u: Invalid unicode escape",
+        "index": 3
+      }
+    }
+  }
+}

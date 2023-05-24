@@ -19,38 +19,52 @@ const stream: Readable = new TestStream(
     { omitRuntime: true },
 )
 
-const usedPatterns = new Set<string>()
-for (const fixture of Object.values(fixturesData)) {
-    for (const pattern of Object.keys(fixture)) {
-        usedPatterns.add(pattern)
+type Test = {
+    file: string
+    contents: string
+    attrs: {
+        features?: string[]
     }
 }
 
-const extractedFixtures = new Map<
-    string,
-    {
-        _test262FileNames: string[]
-        options: {
-            strict?: boolean
-        }
-        patterns: Record<string, any>
+const testObjects: Test[] = []
+
+stream.on("data", (test: Test) => {
+    if (!test.file.toLocaleLowerCase().includes("regexp")) {
+        return
     }
->()
+    testObjects.push(test)
+})
+stream.on("end", () => {
+    // eslint-disable-next-line no-void
+    void extractMain()
+})
 
-stream.on(
-    "data",
-    // eslint-disable-next-line @eslint-community/mysticatea/ts/no-misused-promises
-    async (test: {
-        file: string
-        contents: string
-        attrs: {
-            features?: string[]
+async function extractMain() {
+    const usedPatterns = new Set<string>()
+    for (const fixture of Object.values(fixturesData)) {
+        for (const pattern of Object.keys(fixture.patterns)) {
+            usedPatterns.add(pattern)
         }
-    }) => {
-        if (!test.file.toLocaleLowerCase().includes("regexp")) {
-            return
+    }
+    const extractedFixtures = new Map<
+        string,
+        {
+            _test262FileNames: string[]
+            options: {
+                strict?: boolean
+            }
+            patterns: Record<string, any>
         }
-
+    >()
+    for (const test of testObjects.sort((a, b) => {
+        const lengthA = a.attrs.features?.length ?? 999
+        const lengthB = b.attrs.features?.length ?? 999
+        return (
+            lengthA - lengthB ||
+            (a.file > b.file ? 1 : a.file < b.file ? -1 : 0)
+        )
+    })) {
         let filePath: string | undefined = undefined
         if (test.attrs.features && test.attrs.features.length > 0) {
             filePath = path.join(
@@ -80,7 +94,7 @@ stream.on(
         let has = false
         for (const pattern of extractRegExp(test.contents)) {
             if (usedPatterns.has(pattern)) {
-                return
+                continue
             }
             has = true
             usedPatterns.add(pattern)
@@ -100,37 +114,31 @@ stream.on(
                 test.file,
             ]
         }
-    },
-)
-stream.on(
-    "end",
-    // eslint-disable-next-line @eslint-community/mysticatea/ts/no-misused-promises
-    async () => {
-        for (const [filePath, fixture] of extractedFixtures) {
-            if (Object.keys(fixture.patterns).length === 0) {
-                continue
-            }
-            fixture._test262FileNames = [
-                ...new Set(fixture._test262FileNames),
-            ].sort((a, b) => (a > b ? 1 : a < b ? -1 : 0))
-            // @ts-ignore -- ignore
-            fixture.patterns = Object.fromEntries(
-                Object.entries(fixture.patterns).sort((a, b) =>
-                    a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0,
-                ),
-            )
-            await fs.mkdir(path.dirname(filePath), { recursive: true })
-            await fs.writeFile(
-                filePath,
-                JSON.stringify(
-                    fixture,
-                    (_, v: unknown) => (v === Infinity ? "$$Infinity" : v),
-                    2,
-                ),
-            )
+    }
+    for (const [filePath, fixture] of extractedFixtures) {
+        if (Object.keys(fixture.patterns).length === 0) {
+            continue
         }
-    },
-)
+        fixture._test262FileNames = [
+            ...new Set(fixture._test262FileNames),
+        ].sort((a, b) => (a > b ? 1 : a < b ? -1 : 0))
+        // @ts-ignore -- ignore
+        fixture.patterns = Object.fromEntries(
+            Object.entries(fixture.patterns).sort((a, b) =>
+                a[0] > b[0] ? 1 : a[0] < b[0] ? -1 : 0,
+            ),
+        )
+        await fs.mkdir(path.dirname(filePath), { recursive: true })
+        await fs.writeFile(
+            filePath,
+            JSON.stringify(
+                fixture,
+                (_, v: unknown) => (v === Infinity ? "$$Infinity" : v),
+                2,
+            ),
+        )
+    }
+}
 
 function* extractRegExp(content: string) {
     for (const token of jsTokens(content)) {

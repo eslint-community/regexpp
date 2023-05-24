@@ -28,6 +28,8 @@
     "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_ZWJ_Sequence-negative-P.js",
     "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_ZWJ_Sequence-negative-u.js",
     "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_ZWJ_Sequence.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-property-of-strings-escape.js",
     "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-difference-character-property-escape.js",
     "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-difference-property-of-strings-escape.js",
     "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-intersection-character-property-escape.js",
@@ -224,6 +226,18 @@
     "/^[[0-9]&&\\p{Emoji_Keycap_Sequence}]+$/v": {
       "error": {
         "message": "Invalid regular expression: /^[[0-9]&&\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 39
+      }
+    },
+    "/^[[0-9]--\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]--\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[[0-9]--\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]--\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
         "index": 39
       }
     },

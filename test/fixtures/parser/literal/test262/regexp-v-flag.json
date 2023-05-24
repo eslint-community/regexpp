@@ -1,5 +1,6 @@
 {
   "_test262FileNames": [
+    "test/built-ins/RegExp/prototype/unicodeSets/this-val-regexp.js",
     "test/built-ins/RegExp/prototype/unicodeSets/uv-flags.js",
     "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-character-class-escape.js",
     "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-character-class.js",
@@ -55,6 +56,48 @@
     "/./uv": {
       "error": {
         "message": "Invalid regular expression: /./uv: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./v": {
+      "error": {
+        "message": "Invalid regular expression: /./v: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vd": {
+      "error": {
+        "message": "Invalid regular expression: /./vd: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vg": {
+      "error": {
+        "message": "Invalid regular expression: /./vg: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vi": {
+      "error": {
+        "message": "Invalid regular expression: /./vi: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vm": {
+      "error": {
+        "message": "Invalid regular expression: /./vm: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vs": {
+      "error": {
+        "message": "Invalid regular expression: /./vs: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vy": {
+      "error": {
+        "message": "Invalid regular expression: /./vy: Invalid flag 'v'",
         "index": 3
       }
     },

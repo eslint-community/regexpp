@@ -6,66 +6,6 @@
   ],
   "options": {},
   "patterns": {
-    "/\\s+/g": {
-      "ast": {
-        "type": "RegExpLiteral",
-        "parent": null,
-        "start": 0,
-        "end": 6,
-        "raw": "/\\s+/g",
-        "pattern": {
-          "type": "Pattern",
-          "parent": "♻️..",
-          "start": 1,
-          "end": 4,
-          "raw": "\\s+",
-          "alternatives": [
-            {
-              "type": "Alternative",
-              "parent": "♻️../..",
-              "start": 1,
-              "end": 4,
-              "raw": "\\s+",
-              "elements": [
-                {
-                  "type": "Quantifier",
-                  "parent": "♻️../..",
-                  "start": 1,
-                  "end": 4,
-                  "raw": "\\s+",
-                  "min": 1,
-                  "max": "$$Infinity",
-                  "greedy": true,
-                  "element": {
-                    "type": "CharacterSet",
-                    "parent": "♻️..",
-                    "start": 1,
-                    "end": 3,
-                    "raw": "\\s",
-                    "kind": "space",
-                    "negate": false
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "flags": {
-          "type": "Flags",
-          "parent": "♻️..",
-          "start": 5,
-          "end": 6,
-          "raw": "g",
-          "global": true,
-          "ignoreCase": false,
-          "multiline": false,
-          "unicode": false,
-          "sticky": false,
-          "dotAll": false,
-          "hasIndices": false
-        }
-      }
-    },
     "/^.$/": {
       "ast": {
         "type": "RegExpLiteral",

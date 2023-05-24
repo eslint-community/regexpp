@@ -1,16 +1,22 @@
 {
   "_test262FileNames": [
+    "test/built-ins/RegExp/lookBehind/alternations.js",
+    "test/built-ins/RegExp/lookBehind/back-references-to-captures.js",
+    "test/built-ins/RegExp/lookBehind/back-references.js",
     "test/built-ins/RegExp/lookBehind/captures-negative.js",
     "test/built-ins/RegExp/lookBehind/captures.js",
     "test/built-ins/RegExp/lookBehind/do-not-backtrack.js",
     "test/built-ins/RegExp/lookBehind/greedy-loop.js",
+    "test/built-ins/RegExp/lookBehind/misc.js",
     "test/built-ins/RegExp/lookBehind/mutual-recursive.js",
     "test/built-ins/RegExp/lookBehind/negative.js",
     "test/built-ins/RegExp/lookBehind/nested-lookaround.js",
+    "test/built-ins/RegExp/lookBehind/simple-fixed-length.js",
     "test/built-ins/RegExp/lookBehind/sliced-strings.js",
     "test/built-ins/RegExp/lookBehind/start-of-line.js",
     "test/built-ins/RegExp/lookBehind/sticky.js",
-    "test/built-ins/RegExp/lookBehind/variable-length.js"
+    "test/built-ins/RegExp/lookBehind/variable-length.js",
+    "test/built-ins/RegExp/lookBehind/word-boundary.js"
   ],
   "options": {},
   "patterns": {
@@ -719,6 +725,254 @@
           "raw": "i",
           "global": false,
           "ignoreCase": true,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(.)(?<=\\1\\1\\1)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 16,
+        "raw": "/(.)(?<=\\1\\1\\1)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 15,
+          "raw": "(.)(?<=\\1\\1\\1)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 15,
+              "raw": "(.)(?<=\\1\\1\\1)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 4,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 3,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 2,
+                          "end": 3,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../1/alternatives/0/elements/0",
+                    "♻️../1/alternatives/0/elements/1",
+                    "♻️../1/alternatives/0/elements/2"
+                  ]
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 15,
+                  "raw": "(?<=\\1\\1\\1)",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 8,
+                      "end": 14,
+                      "raw": "\\1\\1\\1",
+                      "elements": [
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 10,
+                          "raw": "\\1",
+                          "ref": 1,
+                          "resolved": "♻️../../../../../0"
+                        },
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 12,
+                          "raw": "\\1",
+                          "ref": 1,
+                          "resolved": "♻️../../../../../0"
+                        },
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 14,
+                          "raw": "\\1",
+                          "ref": 1,
+                          "resolved": "♻️../../../../../0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 16,
+          "end": 16,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(..)(?<=\\1\\1\\1)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/(..)(?<=\\1\\1\\1)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "(..)(?<=\\1\\1\\1)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 16,
+              "raw": "(..)(?<=\\1\\1\\1)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 5,
+                  "raw": "(..)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 4,
+                      "raw": "..",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 2,
+                          "end": 3,
+                          "raw": ".",
+                          "kind": "any"
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 3,
+                          "end": 4,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../1/alternatives/0/elements/0",
+                    "♻️../1/alternatives/0/elements/1",
+                    "♻️../1/alternatives/0/elements/2"
+                  ]
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 16,
+                  "raw": "(?<=\\1\\1\\1)",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 9,
+                      "end": 15,
+                      "raw": "\\1\\1\\1",
+                      "elements": [
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 11,
+                          "raw": "\\1",
+                          "ref": 1,
+                          "resolved": "♻️../../../../../0"
+                        },
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 13,
+                          "raw": "\\1",
+                          "ref": 1,
+                          "resolved": "♻️../../../../../0"
+                        },
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 15,
+                          "raw": "\\1",
+                          "ref": 1,
+                          "resolved": "♻️../../../../../0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
           "multiline": false,
           "unicode": false,
           "sticky": false,
@@ -3666,6 +3920,125 @@
           "parent": "♻️..",
           "start": 17,
           "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<=(\\w+)\\1)c/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 15,
+        "raw": "/(?<=(\\w+)\\1)c/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 14,
+          "raw": "(?<=(\\w+)\\1)c",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 14,
+              "raw": "(?<=(\\w+)\\1)c",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 13,
+                  "raw": "(?<=(\\w+)\\1)",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 12,
+                      "raw": "(\\w+)\\1",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 10,
+                          "raw": "(\\w+)",
+                          "name": null,
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 6,
+                              "end": 9,
+                              "raw": "\\w+",
+                              "elements": [
+                                {
+                                  "type": "Quantifier",
+                                  "parent": "♻️../..",
+                                  "start": 6,
+                                  "end": 9,
+                                  "raw": "\\w+",
+                                  "min": 1,
+                                  "max": "$$Infinity",
+                                  "greedy": true,
+                                  "element": {
+                                    "type": "CharacterSet",
+                                    "parent": "♻️..",
+                                    "start": 6,
+                                    "end": 8,
+                                    "raw": "\\w",
+                                    "kind": "word",
+                                    "negate": false
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "references": [
+                            "♻️../1"
+                          ]
+                        },
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 12,
+                          "raw": "\\1",
+                          "ref": 1,
+                          "resolved": "♻️../0"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 13,
+                  "end": 14,
+                  "raw": "c",
+                  "value": 99
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 15,
+          "end": 15,
           "raw": "",
           "global": false,
           "ignoreCase": false,
@@ -7482,6 +7855,661 @@
         }
       }
     },
+    "/(?<=a.c)\\w\\w\\w/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 16,
+        "raw": "/(?<=a.c)\\w\\w\\w/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 15,
+          "raw": "(?<=a.c)\\w\\w\\w",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 15,
+              "raw": "(?<=a.c)\\w\\w\\w",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 9,
+                  "raw": "(?<=a.c)",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 8,
+                      "raw": "a.c",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 6,
+                          "raw": "a",
+                          "value": 97
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": ".",
+                          "kind": "any"
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "c",
+                          "value": 99
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 11,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 11,
+                  "end": 13,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 13,
+                  "end": 15,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 16,
+          "end": 16,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<=a[a-z])\\w\\w\\w/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 19,
+        "raw": "/(?<=a[a-z])\\w\\w\\w/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 18,
+          "raw": "(?<=a[a-z])\\w\\w\\w",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 18,
+              "raw": "(?<=a[a-z])\\w\\w\\w",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 12,
+                  "raw": "(?<=a[a-z])",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 11,
+                      "raw": "a[a-z]",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 6,
+                          "raw": "a",
+                          "value": 97
+                        },
+                        {
+                          "type": "CharacterClass",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 11,
+                          "raw": "[a-z]",
+                          "negate": false,
+                          "elements": [
+                            {
+                              "type": "CharacterClassRange",
+                              "parent": "♻️../..",
+                              "start": 7,
+                              "end": 10,
+                              "raw": "a-z",
+                              "min": {
+                                "type": "Character",
+                                "parent": "♻️..",
+                                "start": 7,
+                                "end": 8,
+                                "raw": "a",
+                                "value": 97
+                              },
+                              "max": {
+                                "type": "Character",
+                                "parent": "♻️..",
+                                "start": 9,
+                                "end": 10,
+                                "raw": "z",
+                                "value": 122
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 12,
+                  "end": 14,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 14,
+                  "end": 16,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 16,
+                  "end": 18,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 19,
+          "end": 19,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<=a[a-z][a-z])\\w\\w\\w/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 24,
+        "raw": "/(?<=a[a-z][a-z])\\w\\w\\w/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 23,
+          "raw": "(?<=a[a-z][a-z])\\w\\w\\w",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 23,
+              "raw": "(?<=a[a-z][a-z])\\w\\w\\w",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 17,
+                  "raw": "(?<=a[a-z][a-z])",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 16,
+                      "raw": "a[a-z][a-z]",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 6,
+                          "raw": "a",
+                          "value": 97
+                        },
+                        {
+                          "type": "CharacterClass",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 11,
+                          "raw": "[a-z]",
+                          "negate": false,
+                          "elements": [
+                            {
+                              "type": "CharacterClassRange",
+                              "parent": "♻️../..",
+                              "start": 7,
+                              "end": 10,
+                              "raw": "a-z",
+                              "min": {
+                                "type": "Character",
+                                "parent": "♻️..",
+                                "start": 7,
+                                "end": 8,
+                                "raw": "a",
+                                "value": 97
+                              },
+                              "max": {
+                                "type": "Character",
+                                "parent": "♻️..",
+                                "start": 9,
+                                "end": 10,
+                                "raw": "z",
+                                "value": 122
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "CharacterClass",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 16,
+                          "raw": "[a-z]",
+                          "negate": false,
+                          "elements": [
+                            {
+                              "type": "CharacterClassRange",
+                              "parent": "♻️../..",
+                              "start": 12,
+                              "end": 15,
+                              "raw": "a-z",
+                              "min": {
+                                "type": "Character",
+                                "parent": "♻️..",
+                                "start": 12,
+                                "end": 13,
+                                "raw": "a",
+                                "value": 97
+                              },
+                              "max": {
+                                "type": "Character",
+                                "parent": "♻️..",
+                                "start": 14,
+                                "end": 15,
+                                "raw": "z",
+                                "value": 122
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 17,
+                  "end": 19,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 19,
+                  "end": 21,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 21,
+                  "end": 23,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 24,
+          "end": 24,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<=a[a-z]{2})\\w\\w\\w/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 22,
+        "raw": "/(?<=a[a-z]{2})\\w\\w\\w/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 21,
+          "raw": "(?<=a[a-z]{2})\\w\\w\\w",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 21,
+              "raw": "(?<=a[a-z]{2})\\w\\w\\w",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 15,
+                  "raw": "(?<=a[a-z]{2})",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 14,
+                      "raw": "a[a-z]{2}",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 6,
+                          "raw": "a",
+                          "value": 97
+                        },
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 14,
+                          "raw": "[a-z]{2}",
+                          "min": 2,
+                          "max": 2,
+                          "greedy": true,
+                          "element": {
+                            "type": "CharacterClass",
+                            "parent": "♻️..",
+                            "start": 6,
+                            "end": 11,
+                            "raw": "[a-z]",
+                            "negate": false,
+                            "elements": [
+                              {
+                                "type": "CharacterClassRange",
+                                "parent": "♻️../..",
+                                "start": 7,
+                                "end": 10,
+                                "raw": "a-z",
+                                "min": {
+                                  "type": "Character",
+                                  "parent": "♻️..",
+                                  "start": 7,
+                                  "end": 8,
+                                  "raw": "a",
+                                  "value": 97
+                                },
+                                "max": {
+                                  "type": "Character",
+                                  "parent": "♻️..",
+                                  "start": 9,
+                                  "end": 10,
+                                  "raw": "z",
+                                  "value": 122
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 15,
+                  "end": 17,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 17,
+                  "end": 19,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 19,
+                  "end": 21,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 22,
+          "end": 22,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<=a\\wc)\\w\\w\\w/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/(?<=a\\wc)\\w\\w\\w/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "(?<=a\\wc)\\w\\w\\w",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 16,
+              "raw": "(?<=a\\wc)\\w\\w\\w",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 10,
+                  "raw": "(?<=a\\wc)",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 9,
+                      "raw": "a\\wc",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 6,
+                          "raw": "a",
+                          "value": 97
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 8,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 9,
+                          "raw": "c",
+                          "value": 99
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 10,
+                  "end": 12,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 12,
+                  "end": 14,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 14,
+                  "end": 16,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
     "/(?<=ab(?=c)\\wd)\\w\\w/": {
       "ast": {
         "type": "RegExpLiteral",
@@ -7583,6 +8611,497 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 16,
+                  "end": 18,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 18,
+                  "end": 20,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 21,
+          "end": 21,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<=abc)\\w\\w\\w/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 16,
+        "raw": "/(?<=abc)\\w\\w\\w/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 15,
+          "raw": "(?<=abc)\\w\\w\\w",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 15,
+              "raw": "(?<=abc)\\w\\w\\w",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 9,
+                  "raw": "(?<=abc)",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 8,
+                      "raw": "abc",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 6,
+                          "raw": "a",
+                          "value": 97
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "b",
+                          "value": 98
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "c",
+                          "value": 99
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 11,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 11,
+                  "end": 13,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 13,
+                  "end": 15,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 16,
+          "end": 16,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<=a{1})\\w\\w\\w/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/(?<=a{1})\\w\\w\\w/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "(?<=a{1})\\w\\w\\w",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 16,
+              "raw": "(?<=a{1})\\w\\w\\w",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 10,
+                  "raw": "(?<=a{1})",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 9,
+                      "raw": "a{1}",
+                      "elements": [
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 9,
+                          "raw": "a{1}",
+                          "min": 1,
+                          "max": 1,
+                          "greedy": true,
+                          "element": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 5,
+                            "end": 6,
+                            "raw": "a",
+                            "value": 97
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 10,
+                  "end": 12,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 12,
+                  "end": 14,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 14,
+                  "end": 16,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<=a{1}[a-z]{2})\\w\\w\\w/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 25,
+        "raw": "/(?<=a{1}[a-z]{2})\\w\\w\\w/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 24,
+          "raw": "(?<=a{1}[a-z]{2})\\w\\w\\w",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 24,
+              "raw": "(?<=a{1}[a-z]{2})\\w\\w\\w",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 18,
+                  "raw": "(?<=a{1}[a-z]{2})",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 17,
+                      "raw": "a{1}[a-z]{2}",
+                      "elements": [
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 9,
+                          "raw": "a{1}",
+                          "min": 1,
+                          "max": 1,
+                          "greedy": true,
+                          "element": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 5,
+                            "end": 6,
+                            "raw": "a",
+                            "value": 97
+                          }
+                        },
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 17,
+                          "raw": "[a-z]{2}",
+                          "min": 2,
+                          "max": 2,
+                          "greedy": true,
+                          "element": {
+                            "type": "CharacterClass",
+                            "parent": "♻️..",
+                            "start": 9,
+                            "end": 14,
+                            "raw": "[a-z]",
+                            "negate": false,
+                            "elements": [
+                              {
+                                "type": "CharacterClassRange",
+                                "parent": "♻️../..",
+                                "start": 10,
+                                "end": 13,
+                                "raw": "a-z",
+                                "min": {
+                                  "type": "Character",
+                                  "parent": "♻️..",
+                                  "start": 10,
+                                  "end": 11,
+                                  "raw": "a",
+                                  "value": 97
+                                },
+                                "max": {
+                                  "type": "Character",
+                                  "parent": "♻️..",
+                                  "start": 12,
+                                  "end": 13,
+                                  "raw": "z",
+                                  "value": 122
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 18,
+                  "end": 20,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 20,
+                  "end": 22,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 22,
+                  "end": 24,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 25,
+          "end": 25,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<=a{1}b{1})\\w\\w\\w/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 21,
+        "raw": "/(?<=a{1}b{1})\\w\\w\\w/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 20,
+          "raw": "(?<=a{1}b{1})\\w\\w\\w",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 20,
+              "raw": "(?<=a{1}b{1})\\w\\w\\w",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 14,
+                  "raw": "(?<=a{1}b{1})",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 13,
+                      "raw": "a{1}b{1}",
+                      "elements": [
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 9,
+                          "raw": "a{1}",
+                          "min": 1,
+                          "max": 1,
+                          "greedy": true,
+                          "element": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 5,
+                            "end": 6,
+                            "raw": "a",
+                            "value": 97
+                          }
+                        },
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 13,
+                          "raw": "b{1}",
+                          "min": 1,
+                          "max": 1,
+                          "greedy": true,
+                          "element": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 9,
+                            "end": 10,
+                            "raw": "b",
+                            "value": 98
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 14,
+                  "end": 16,
+                  "raw": "\\w",
+                  "kind": "word",
+                  "negate": false
                 },
                 {
                   "type": "CharacterSet",
@@ -8649,6 +10168,1024 @@
         }
       }
     },
+    "/(abc\\1)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 9,
+        "raw": "/(abc\\1)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(abc\\1)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(abc\\1)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(abc\\1)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 7,
+                      "raw": "abc\\1",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 2,
+                          "end": 3,
+                          "raw": "a",
+                          "value": 97
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 3,
+                          "end": 4,
+                          "raw": "b",
+                          "value": 98
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 4,
+                          "end": 5,
+                          "raw": "c",
+                          "value": 99
+                        },
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 7,
+                          "raw": "\\1",
+                          "ref": 1,
+                          "resolved": "♻️../../../.."
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️alternatives/0/elements/3"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 9,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(abc\\1)/i": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 10,
+        "raw": "/(abc\\1)/i",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(abc\\1)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(abc\\1)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(abc\\1)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 7,
+                      "raw": "abc\\1",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 2,
+                          "end": 3,
+                          "raw": "a",
+                          "value": 97
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 3,
+                          "end": 4,
+                          "raw": "b",
+                          "value": 98
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 4,
+                          "end": 5,
+                          "raw": "c",
+                          "value": 99
+                        },
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 7,
+                          "raw": "\\1",
+                          "ref": 1,
+                          "resolved": "♻️../../../.."
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️alternatives/0/elements/3"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 10,
+          "raw": "i",
+          "global": false,
+          "ignoreCase": true,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.*(?<=(..|...|....))(.*)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 26,
+        "raw": "/.*(?<=(..|...|....))(.*)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 25,
+          "raw": ".*(?<=(..|...|....))(.*)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 25,
+              "raw": ".*(?<=(..|...|....))(.*)",
+              "elements": [
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 3,
+                  "raw": ".*",
+                  "min": 0,
+                  "max": "$$Infinity",
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterSet",
+                    "parent": "♻️..",
+                    "start": 1,
+                    "end": 2,
+                    "raw": ".",
+                    "kind": "any"
+                  }
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 21,
+                  "raw": "(?<=(..|...|....))",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 20,
+                      "raw": "(..|...|....)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 20,
+                          "raw": "(..|...|....)",
+                          "name": null,
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 8,
+                              "end": 10,
+                              "raw": "..",
+                              "elements": [
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 8,
+                                  "end": 9,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 9,
+                                  "end": 10,
+                                  "raw": ".",
+                                  "kind": "any"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 11,
+                              "end": 14,
+                              "raw": "...",
+                              "elements": [
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 11,
+                                  "end": 12,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 12,
+                                  "end": 13,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 13,
+                                  "end": 14,
+                                  "raw": ".",
+                                  "kind": "any"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 15,
+                              "end": 19,
+                              "raw": "....",
+                              "elements": [
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 15,
+                                  "end": 16,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 16,
+                                  "end": 17,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 17,
+                                  "end": 18,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 18,
+                                  "end": 19,
+                                  "raw": ".",
+                                  "kind": "any"
+                                }
+                              ]
+                            }
+                          ],
+                          "references": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 21,
+                  "end": 25,
+                  "raw": "(.*)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 22,
+                      "end": 24,
+                      "raw": ".*",
+                      "elements": [
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 22,
+                          "end": 24,
+                          "raw": ".*",
+                          "min": 0,
+                          "max": "$$Infinity",
+                          "greedy": true,
+                          "element": {
+                            "type": "CharacterSet",
+                            "parent": "♻️..",
+                            "start": 22,
+                            "end": 23,
+                            "raw": ".",
+                            "kind": "any"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 26,
+          "end": 26,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.*(?<=(xx|...))(.*)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 21,
+        "raw": "/.*(?<=(xx|...))(.*)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 20,
+          "raw": ".*(?<=(xx|...))(.*)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 20,
+              "raw": ".*(?<=(xx|...))(.*)",
+              "elements": [
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 3,
+                  "raw": ".*",
+                  "min": 0,
+                  "max": "$$Infinity",
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterSet",
+                    "parent": "♻️..",
+                    "start": 1,
+                    "end": 2,
+                    "raw": ".",
+                    "kind": "any"
+                  }
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 16,
+                  "raw": "(?<=(xx|...))",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 15,
+                      "raw": "(xx|...)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 15,
+                          "raw": "(xx|...)",
+                          "name": null,
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 8,
+                              "end": 10,
+                              "raw": "xx",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 8,
+                                  "end": 9,
+                                  "raw": "x",
+                                  "value": 120
+                                },
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 9,
+                                  "end": 10,
+                                  "raw": "x",
+                                  "value": 120
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 11,
+                              "end": 14,
+                              "raw": "...",
+                              "elements": [
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 11,
+                                  "end": 12,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 12,
+                                  "end": 13,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 13,
+                                  "end": 14,
+                                  "raw": ".",
+                                  "kind": "any"
+                                }
+                              ]
+                            }
+                          ],
+                          "references": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 16,
+                  "end": 20,
+                  "raw": "(.*)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 17,
+                      "end": 19,
+                      "raw": ".*",
+                      "elements": [
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 17,
+                          "end": 19,
+                          "raw": ".*",
+                          "min": 0,
+                          "max": "$$Infinity",
+                          "greedy": true,
+                          "element": {
+                            "type": "CharacterSet",
+                            "parent": "♻️..",
+                            "start": 17,
+                            "end": 18,
+                            "raw": ".",
+                            "kind": "any"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 21,
+          "end": 21,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.*(?<=(xx|...|....))(.*)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 26,
+        "raw": "/.*(?<=(xx|...|....))(.*)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 25,
+          "raw": ".*(?<=(xx|...|....))(.*)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 25,
+              "raw": ".*(?<=(xx|...|....))(.*)",
+              "elements": [
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 3,
+                  "raw": ".*",
+                  "min": 0,
+                  "max": "$$Infinity",
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterSet",
+                    "parent": "♻️..",
+                    "start": 1,
+                    "end": 2,
+                    "raw": ".",
+                    "kind": "any"
+                  }
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 21,
+                  "raw": "(?<=(xx|...|....))",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 20,
+                      "raw": "(xx|...|....)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 20,
+                          "raw": "(xx|...|....)",
+                          "name": null,
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 8,
+                              "end": 10,
+                              "raw": "xx",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 8,
+                                  "end": 9,
+                                  "raw": "x",
+                                  "value": 120
+                                },
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 9,
+                                  "end": 10,
+                                  "raw": "x",
+                                  "value": 120
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 11,
+                              "end": 14,
+                              "raw": "...",
+                              "elements": [
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 11,
+                                  "end": 12,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 12,
+                                  "end": 13,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 13,
+                                  "end": 14,
+                                  "raw": ".",
+                                  "kind": "any"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 15,
+                              "end": 19,
+                              "raw": "....",
+                              "elements": [
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 15,
+                                  "end": 16,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 16,
+                                  "end": 17,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 17,
+                                  "end": 18,
+                                  "raw": ".",
+                                  "kind": "any"
+                                },
+                                {
+                                  "type": "CharacterSet",
+                                  "parent": "♻️../..",
+                                  "start": 18,
+                                  "end": 19,
+                                  "raw": ".",
+                                  "kind": "any"
+                                }
+                              ]
+                            }
+                          ],
+                          "references": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 21,
+                  "end": 25,
+                  "raw": "(.*)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 22,
+                      "end": 24,
+                      "raw": ".*",
+                      "elements": [
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 22,
+                          "end": 24,
+                          "raw": ".*",
+                          "min": 0,
+                          "max": "$$Infinity",
+                          "greedy": true,
+                          "element": {
+                            "type": "CharacterSet",
+                            "parent": "♻️..",
+                            "start": 22,
+                            "end": 23,
+                            "raw": ".",
+                            "kind": "any"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 26,
+          "end": 26,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.*(?<=(xx|xxx))(.*)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 21,
+        "raw": "/.*(?<=(xx|xxx))(.*)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 20,
+          "raw": ".*(?<=(xx|xxx))(.*)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 20,
+              "raw": ".*(?<=(xx|xxx))(.*)",
+              "elements": [
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 3,
+                  "raw": ".*",
+                  "min": 0,
+                  "max": "$$Infinity",
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterSet",
+                    "parent": "♻️..",
+                    "start": 1,
+                    "end": 2,
+                    "raw": ".",
+                    "kind": "any"
+                  }
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 16,
+                  "raw": "(?<=(xx|xxx))",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 15,
+                      "raw": "(xx|xxx)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 15,
+                          "raw": "(xx|xxx)",
+                          "name": null,
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 8,
+                              "end": 10,
+                              "raw": "xx",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 8,
+                                  "end": 9,
+                                  "raw": "x",
+                                  "value": 120
+                                },
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 9,
+                                  "end": 10,
+                                  "raw": "x",
+                                  "value": 120
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 11,
+                              "end": 14,
+                              "raw": "xxx",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 11,
+                                  "end": 12,
+                                  "raw": "x",
+                                  "value": 120
+                                },
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 12,
+                                  "end": 13,
+                                  "raw": "x",
+                                  "value": 120
+                                },
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 13,
+                                  "end": 14,
+                                  "raw": "x",
+                                  "value": 120
+                                }
+                              ]
+                            }
+                          ],
+                          "references": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 16,
+                  "end": 20,
+                  "raw": "(.*)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 17,
+                      "end": 19,
+                      "raw": ".*",
+                      "elements": [
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 17,
+                          "end": 19,
+                          "raw": ".*",
+                          "min": 0,
+                          "max": "$$Infinity",
+                          "greedy": true,
+                          "element": {
+                            "type": "CharacterSet",
+                            "parent": "♻️..",
+                            "start": 17,
+                            "end": 18,
+                            "raw": ".",
+                            "kind": "any"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 21,
+          "end": 21,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
     "/\\Bdef/g": {
       "ast": {
         "type": "RegExpLiteral",
@@ -9522,6 +12059,123 @@
           "parent": "♻️..",
           "start": 10,
           "end": 10,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^f..(?<=.oo)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 14,
+        "raw": "/^f..(?<=.oo)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 13,
+          "raw": "^f..(?<=.oo)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 13,
+              "raw": "^f..(?<=.oo)",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "f",
+                  "value": 102
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 13,
+                  "raw": "(?<=.oo)",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 9,
+                      "end": 12,
+                      "raw": ".oo",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 10,
+                          "raw": ".",
+                          "kind": "any"
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 11,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 12,
+                          "raw": "o",
+                          "value": 111
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 14,
+          "end": 14,
           "raw": "",
           "global": false,
           "ignoreCase": false,
@@ -10609,6 +13263,292 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^foooo(?<=fo*)$/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/^foooo(?<=fo*)$/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "^foooo(?<=fo*)$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 16,
+              "raw": "^foooo(?<=fo*)$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "f",
+                  "value": 102
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "o",
+                  "value": 111
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": "o",
+                  "value": 111
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 6,
+                  "raw": "o",
+                  "value": 111
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 6,
+                  "end": 7,
+                  "raw": "o",
+                  "value": 111
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 7,
+                  "end": 15,
+                  "raw": "(?<=fo*)",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 11,
+                      "end": 14,
+                      "raw": "fo*",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 12,
+                          "raw": "f",
+                          "value": 102
+                        },
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 14,
+                          "raw": "o*",
+                          "min": 0,
+                          "max": "$$Infinity",
+                          "greedy": true,
+                          "element": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 12,
+                            "end": 13,
+                            "raw": "o",
+                            "value": 111
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 15,
+                  "end": 16,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^foooo(?<=fo+)$/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/^foooo(?<=fo+)$/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "^foooo(?<=fo+)$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 16,
+              "raw": "^foooo(?<=fo+)$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "f",
+                  "value": 102
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "o",
+                  "value": 111
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": "o",
+                  "value": 111
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 6,
+                  "raw": "o",
+                  "value": 111
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 6,
+                  "end": 7,
+                  "raw": "o",
+                  "value": 111
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 7,
+                  "end": 15,
+                  "raw": "(?<=fo+)",
+                  "kind": "lookbehind",
+                  "negate": false,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 11,
+                      "end": 14,
+                      "raw": "fo+",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 12,
+                          "raw": "f",
+                          "value": 102
+                        },
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 14,
+                          "raw": "o+",
+                          "min": 1,
+                          "max": "$$Infinity",
+                          "greedy": true,
+                          "element": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 12,
+                            "end": 13,
+                            "raw": "o",
+                            "value": 111
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 15,
+                  "end": 16,
+                  "raw": "$",
+                  "kind": "end"
                 }
               ]
             }

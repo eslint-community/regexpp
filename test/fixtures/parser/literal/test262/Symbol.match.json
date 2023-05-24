@@ -1,14 +1,14 @@
 {
   "_test262FileNames": [
-    "test/built-ins/RegExp/prototype/Symbol.match/builtin-coerce-lastindex.js",
     "test/built-ins/RegExp/prototype/Symbol.match/builtin-failure-g-set-lastindex-err.js",
     "test/built-ins/RegExp/prototype/Symbol.match/builtin-failure-y-return-val.js",
     "test/built-ins/RegExp/prototype/Symbol.match/builtin-infer-unicode.js",
-    "test/built-ins/RegExp/prototype/Symbol.match/builtin-success-g-set-lastindex.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/builtin-success-g-set-lastindex-err.js",
     "test/built-ins/RegExp/prototype/Symbol.match/builtin-success-return-val-groups.js",
     "test/built-ins/RegExp/prototype/Symbol.match/builtin-success-return-val.js",
     "test/built-ins/RegExp/prototype/Symbol.match/builtin-success-u-return-val-groups.js",
     "test/built-ins/RegExp/prototype/Symbol.match/coerce-arg.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/g-coerce-result-err.js",
     "test/built-ins/RegExp/prototype/Symbol.match/g-success-return-val.js",
     "test/built-ins/RegExp/prototype/Symbol.match/u-advance-after-empty.js",
     "test/built-ins/RegExp/prototype/Symbol.match/y-fail-global-return.js",
@@ -103,13 +103,13 @@
         }
       }
     },
-    "/./y": {
+    "/./g": {
       "ast": {
         "type": "RegExpLiteral",
         "parent": null,
         "start": 0,
         "end": 4,
-        "raw": "/./y",
+        "raw": "/./g",
         "pattern": {
           "type": "Pattern",
           "parent": "♻️..",
@@ -141,12 +141,12 @@
           "parent": "♻️..",
           "start": 3,
           "end": 4,
-          "raw": "y",
-          "global": false,
+          "raw": "g",
+          "global": true,
           "ignoreCase": false,
           "multiline": false,
           "unicode": false,
-          "sticky": true,
+          "sticky": false,
           "dotAll": false,
           "hasIndices": false
         }
