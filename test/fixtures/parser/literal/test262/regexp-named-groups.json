@@ -1,0 +1,4811 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/named-groups/groups-object-unmatched.js",
+    "test/built-ins/RegExp/named-groups/groups-object.js",
+    "test/language/literals/regexp/named-groups/forward-reference.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname-2-u.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname-2.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname-3-u.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname-3.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname-4-u.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname-4.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname-5.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname-u.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname-without-group-u.js",
+    "test/language/literals/regexp/named-groups/invalid-dangling-groupname.js",
+    "test/language/literals/regexp/named-groups/invalid-duplicate-groupspecifier-2-u.js",
+    "test/language/literals/regexp/named-groups/invalid-duplicate-groupspecifier-2.js",
+    "test/language/literals/regexp/named-groups/invalid-duplicate-groupspecifier-u.js",
+    "test/language/literals/regexp/named-groups/invalid-duplicate-groupspecifier.js",
+    "test/language/literals/regexp/named-groups/invalid-empty-groupspecifier-u.js",
+    "test/language/literals/regexp/named-groups/invalid-empty-groupspecifier.js",
+    "test/language/literals/regexp/named-groups/invalid-identity-escape-in-capture-u.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-2-u.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-2.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-3-u.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-3.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-4.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-5.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-6.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-u.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-without-group-2-u.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-without-group-3-u.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname-without-group-u.js",
+    "test/language/literals/regexp/named-groups/invalid-incomplete-groupname.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-continue-groupspecifier-4-u.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-continue-groupspecifier-4.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-continue-groupspecifier.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-2-u.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-2.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-3.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-4-u.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-4.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-5-u.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-5.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-6.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-7.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-8-u.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-8.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-9-u.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier-u.js",
+    "test/language/literals/regexp/named-groups/invalid-non-id-start-groupspecifier.js",
+    "test/language/literals/regexp/named-groups/invalid-numeric-groupspecifier-u.js",
+    "test/language/literals/regexp/named-groups/invalid-numeric-groupspecifier.js",
+    "test/language/literals/regexp/named-groups/invalid-punctuator-starting-groupspecifier-u.js",
+    "test/language/literals/regexp/named-groups/invalid-punctuator-starting-groupspecifier.js",
+    "test/language/literals/regexp/named-groups/invalid-punctuator-within-groupspecifier-u.js",
+    "test/language/literals/regexp/named-groups/invalid-punctuator-within-groupspecifier.js",
+    "test/language/literals/regexp/named-groups/invalid-unterminated-groupspecifier-u.js",
+    "test/language/literals/regexp/named-groups/invalid-unterminated-groupspecifier.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/(?<$>a)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 9,
+        "raw": "/(?<$>a)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(?<$>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<$>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<$>a)",
+                  "name": "$",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 9,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<$>a)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 10,
+        "raw": "/(?<$>a)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(?<$>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<$>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<$>a)",
+                  "name": "$",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 10,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<$❞>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<$❞>a)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<42a>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<42a>a)/: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<42a>a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<42a>a)/u: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<:a>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<:a>a)/: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<:a>a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<:a>a)/u: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<>a)/: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<>a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<>a)/u: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<\\>.)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<\\>.)/: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<\\>.)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<\\>.)/u: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<\\u{03C0}>a)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/(?<\\u{03C0}>a)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 15,
+          "raw": "(?<\\u{03C0}>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 15,
+              "raw": "(?<\\u{03C0}>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 15,
+                  "raw": "(?<\\u{03C0}>a)",
+                  "name": "π",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 13,
+                      "end": 14,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 14,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 16,
+          "end": 17,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<_>a)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 9,
+        "raw": "/(?<_>a)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(?<_>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<_>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<_>a)",
+                  "name": "_",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 9,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<_>a)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 10,
+        "raw": "/(?<_>a)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(?<_>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<_>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<_>a)",
+                  "name": "_",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 10,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<__proto__>.)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/(?<__proto__>.)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "(?<__proto__>.)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 16,
+              "raw": "(?<__proto__>.)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 16,
+                  "raw": "(?<__proto__>.)",
+                  "name": "__proto__",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 14,
+                      "end": 15,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 14,
+                          "end": 15,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a42>a)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 11,
+        "raw": "/(?<a42>a)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 10,
+          "raw": "(?<a42>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 10,
+              "raw": "(?<a42>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 10,
+                  "raw": "(?<a42>a)",
+                  "name": "a42",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 8,
+                      "end": 9,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 9,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 11,
+          "end": 11,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a42>a)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 12,
+        "raw": "/(?<a42>a)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 10,
+          "raw": "(?<a42>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 10,
+              "raw": "(?<a42>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 10,
+                  "raw": "(?<a42>a)",
+                  "name": "a42",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 8,
+                      "end": 9,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 9,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 11,
+          "end": 12,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a:>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a:>a)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a:>a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a:>a)/u: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a>.)(?<b>.)(?<c>.)\\k<c>\\k<b>\\k<a>/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 38,
+        "raw": "/(?<a>.)(?<b>.)(?<c>.)\\k<c>\\k<b>\\k<a>/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 37,
+          "raw": "(?<a>.)(?<b>.)(?<c>.)\\k<c>\\k<b>\\k<a>",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 37,
+              "raw": "(?<a>.)(?<b>.)(?<c>.)\\k<c>\\k<b>\\k<a>",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<a>.)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../5"
+                  ]
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 8,
+                  "end": 15,
+                  "raw": "(?<b>.)",
+                  "name": "b",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 13,
+                      "end": 14,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 14,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../4"
+                  ]
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 15,
+                  "end": 22,
+                  "raw": "(?<c>.)",
+                  "name": "c",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 20,
+                      "end": 21,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 20,
+                          "end": 21,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../3"
+                  ]
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 22,
+                  "end": 27,
+                  "raw": "\\k<c>",
+                  "ref": "c",
+                  "resolved": "♻️../2"
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 27,
+                  "end": 32,
+                  "raw": "\\k<b>",
+                  "ref": "b",
+                  "resolved": "♻️../1"
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 32,
+                  "end": 37,
+                  "raw": "\\k<a>",
+                  "ref": "a",
+                  "resolved": "♻️../0"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 38,
+          "end": 38,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>.)(?<b>.)(?<c>.)\\k<c>\\k<b>\\k<a>/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 39,
+        "raw": "/(?<a>.)(?<b>.)(?<c>.)\\k<c>\\k<b>\\k<a>/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 37,
+          "raw": "(?<a>.)(?<b>.)(?<c>.)\\k<c>\\k<b>\\k<a>",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 37,
+              "raw": "(?<a>.)(?<b>.)(?<c>.)\\k<c>\\k<b>\\k<a>",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<a>.)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../5"
+                  ]
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 8,
+                  "end": 15,
+                  "raw": "(?<b>.)",
+                  "name": "b",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 13,
+                      "end": 14,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 14,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../4"
+                  ]
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 15,
+                  "end": 22,
+                  "raw": "(?<c>.)",
+                  "name": "c",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 20,
+                      "end": 21,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 20,
+                          "end": 21,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../3"
+                  ]
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 22,
+                  "end": 27,
+                  "raw": "\\k<c>",
+                  "ref": "c",
+                  "resolved": "♻️../2"
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 27,
+                  "end": 32,
+                  "raw": "\\k<b>",
+                  "ref": "b",
+                  "resolved": "♻️../1"
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 32,
+                  "end": 37,
+                  "raw": "\\k<a>",
+                  "ref": "a",
+                  "resolved": "♻️../0"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 38,
+          "end": 39,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>.)\\k/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>.)\\k/: Invalid named reference",
+        "index": 10
+      }
+    },
+    "/(?<a>.)\\k/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>.)\\k/u: Invalid named reference",
+        "index": 10
+      }
+    },
+    "/(?<a>.)\\k<>/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>.)\\k<>/: Invalid capture group name",
+        "index": 11
+      }
+    },
+    "/(?<a>.)\\k<>/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>.)\\k<>/u: Invalid capture group name",
+        "index": 11
+      }
+    },
+    "/(?<a>.)\\k<a/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>.)\\k<a/: Invalid capture group name",
+        "index": 12
+      }
+    },
+    "/(?<a>.)\\k<a/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>.)\\k<a/u: Invalid capture group name",
+        "index": 12
+      }
+    },
+    "/(?<a>.)\\k<b>/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>.)\\k<b>/: Invalid named capture referenced",
+        "index": 13
+      }
+    },
+    "/(?<a>.)\\k<b>/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>.)\\k<b>/u: Invalid named capture referenced",
+        "index": 13
+      }
+    },
+    "/(?<a>\\a)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 10,
+        "raw": "/(?<a>\\a)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 9,
+          "raw": "(?<a>\\a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 9,
+              "raw": "(?<a>\\a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 9,
+                  "raw": "(?<a>\\a)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 8,
+                      "raw": "\\a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 8,
+                          "raw": "\\a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 10,
+          "end": 10,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>\\a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>\\a)/u: Invalid escape",
+        "index": 7
+      }
+    },
+    "/(?<a>\\w\\w)(?<b>\\w)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 20,
+        "raw": "/(?<a>\\w\\w)(?<b>\\w)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 19,
+          "raw": "(?<a>\\w\\w)(?<b>\\w)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 19,
+              "raw": "(?<a>\\w\\w)(?<b>\\w)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 11,
+                  "raw": "(?<a>\\w\\w)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 10,
+                      "raw": "\\w\\w",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 8,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 10,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 11,
+                  "end": 19,
+                  "raw": "(?<b>\\w)",
+                  "name": "b",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 16,
+                      "end": 18,
+                      "raw": "\\w",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 16,
+                          "end": 18,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 20,
+          "end": 20,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>\\w\\w)(?<b>\\w)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 21,
+        "raw": "/(?<a>\\w\\w)(?<b>\\w)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 19,
+          "raw": "(?<a>\\w\\w)(?<b>\\w)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 19,
+              "raw": "(?<a>\\w\\w)(?<b>\\w)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 11,
+                  "raw": "(?<a>\\w\\w)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 10,
+                      "raw": "\\w\\w",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 8,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 10,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 11,
+                  "end": 19,
+                  "raw": "(?<b>\\w)",
+                  "name": "b",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 16,
+                      "end": 18,
+                      "raw": "\\w",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 16,
+                          "end": 18,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 20,
+          "end": 21,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>\\w\\w\\w)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 14,
+        "raw": "/(?<a>\\w\\w\\w)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 13,
+          "raw": "(?<a>\\w\\w\\w)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 13,
+              "raw": "(?<a>\\w\\w\\w)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 13,
+                  "raw": "(?<a>\\w\\w\\w)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 12,
+                      "raw": "\\w\\w\\w",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 8,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 10,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 12,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 14,
+          "end": 14,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>\\w\\w\\w)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 15,
+        "raw": "/(?<a>\\w\\w\\w)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 13,
+          "raw": "(?<a>\\w\\w\\w)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 13,
+              "raw": "(?<a>\\w\\w\\w)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 13,
+                  "raw": "(?<a>\\w\\w\\w)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 12,
+                      "raw": "\\w\\w\\w",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 8,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 10,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 12,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 14,
+          "end": 15,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>a)(?<a>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>a)(?<a>a)/: Duplicate capture group name",
+        "index": 13
+      }
+    },
+    "/(?<a>a)(?<a>a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>a)(?<a>a)/u: Duplicate capture group name",
+        "index": 13
+      }
+    },
+    "/(?<a>a)(?<b>b)(?<a>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>a)(?<b>b)(?<a>a)/: Duplicate capture group name",
+        "index": 20
+      }
+    },
+    "/(?<a>a)(?<b>b)(?<a>a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>a)(?<b>b)(?<a>a)/u: Duplicate capture group name",
+        "index": 20
+      }
+    },
+    "/(?<a>a).|(?<x>x)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 18,
+        "raw": "/(?<a>a).|(?<x>x)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 17,
+          "raw": "(?<a>a).|(?<x>x)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 9,
+              "raw": "(?<a>a).",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<a>a)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 8,
+                  "end": 9,
+                  "raw": ".",
+                  "kind": "any"
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 10,
+              "end": 17,
+              "raw": "(?<x>x)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 10,
+                  "end": 17,
+                  "raw": "(?<x>x)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 15,
+                      "end": 16,
+                      "raw": "x",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 15,
+                          "end": 16,
+                          "raw": "x",
+                          "value": 120
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 18,
+          "end": 18,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>a)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 9,
+        "raw": "/(?<a>a)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(?<a>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<a>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<a>a)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 9,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>a)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 10,
+        "raw": "/(?<a>a)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(?<a>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<a>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<a>a)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 10,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<a>a)\\k<ab>/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>a)\\k<ab>/: Invalid named capture referenced",
+        "index": 14
+      }
+    },
+    "/(?<a>a)\\k<ab>/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a>a)\\k<ab>/u: Invalid named capture referenced",
+        "index": 14
+      }
+    },
+    "/(?<a\\>.)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\>.)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a\\>.)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\>.)/u: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a\\uD801>.)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\uD801>.)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a\\uD801>.)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\uD801>.)/u: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a\\uD83D\\uDF12>.)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\uD83D\\uDF12>.)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a\\uDCA4>.)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\uDCA4>.)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a\\uDCA4>.)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\uDCA4>.)/u: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a\\u{10FFFF}>.)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\u{10FFFF}>.)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<a\\u{110000}>.)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\u{110000}>.)/u: Invalid unicode escape",
+        "index": 7
+      }
+    },
+    "/(?<a\\u{1F08B}>.)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<a\\u{1F08B}>.)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/(?<aa)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<aa)/: Invalid capture group name",
+        "index": 6
+      }
+    },
+    "/(?<aa)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<aa)/u: Invalid capture group name",
+        "index": 6
+      }
+    },
+    "/(?<ab>a)\\k<a>/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<ab>a)\\k<a>/: Invalid named capture referenced",
+        "index": 14
+      }
+    },
+    "/(?<ab>a)\\k<a>/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<ab>a)\\k<a>/u: Invalid named capture referenced",
+        "index": 14
+      }
+    },
+    "/(?<animal>fox|dog)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 20,
+        "raw": "/(?<animal>fox|dog)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 19,
+          "raw": "(?<animal>fox|dog)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 19,
+              "raw": "(?<animal>fox|dog)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 19,
+                  "raw": "(?<animal>fox|dog)",
+                  "name": "animal",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 11,
+                      "end": 14,
+                      "raw": "fox",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 12,
+                          "raw": "f",
+                          "value": 102
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 13,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 14,
+                          "raw": "x",
+                          "value": 120
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 15,
+                      "end": 18,
+                      "raw": "dog",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 15,
+                          "end": 16,
+                          "raw": "d",
+                          "value": 100
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 16,
+                          "end": 17,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 17,
+                          "end": 18,
+                          "raw": "g",
+                          "value": 103
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 20,
+          "end": 20,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<animal>fox|dog)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 21,
+        "raw": "/(?<animal>fox|dog)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 19,
+          "raw": "(?<animal>fox|dog)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 19,
+              "raw": "(?<animal>fox|dog)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 19,
+                  "raw": "(?<animal>fox|dog)",
+                  "name": "animal",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 11,
+                      "end": 14,
+                      "raw": "fox",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 12,
+                          "raw": "f",
+                          "value": 102
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 13,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 14,
+                          "raw": "x",
+                          "value": 120
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 15,
+                      "end": 18,
+                      "raw": "dog",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 15,
+                          "end": 16,
+                          "raw": "d",
+                          "value": 100
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 16,
+                          "end": 17,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 17,
+                          "end": 18,
+                          "raw": "g",
+                          "value": 103
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 20,
+          "end": 21,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<b>.).\\k<b>/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 15,
+        "raw": "/(?<b>.).\\k<b>/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 14,
+          "raw": "(?<b>.).\\k<b>",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 14,
+              "raw": "(?<b>.).\\k<b>",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<b>.)",
+                  "name": "b",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../2"
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 8,
+                  "end": 9,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 14,
+                  "raw": "\\k<b>",
+                  "ref": "b",
+                  "resolved": "♻️../0"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 15,
+          "end": 15,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<b>.).\\k<b>/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 16,
+        "raw": "/(?<b>.).\\k<b>/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 14,
+          "raw": "(?<b>.).\\k<b>",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 14,
+              "raw": "(?<b>.).\\k<b>",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<b>.)",
+                  "name": "b",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../2"
+                  ]
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 8,
+                  "end": 9,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 14,
+                  "raw": "\\k<b>",
+                  "ref": "b",
+                  "resolved": "♻️../0"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 15,
+          "end": 16,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<fst>.)|(?<snd>.)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 22,
+        "raw": "/(?<fst>.)|(?<snd>.)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 20,
+          "raw": "(?<fst>.)|(?<snd>.)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 10,
+              "raw": "(?<fst>.)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 10,
+                  "raw": "(?<fst>.)",
+                  "name": "fst",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 8,
+                      "end": 9,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 9,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 11,
+              "end": 20,
+              "raw": "(?<snd>.)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 11,
+                  "end": 20,
+                  "raw": "(?<snd>.)",
+                  "name": "snd",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 18,
+                      "end": 19,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 18,
+                          "end": 19,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 21,
+          "end": 22,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<the2>the)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 15,
+        "raw": "/(?<the2>the)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 13,
+          "raw": "(?<the2>the)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 13,
+              "raw": "(?<the2>the)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 13,
+                  "raw": "(?<the2>the)",
+                  "name": "the2",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 9,
+                      "end": 12,
+                      "raw": "the",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 10,
+                          "raw": "t",
+                          "value": 116
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 11,
+                          "raw": "h",
+                          "value": 104
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 12,
+                          "raw": "e",
+                          "value": 101
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 14,
+          "end": 15,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<x>.)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 9,
+        "raw": "/(?<x>.)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(?<x>.)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<x>.)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<x>.)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 9,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<π>a)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 9,
+        "raw": "/(?<π>a)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(?<π>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<π>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<π>a)",
+                  "name": "π",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 9,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<π>a)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 10,
+        "raw": "/(?<π>a)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 8,
+          "raw": "(?<π>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<π>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<π>a)",
+                  "name": "π",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 9,
+          "end": 10,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<❤>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<❤>a)/: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<❤>a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<❤>a)/u: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<狸>fox).*(?<狗>dog)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 22,
+        "raw": "/(?<狸>fox).*(?<狗>dog)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 21,
+          "raw": "(?<狸>fox).*(?<狗>dog)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 21,
+              "raw": "(?<狸>fox).*(?<狗>dog)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 10,
+                  "raw": "(?<狸>fox)",
+                  "name": "狸",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 9,
+                      "raw": "fox",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "f",
+                          "value": 102
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 9,
+                          "raw": "x",
+                          "value": 120
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 10,
+                  "end": 12,
+                  "raw": ".*",
+                  "min": 0,
+                  "max": "$$Infinity",
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterSet",
+                    "parent": "♻️..",
+                    "start": 10,
+                    "end": 11,
+                    "raw": ".",
+                    "kind": "any"
+                  }
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 12,
+                  "end": 21,
+                  "raw": "(?<狗>dog)",
+                  "name": "狗",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 17,
+                      "end": 20,
+                      "raw": "dog",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 17,
+                          "end": 18,
+                          "raw": "d",
+                          "value": 100
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 18,
+                          "end": 19,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 19,
+                          "end": 20,
+                          "raw": "g",
+                          "value": 103
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 22,
+          "end": 22,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<狸>fox).*(?<狗>dog)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 23,
+        "raw": "/(?<狸>fox).*(?<狗>dog)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 21,
+          "raw": "(?<狸>fox).*(?<狗>dog)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 21,
+              "raw": "(?<狸>fox).*(?<狗>dog)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 10,
+                  "raw": "(?<狸>fox)",
+                  "name": "狸",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 9,
+                      "raw": "fox",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "f",
+                          "value": 102
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 8,
+                          "end": 9,
+                          "raw": "x",
+                          "value": 120
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 10,
+                  "end": 12,
+                  "raw": ".*",
+                  "min": 0,
+                  "max": "$$Infinity",
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterSet",
+                    "parent": "♻️..",
+                    "start": 10,
+                    "end": 11,
+                    "raw": ".",
+                    "kind": "any"
+                  }
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 12,
+                  "end": 21,
+                  "raw": "(?<狗>dog)",
+                  "name": "狗",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 17,
+                      "end": 20,
+                      "raw": "dog",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 17,
+                          "end": 18,
+                          "raw": "d",
+                          "value": 100
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 18,
+                          "end": 19,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 19,
+                          "end": 20,
+                          "raw": "g",
+                          "value": 103
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 22,
+          "end": 23,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<𐒤>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<𐒤>a)/: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<𐒤>a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?<𐒤>a)/u: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/(?<𝑓𝑜𝑥>fox).*(?<𝓓𝓸𝓰>dog)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 32,
+        "raw": "/(?<𝑓𝑜𝑥>fox).*(?<𝓓𝓸𝓰>dog)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 31,
+          "raw": "(?<𝑓𝑜𝑥>fox).*(?<𝓓𝓸𝓰>dog)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 31,
+              "raw": "(?<𝑓𝑜𝑥>fox).*(?<𝓓𝓸𝓰>dog)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 15,
+                  "raw": "(?<𝑓𝑜𝑥>fox)",
+                  "name": "𝑓𝑜𝑥",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 11,
+                      "end": 14,
+                      "raw": "fox",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 12,
+                          "raw": "f",
+                          "value": 102
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 13,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 14,
+                          "raw": "x",
+                          "value": 120
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 15,
+                  "end": 17,
+                  "raw": ".*",
+                  "min": 0,
+                  "max": "$$Infinity",
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterSet",
+                    "parent": "♻️..",
+                    "start": 15,
+                    "end": 16,
+                    "raw": ".",
+                    "kind": "any"
+                  }
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 17,
+                  "end": 31,
+                  "raw": "(?<𝓓𝓸𝓰>dog)",
+                  "name": "𝓓𝓸𝓰",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 27,
+                      "end": 30,
+                      "raw": "dog",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 27,
+                          "end": 28,
+                          "raw": "d",
+                          "value": 100
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 28,
+                          "end": 29,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 29,
+                          "end": 30,
+                          "raw": "g",
+                          "value": 103
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 32,
+          "end": 32,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<𝑓𝑜𝑥>fox).*(?<𝓓𝓸𝓰>dog)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 33,
+        "raw": "/(?<𝑓𝑜𝑥>fox).*(?<𝓓𝓸𝓰>dog)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 31,
+          "raw": "(?<𝑓𝑜𝑥>fox).*(?<𝓓𝓸𝓰>dog)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 31,
+              "raw": "(?<𝑓𝑜𝑥>fox).*(?<𝓓𝓸𝓰>dog)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 15,
+                  "raw": "(?<𝑓𝑜𝑥>fox)",
+                  "name": "𝑓𝑜𝑥",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 11,
+                      "end": 14,
+                      "raw": "fox",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 12,
+                          "raw": "f",
+                          "value": 102
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 13,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 14,
+                          "raw": "x",
+                          "value": 120
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 15,
+                  "end": 17,
+                  "raw": ".*",
+                  "min": 0,
+                  "max": "$$Infinity",
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterSet",
+                    "parent": "♻️..",
+                    "start": 15,
+                    "end": 16,
+                    "raw": ".",
+                    "kind": "any"
+                  }
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 17,
+                  "end": 31,
+                  "raw": "(?<𝓓𝓸𝓰>dog)",
+                  "name": "𝓓𝓸𝓰",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 27,
+                      "end": 30,
+                      "raw": "dog",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 27,
+                          "end": 28,
+                          "raw": "d",
+                          "value": 100
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 28,
+                          "end": 29,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 29,
+                          "end": 30,
+                          "raw": "g",
+                          "value": 103
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 32,
+          "end": 33,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<𝓑𝓻𝓸𝔀𝓷>brown)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 22,
+        "raw": "/(?<𝓑𝓻𝓸𝔀𝓷>brown)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 21,
+          "raw": "(?<𝓑𝓻𝓸𝔀𝓷>brown)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 21,
+              "raw": "(?<𝓑𝓻𝓸𝔀𝓷>brown)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 21,
+                  "raw": "(?<𝓑𝓻𝓸𝔀𝓷>brown)",
+                  "name": "𝓑𝓻𝓸𝔀𝓷",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 15,
+                      "end": 20,
+                      "raw": "brown",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 15,
+                          "end": 16,
+                          "raw": "b",
+                          "value": 98
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 16,
+                          "end": 17,
+                          "raw": "r",
+                          "value": 114
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 17,
+                          "end": 18,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 18,
+                          "end": 19,
+                          "raw": "w",
+                          "value": 119
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 19,
+                          "end": 20,
+                          "raw": "n",
+                          "value": 110
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 22,
+          "end": 22,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<𝓑𝓻𝓸𝔀𝓷>brown)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 23,
+        "raw": "/(?<𝓑𝓻𝓸𝔀𝓷>brown)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 21,
+          "raw": "(?<𝓑𝓻𝓸𝔀𝓷>brown)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 21,
+              "raw": "(?<𝓑𝓻𝓸𝔀𝓷>brown)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 21,
+                  "raw": "(?<𝓑𝓻𝓸𝔀𝓷>brown)",
+                  "name": "𝓑𝓻𝓸𝔀𝓷",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 15,
+                      "end": 20,
+                      "raw": "brown",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 15,
+                          "end": 16,
+                          "raw": "b",
+                          "value": 98
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 16,
+                          "end": 17,
+                          "raw": "r",
+                          "value": 114
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 17,
+                          "end": 18,
+                          "raw": "o",
+                          "value": 111
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 18,
+                          "end": 19,
+                          "raw": "w",
+                          "value": 119
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 19,
+                          "end": 20,
+                          "raw": "n",
+                          "value": 110
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 22,
+          "end": 23,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(a)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 5,
+        "raw": "/(a)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "(a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "(a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 4,
+                  "raw": "(a)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 3,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 2,
+                          "end": 3,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 5,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(a)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/(a)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "(a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "(a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 4,
+                  "raw": "(a)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 3,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 2,
+                          "end": 3,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 6,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.(?<$>a)./": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 11,
+        "raw": "/.(?<$>a)./",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 10,
+          "raw": ".(?<$>a).",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 10,
+              "raw": ".(?<$>a).",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 9,
+                  "raw": "(?<$>a)",
+                  "name": "$",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 8,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 10,
+                  "raw": ".",
+                  "kind": "any"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 11,
+          "end": 11,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.(?<$>a)./u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 12,
+        "raw": "/.(?<$>a)./u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 10,
+          "raw": ".(?<$>a).",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 10,
+              "raw": ".(?<$>a).",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 9,
+                  "raw": "(?<$>a)",
+                  "name": "$",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 8,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 10,
+                  "raw": ".",
+                  "kind": "any"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 11,
+          "end": 12,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.(?<a>\\w\\w)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 13,
+        "raw": "/.(?<a>\\w\\w)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 12,
+          "raw": ".(?<a>\\w\\w)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 12,
+              "raw": ".(?<a>\\w\\w)",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 12,
+                  "raw": "(?<a>\\w\\w)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 11,
+                      "raw": "\\w\\w",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 9,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 11,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 13,
+          "end": 13,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.(?<a>\\w\\w)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 14,
+        "raw": "/.(?<a>\\w\\w)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 12,
+          "raw": ".(?<a>\\w\\w)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 12,
+              "raw": ".(?<a>\\w\\w)",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 12,
+                  "raw": "(?<a>\\w\\w)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 11,
+                      "raw": "\\w\\w",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 9,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        },
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 11,
+                          "raw": "\\w",
+                          "kind": "word",
+                          "negate": false
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 13,
+          "end": 14,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.(?<a>a)(.)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 13,
+        "raw": "/.(?<a>a)(.)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 12,
+          "raw": ".(?<a>a)(.)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 12,
+              "raw": ".(?<a>a)(.)",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 9,
+                  "raw": "(?<a>a)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 8,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 12,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 10,
+                      "end": 11,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 11,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 13,
+          "end": 13,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.(?<a>a)(.)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 14,
+        "raw": "/.(?<a>a)(.)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 12,
+          "raw": ".(?<a>a)(.)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 12,
+              "raw": ".(?<a>a)(.)",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 9,
+                  "raw": "(?<a>a)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 8,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 12,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 10,
+                      "end": 11,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 11,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 13,
+          "end": 14,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.(?<a>a)(?<b>.)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/.(?<a>a)(?<b>.)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": ".(?<a>a)(?<b>.)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 16,
+              "raw": ".(?<a>a)(?<b>.)",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 9,
+                  "raw": "(?<a>a)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 8,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 16,
+                  "raw": "(?<b>.)",
+                  "name": "b",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 14,
+                      "end": 15,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 14,
+                          "end": 15,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/.(?<a>a)(?<b>.)/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 18,
+        "raw": "/.(?<a>a)(?<b>.)/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": ".(?<a>a)(?<b>.)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 16,
+              "raw": ".(?<a>a)(?<b>.)",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 9,
+                  "raw": "(?<a>a)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 8,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 16,
+                  "raw": "(?<b>.)",
+                  "name": "b",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 14,
+                      "end": 15,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 14,
+                          "end": 15,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 18,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/\\k(?<a>.)/": {
+      "error": {
+        "message": "Invalid regular expression: /\\k(?<a>.)/: Invalid named reference",
+        "index": 3
+      }
+    },
+    "/\\k/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/\\k/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 3,
+          "raw": "\\k",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 3,
+              "raw": "\\k",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 3,
+                  "raw": "\\k",
+                  "value": 107
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 4,
+          "end": 4,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/\\k/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\k/u: Invalid named reference",
+        "index": 3
+      }
+    },
+    "/\\k<4>/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 7,
+        "raw": "/\\k<4>/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 6,
+          "raw": "\\k<4>",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 6,
+              "raw": "\\k<4>",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 3,
+                  "raw": "\\k",
+                  "value": 107
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "<",
+                  "value": 60
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": "4",
+                  "value": 52
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 6,
+                  "raw": ">",
+                  "value": 62
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 7,
+          "end": 7,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/\\k<>/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\k<>/u: Invalid capture group name",
+        "index": 4
+      }
+    },
+    "/\\k<a(?<a>.)/": {
+      "error": {
+        "message": "Invalid regular expression: /\\k<a(?<a>.)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/\\k<a(?<a>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /\\k<a(?<a>a)/: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/\\k<a/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/\\k<a/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 5,
+          "raw": "\\k<a",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 5,
+              "raw": "\\k<a",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 3,
+                  "raw": "\\k",
+                  "value": 107
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "<",
+                  "value": 60
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": "a",
+                  "value": 97
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 6,
+          "end": 6,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/\\k<a/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\k<a/u: Invalid capture group name",
+        "index": 5
+      }
+    },
+    "/\\k<a>(?<a>x)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 14,
+        "raw": "/\\k<a>(?<a>x)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 13,
+          "raw": "\\k<a>(?<a>x)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 13,
+              "raw": "\\k<a>(?<a>x)",
+              "elements": [
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 6,
+                  "raw": "\\k<a>",
+                  "ref": "a",
+                  "resolved": "♻️../1"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 6,
+                  "end": 13,
+                  "raw": "(?<a>x)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 11,
+                      "end": 12,
+                      "raw": "x",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 11,
+                          "end": 12,
+                          "raw": "x",
+                          "value": 120
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../0"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 14,
+          "end": 14,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/\\k<a>(?<ab>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /\\k<a>(?<ab>a)/: Invalid named capture referenced",
+        "index": 14
+      }
+    },
+    "/\\k<a>(?<ab>a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\k<a>(?<ab>a)/u: Invalid named capture referenced",
+        "index": 14
+      }
+    },
+    "/\\k<a>(?<b>x)/": {
+      "error": {
+        "message": "Invalid regular expression: /\\k<a>(?<b>x)/: Invalid named capture referenced",
+        "index": 13
+      }
+    },
+    "/\\k<a>/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 7,
+        "raw": "/\\k<a>/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 6,
+          "raw": "\\k<a>",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 6,
+              "raw": "\\k<a>",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 3,
+                  "raw": "\\k",
+                  "value": 107
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "<",
+                  "value": 60
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": "a",
+                  "value": 97
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 6,
+                  "raw": ">",
+                  "value": 62
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 7,
+          "end": 7,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/\\k<a>/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\k<a>/u: Invalid named capture referenced",
+        "index": 6
+      }
+    }
+  }
+}

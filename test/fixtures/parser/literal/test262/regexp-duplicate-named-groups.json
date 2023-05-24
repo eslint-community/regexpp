@@ -1,0 +1,126 @@
+{
+  "_test262FileNames": [
+    "test/annexB/built-ins/RegExp/prototype/compile/duplicate-named-capturing-groups-syntax.js",
+    "test/built-ins/RegExp/named-groups/duplicate-names-group-property-enumeration-order.js",
+    "test/built-ins/RegExp/named-groups/duplicate-names-matchall.js",
+    "test/built-ins/RegExp/prototype/exec/duplicate-named-groups-properties.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}/": {
+      "error": {
+        "message": "Invalid regular expression: /(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}/: Duplicate capture group name",
+        "index": 20
+      }
+    },
+    "/(?:(?<x>a)|(?<x>b))\\k<x>/": {
+      "error": {
+        "message": "Invalid regular expression: /(?:(?<x>a)|(?<x>b))\\k<x>/: Duplicate capture group name",
+        "index": 17
+      }
+    },
+    "/(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))/: Duplicate capture group name",
+        "index": 24
+      }
+    },
+    "/(?<x>a)|(?<x>b)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>a)|(?<x>b)/: Duplicate capture group name",
+        "index": 14
+      }
+    },
+    "/(?<x>a)|(?<x>b)/g": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>a)|(?<x>b)/g: Duplicate capture group name",
+        "index": 14
+      }
+    },
+    "/(?<x>b)|(?<x>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>b)|(?<x>a)/: Duplicate capture group name",
+        "index": 14
+      }
+    },
+    "/(?<x>b)|(?<x>a)/g": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>b)|(?<x>a)/g: Duplicate capture group name",
+        "index": 14
+      }
+    },
+    "/(?<y>a)(?<x>a)|(?<x>b)(?<y>b)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<y>a)(?<x>a)|(?<x>b)(?<y>b)/: Duplicate capture group name",
+        "index": 21
+      }
+    },
+    "/[ab]/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/[ab]/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 5,
+          "raw": "[ab]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 5,
+              "raw": "[ab]",
+              "elements": [
+                {
+                  "type": "CharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 5,
+                  "raw": "[ab]",
+                  "negate": false,
+                  "elements": [
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 3,
+                      "raw": "a",
+                      "value": 97
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 3,
+                      "end": 4,
+                      "raw": "b",
+                      "value": 98
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 6,
+          "end": 6,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    }
+  }
+}
