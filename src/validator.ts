@@ -2300,9 +2300,9 @@ export class RegExpValidator {
         let mayContainStrings: boolean | undefined = false
         let result: UnicodeSetsConsumeResult | null = null
         if (this.consumeClassSetCharacter()) {
-            if (this.consumeClassSetRangeRight(start)) {
+            if (this.consumeClassSetRangeFromOperator(start)) {
                 // ClassUnion
-                this.consumeClassUnion({})
+                this.consumeClassUnionRight({})
                 return {}
             }
             // ClassSetOperand
@@ -2380,18 +2380,19 @@ export class RegExpValidator {
             this.raise("Invalid character in character class")
         }
         // ClassUnion
-        return this.consumeClassUnion({ mayContainStrings })
+        return this.consumeClassUnionRight({ mayContainStrings })
     }
 
     /**
-     * Validate the next characters as a RegExp `ClassUnion(opt)` production.
+     * Validate the next characters as right operand of a RegExp `ClassUnion` production.
      * ```
      * ClassUnion ::
      *     ClassSetRange ClassUnion(opt)
      *     ClassSetOperand ClassUnion(opt)
      * ```
+     * @param leftResult The result information for the left `ClassSetRange` or `ClassSetOperand`.
      */
-    private consumeClassUnion(
+    private consumeClassUnionRight(
         leftResult: UnicodeSetsConsumeResult,
     ): UnicodeSetsConsumeResult {
         // ClassUnion
@@ -2399,7 +2400,7 @@ export class RegExpValidator {
         for (;;) {
             const start = this.index
             if (this.consumeClassSetCharacter()) {
-                this.consumeClassSetRangeRight(start)
+                this.consumeClassSetRangeFromOperator(start)
                 continue
             }
             const result = this.consumeClassSetOperand()
@@ -2426,16 +2427,17 @@ export class RegExpValidator {
     }
 
     /**
-     * Validate the next characters as right operand of a RegExp `ClassSetRange` production if possible.
+     * Validate the next characters as from the `-` operator in a RegExp `ClassSetRange` production if possible.
      *
      * ```
      * ClassSetRange ::
      *     ClassSetCharacter `-` ClassSetCharacter
      * ```
      *
+     * @param start The starting position of the left operand.
      * @returns `true` if it consumed the next characters successfully.
      */
-    private consumeClassSetRangeRight(start: number) {
+    private consumeClassSetRangeFromOperator(start: number) {
         const currentStart = this.index
         const min = this._lastIntValue
         if (this.eat(HYPHEN_MINUS)) {
