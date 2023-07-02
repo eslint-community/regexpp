@@ -1,0 +1,393 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/prototype/unicodeSets/this-val-regexp.js",
+    "test/built-ins/RegExp/prototype/unicodeSets/uv-flags.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-difference-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-difference-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-difference-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-difference-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-intersection-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-intersection-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-intersection-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-intersection-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-union-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-union-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-union-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-union-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-intersection-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-intersection-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-intersection-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-intersection-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-union-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-union-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-union-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-union-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-difference-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-difference-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-difference-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-difference-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-intersection-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-intersection-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-intersection-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-intersection-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-union-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-union-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-union-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-union-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-difference-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-difference-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-difference-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-difference-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-intersection-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-intersection-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-intersection-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-intersection-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-union-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-union-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-union-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-union-string-literal.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/./uv": {
+      "error": {
+        "message": "Invalid regular expression: /./uv: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./v": {
+      "error": {
+        "message": "Invalid regular expression: /./v: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vd": {
+      "error": {
+        "message": "Invalid regular expression: /./vd: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vg": {
+      "error": {
+        "message": "Invalid regular expression: /./vg: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vi": {
+      "error": {
+        "message": "Invalid regular expression: /./vi: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vm": {
+      "error": {
+        "message": "Invalid regular expression: /./vm: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vs": {
+      "error": {
+        "message": "Invalid regular expression: /./vs: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/./vy": {
+      "error": {
+        "message": "Invalid regular expression: /./vy: Invalid flag 'v'",
+        "index": 3
+      }
+    },
+    "/^[[0-9]&&[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]&&[0-9]]+$/v: Invalid flag 'v'",
+        "index": 19
+      }
+    },
+    "/^[[0-9]&&\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]&&\\d]+$/v: Invalid flag 'v'",
+        "index": 16
+      }
+    },
+    "/^[[0-9]&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 37
+      }
+    },
+    "/^[[0-9]&&_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]&&_]+$/v: Invalid flag 'v'",
+        "index": 15
+      }
+    },
+    "/^[[0-9]--[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]--[0-9]]+$/v: Invalid flag 'v'",
+        "index": 19
+      }
+    },
+    "/^[[0-9]--\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]--\\d]+$/v: Invalid flag 'v'",
+        "index": 16
+      }
+    },
+    "/^[[0-9]--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 37
+      }
+    },
+    "/^[[0-9]--_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]--_]+$/v: Invalid flag 'v'",
+        "index": 15
+      }
+    },
+    "/^[[0-9][0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9][0-9]]+$/v: Invalid flag 'v'",
+        "index": 17
+      }
+    },
+    "/^[[0-9]\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]\\d]+$/v: Invalid flag 'v'",
+        "index": 14
+      }
+    },
+    "/^[[0-9]\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 35
+      }
+    },
+    "/^[[0-9]_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]_]+$/v: Invalid flag 'v'",
+        "index": 13
+      }
+    },
+    "/^[\\d&&[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d&&[0-9]]+$/v: Invalid flag 'v'",
+        "index": 16
+      }
+    },
+    "/^[\\d&&\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d&&\\d]+$/v: Invalid flag 'v'",
+        "index": 13
+      }
+    },
+    "/^[\\d&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 34
+      }
+    },
+    "/^[\\d&&_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d&&_]+$/v: Invalid flag 'v'",
+        "index": 12
+      }
+    },
+    "/^[\\d--[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d--[0-9]]+$/v: Invalid flag 'v'",
+        "index": 16
+      }
+    },
+    "/^[\\d--\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d--\\d]+$/v: Invalid flag 'v'",
+        "index": 13
+      }
+    },
+    "/^[\\d--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 34
+      }
+    },
+    "/^[\\d--_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d--_]+$/v: Invalid flag 'v'",
+        "index": 12
+      }
+    },
+    "/^[\\d[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d[0-9]]+$/v: Invalid flag 'v'",
+        "index": 14
+      }
+    },
+    "/^[\\d\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d\\d]+$/v: Invalid flag 'v'",
+        "index": 11
+      }
+    },
+    "/^[\\d\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 32
+      }
+    },
+    "/^[\\d_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d_]+$/v: Invalid flag 'v'",
+        "index": 10
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}&&[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}&&[0-9]]+$/v: Invalid flag 'v'",
+        "index": 37
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}&&\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}&&\\d]+$/v: Invalid flag 'v'",
+        "index": 34
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 55
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}&&_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}&&_]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}--[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}--[0-9]]+$/v: Invalid flag 'v'",
+        "index": 37
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}--\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}--\\d]+$/v: Invalid flag 'v'",
+        "index": 34
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 55
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}--_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}--_]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}[0-9]]+$/v: Invalid flag 'v'",
+        "index": 35
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}\\d]+$/v: Invalid flag 'v'",
+        "index": 32
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 53
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}_]+$/v: Invalid flag 'v'",
+        "index": 31
+      }
+    },
+    "/^[_&&[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_&&[0-9]]+$/v: Invalid flag 'v'",
+        "index": 15
+      }
+    },
+    "/^[_&&\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_&&\\d]+$/v: Invalid flag 'v'",
+        "index": 12
+      }
+    },
+    "/^[_&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[_&&_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_&&_]+$/v: Invalid flag 'v'",
+        "index": 11
+      }
+    },
+    "/^[_--[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_--[0-9]]+$/v: Invalid flag 'v'",
+        "index": 15
+      }
+    },
+    "/^[_--\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_--\\d]+$/v: Invalid flag 'v'",
+        "index": 12
+      }
+    },
+    "/^[_--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[_--_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_--_]+$/v: Invalid flag 'v'",
+        "index": 11
+      }
+    },
+    "/^[_[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_[0-9]]+$/v: Invalid flag 'v'",
+        "index": 13
+      }
+    },
+    "/^[_\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_\\d]+$/v: Invalid flag 'v'",
+        "index": 10
+      }
+    },
+    "/^[_\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 31
+      }
+    },
+    "/^[__]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[__]+$/v: Invalid flag 'v'",
+        "index": 9
+      }
+    }
+  }
+}

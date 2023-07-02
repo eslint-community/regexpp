@@ -1,0 +1,1131 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/prototype/Symbol.match/builtin-failure-g-set-lastindex-err.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/builtin-failure-y-return-val.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/builtin-infer-unicode.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/builtin-success-g-set-lastindex-err.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/builtin-success-return-val-groups.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/builtin-success-return-val.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/builtin-success-u-return-val-groups.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/coerce-arg.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/g-coerce-result-err.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/g-success-return-val.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/u-advance-after-empty.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/y-fail-global-return.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/y-fail-lastindex-no-write.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/y-fail-return.js",
+    "test/built-ins/RegExp/prototype/Symbol.match/y-set-lastindex.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/.(.)./g": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 8,
+        "raw": "/.(.)./g",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 6,
+          "raw": ".(.).",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 6,
+              "raw": ".(.).",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 5,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 3,
+                      "end": 4,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 3,
+                          "end": 4,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 6,
+                  "raw": ".",
+                  "kind": "any"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 7,
+          "end": 8,
+          "raw": "g",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/./g": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/./g",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": ".",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": ".",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 4,
+          "raw": "g",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/\\udf06/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 8,
+        "raw": "/\\udf06/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 7,
+          "raw": "\\udf06",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 7,
+              "raw": "\\udf06",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 7,
+                  "raw": "\\udf06",
+                  "value": 57094
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 8,
+          "end": 8,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/\\udf06/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 9,
+        "raw": "/\\udf06/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 7,
+          "raw": "\\udf06",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 7,
+              "raw": "\\udf06",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 7,
+                  "raw": "\\udf06",
+                  "value": 57094
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 8,
+          "end": 9,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^|\\udf06/ug": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 12,
+        "raw": "/^|\\udf06/ug",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 9,
+          "raw": "^|\\udf06",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "^",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 3,
+              "end": 9,
+              "raw": "\\udf06",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 9,
+                  "raw": "\\udf06",
+                  "value": 57094
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 10,
+          "end": 12,
+          "raw": "ug",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/a/g": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/a/g",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "a",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "a",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "a",
+                  "value": 97
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 4,
+          "raw": "g",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/a/y": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/a/y",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "a",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "a",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "a",
+                  "value": 97
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 4,
+          "raw": "y",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": true,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/a/yg": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 5,
+        "raw": "/a/yg",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "a",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "a",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "a",
+                  "value": 97
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 5,
+          "raw": "yg",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": true,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/abc/y": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/abc/y",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "abc",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "abc",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "a",
+                  "value": 97
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "c",
+                  "value": 99
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 6,
+          "raw": "y",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": true,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/b(.).(.)./": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 11,
+        "raw": "/b(.).(.)./",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 10,
+          "raw": "b(.).(.).",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 10,
+              "raw": "b(.).(.).",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 5,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 3,
+                      "end": 4,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 3,
+                          "end": 4,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 6,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 6,
+                  "end": 9,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 8,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 10,
+                  "raw": ".",
+                  "kind": "any"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 11,
+          "end": 11,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/b(.).(.)./u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 12,
+        "raw": "/b(.).(.)./u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 10,
+          "raw": "b(.).(.).",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 10,
+              "raw": "b(.).(.).",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 5,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 3,
+                      "end": 4,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 3,
+                          "end": 4,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 6,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 6,
+                  "end": 9,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 8,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 10,
+                  "raw": ".",
+                  "kind": "any"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 11,
+          "end": 12,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/b./": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/b./",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 3,
+          "raw": "b.",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 3,
+              "raw": "b.",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 4,
+          "end": 4,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/b/g": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/b/g",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "b",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "b",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 4,
+          "raw": "g",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/b/y": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/b/y",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "b",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "b",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 4,
+          "raw": "y",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": true,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/c/y": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/c/y",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "c",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "c",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "c",
+                  "value": 99
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 4,
+          "raw": "y",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": true,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/toString value/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 16,
+        "raw": "/toString value/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 15,
+          "raw": "toString value",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 15,
+              "raw": "toString value",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "t",
+                  "value": 116
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "o",
+                  "value": 111
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "S",
+                  "value": 83
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": "t",
+                  "value": 116
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 6,
+                  "raw": "r",
+                  "value": 114
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 6,
+                  "end": 7,
+                  "raw": "i",
+                  "value": 105
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 7,
+                  "end": 8,
+                  "raw": "n",
+                  "value": 110
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 8,
+                  "end": 9,
+                  "raw": "g",
+                  "value": 103
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 10,
+                  "raw": " ",
+                  "value": 32
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 10,
+                  "end": 11,
+                  "raw": "v",
+                  "value": 118
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 11,
+                  "end": 12,
+                  "raw": "a",
+                  "value": 97
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 12,
+                  "end": 13,
+                  "raw": "l",
+                  "value": 108
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 13,
+                  "end": 14,
+                  "raw": "u",
+                  "value": 117
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 14,
+                  "end": 15,
+                  "raw": "e",
+                  "value": 101
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 16,
+          "end": 16,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    }
+  }
+}

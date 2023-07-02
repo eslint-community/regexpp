@@ -1,0 +1,131 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/prototype/Symbol.search/coerce-string.js",
+    "test/built-ins/RegExp/prototype/Symbol.search/failure-return-val.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/ring/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/ring/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 5,
+          "raw": "ring",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 5,
+              "raw": "ring",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "r",
+                  "value": 114
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "i",
+                  "value": 105
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "n",
+                  "value": 110
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": "g",
+                  "value": 103
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 6,
+          "end": 6,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/z/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 3,
+        "raw": "/z/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "z",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "z",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "z",
+                  "value": 122
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 3,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    }
+  }
+}

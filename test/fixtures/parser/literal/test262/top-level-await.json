@@ -1,0 +1,123 @@
+{
+  "_test262FileNames": [
+    "test/language/module-code/top-level-await/await-expr-regexp.js",
+    "test/language/module-code/top-level-await/syntax/block-await-expr-regexp.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/1/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 3,
+        "raw": "/1/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "1",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "1",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "1",
+                  "value": 49
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 3,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/x.y/g": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/x.y/g",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "x.y",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "x.y",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "x",
+                  "value": 120
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "y",
+                  "value": 121
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 6,
+          "raw": "g",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    }
+  }
+}

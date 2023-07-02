@@ -1,0 +1,623 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/property-escapes/generated/strings/Basic_Emoji-negative-CharacterClass.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/Basic_Emoji-negative-P.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/Basic_Emoji-negative-u.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/Basic_Emoji.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/Emoji_Keycap_Sequence-negative-CharacterClass.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/Emoji_Keycap_Sequence-negative-P.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/Emoji_Keycap_Sequence-negative-u.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/Emoji_Keycap_Sequence.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji-negative-CharacterClass.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji-negative-P.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji-negative-u.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Flag_Sequence-negative-CharacterClass.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Flag_Sequence-negative-P.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Flag_Sequence-negative-u.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Flag_Sequence.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Modifier_Sequence-negative-CharacterClass.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Modifier_Sequence-negative-P.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Modifier_Sequence-negative-u.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Modifier_Sequence.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Tag_Sequence-negative-CharacterClass.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Tag_Sequence-negative-P.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Tag_Sequence-negative-u.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_Tag_Sequence.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_ZWJ_Sequence-negative-CharacterClass.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_ZWJ_Sequence-negative-P.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_ZWJ_Sequence-negative-u.js",
+    "test/built-ins/RegExp/property-escapes/generated/strings/RGI_Emoji_ZWJ_Sequence.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-difference-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-difference-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-difference-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-intersection-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-intersection-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-union-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-escape-union-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-intersection-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-intersection-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-union-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-class-union-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-difference-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-difference-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-intersection-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-intersection-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-difference-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-difference-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-difference-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-difference-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-difference-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-difference-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-intersection-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-intersection-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-intersection-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-intersection-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-intersection-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-intersection-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-union-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-union-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-union-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-union-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-union-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-property-escape-union-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-union-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/character-union-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-difference-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-difference-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-difference-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-difference-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-difference-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-difference-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-intersection-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-intersection-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-intersection-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-intersection-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-intersection-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-intersection-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-union-character-class-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-union-character-class.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-union-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-union-character.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-union-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/property-of-strings-escape-union-string-literal.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-difference-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-difference-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-intersection-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-intersection-property-of-strings-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-union-character-property-escape.js",
+    "test/built-ins/RegExp/unicodeSets/generated/string-literal-union-property-of-strings-escape.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/[^\\p{Basic_Emoji}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\p{Basic_Emoji}]/v: Invalid flag 'v'",
+        "index": 20
+      }
+    },
+    "/[^\\p{Emoji_Keycap_Sequence}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\p{Emoji_Keycap_Sequence}]/v: Invalid flag 'v'",
+        "index": 30
+      }
+    },
+    "/[^\\p{RGI_Emoji_Flag_Sequence}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\p{RGI_Emoji_Flag_Sequence}]/v: Invalid flag 'v'",
+        "index": 32
+      }
+    },
+    "/[^\\p{RGI_Emoji_Modifier_Sequence}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\p{RGI_Emoji_Modifier_Sequence}]/v: Invalid flag 'v'",
+        "index": 36
+      }
+    },
+    "/[^\\p{RGI_Emoji_Tag_Sequence}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\p{RGI_Emoji_Tag_Sequence}]/v: Invalid flag 'v'",
+        "index": 31
+      }
+    },
+    "/[^\\p{RGI_Emoji_ZWJ_Sequence}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\p{RGI_Emoji_ZWJ_Sequence}]/v: Invalid flag 'v'",
+        "index": 31
+      }
+    },
+    "/[^\\p{RGI_Emoji}]/v": {
+      "error": {
+        "message": "Invalid regular expression: /[^\\p{RGI_Emoji}]/v: Invalid flag 'v'",
+        "index": 18
+      }
+    },
+    "/\\P{Basic_Emoji}/v": {
+      "error": {
+        "message": "Invalid regular expression: /\\P{Basic_Emoji}/v: Invalid flag 'v'",
+        "index": 17
+      }
+    },
+    "/\\P{Emoji_Keycap_Sequence}/v": {
+      "error": {
+        "message": "Invalid regular expression: /\\P{Emoji_Keycap_Sequence}/v: Invalid flag 'v'",
+        "index": 27
+      }
+    },
+    "/\\P{RGI_Emoji_Flag_Sequence}/v": {
+      "error": {
+        "message": "Invalid regular expression: /\\P{RGI_Emoji_Flag_Sequence}/v: Invalid flag 'v'",
+        "index": 29
+      }
+    },
+    "/\\P{RGI_Emoji_Modifier_Sequence}/v": {
+      "error": {
+        "message": "Invalid regular expression: /\\P{RGI_Emoji_Modifier_Sequence}/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/\\P{RGI_Emoji_Tag_Sequence}/v": {
+      "error": {
+        "message": "Invalid regular expression: /\\P{RGI_Emoji_Tag_Sequence}/v: Invalid flag 'v'",
+        "index": 28
+      }
+    },
+    "/\\P{RGI_Emoji_ZWJ_Sequence}/v": {
+      "error": {
+        "message": "Invalid regular expression: /\\P{RGI_Emoji_ZWJ_Sequence}/v: Invalid flag 'v'",
+        "index": 28
+      }
+    },
+    "/\\P{RGI_Emoji}/v": {
+      "error": {
+        "message": "Invalid regular expression: /\\P{RGI_Emoji}/v: Invalid flag 'v'",
+        "index": 15
+      }
+    },
+    "/\\p{Basic_Emoji}/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\p{Basic_Emoji}/u: Invalid property name",
+        "index": 15
+      }
+    },
+    "/\\p{Emoji_Keycap_Sequence}/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\p{Emoji_Keycap_Sequence}/u: Invalid property name",
+        "index": 25
+      }
+    },
+    "/\\p{RGI_Emoji_Flag_Sequence}/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\p{RGI_Emoji_Flag_Sequence}/u: Invalid property name",
+        "index": 27
+      }
+    },
+    "/\\p{RGI_Emoji_Modifier_Sequence}/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\p{RGI_Emoji_Modifier_Sequence}/u: Invalid property name",
+        "index": 31
+      }
+    },
+    "/\\p{RGI_Emoji_Tag_Sequence}/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\p{RGI_Emoji_Tag_Sequence}/u: Invalid property name",
+        "index": 26
+      }
+    },
+    "/\\p{RGI_Emoji_ZWJ_Sequence}/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\p{RGI_Emoji_ZWJ_Sequence}/u: Invalid property name",
+        "index": 26
+      }
+    },
+    "/\\p{RGI_Emoji}/u": {
+      "error": {
+        "message": "Invalid regular expression: /\\p{RGI_Emoji}/u: Invalid property name",
+        "index": 13
+      }
+    },
+    "/^[[0-9]&&\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]&&\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[[0-9]&&\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]&&\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 39
+      }
+    },
+    "/^[[0-9]--\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]--\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[[0-9]--\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]--\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 39
+      }
+    },
+    "/^[[0-9]\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 31
+      }
+    },
+    "/^[[0-9]\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[[0-9]\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 37
+      }
+    },
+    "/^[\\d&&\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d&&\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 30
+      }
+    },
+    "/^[\\d&&\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d&&\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 36
+      }
+    },
+    "/^[\\d--\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d--\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 30
+      }
+    },
+    "/^[\\d--\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d--\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 36
+      }
+    },
+    "/^[\\d\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 28
+      }
+    },
+    "/^[\\d\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\d\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 34
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}&&[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}&&[0-9]]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}&&\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}&&\\d]+$/v: Invalid flag 'v'",
+        "index": 30
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}&&\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}&&\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 47
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}&&\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}&&\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 53
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 51
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}&&_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}&&_]+$/v: Invalid flag 'v'",
+        "index": 29
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}--[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}--[0-9]]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}--\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}--\\d]+$/v: Invalid flag 'v'",
+        "index": 30
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}--\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}--\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 47
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}--\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}--\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 53
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 51
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}--_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}--_]+$/v: Invalid flag 'v'",
+        "index": 29
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}[0-9]]+$/v: Invalid flag 'v'",
+        "index": 31
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}\\d]+$/v: Invalid flag 'v'",
+        "index": 28
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 45
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 51
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 49
+      }
+    },
+    "/^[\\p{ASCII_Hex_Digit}_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{ASCII_Hex_Digit}_]+$/v: Invalid flag 'v'",
+        "index": 27
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}&&[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}&&[0-9]]+$/v: Invalid flag 'v'",
+        "index": 39
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}&&\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}&&\\d]+$/v: Invalid flag 'v'",
+        "index": 36
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}&&\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}&&\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 53
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}&&\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}&&\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 59
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}&&\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 57
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}&&_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}&&_]+$/v: Invalid flag 'v'",
+        "index": 35
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}--[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}--[0-9]]+$/v: Invalid flag 'v'",
+        "index": 39
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}--\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}--\\d]+$/v: Invalid flag 'v'",
+        "index": 36
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}--\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}--\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 53
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}--\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}--\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 59
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}--\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 57
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}--_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}--_]+$/v: Invalid flag 'v'",
+        "index": 35
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}[0-9]]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}[0-9]]+$/v: Invalid flag 'v'",
+        "index": 37
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}\\d]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}\\d]+$/v: Invalid flag 'v'",
+        "index": 34
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 51
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 57
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}\\q{0|2|4|9\\uFE0F\\u20E3}]+$/v: Invalid flag 'v'",
+        "index": 55
+      }
+    },
+    "/^[\\p{Emoji_Keycap_Sequence}_]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\p{Emoji_Keycap_Sequence}_]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}&&\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}&&\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 51
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}&&\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}&&\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 57
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}--\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}--\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 51
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}--\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}--\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 57
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 49
+      }
+    },
+    "/^[\\q{0|2|4|9\\uFE0F\\u20E3}\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[\\q{0|2|4|9\\uFE0F\\u20E3}\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 55
+      }
+    },
+    "/^[_&&\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_&&\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 29
+      }
+    },
+    "/^[_&&\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_&&\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 35
+      }
+    },
+    "/^[_--\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_--\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 29
+      }
+    },
+    "/^[_--\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_--\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 35
+      }
+    },
+    "/^[_\\p{ASCII_Hex_Digit}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_\\p{ASCII_Hex_Digit}]+$/v: Invalid flag 'v'",
+        "index": 27
+      }
+    },
+    "/^[_\\p{Emoji_Keycap_Sequence}]+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^[_\\p{Emoji_Keycap_Sequence}]+$/v: Invalid flag 'v'",
+        "index": 33
+      }
+    },
+    "/^\\p{Basic_Emoji}+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^\\p{Basic_Emoji}+$/v: Invalid flag 'v'",
+        "index": 20
+      }
+    },
+    "/^\\p{Emoji_Keycap_Sequence}+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^\\p{Emoji_Keycap_Sequence}+$/v: Invalid flag 'v'",
+        "index": 30
+      }
+    },
+    "/^\\p{RGI_Emoji_Flag_Sequence}+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^\\p{RGI_Emoji_Flag_Sequence}+$/v: Invalid flag 'v'",
+        "index": 32
+      }
+    },
+    "/^\\p{RGI_Emoji_Modifier_Sequence}+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^\\p{RGI_Emoji_Modifier_Sequence}+$/v: Invalid flag 'v'",
+        "index": 36
+      }
+    },
+    "/^\\p{RGI_Emoji_Tag_Sequence}+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^\\p{RGI_Emoji_Tag_Sequence}+$/v: Invalid flag 'v'",
+        "index": 31
+      }
+    },
+    "/^\\p{RGI_Emoji_ZWJ_Sequence}+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^\\p{RGI_Emoji_ZWJ_Sequence}+$/v: Invalid flag 'v'",
+        "index": 31
+      }
+    },
+    "/^\\p{RGI_Emoji}+$/v": {
+      "error": {
+        "message": "Invalid regular expression: /^\\p{RGI_Emoji}+$/v: Invalid flag 'v'",
+        "index": 18
+      }
+    }
+  }
+}

@@ -22,3 +22,21 @@ jobs:
         run: |
             git add --all && \
             git diff-index --cached HEAD --stat --exit-code
+  check-extract-test262:
+    name: check-extract-test262
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Packages
+        run: npm install
+      - name: Update
+        run: npm run update:test262:extract
+      - name: Check changes
+        run: |
+            git add --all && \
+            git diff-index --cached HEAD --stat --exit-code

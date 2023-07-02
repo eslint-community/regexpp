@@ -1,0 +1,981 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/prototype/Symbol.replace/coerce-unicode.js",
+    "test/built-ins/RegExp/prototype/Symbol.replace/fn-coerce-replacement-err.js",
+    "test/built-ins/RegExp/prototype/Symbol.replace/fn-invoke-args.js",
+    "test/built-ins/RegExp/prototype/Symbol.replace/replace-with-trailing.js",
+    "test/built-ins/RegExp/prototype/Symbol.replace/replace-without-trailing.js",
+    "test/built-ins/RegExp/prototype/Symbol.replace/subst-capture-idx-1.js",
+    "test/built-ins/RegExp/prototype/Symbol.replace/subst-matched.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/.4?./": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/.4?./",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 5,
+          "raw": ".4?.",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 5,
+              "raw": ".4?.",
+              "elements": [
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 4,
+                  "raw": "4?",
+                  "min": 0,
+                  "max": 1,
+                  "greedy": true,
+                  "element": {
+                    "type": "Character",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 3,
+                    "raw": "4",
+                    "value": 52
+                  }
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": ".",
+                  "kind": "any"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 6,
+          "end": 6,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^|\\udf06/g": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 11,
+        "raw": "/^|\\udf06/g",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 9,
+          "raw": "^|\\udf06",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "^",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 3,
+              "end": 9,
+              "raw": "\\udf06",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 9,
+                  "raw": "\\udf06",
+                  "value": 57094
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 10,
+          "end": 11,
+          "raw": "g",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/ab/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/ab/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 3,
+          "raw": "ab",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 3,
+              "raw": "ab",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "a",
+                  "value": 97
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "b",
+                  "value": 98
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 4,
+          "end": 4,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/abc/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 5,
+        "raw": "/abc/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "abc",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "abc",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "a",
+                  "value": 97
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "c",
+                  "value": 99
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 5,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/abcd/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/abcd/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 5,
+          "raw": "abcd",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 5,
+              "raw": "abcd",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "a",
+                  "value": 97
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "c",
+                  "value": 99
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 4,
+                  "end": 5,
+                  "raw": "d",
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 6,
+          "end": 6,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/b(.).(.)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 10,
+        "raw": "/b(.).(.)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 9,
+          "raw": "b(.).(.)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 9,
+              "raw": "b(.).(.)",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 5,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 3,
+                      "end": 4,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 3,
+                          "end": 4,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 6,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 6,
+                  "end": 9,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 7,
+                      "end": 8,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 7,
+                          "end": 8,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 10,
+          "end": 10,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/b(c)(z)?(.)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 13,
+        "raw": "/b(c)(z)?(.)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 12,
+          "raw": "b(c)(z)?(.)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 12,
+              "raw": "b(c)(z)?(.)",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 5,
+                  "raw": "(c)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 3,
+                      "end": 4,
+                      "raw": "c",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 3,
+                          "end": 4,
+                          "raw": "c",
+                          "value": 99
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 5,
+                  "end": 9,
+                  "raw": "(z)?",
+                  "min": 0,
+                  "max": 1,
+                  "greedy": true,
+                  "element": {
+                    "type": "CapturingGroup",
+                    "parent": "♻️..",
+                    "start": 5,
+                    "end": 8,
+                    "raw": "(z)",
+                    "name": null,
+                    "alternatives": [
+                      {
+                        "type": "Alternative",
+                        "parent": "♻️../..",
+                        "start": 6,
+                        "end": 7,
+                        "raw": "z",
+                        "elements": [
+                          {
+                            "type": "Character",
+                            "parent": "♻️../..",
+                            "start": 6,
+                            "end": 7,
+                            "raw": "z",
+                            "value": 122
+                          }
+                        ]
+                      }
+                    ],
+                    "references": []
+                  }
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 12,
+                  "raw": "(.)",
+                  "name": null,
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 10,
+                      "end": 11,
+                      "raw": ".",
+                      "elements": [
+                        {
+                          "type": "CharacterSet",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 11,
+                          "raw": ".",
+                          "kind": "any"
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 13,
+          "end": 13,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/b/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 3,
+        "raw": "/b/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "b",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "b",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 3,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/bc/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/bc/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 3,
+          "raw": "bc",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 3,
+              "raw": "bc",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "c",
+                  "value": 99
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 4,
+          "end": 4,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/bcd/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 5,
+        "raw": "/bcd/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "bcd",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "bcd",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "b",
+                  "value": 98
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "c",
+                  "value": 99
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "d",
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 5,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/c/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 3,
+        "raw": "/c/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "c",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "c",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "c",
+                  "value": 99
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 3,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/cd/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 4,
+        "raw": "/cd/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 3,
+          "raw": "cd",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 3,
+              "raw": "cd",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "c",
+                  "value": 99
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": "d",
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 4,
+          "end": 4,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/d/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 3,
+        "raw": "/d/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "d",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "d",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "d",
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 3,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/x/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 3,
+        "raw": "/x/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "x",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "x",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "x",
+                  "value": 120
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 3,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    }
+  }
+}

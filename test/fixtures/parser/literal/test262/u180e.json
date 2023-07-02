@@ -1,0 +1,319 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/dotall/without-dotall-unicode.js",
+    "test/built-ins/RegExp/dotall/without-dotall.js",
+    "test/language/literals/regexp/mongolian-vowel-separator.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/^.$/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 5,
+        "raw": "/^.$/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "^.$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "^.$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 5,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^.$/m": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/^.$/m",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "^.$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "^.$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 6,
+          "raw": "m",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": true,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^.$/u": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/^.$/u",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "^.$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "^.$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 6,
+          "raw": "u",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^.$/um": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 7,
+        "raw": "/^.$/um",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "^.$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "^.$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 7,
+          "raw": "um",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": true,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/᠎/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 3,
+        "raw": "/᠎/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 2,
+          "raw": "᠎",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 2,
+              "raw": "᠎",
+              "elements": [
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "᠎",
+                  "value": 6158
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 3,
+          "end": 3,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    }
+  }
+}

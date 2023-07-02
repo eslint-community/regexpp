@@ -1,0 +1,269 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/dotall/with-dotall-unicode.js",
+    "test/built-ins/RegExp/dotall/with-dotall.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/^.$/s": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/^.$/s",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "^.$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "^.$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 6,
+          "raw": "s",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": true,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^.$/sm": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 7,
+        "raw": "/^.$/sm",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "^.$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "^.$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 7,
+          "raw": "sm",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": true,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": true,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^.$/su": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 7,
+        "raw": "/^.$/su",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "^.$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "^.$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 7,
+          "raw": "su",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": true,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^.$/sum": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 8,
+        "raw": "/^.$/sum",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 4,
+          "raw": "^.$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 4,
+              "raw": "^.$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "CharacterSet",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 3,
+                  "raw": ".",
+                  "kind": "any"
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 3,
+                  "end": 4,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 5,
+          "end": 8,
+          "raw": "sum",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": true,
+          "unicode": true,
+          "sticky": false,
+          "dotAll": true,
+          "hasIndices": false
+        }
+      }
+    }
+  }
+}

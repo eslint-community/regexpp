@@ -1,0 +1,268 @@
+{
+  "_test262FileNames": [
+    "test/annexB/built-ins/RegExp/prototype/compile/duplicate-named-capturing-groups-syntax.js",
+    "test/built-ins/RegExp/named-groups/duplicate-names-exec.js",
+    "test/built-ins/RegExp/named-groups/duplicate-names-group-property-enumeration-order.js",
+    "test/built-ins/RegExp/named-groups/duplicate-names-matchall.js",
+    "test/built-ins/RegExp/prototype/exec/duplicate-named-groups-properties.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/(?:(?:(?<x>a)|(?<x>b))\\k<x>){2}/": {
+      "error": {
+        "message": "Invalid regular expression: /(?:(?:(?<x>a)|(?<x>b))\\k<x>){2}/: Duplicate capture group name",
+        "index": 20
+      }
+    },
+    "/(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}/": {
+      "error": {
+        "message": "Invalid regular expression: /(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}/: Duplicate capture group name",
+        "index": 20
+      }
+    },
+    "/(?:(?<x>a)|(?<x>b))\\k<x>/": {
+      "error": {
+        "message": "Invalid regular expression: /(?:(?<x>a)|(?<x>b))\\k<x>/: Duplicate capture group name",
+        "index": 17
+      }
+    },
+    "/(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))/: Duplicate capture group name",
+        "index": 24
+      }
+    },
+    "/(?<a>x)|(?:zy\\k<a>)/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 21,
+        "raw": "/(?<a>x)|(?:zy\\k<a>)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 20,
+          "raw": "(?<a>x)|(?:zy\\k<a>)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<a>x)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<a>x)",
+                  "name": "a",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "x",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "x",
+                          "value": 120
+                        }
+                      ]
+                    }
+                  ],
+                  "references": [
+                    "♻️../../../1/elements/0/alternatives/0/elements/2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 9,
+              "end": 20,
+              "raw": "(?:zy\\k<a>)",
+              "elements": [
+                {
+                  "type": "Group",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 20,
+                  "raw": "(?:zy\\k<a>)",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 12,
+                      "end": 19,
+                      "raw": "zy\\k<a>",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 13,
+                          "raw": "z",
+                          "value": 122
+                        },
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 14,
+                          "raw": "y",
+                          "value": 121
+                        },
+                        {
+                          "type": "Backreference",
+                          "parent": "♻️../..",
+                          "start": 14,
+                          "end": 19,
+                          "raw": "\\k<a>",
+                          "ref": "a",
+                          "resolved": "♻️../../../../../../../0/elements/0"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 21,
+          "end": 21,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/(?<x>a)|(?<x>b)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>a)|(?<x>b)/: Duplicate capture group name",
+        "index": 14
+      }
+    },
+    "/(?<x>a)|(?<x>b)/g": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>a)|(?<x>b)/g: Duplicate capture group name",
+        "index": 14
+      }
+    },
+    "/(?<x>b)|(?<x>a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>b)|(?<x>a)/: Duplicate capture group name",
+        "index": 14
+      }
+    },
+    "/(?<x>b)|(?<x>a)/g": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>b)|(?<x>a)/g: Duplicate capture group name",
+        "index": 14
+      }
+    },
+    "/(?<y>a)(?<x>a)|(?<x>b)(?<y>b)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<y>a)(?<x>a)|(?<x>b)(?<y>b)/: Duplicate capture group name",
+        "index": 21
+      }
+    },
+    "/[ab]/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 6,
+        "raw": "/[ab]/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 5,
+          "raw": "[ab]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 5,
+              "raw": "[ab]",
+              "elements": [
+                {
+                  "type": "CharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 5,
+                  "raw": "[ab]",
+                  "negate": false,
+                  "elements": [
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 2,
+                      "end": 3,
+                      "raw": "a",
+                      "value": 97
+                    },
+                    {
+                      "type": "Character",
+                      "parent": "♻️../..",
+                      "start": 3,
+                      "end": 4,
+                      "raw": "b",
+                      "value": 98
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 6,
+          "end": 6,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false
+        }
+      }
+    },
+    "/^(?:(?<a>x)|(?<a>y)|z)\\k<a>$/": {
+      "error": {
+        "message": "Invalid regular expression: /^(?:(?<a>x)|(?<a>y)|z)\\k<a>$/: Duplicate capture group name",
+        "index": 18
+      }
+    },
+    "/^(?:(?<a>x)|(?<a>y)|z){2}\\k<a>$/": {
+      "error": {
+        "message": "Invalid regular expression: /^(?:(?<a>x)|(?<a>y)|z){2}\\k<a>$/: Duplicate capture group name",
+        "index": 18
+      }
+    }
+  }
+}

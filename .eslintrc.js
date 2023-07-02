@@ -49,6 +49,15 @@ module.exports = {
                 "@eslint-community/mysticatea/ts/no-unsafe-return": "off",
             },
         },
+        {
+            files: ["./scripts/extract-test262.ts"],
+            // Disables rules that cannot resolve reports due to missing library type definitions.
+            rules: {
+                "@eslint-community/mysticatea/ts/ban-ts-comment": "off",
+                "@eslint-community/mysticatea/ts/no-unsafe-assignment": "off",
+                "@eslint-community/mysticatea/ts/no-unsafe-call": "off",
+            },
+        },
 
         {
             files: "./src/unicode/ids.ts",

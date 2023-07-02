@@ -1,0 +1,27 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/named-groups/duplicate-names-match-indices.js",
+    "test/built-ins/RegExp/prototype/exec/duplicate-named-indices-groups-properties.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}/d": {
+      "error": {
+        "message": "Invalid regular expression: /(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}/d: Duplicate capture group name",
+        "index": 20
+      }
+    },
+    "/(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))/d": {
+      "error": {
+        "message": "Invalid regular expression: /(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))/d: Duplicate capture group name",
+        "index": 24
+      }
+    },
+    "/(?<x>a)|(?<x>b)/d": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>a)|(?<x>b)/d: Duplicate capture group name",
+        "index": 14
+      }
+    }
+  }
+}
