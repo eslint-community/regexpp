@@ -66,7 +66,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": true,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -131,7 +132,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": true,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -196,7 +198,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": true,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -261,7 +264,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": true,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     }

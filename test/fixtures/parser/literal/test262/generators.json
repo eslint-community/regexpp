@@ -32,6 +32,7 @@
                   "start": 1,
                   "end": 27,
                   "raw": "[0-9A-Za-z_\\$(|)\\[\\]\\/\\\\^]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -201,7 +202,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -266,7 +268,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     }

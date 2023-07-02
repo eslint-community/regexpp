@@ -52,7 +52,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": true
+          "hasIndices": true,
+          "unicodeSets": false
         }
       }
     },
@@ -101,7 +102,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": true
+          "hasIndices": true,
+          "unicodeSets": false
         }
       }
     },
@@ -150,7 +152,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": true
+          "hasIndices": true,
+          "unicodeSets": false
         }
       }
     },
@@ -199,7 +202,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": true,
-          "hasIndices": true
+          "hasIndices": true,
+          "unicodeSets": false
         }
       }
     },
@@ -248,7 +252,8 @@
           "unicode": true,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": true
+          "hasIndices": true,
+          "unicodeSets": false
         }
       }
     },
@@ -297,7 +302,8 @@
           "unicode": false,
           "sticky": true,
           "dotAll": false,
-          "hasIndices": true
+          "hasIndices": true,
+          "unicodeSets": false
         }
       }
     },
@@ -346,7 +352,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": true
+          "hasIndices": true,
+          "unicodeSets": false
         }
       }
     },
@@ -423,7 +430,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": true
+          "hasIndices": true,
+          "unicodeSets": false
         }
       }
     },
@@ -510,7 +518,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": true
+          "hasIndices": true,
+          "unicodeSets": false
         }
       }
     }

@@ -151,7 +151,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
@@ -212,6 +213,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "[ab]",
+                  "unicodeSets": false,
                   "negate": false,
                   "elements": [
                     {
@@ -248,7 +250,8 @@
           "unicode": false,
           "sticky": false,
           "dotAll": false,
-          "hasIndices": false
+          "hasIndices": false,
+          "unicodeSets": false
         }
       }
     },
