@@ -786,7 +786,7 @@ export class RegExpValidator {
               }
             | undefined = undefined,
     ): void {
-        const mode = this._parseFlagsOptionToMode(uFlagOrFlags)
+        const mode = this._parseFlagsOptionToMode(uFlagOrFlags, source, end)
 
         this._unicodeMode = mode.unicodeMode
         this._nFlag = mode.nFlag
@@ -812,7 +812,9 @@ export class RegExpValidator {
                   unicode?: boolean
                   unicodeSets?: boolean
               }
-            | undefined = undefined,
+            | undefined,
+        source: string,
+        sourceEnd: number,
     ): {
         unicodeMode: boolean
         nFlag: boolean
@@ -835,7 +837,12 @@ export class RegExpValidator {
         if (unicode && unicodeSets) {
             // 1. If v is true and u is true, then
             //   a. Let parseResult be a List containing one SyntaxError object.
-            this.raise("Invalid regular expression flags")
+            throw new RegExpSyntaxError(
+                source,
+                { unicode, unicodeSets },
+                sourceEnd + 1 /* `/` */,
+                "Invalid regular expression flags",
+            )
         }
 
         const unicodeMode = unicode || unicodeSets
@@ -1210,7 +1217,10 @@ export class RegExpValidator {
     private raise(message: string): never {
         throw new RegExpSyntaxError(
             this.source,
-            this._unicodeMode,
+            {
+                unicode: this._unicodeMode && !this._unicodeSetsMode,
+                unicodeSets: this._unicodeSetsMode,
+            },
             this.index,
             message,
         )

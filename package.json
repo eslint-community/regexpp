@@ -53,6 +53,7 @@
     "clean": "rimraf .temp index.*",
     "lint": "eslint . --ext .ts",
     "test": "nyc _mocha \"test/*.ts\" --reporter dot --timeout 10000",
+    "debug": "mocha --require ts-node/register/transpile-only \"test/*.ts\" --reporter dot --timeout 10000",
     "update:test": "ts-node scripts/update-fixtures.ts",
     "update:unicode": "run-s update:unicode:*",
     "update:unicode:ids": "ts-node scripts/update-unicode-ids.ts",

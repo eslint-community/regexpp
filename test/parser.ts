@@ -1,8 +1,16 @@
 import assert from "assert"
-import { parseRegExpLiteral, RegExpParser } from "../src/index"
+import { parseRegExpLiteral, RegExpParser, RegExpValidator } from "../src/index"
 import type { RegExpSyntaxError } from "../src/regexp-syntax-error"
 import { cloneWithoutCircular } from "../scripts/clone-without-circular"
 import { fixturesData } from "./fixtures/parser/literal"
+import {
+    ASTERISK,
+    isLineTerminator,
+    LEFT_SQUARE_BRACKET,
+    REVERSE_SOLIDUS,
+    RIGHT_SQUARE_BRACKET,
+    SOLIDUS,
+} from "../src/unicode"
 
 function generateAST(source: string, options: RegExpParser.Options): object {
     return cloneWithoutCircular(parseRegExpLiteral(source, options))
@@ -56,6 +64,45 @@ describe("parseRegExpLiteral function:", () => {
                         }
                         assert.fail("Should fail, but succeeded.")
                     })
+
+                    const validator = new RegExpValidator(options)
+                    const extracted = extractPatternAndFlags(source, validator)
+                    if (extracted) {
+                        it(`${source} should throw syntax error with RegExpValidator#validatePattern.`, () => {
+                            const expected = result.error
+                            try {
+                                validator.validatePattern(
+                                    extracted.pattern,
+                                    undefined,
+                                    undefined,
+                                    {
+                                        unicode: extracted.flags.includes("u"),
+                                        unicodeSets:
+                                            extracted.flags.includes("v"),
+                                    },
+                                )
+                            } catch (err) {
+                                const error = err as RegExpSyntaxError
+                                const expectedMessage =
+                                    expected.message.replace(
+                                        /\/([a-z]+?):/u,
+                                        (_, flagsInLateral: string) =>
+                                            `/${flagsInLateral.replace(
+                                                /[dg]/gu,
+                                                "",
+                                            )}:`,
+                                    )
+                                const expectedIndex = expected.index - 1
+                                assert.strictEqual(
+                                    error.message,
+                                    expectedMessage,
+                                )
+                                assert.strictEqual(error.index, expectedIndex)
+                                return
+                            }
+                            assert.fail("Should fail, but succeeded.")
+                        })
+                    }
                 }
             }
         })
@@ -79,3 +126,61 @@ describe("RegExpParser:", () => {
         })
     })
 })
+
+function extractPatternAndFlags(
+    source: string,
+    validator: RegExpValidator,
+): { pattern: string; flags: string } | null {
+    let inClass = false
+    let escaped = false
+
+    const chars = [...source]
+
+    if (chars[0] !== "/") {
+        return null
+    }
+    chars.shift()
+
+    const pattern: string[] = []
+
+    let first = true
+    // https://tc39.es/ecma262/2022/multipage/ecmascript-language-lexical-grammar.html#prod-RegularExpressionBody
+    for (;;) {
+        const char = chars.shift()
+        if (!char) {
+            return null
+        }
+        const cp = char.charCodeAt(0)!
+        if (isLineTerminator(cp)) {
+            return null
+        }
+        if (escaped) {
+            escaped = false
+        } else if (cp === REVERSE_SOLIDUS) {
+            escaped = true
+        } else if (cp === LEFT_SQUARE_BRACKET) {
+            inClass = true
+        } else if (cp === RIGHT_SQUARE_BRACKET) {
+            inClass = false
+        } else if (cp === ASTERISK && first) {
+            return null
+        } else if (cp === SOLIDUS && !inClass) {
+            break
+        }
+        pattern.push(char)
+        first = false
+    }
+
+    const flags = chars.join("")
+    if (pattern.length === 0) {
+        return null
+    }
+
+    try {
+        validator.validateFlags(flags)
+    } catch {
+        return null
+    }
+
+    return { pattern: pattern.join(""), flags }
+}

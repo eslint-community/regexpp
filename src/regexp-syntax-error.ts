@@ -3,14 +3,16 @@ export class RegExpSyntaxError extends SyntaxError {
 
     public constructor(
         source: string,
-        uFlag: boolean,
+        flags: { unicode: boolean; unicodeSets: boolean },
         index: number,
         message: string,
     ) {
         /*eslint-disable no-param-reassign */
         if (source) {
             if (!source.startsWith("/")) {
-                source = `/${source}/${uFlag ? "u" : ""}`
+                source = `/${source}/${flags.unicode ? "u" : ""}${
+                    flags.unicodeSets ? "v" : ""
+                }`
             }
             source = `: ${source}`
         }
