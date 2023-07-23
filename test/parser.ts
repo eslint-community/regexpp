@@ -88,7 +88,7 @@ describe("parseRegExpLiteral function:", () => {
                                         /\/([a-z]+?):/u,
                                         (_, flagsInLateral: string) =>
                                             `/${flagsInLateral.replace(
-                                                /[dg]/gu,
+                                                /[^uv]/gu,
                                                 "",
                                             )}:`,
                                     )
