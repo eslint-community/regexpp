@@ -86,8 +86,8 @@ describe("parseRegExpLiteral function:", () => {
                                 const expectedMessage =
                                     expected.message.replace(
                                         /\/([a-z]+?):/u,
-                                        (_, flagsInLateral: string) =>
-                                            `/${flagsInLateral.replace(
+                                        (_, flagsInLiteral: string) =>
+                                            `/${flagsInLiteral.replace(
                                                 /[^uv]/gu,
                                                 "",
                                             )}:`,
