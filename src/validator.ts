@@ -213,6 +213,13 @@ function isUnicodePropertyValueCharacter(cp: number): boolean {
     return isUnicodePropertyNameCharacter(cp) || isDecimalDigit(cp)
 }
 
+export type RegExpValidatorSourceContext = {
+    readonly source: string
+    readonly start: number
+    readonly end: number
+    readonly kind: "flags" | "literal" | "pattern"
+}
+
 export namespace RegExpValidator {
     /**
      * The options for RegExpValidator construction.
@@ -628,6 +635,8 @@ export class RegExpValidator {
 
     private _backreferenceNames = new Set<string>()
 
+    private _srcCtx: RegExpValidatorSourceContext | null = null
+
     /**
      * Initialize this validator.
      * @param options The options of validator.
@@ -647,6 +656,7 @@ export class RegExpValidator {
         start = 0,
         end: number = source.length,
     ): void {
+        this._srcCtx = { source, start, end, kind: "literal" }
         this._unicodeSetsMode = this._unicodeMode = this._nFlag = false
         this.reset(source, start, end)
 
@@ -655,8 +665,8 @@ export class RegExpValidator {
             const flagStart = this.index
             const unicode = source.includes("u", flagStart)
             const unicodeSets = source.includes("v", flagStart)
-            this.validateFlags(source, flagStart, end)
-            this.validatePattern(source, start + 1, flagStart - 1, {
+            this.validateFlagsInternal(source, flagStart, end)
+            this.validatePatternInternal(source, start + 1, flagStart - 1, {
                 unicode,
                 unicodeSets,
             })
@@ -680,68 +690,8 @@ export class RegExpValidator {
         start = 0,
         end: number = source.length,
     ): void {
-        const existingFlags = new Set<number>()
-        let global = false
-        let ignoreCase = false
-        let multiline = false
-        let sticky = false
-        let unicode = false
-        let dotAll = false
-        let hasIndices = false
-        let unicodeSets = false
-        for (let i = start; i < end; ++i) {
-            const flag = source.charCodeAt(i)
-
-            if (existingFlags.has(flag)) {
-                this.raise(`Duplicated flag '${source[i]}'`)
-            }
-            existingFlags.add(flag)
-
-            if (flag === LATIN_SMALL_LETTER_G) {
-                global = true
-            } else if (flag === LATIN_SMALL_LETTER_I) {
-                ignoreCase = true
-            } else if (flag === LATIN_SMALL_LETTER_M) {
-                multiline = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_U &&
-                this.ecmaVersion >= 2015
-            ) {
-                unicode = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_Y &&
-                this.ecmaVersion >= 2015
-            ) {
-                sticky = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_S &&
-                this.ecmaVersion >= 2018
-            ) {
-                dotAll = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_D &&
-                this.ecmaVersion >= 2022
-            ) {
-                hasIndices = true
-            } else if (
-                flag === LATIN_SMALL_LETTER_V &&
-                this.ecmaVersion >= 2024
-            ) {
-                unicodeSets = true
-            } else {
-                this.raise(`Invalid flag '${source[i]}'`)
-            }
-        }
-        this.onRegExpFlags(start, end, {
-            global,
-            ignoreCase,
-            multiline,
-            unicode,
-            sticky,
-            dotAll,
-            hasIndices,
-            unicodeSets,
-        })
+        this._srcCtx = { source, start, end, kind: "flags" }
+        this.validateFlagsInternal(source, start, end)
     }
 
     /**
@@ -786,7 +736,23 @@ export class RegExpValidator {
               }
             | undefined = undefined,
     ): void {
-        const mode = this._parseFlagsOptionToMode(uFlagOrFlags, source, end)
+        this._srcCtx = { source, start, end, kind: "pattern" }
+        this.validatePatternInternal(source, start, end, uFlagOrFlags)
+    }
+
+    private validatePatternInternal(
+        source: string,
+        start = 0,
+        end: number = source.length,
+        uFlagOrFlags:
+            | boolean // The unicode flag (backward compatibility).
+            | {
+                  unicode?: boolean
+                  unicodeSets?: boolean
+              }
+            | undefined = undefined,
+    ): void {
+        const mode = this._parseFlagsOptionToMode(uFlagOrFlags, end)
 
         this._unicodeMode = mode.unicodeMode
         this._nFlag = mode.nFlag
@@ -805,6 +771,75 @@ export class RegExpValidator {
         }
     }
 
+    private validateFlagsInternal(
+        source: string,
+        start: number,
+        end: number,
+    ): void {
+        const existingFlags = new Set<number>()
+        let global = false
+        let ignoreCase = false
+        let multiline = false
+        let sticky = false
+        let unicode = false
+        let dotAll = false
+        let hasIndices = false
+        let unicodeSets = false
+        for (let i = start; i < end; ++i) {
+            const flag = source.charCodeAt(i)
+
+            if (existingFlags.has(flag)) {
+                this.raise(`Duplicated flag '${source[i]}'`, { index: start })
+            }
+            existingFlags.add(flag)
+
+            if (flag === LATIN_SMALL_LETTER_G) {
+                global = true
+            } else if (flag === LATIN_SMALL_LETTER_I) {
+                ignoreCase = true
+            } else if (flag === LATIN_SMALL_LETTER_M) {
+                multiline = true
+            } else if (
+                flag === LATIN_SMALL_LETTER_U &&
+                this.ecmaVersion >= 2015
+            ) {
+                unicode = true
+            } else if (
+                flag === LATIN_SMALL_LETTER_Y &&
+                this.ecmaVersion >= 2015
+            ) {
+                sticky = true
+            } else if (
+                flag === LATIN_SMALL_LETTER_S &&
+                this.ecmaVersion >= 2018
+            ) {
+                dotAll = true
+            } else if (
+                flag === LATIN_SMALL_LETTER_D &&
+                this.ecmaVersion >= 2022
+            ) {
+                hasIndices = true
+            } else if (
+                flag === LATIN_SMALL_LETTER_V &&
+                this.ecmaVersion >= 2024
+            ) {
+                unicodeSets = true
+            } else {
+                this.raise(`Invalid flag '${source[i]}'`, { index: start })
+            }
+        }
+        this.onRegExpFlags(start, end, {
+            global,
+            ignoreCase,
+            multiline,
+            unicode,
+            sticky,
+            dotAll,
+            hasIndices,
+            unicodeSets,
+        })
+    }
+
     private _parseFlagsOptionToMode(
         uFlagOrFlags:
             | boolean // The unicode flag (backward compatibility).
@@ -813,7 +848,6 @@ export class RegExpValidator {
                   unicodeSets?: boolean
               }
             | undefined,
-        source: string,
         sourceEnd: number,
     ): {
         unicodeMode: boolean
@@ -837,12 +871,11 @@ export class RegExpValidator {
         if (unicode && unicodeSets) {
             // 1. If v is true and u is true, then
             //   a. Let parseResult be a List containing one SyntaxError object.
-            throw new RegExpSyntaxError(
-                source,
-                { unicode, unicodeSets },
-                sourceEnd + 1 /* `/` */,
-                "Invalid regular expression flags",
-            )
+            this.raise("Invalid regular expression flags", {
+                index: sourceEnd + 1 /* `/` */,
+                unicode,
+                unicodeSets,
+            })
         }
 
         const unicodeMode = unicode || unicodeSets
@@ -856,7 +889,6 @@ export class RegExpValidator {
 
         return { unicodeMode, nFlag, unicodeSetsMode }
     }
-
     // #region Delegate for Options
 
     private get strict() {
@@ -1164,10 +1196,6 @@ export class RegExpValidator {
 
     // #region Delegate for Reader
 
-    private get source(): string {
-        return this._reader.source
-    }
-
     private get index(): number {
         return this._reader.index
     }
@@ -1214,14 +1242,19 @@ export class RegExpValidator {
 
     // #endregion
 
-    private raise(message: string): never {
+    private raise(
+        message: string,
+        context?: { index?: number; unicode?: boolean; unicodeSets?: boolean },
+    ): never {
         throw new RegExpSyntaxError(
-            this.source,
+            this._srcCtx!,
             {
-                unicode: this._unicodeMode && !this._unicodeSetsMode,
-                unicodeSets: this._unicodeSetsMode,
+                unicode:
+                    context?.unicode ??
+                    (this._unicodeMode && !this._unicodeSetsMode),
+                unicodeSets: context?.unicodeSets ?? this._unicodeSetsMode,
             },
-            this.index,
+            context?.index ?? this.index,
             message,
         )
     }
