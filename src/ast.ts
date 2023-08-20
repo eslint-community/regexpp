@@ -197,12 +197,23 @@ interface BaseCharacterClass extends NodeBase {
     negate: boolean
     elements: CharacterClassElement[]
 }
+/**
+ * The character class used in legacy (neither `u` nor `v` flag) and Unicode mode (`u` flag).
+ *
+ * This character class is guaranteed to **not** contain strings.
+ *
+ * In Unicode sets mode (`v` flag), {@link UnicodeSetsCharacterClass} is used.
+ */
 export interface ClassRangesCharacterClass extends BaseCharacterClass {
     parent: Alternative | Quantifier
     unicodeSets: false
     elements: ClassRangesCharacterClassElement[]
 }
-/** UnicodeSetsCharacterClass is the CharacterClass when in Unicode sets mode. So it may contain strings. */
+/**
+ * The character class used in Unicode sets mode (`v` flag).
+ *
+ * This character class may contain strings.
+ */
 export interface UnicodeSetsCharacterClass extends BaseCharacterClass {
     parent:
         | Alternative
