@@ -59,8 +59,8 @@ export type CharacterClassElement =
 export type ClassRangesCharacterClassElement =
     | Character
     | CharacterClassRange
+    | CharacterUnicodePropertyCharacterSet
     | EscapeCharacterSet
-    | UnicodePropertyCharacterSet
 export type UnicodeSetsCharacterClassElement =
     | Character
     | CharacterClassRange

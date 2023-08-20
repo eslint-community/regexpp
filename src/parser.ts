@@ -444,7 +444,15 @@ class RegExpParserState {
                   negate,
                   strings: false,
               }
-        parent.elements.push(node)
+
+        if (node.strings) {
+            if (parent.type === "CharacterClass" && !parent.unicodeSets) {
+                throw new Error("UnknownError")
+            }
+            parent.elements.push(node)
+        } else {
+            parent.elements.push(node)
+        }
     }
 
     public onCharacter(start: number, end: number, value: number): void {
