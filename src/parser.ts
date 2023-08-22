@@ -16,7 +16,6 @@ import type {
     ClassSubtraction,
     UnicodeSetsCharacterClassElement,
     ClassSetOperand,
-    UnicodePropertyCharacterSet,
     UnicodeSetsCharacterClass,
     ExpressionCharacterClass,
     StringAlternative,
@@ -413,45 +412,43 @@ class RegExpParserState {
         strings: boolean,
     ): void {
         const parent = this._node
-        if (
-            (parent.type !== "Alternative" &&
-                parent.type !== "CharacterClass") ||
-            (strings && (negate || value))
-        ) {
+        if (parent.type !== "Alternative" && parent.type !== "CharacterClass") {
             throw new Error("UnknownError")
         }
 
         const base = {
             type: "CharacterSet",
-            parent,
             start,
             end,
             raw: this.source.slice(start, end),
             kind,
-            strings,
             key,
         } as const
-        const node: UnicodePropertyCharacterSet = strings
-            ? {
-                  ...base,
-                  value: null,
-                  negate: false,
-                  strings: true,
-              }
-            : {
-                  ...base,
-                  value,
-                  negate,
-                  strings: false,
-              }
 
-        if (node.strings) {
-            if (parent.type === "CharacterClass" && !parent.unicodeSets) {
+        if (strings) {
+            if (
+                (parent.type === "CharacterClass" && !parent.unicodeSets) ||
+                negate ||
+                value !== null
+            ) {
                 throw new Error("UnknownError")
             }
-            parent.elements.push(node)
+
+            parent.elements.push({
+                ...base,
+                parent,
+                strings,
+                value,
+                negate,
+            })
         } else {
-            parent.elements.push(node)
+            parent.elements.push({
+                ...base,
+                parent,
+                strings,
+                value,
+                negate,
+            })
         }
     }
 

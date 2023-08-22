@@ -330,6 +330,12 @@ export interface CharacterUnicodePropertyCharacterSet
 /** StringsUnicodePropertyCharacterSet is Unicode property escape with property of strings. */
 export interface StringsUnicodePropertyCharacterSet
     extends BaseUnicodePropertyCharacterSet {
+    parent:
+        | Alternative
+        | ClassIntersection
+        | ClassSubtraction
+        | Quantifier
+        | UnicodeSetsCharacterClass
     strings: true
     value: null
     negate: false
