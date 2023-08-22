@@ -434,21 +434,9 @@ class RegExpParserState {
                 throw new Error("UnknownError")
             }
 
-            parent.elements.push({
-                ...base,
-                parent,
-                strings,
-                value,
-                negate,
-            })
+            parent.elements.push({ ...base, parent, strings, value, negate })
         } else {
-            parent.elements.push({
-                ...base,
-                parent,
-                strings,
-                value,
-                negate,
-            })
+            parent.elements.push({ ...base, parent, strings, value, negate })
         }
     }
 
