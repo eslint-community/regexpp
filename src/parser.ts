@@ -528,8 +528,7 @@ class RegExpParserState {
         if (
             node.type !== "CharacterClass" ||
             (node.parent.type !== "Alternative" &&
-                node.parent.type !== "CharacterClass") ||
-            (this._expressionBuffer && node.elements.length > 0)
+                node.parent.type !== "CharacterClass")
         ) {
             throw new Error("UnknownError")
         }
@@ -540,10 +539,15 @@ class RegExpParserState {
         this._node = parent
 
         const expression = this._expressionBuffer
-        this._expressionBuffer = null
-        if (!expression) {
+        if (
+            expression?.parent !== (node as unknown as ExpressionCharacterClass)
+        ) {
             return
         }
+        if (node.elements.length > 0) {
+            throw new Error("UnknownError")
+        }
+        this._expressionBuffer = null
 
         // Replace with ExpressionCharacterClass.
         const newNode: ExpressionCharacterClass = {

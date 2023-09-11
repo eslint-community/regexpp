@@ -49,17 +49,18 @@ describe("parseRegExpLiteral function:", () => {
                 } else {
                     it(`${source} should throw syntax error.`, () => {
                         const expected = result.error
-                        assert.strictEqual(
-                            expected.message.slice(0, 27),
-                            "Invalid regular expression:",
-                            `The error message '${expected.message}' was not syntax error.`,
-                        )
                         try {
                             parseRegExpLiteral(source, options)
                         } catch (err) {
                             const error = err as RegExpSyntaxError
                             assert.strictEqual(error.message, expected.message)
                             assert.strictEqual(error.index, expected.index)
+
+                            assert.strictEqual(
+                                expected.message.slice(0, 27),
+                                "Invalid regular expression:",
+                                `The error message '${expected.message}' was not syntax error.`,
+                            )
                             return
                         }
                         assert.fail("Should fail, but succeeded.")

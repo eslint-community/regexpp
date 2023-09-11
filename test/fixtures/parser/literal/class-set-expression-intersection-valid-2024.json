@@ -1935,6 +1935,402 @@
           "unicodeSets": true
         }
       }
+    },
+    "/[a&&b&&[c]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 14,
+        "raw": "/[a&&b&&[c]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 12,
+          "raw": "[a&&b&&[c]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 12,
+              "raw": "[a&&b&&[c]]",
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 12,
+                  "raw": "[a&&b&&[c]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassIntersection",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 11,
+                    "raw": "a&&b&&[c]",
+                    "left": {
+                      "type": "ClassIntersection",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 6,
+                      "raw": "a&&b",
+                      "left": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 2,
+                        "end": 3,
+                        "raw": "a",
+                        "value": 97
+                      },
+                      "right": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 5,
+                        "end": 6,
+                        "raw": "b",
+                        "value": 98
+                      }
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 8,
+                      "end": 11,
+                      "raw": "[c]",
+                      "unicodeSets": true,
+                      "negate": false,
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 10,
+                          "raw": "c",
+                          "value": 99
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 13,
+          "end": 14,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[a&&b&&[^c]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 15,
+        "raw": "/[a&&b&&[^c]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 13,
+          "raw": "[a&&b&&[^c]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 13,
+              "raw": "[a&&b&&[^c]]",
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 13,
+                  "raw": "[a&&b&&[^c]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassIntersection",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 12,
+                    "raw": "a&&b&&[^c]",
+                    "left": {
+                      "type": "ClassIntersection",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 6,
+                      "raw": "a&&b",
+                      "left": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 2,
+                        "end": 3,
+                        "raw": "a",
+                        "value": 97
+                      },
+                      "right": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 5,
+                        "end": 6,
+                        "raw": "b",
+                        "value": 98
+                      }
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 8,
+                      "end": 12,
+                      "raw": "[^c]",
+                      "unicodeSets": true,
+                      "negate": true,
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 11,
+                          "raw": "c",
+                          "value": 99
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 14,
+          "end": 15,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[a--b--[c]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 14,
+        "raw": "/[a--b--[c]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 12,
+          "raw": "[a--b--[c]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 12,
+              "raw": "[a--b--[c]]",
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 12,
+                  "raw": "[a--b--[c]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 11,
+                    "raw": "a--b--[c]",
+                    "left": {
+                      "type": "ClassSubtraction",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 6,
+                      "raw": "a--b",
+                      "left": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 2,
+                        "end": 3,
+                        "raw": "a",
+                        "value": 97
+                      },
+                      "right": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 5,
+                        "end": 6,
+                        "raw": "b",
+                        "value": 98
+                      }
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 8,
+                      "end": 11,
+                      "raw": "[c]",
+                      "unicodeSets": true,
+                      "negate": false,
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 10,
+                          "raw": "c",
+                          "value": 99
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 13,
+          "end": 14,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[a--b--[^c]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 15,
+        "raw": "/[a--b--[^c]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 13,
+          "raw": "[a--b--[^c]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 13,
+              "raw": "[a--b--[^c]]",
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 13,
+                  "raw": "[a--b--[^c]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassSubtraction",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 12,
+                    "raw": "a--b--[^c]",
+                    "left": {
+                      "type": "ClassSubtraction",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 6,
+                      "raw": "a--b",
+                      "left": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 2,
+                        "end": 3,
+                        "raw": "a",
+                        "value": 97
+                      },
+                      "right": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 5,
+                        "end": 6,
+                        "raw": "b",
+                        "value": 98
+                      }
+                    },
+                    "right": {
+                      "type": "CharacterClass",
+                      "parent": "♻️..",
+                      "start": 8,
+                      "end": 12,
+                      "raw": "[^c]",
+                      "unicodeSets": true,
+                      "negate": true,
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 10,
+                          "end": 11,
+                          "raw": "c",
+                          "value": 99
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 14,
+          "end": 15,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
     }
   }
 }
