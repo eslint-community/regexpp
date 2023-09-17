@@ -73,6 +73,7 @@ import {
     isTrailSurrogate,
     isValidLoneUnicodeProperty,
     isValidUnicodeProperty,
+    isValidLoneUnicodePropertyOfString,
     isValidUnicode,
     AMPERSAND,
     NUMBER_SIGN,
@@ -83,7 +84,6 @@ import {
     TILDE,
     LATIN_SMALL_LETTER_Q,
 } from "./unicode"
-import { isValidLoneUnicodePropertyOfString } from "./unicode/properties-of-strings"
 
 // ^ $ \ . * + ? ( ) [ ] { } |
 const SYNTAX_CHARACTER = new Set([

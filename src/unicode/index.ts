@@ -2,6 +2,7 @@ export { isIdContinue, isIdStart } from "./ids"
 export {
     isValidLoneUnicodeProperty,
     isValidUnicodeProperty,
+    isValidLoneUnicodePropertyOfString,
 } from "./properties"
 
 export const NULL = 0x00

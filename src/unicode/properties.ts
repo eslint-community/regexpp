@@ -119,6 +119,15 @@ const binPropertySets = new DataSet(
     "",
     "",
 )
+const binPropertyOfStringsSets = new DataSet(
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Basic_Emoji Emoji_Keycap_Sequence RGI_Emoji RGI_Emoji_Flag_Sequence RGI_Emoji_Modifier_Sequence RGI_Emoji_Tag_Sequence RGI_Emoji_ZWJ_Sequence",
+)
 
 export function isValidUnicodeProperty(
     version: number,
@@ -150,4 +159,11 @@ export function isValidLoneUnicodeProperty(
         (version >= 2019 && binPropertySets.es2019.has(value)) ||
         (version >= 2021 && binPropertySets.es2021.has(value))
     )
+}
+
+export function isValidLoneUnicodePropertyOfString(
+    version: number,
+    value: string,
+): boolean {
+    return version >= 2024 && binPropertyOfStringsSets.es2024.has(value)
 }

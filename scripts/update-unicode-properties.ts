@@ -54,6 +54,7 @@ const DATA_SOURCES = [
         binProperties: "#table-binary-unicode-properties",
         gcValues: getLatestUnicodeGeneralCategoryValues,
         scValues: getLatestUnicodeScriptValues,
+        binPropertiesOfStrings: "#table-binary-unicode-properties-of-strings",
     },
 ]
 const FILE_PATH = "src/unicode/properties.ts"
@@ -63,6 +64,7 @@ type Datum = {
     binProperties: string[]
     gcValues: string[]
     scValues: string[]
+    binPropertiesOfStrings: string[]
 }
 
 // Main
@@ -72,12 +74,14 @@ type Datum = {
         binProperties: new Set<string>(),
         gcValues: new Set<string>(),
         scValues: new Set<string>(),
+        binPropertiesOfStrings: new Set<string>(),
     }
 
     for (const {
         binProperties,
         gcValues,
         scValues,
+        binPropertiesOfStrings,
         url,
         version,
     } of DATA_SOURCES) {
@@ -86,6 +90,7 @@ type Datum = {
             binProperties: [],
             gcValues: [],
             scValues: [],
+            binPropertiesOfStrings: [],
         }
         data[version] = datum
 
@@ -120,6 +125,13 @@ type Datum = {
             scValues,
             existing.scValues,
         )
+        if (binPropertiesOfStrings) {
+            datum.binPropertiesOfStrings = await collectValues(
+                window,
+                binPropertiesOfStrings,
+                existing.binPropertiesOfStrings,
+            )
+        }
 
         logger.log("Done")
     }
@@ -139,6 +151,9 @@ const scValueSets = new DataSet(${Object.values(data)
         .join(",")})
 const binPropertySets = new DataSet(${Object.values(data)
         .map((d) => makeDataCode(d.binProperties))
+        .join(",")})
+const binPropertyOfStringsSets = new DataSet(${Object.values(data)
+        .map((d) => makeDataCode(d.binPropertiesOfStrings))
         .join(",")})
 
 export function isValidUnicodeProperty(version: number, name: string, value: string): boolean {
@@ -165,6 +180,19 @@ export function isValidLoneUnicodeProperty(version: number, value: string): bool
     return ${Object.entries(data)
         .map(([version, { binProperties }]) =>
             makeVerificationCode(version, "binPropertySets", binProperties),
+        )
+        .filter(Boolean)
+        .join(" || ")}
+}
+
+export function isValidLoneUnicodePropertyOfString(version: number, value: string): boolean {
+    return ${Object.entries(data)
+        .map(([version, { binPropertiesOfStrings }]) =>
+            makeVerificationCode(
+                version,
+                "binPropertyOfStringsSets",
+                binPropertiesOfStrings,
+            ),
         )
         .filter(Boolean)
         .join(" || ")}
