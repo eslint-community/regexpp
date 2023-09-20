@@ -71,7 +71,7 @@
     "@types/eslint": "^8.4.10",
     "@types/jsdom": "^16.2.15",
     "@types/mocha": "^9.1.1",
-    "@types/node": "^12.20.55",
+    "@types/node": "^20.6.3",
     "dts-bundle": "^0.7.3",
     "eslint": "^8.31.0",
     "js-tokens": "^8.0.1",
