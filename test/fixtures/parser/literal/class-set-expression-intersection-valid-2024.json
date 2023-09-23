@@ -2331,6 +2331,296 @@
           "unicodeSets": true
         }
       }
+    },
+    "/[a&&b&&[c&&d&&e]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 20,
+        "raw": "/[a&&b&&[c&&d&&e]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 18,
+          "raw": "[a&&b&&[c&&d&&e]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 18,
+              "raw": "[a&&b&&[c&&d&&e]]",
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 18,
+                  "raw": "[a&&b&&[c&&d&&e]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassIntersection",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 17,
+                    "raw": "a&&b&&[c&&d&&e]",
+                    "left": {
+                      "type": "ClassIntersection",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 6,
+                      "raw": "a&&b",
+                      "left": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 2,
+                        "end": 3,
+                        "raw": "a",
+                        "value": 97
+                      },
+                      "right": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 5,
+                        "end": 6,
+                        "raw": "b",
+                        "value": 98
+                      }
+                    },
+                    "right": {
+                      "type": "ExpressionCharacterClass",
+                      "parent": "♻️..",
+                      "start": 8,
+                      "end": 17,
+                      "raw": "[c&&d&&e]",
+                      "negate": false,
+                      "expression": {
+                        "type": "ClassIntersection",
+                        "parent": "♻️..",
+                        "start": 9,
+                        "end": 16,
+                        "raw": "c&&d&&e",
+                        "left": {
+                          "type": "ClassIntersection",
+                          "parent": "♻️..",
+                          "start": 9,
+                          "end": 13,
+                          "raw": "c&&d",
+                          "left": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 9,
+                            "end": 10,
+                            "raw": "c",
+                            "value": 99
+                          },
+                          "right": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 12,
+                            "end": 13,
+                            "raw": "d",
+                            "value": 100
+                          }
+                        },
+                        "right": {
+                          "type": "Character",
+                          "parent": "♻️..",
+                          "start": 15,
+                          "end": 16,
+                          "raw": "e",
+                          "value": 101
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 19,
+          "end": 20,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
+    },
+    "/[a&&b&&[c--d--[e&&f&&g]]]/v": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 28,
+        "raw": "/[a&&b&&[c--d--[e&&f&&g]]]/v",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 26,
+          "raw": "[a&&b&&[c--d--[e&&f&&g]]]",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 26,
+              "raw": "[a&&b&&[c--d--[e&&f&&g]]]",
+              "elements": [
+                {
+                  "type": "ExpressionCharacterClass",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 26,
+                  "raw": "[a&&b&&[c--d--[e&&f&&g]]]",
+                  "negate": false,
+                  "expression": {
+                    "type": "ClassIntersection",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 25,
+                    "raw": "a&&b&&[c--d--[e&&f&&g]]",
+                    "left": {
+                      "type": "ClassIntersection",
+                      "parent": "♻️..",
+                      "start": 2,
+                      "end": 6,
+                      "raw": "a&&b",
+                      "left": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 2,
+                        "end": 3,
+                        "raw": "a",
+                        "value": 97
+                      },
+                      "right": {
+                        "type": "Character",
+                        "parent": "♻️..",
+                        "start": 5,
+                        "end": 6,
+                        "raw": "b",
+                        "value": 98
+                      }
+                    },
+                    "right": {
+                      "type": "ExpressionCharacterClass",
+                      "parent": "♻️..",
+                      "start": 8,
+                      "end": 25,
+                      "raw": "[c--d--[e&&f&&g]]",
+                      "negate": false,
+                      "expression": {
+                        "type": "ClassSubtraction",
+                        "parent": "♻️..",
+                        "start": 9,
+                        "end": 24,
+                        "raw": "c--d--[e&&f&&g]",
+                        "left": {
+                          "type": "ClassSubtraction",
+                          "parent": "♻️..",
+                          "start": 9,
+                          "end": 13,
+                          "raw": "c--d",
+                          "left": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 9,
+                            "end": 10,
+                            "raw": "c",
+                            "value": 99
+                          },
+                          "right": {
+                            "type": "Character",
+                            "parent": "♻️..",
+                            "start": 12,
+                            "end": 13,
+                            "raw": "d",
+                            "value": 100
+                          }
+                        },
+                        "right": {
+                          "type": "ExpressionCharacterClass",
+                          "parent": "♻️..",
+                          "start": 15,
+                          "end": 24,
+                          "raw": "[e&&f&&g]",
+                          "negate": false,
+                          "expression": {
+                            "type": "ClassIntersection",
+                            "parent": "♻️..",
+                            "start": 16,
+                            "end": 23,
+                            "raw": "e&&f&&g",
+                            "left": {
+                              "type": "ClassIntersection",
+                              "parent": "♻️..",
+                              "start": 16,
+                              "end": 20,
+                              "raw": "e&&f",
+                              "left": {
+                                "type": "Character",
+                                "parent": "♻️..",
+                                "start": 16,
+                                "end": 17,
+                                "raw": "e",
+                                "value": 101
+                              },
+                              "right": {
+                                "type": "Character",
+                                "parent": "♻️..",
+                                "start": 19,
+                                "end": 20,
+                                "raw": "f",
+                                "value": 102
+                              }
+                            },
+                            "right": {
+                              "type": "Character",
+                              "parent": "♻️..",
+                              "start": 22,
+                              "end": 23,
+                              "raw": "g",
+                              "value": 103
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 27,
+          "end": 28,
+          "raw": "v",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": true
+        }
+      }
     }
   }
 }
