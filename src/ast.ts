@@ -73,7 +73,7 @@ export type UnicodeSetsCharacterClassElement =
 /**
  * The type which defines common properties for all node types.
  */
-export interface NodeBase {
+export type NodeBase = {
     /** The node type. */
     type: Node["type"]
     /** The parent node. */
@@ -89,7 +89,7 @@ export interface NodeBase {
 /**
  * The root node.
  */
-export interface RegExpLiteral extends NodeBase {
+export type RegExpLiteral = NodeBase & {
     type: "RegExpLiteral"
     parent: null
     pattern: Pattern
@@ -99,7 +99,7 @@ export interface RegExpLiteral extends NodeBase {
 /**
  * The pattern.
  */
-export interface Pattern extends NodeBase {
+export type Pattern = NodeBase & {
     type: "Pattern"
     parent: RegExpLiteral | null
     alternatives: Alternative[]
@@ -109,7 +109,7 @@ export interface Pattern extends NodeBase {
  * The alternative.
  * E.g. `a|b`
  */
-export interface Alternative extends NodeBase {
+export type Alternative = NodeBase & {
     type: "Alternative"
     parent: CapturingGroup | Group | LookaroundAssertion | Pattern
     elements: Element[]
@@ -119,7 +119,7 @@ export interface Alternative extends NodeBase {
  * The uncapturing group.
  * E.g. `(?:ab)`
  */
-export interface Group extends NodeBase {
+export type Group = NodeBase & {
     type: "Group"
     parent: Alternative | Quantifier
     alternatives: Alternative[]
@@ -129,7 +129,7 @@ export interface Group extends NodeBase {
  * The capturing group.
  * E.g. `(ab)`, `(?<name>ab)`
  */
-export interface CapturingGroup extends NodeBase {
+export type CapturingGroup = NodeBase & {
     type: "CapturingGroup"
     parent: Alternative | Quantifier
     name: string | null
@@ -146,7 +146,7 @@ export type LookaroundAssertion = LookaheadAssertion | LookbehindAssertion
  * The lookahead assertion.
  * E.g. `(?=ab)`, `(?!ab)`
  */
-export interface LookaheadAssertion extends NodeBase {
+export type LookaheadAssertion = NodeBase & {
     type: "Assertion"
     parent: Alternative | Quantifier
     kind: "lookahead"
@@ -158,7 +158,7 @@ export interface LookaheadAssertion extends NodeBase {
  * The lookbehind assertion.
  * E.g. `(?<=ab)`, `(?<!ab)`
  */
-export interface LookbehindAssertion extends NodeBase {
+export type LookbehindAssertion = NodeBase & {
     type: "Assertion"
     parent: Alternative
     kind: "lookbehind"
@@ -170,7 +170,7 @@ export interface LookbehindAssertion extends NodeBase {
  * The quantifier.
  * E.g. `a?`, `a*`, `a+`, `a{1,2}`, `a??`, `a*?`, `a+?`, `a{1,2}?`
  */
-export interface Quantifier extends NodeBase {
+export type Quantifier = NodeBase & {
     type: "Quantifier"
     parent: Alternative
     min: number
@@ -186,7 +186,7 @@ export interface Quantifier extends NodeBase {
 export type CharacterClass =
     | ClassRangesCharacterClass
     | UnicodeSetsCharacterClass
-interface BaseCharacterClass extends NodeBase {
+type BaseCharacterClass = NodeBase & {
     type: "CharacterClass"
     parent:
         | Alternative
@@ -204,7 +204,7 @@ interface BaseCharacterClass extends NodeBase {
  *
  * In Unicode sets mode (`v` flag), {@link UnicodeSetsCharacterClass} is used.
  */
-export interface ClassRangesCharacterClass extends BaseCharacterClass {
+export type ClassRangesCharacterClass = BaseCharacterClass & {
     parent: Alternative | Quantifier
     unicodeSets: false
     elements: ClassRangesCharacterClassElement[]
@@ -214,7 +214,7 @@ export interface ClassRangesCharacterClass extends BaseCharacterClass {
  *
  * This character class may contain strings.
  */
-export interface UnicodeSetsCharacterClass extends BaseCharacterClass {
+export type UnicodeSetsCharacterClass = BaseCharacterClass & {
     parent:
         | Alternative
         | ExpressionCharacterClass
@@ -228,7 +228,7 @@ export interface UnicodeSetsCharacterClass extends BaseCharacterClass {
  * The character class.
  * E.g. `[a-b]`
  */
-export interface CharacterClassRange extends NodeBase {
+export type CharacterClassRange = NodeBase & {
     type: "CharacterClassRange"
     parent: CharacterClass
     min: Character
@@ -249,7 +249,7 @@ export type BoundaryAssertion = EdgeAssertion | WordBoundaryAssertion
  * The edge boundary assertion.
  * E.g. `^`, `$`
  */
-export interface EdgeAssertion extends NodeBase {
+export type EdgeAssertion = NodeBase & {
     type: "Assertion"
     parent: Alternative | Quantifier
     kind: "end" | "start"
@@ -259,7 +259,7 @@ export interface EdgeAssertion extends NodeBase {
  * The word bondary assertion.
  * E.g. `\b`, `\B`
  */
-export interface WordBoundaryAssertion extends NodeBase {
+export type WordBoundaryAssertion = NodeBase & {
     type: "Assertion"
     parent: Alternative | Quantifier
     kind: "word"
@@ -278,7 +278,7 @@ export type CharacterSet =
  * The dot.
  * E.g. `.`
  */
-export interface AnyCharacterSet extends NodeBase {
+export type AnyCharacterSet = NodeBase & {
     type: "CharacterSet"
     parent: Alternative | Quantifier
     kind: "any"
@@ -288,7 +288,7 @@ export interface AnyCharacterSet extends NodeBase {
  * The character class escape.
  * E.g. `\d`, `\s`, `\w`, `\D`, `\S`, `\W`
  */
-export interface EscapeCharacterSet extends NodeBase {
+export type EscapeCharacterSet = NodeBase & {
     type: "CharacterSet"
     parent:
         | Alternative
@@ -307,7 +307,7 @@ export interface EscapeCharacterSet extends NodeBase {
 export type UnicodePropertyCharacterSet =
     | CharacterUnicodePropertyCharacterSet
     | StringsUnicodePropertyCharacterSet
-interface BaseUnicodePropertyCharacterSet extends NodeBase {
+type BaseUnicodePropertyCharacterSet = NodeBase & {
     type: "CharacterSet"
     parent:
         | Alternative
@@ -321,31 +321,31 @@ interface BaseUnicodePropertyCharacterSet extends NodeBase {
     value: string | null
     negate: boolean
 }
-export interface CharacterUnicodePropertyCharacterSet
-    extends BaseUnicodePropertyCharacterSet {
-    strings: false
-    value: string | null
-    negate: boolean
-}
+export type CharacterUnicodePropertyCharacterSet =
+    BaseUnicodePropertyCharacterSet & {
+        strings: false
+        value: string | null
+        negate: boolean
+    }
 /** StringsUnicodePropertyCharacterSet is Unicode property escape with property of strings. */
-export interface StringsUnicodePropertyCharacterSet
-    extends BaseUnicodePropertyCharacterSet {
-    parent:
-        | Alternative
-        | ClassIntersection
-        | ClassSubtraction
-        | Quantifier
-        | UnicodeSetsCharacterClass
-    strings: true
-    value: null
-    negate: false
-}
+export type StringsUnicodePropertyCharacterSet =
+    BaseUnicodePropertyCharacterSet & {
+        parent:
+            | Alternative
+            | ClassIntersection
+            | ClassSubtraction
+            | Quantifier
+            | UnicodeSetsCharacterClass
+        strings: true
+        value: null
+        negate: false
+    }
 
 /**
  * The expression character class.
  * E.g. `[a--b]`, `[a&&b]`,`[^a--b]`, `[^a&&b]`
  */
-export interface ExpressionCharacterClass extends NodeBase {
+export type ExpressionCharacterClass = NodeBase & {
     type: "ExpressionCharacterClass"
     parent:
         | Alternative
@@ -368,7 +368,7 @@ export type ClassSetOperand =
  * The character class intersection.
  * E.g. `a&&b`
  */
-export interface ClassIntersection extends NodeBase {
+export type ClassIntersection = NodeBase & {
     type: "ClassIntersection"
     parent: ClassIntersection | ExpressionCharacterClass
     left: ClassIntersection | ClassSetOperand
@@ -379,7 +379,7 @@ export interface ClassIntersection extends NodeBase {
  * The character class subtraction.
  * E.g. `a--b`
  */
-export interface ClassSubtraction extends NodeBase {
+export type ClassSubtraction = NodeBase & {
     type: "ClassSubtraction"
     parent: ClassSubtraction | ExpressionCharacterClass
     left: ClassSetOperand | ClassSubtraction
@@ -390,14 +390,14 @@ export interface ClassSubtraction extends NodeBase {
  * The character class string disjunction.
  * E.g. `\q{a|b}`
  */
-export interface ClassStringDisjunction extends NodeBase {
+export type ClassStringDisjunction = NodeBase & {
     type: "ClassStringDisjunction"
     parent: ClassIntersection | ClassSubtraction | UnicodeSetsCharacterClass
     alternatives: StringAlternative[]
 }
 
 /** StringAlternative is only used for `\q{alt}`({@link ClassStringDisjunction}). */
-export interface StringAlternative extends NodeBase {
+export type StringAlternative = NodeBase & {
     type: "StringAlternative"
     parent: ClassStringDisjunction
     elements: Character[]
@@ -408,7 +408,7 @@ export interface StringAlternative extends NodeBase {
  * This includes escape sequences which mean a character.
  * E.g. `a`, `あ`, `✿`, `\x65`, `\u0065`, `\u{65}`, `\/`
  */
-export interface Character extends NodeBase {
+export type Character = NodeBase & {
     type: "Character"
     parent:
         | Alternative
@@ -425,7 +425,7 @@ export interface Character extends NodeBase {
  * The backreference.
  * E.g. `\1`, `\k<name>`
  */
-export interface Backreference extends NodeBase {
+export type Backreference = NodeBase & {
     type: "Backreference"
     parent: Alternative | Quantifier
     ref: number | string
@@ -435,7 +435,7 @@ export interface Backreference extends NodeBase {
 /**
  * The flags.
  */
-export interface Flags extends NodeBase {
+export type Flags = NodeBase & {
     type: "Flags"
     parent: RegExpLiteral | null
     dotAll: boolean
