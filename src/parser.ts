@@ -3,7 +3,6 @@ import type {
     Backreference,
     CapturingGroup,
     CharacterClass,
-    CharacterClassElement,
     CharacterClassRange,
     Flags,
     Group,
@@ -393,7 +392,7 @@ class RegExpParserState {
             throw new Error("UnknownError")
         }
 
-        ;(parent.elements as CharacterClassElement[]).push({
+        parent.elements.push({
             type: "CharacterSet",
             parent,
             start,

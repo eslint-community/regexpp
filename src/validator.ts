@@ -642,7 +642,7 @@ export class RegExpValidator {
      * @param options The options of validator.
      */
     public constructor(options?: RegExpValidator.Options) {
-        this._options = options ?? ({} as RegExpValidator.Options)
+        this._options = options ?? {}
     }
 
     /**
