@@ -190,7 +190,8 @@ interface BaseCharacterClass extends NodeBase {
     type: "CharacterClass"
     parent:
         | Alternative
-        | ExpressionCharacterClass
+        | ClassIntersection
+        | ClassSubtraction
         | Quantifier
         | UnicodeSetsCharacterClass
     unicodeSets: boolean
@@ -217,7 +218,8 @@ export interface ClassRangesCharacterClass extends BaseCharacterClass {
 export interface UnicodeSetsCharacterClass extends BaseCharacterClass {
     parent:
         | Alternative
-        | ExpressionCharacterClass
+        | ClassIntersection
+        | ClassSubtraction
         | Quantifier
         | UnicodeSetsCharacterClass
     unicodeSets: true
@@ -349,7 +351,8 @@ export interface ExpressionCharacterClass extends NodeBase {
     type: "ExpressionCharacterClass"
     parent:
         | Alternative
-        | ExpressionCharacterClass
+        | ClassIntersection
+        | ClassSubtraction
         | Quantifier
         | UnicodeSetsCharacterClass
     negate: boolean
