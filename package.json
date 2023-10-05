@@ -67,7 +67,7 @@
   "dependencies": {},
   "devDependencies": {
     "@eslint-community/eslint-plugin-mysticatea": "^15.5.1",
-    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.2",
     "@types/eslint": "^8.44.3",
     "@types/jsdom": "^16.2.15",
     "@types/mocha": "^9.1.1",
