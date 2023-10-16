@@ -3,7 +3,6 @@ import type {
     Backreference,
     CapturingGroup,
     CharacterClass,
-    CharacterClassElement,
     CharacterClassRange,
     Flags,
     Group,
@@ -58,8 +57,10 @@ class RegExpParserState {
 
     private _node: AppendableNode = DUMMY_PATTERN
 
-    private _expressionBuffer: ClassIntersection | ClassSubtraction | null =
-        null
+    private _expressionBufferMap = new Map<
+        CharacterClass | ExpressionCharacterClass,
+        ClassIntersection | ClassSubtraction
+    >()
 
     private _flags: Flags = DUMMY_FLAGS
 
@@ -391,7 +392,7 @@ class RegExpParserState {
             throw new Error("UnknownError")
         }
 
-        ;(parent.elements as CharacterClassElement[]).push({
+        parent.elements.push({
             type: "CharacterSet",
             parent,
             start,
@@ -538,16 +539,14 @@ class RegExpParserState {
         node.raw = this.source.slice(start, end)
         this._node = parent
 
-        const expression = this._expressionBuffer
-        if (
-            expression?.parent !== (node as unknown as ExpressionCharacterClass)
-        ) {
+        const expression = this._expressionBufferMap.get(node)
+        if (!expression) {
             return
         }
         if (node.elements.length > 0) {
             throw new Error("UnknownError")
         }
-        this._expressionBuffer = null
+        this._expressionBufferMap.delete(node)
 
         // Replace with ExpressionCharacterClass.
         const newNode: ExpressionCharacterClass = {
@@ -614,7 +613,8 @@ class RegExpParserState {
         }
         // Replace the last two elements.
         const right = parent.elements.pop()
-        const left = this._expressionBuffer ?? parent.elements.pop()
+        const left =
+            this._expressionBufferMap.get(parent) ?? parent.elements.pop()
         if (
             !left ||
             !right ||
@@ -637,7 +637,7 @@ class RegExpParserState {
         }
         left.parent = node
         right.parent = node
-        this._expressionBuffer = node
+        this._expressionBufferMap.set(parent, node)
     }
 
     public onClassSubtraction(start: number, end: number): void {
@@ -647,7 +647,8 @@ class RegExpParserState {
         }
         // Replace the last two elements.
         const right = parent.elements.pop()
-        const left = this._expressionBuffer ?? parent.elements.pop()
+        const left =
+            this._expressionBufferMap.get(parent) ?? parent.elements.pop()
         if (
             !left ||
             !right ||
@@ -670,7 +671,7 @@ class RegExpParserState {
         }
         left.parent = node
         right.parent = node
-        this._expressionBuffer = node
+        this._expressionBufferMap.set(parent, node)
     }
 
     public onClassStringDisjunctionEnter(start: number): void {
