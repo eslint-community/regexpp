@@ -1,7 +1,7 @@
 import type { EcmaVersion } from "./ecma-versions"
 import { latestEcmaVersion } from "./ecma-versions"
 import { Reader } from "./reader"
-import { RegExpSyntaxError } from "./regexp-syntax-error"
+import { newRegExpSyntaxError } from "./regexp-syntax-error"
 import {
     ASTERISK,
     BACKSPACE,
@@ -1246,7 +1246,7 @@ export class RegExpValidator {
         message: string,
         context?: { index?: number; unicode?: boolean; unicodeSets?: boolean },
     ): never {
-        throw new RegExpSyntaxError(
+        throw newRegExpSyntaxError(
             this._srcCtx!,
             {
                 unicode:
