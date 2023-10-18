@@ -4,8 +4,8 @@ export class RegExpSyntaxError extends SyntaxError {
     public index: number
 
     public constructor(
-        index: number,
         message: string,
+        index: number,
     ) {
         super(message)
         this.index = index
@@ -32,5 +32,5 @@ export function newRegExpSyntaxError(
         source = `: /${pattern}/${flagsText}`
     }
 
-    return new RegExpSyntaxError(index, `Invalid regular expression${source}: ${message}`)
+    return new RegExpSyntaxError(`Invalid regular expression${source}: ${message}`, index)
 }
