@@ -3,10 +3,7 @@ import type { RegExpValidatorSourceContext } from "./validator"
 export class RegExpSyntaxError extends SyntaxError {
     public index: number
 
-    public constructor(
-        message: string,
-        index: number,
-    ) {
+    public constructor(message: string, index: number) {
         super(message)
         this.index = index
     }
@@ -32,5 +29,8 @@ export function newRegExpSyntaxError(
         source = `: /${pattern}/${flagsText}`
     }
 
-    return new RegExpSyntaxError(`Invalid regular expression${source}: ${message}`, index)
+    return new RegExpSyntaxError(
+        `Invalid regular expression${source}: ${message}`,
+        index,
+    )
 }
