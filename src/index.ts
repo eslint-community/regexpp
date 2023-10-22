@@ -2,9 +2,9 @@ import * as AST from "./ast"
 import { RegExpParser } from "./parser"
 import { RegExpValidator } from "./validator"
 import { RegExpVisitor } from "./visitor"
-import { RegExpSyntaxError } from "./regexp-syntax-error"
 
-export { AST, RegExpParser, RegExpValidator, RegExpSyntaxError }
+export { RegExpSyntaxError } from "./regexp-syntax-error"
+export { AST, RegExpParser, RegExpValidator }
 
 /**
  * Parse a given regular expression literal then make AST object.
