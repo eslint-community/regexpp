@@ -171,7 +171,7 @@ const FLAG_CODEPOINT_TO_PROP: Record<FlagCodePoint, FlagProp> =
         Object.entries(FLAG_PROP_TO_CODEPOINT).map(([k, v]) => [v, k]),
     ) as never
 type FlagProp = keyof typeof FLAG_PROP_TO_CODEPOINT
-type FlagCodePoint = typeof FLAG_PROP_TO_CODEPOINT[FlagProp]
+type FlagCodePoint = (typeof FLAG_PROP_TO_CODEPOINT)[FlagProp]
 type FlagsRecord = Omit<Flags, "end" | "parent" | "raw" | "start" | "type">
 
 function isSyntaxCharacter(cp: number): boolean {
