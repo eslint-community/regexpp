@@ -1,0 +1,1726 @@
+{
+  "_test262FileNames": [
+    "test/built-ins/RegExp/regexp-modifiers/add-dotAll-does-not-affect-dotAll-property.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-dotAll-does-not-affect-ignoreCase-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-dotAll-does-not-affect-multiline-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-dotAll.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-affects-backreferences.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-affects-characterClasses.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-affects-characterEscapes.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-affects-slash-lower-b.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-affects-slash-lower-p.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-affects-slash-lower-w.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-affects-slash-upper-b.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-affects-slash-upper-p.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-affects-slash-upper-w.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-does-not-affect-dotAll-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-does-not-affect-ignoreCase-property.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase-does-not-affect-multiline-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-ignoreCase.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-multiline-does-not-affect-dotAll-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-multiline-does-not-affect-ignoreCase-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-multiline-does-not-affect-multiline-property.js",
+    "test/built-ins/RegExp/regexp-modifiers/add-remove-modifiers.js",
+    "test/built-ins/RegExp/regexp-modifiers/changing-dotAll-flag-does-not-affect-dotAll-modifier.js",
+    "test/built-ins/RegExp/regexp-modifiers/changing-ignoreCase-flag-does-not-affect-ignoreCase-modifier.js",
+    "test/built-ins/RegExp/regexp-modifiers/changing-multiline-flag-does-not-affect-multiline-modifier.js",
+    "test/built-ins/RegExp/regexp-modifiers/nested-add-remove-modifiers.js",
+    "test/built-ins/RegExp/regexp-modifiers/nesting-add-dotAll-within-remove-dotAll.js",
+    "test/built-ins/RegExp/regexp-modifiers/nesting-add-ignoreCase-within-remove-ignoreCase.js",
+    "test/built-ins/RegExp/regexp-modifiers/nesting-add-multiline-within-remove-multiline.js",
+    "test/built-ins/RegExp/regexp-modifiers/nesting-remove-dotAll-within-add-dotAll.js",
+    "test/built-ins/RegExp/regexp-modifiers/nesting-remove-multiline-within-add-multiline.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-dotAll-does-not-affect-dotAll-property.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-dotAll-does-not-affect-ignoreCase-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-dotAll-does-not-affect-multiline-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-affects-backreferences.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-affects-characterClasses.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-affects-characterEscapes.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-affects-slash-lower-b.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-affects-slash-lower-p.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-affects-slash-lower-w.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-affects-slash-upper-b.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-affects-slash-upper-p.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-affects-slash-upper-w.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-does-not-affect-dotAll-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-does-not-affect-ignoreCase-property.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase-does-not-affect-multiline-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-ignoreCase.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-multiline-does-not-affect-dotAll-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-multiline-does-not-affect-ignoreCase-flag.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-multiline-does-not-affect-multiline-property.js",
+    "test/built-ins/RegExp/regexp-modifiers/remove-multiline.js",
+    "test/built-ins/RegExp/regexp-modifiers/syntax/valid/add-and-remove-modifiers-can-have-empty-remove-modifiers.js",
+    "test/built-ins/RegExp/regexp-modifiers/syntax/valid/add-and-remove-modifiers.js",
+    "test/built-ins/RegExp/regexp-modifiers/syntax/valid/add-modifiers-when-nested.js",
+    "test/built-ins/RegExp/regexp-modifiers/syntax/valid/add-modifiers-when-not-set-as-flags.js",
+    "test/built-ins/RegExp/regexp-modifiers/syntax/valid/add-modifiers-when-set-as-flags.js",
+    "test/built-ins/RegExp/regexp-modifiers/syntax/valid/remove-modifiers-when-nested.js",
+    "test/built-ins/RegExp/regexp-modifiers/syntax/valid/remove-modifiers-when-not-set-as-flags.js",
+    "test/built-ins/RegExp/regexp-modifiers/syntax/valid/remove-modifiers-when-set-as-flags.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-add-remove-i.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-add-remove-m.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-add-remove-multi-duplicate.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-add-remove-s-escape.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-add-remove-s.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-both-empty.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-code-point-repeat-i-1.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-code-point-repeat-i-2.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-no-colon-1.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-no-colon-2.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-no-colon-3.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-arbitrary.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-combining-i.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-combining-m.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-combining-s.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-d.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-g.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-non-display-1.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-non-display-2.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-non-flag.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-u.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-uppercase-I.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-y.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-zwj.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-zwnbsp.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-other-code-point-zwnj.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-add-remove-multi-duplicate.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-add-remove-s-escape.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-code-point-repeat-i-1.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-code-point-repeat-i-2.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-arbitrary.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-combining-i.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-combining-m.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-combining-s.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-d.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-g.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-non-display-1.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-non-display-2.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-non-flag.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-u.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-uppercase-I.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-y.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-zwj.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-zwnbsp.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-other-code-point-zwnj.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-should-not-case-fold-m.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-should-not-case-fold-s.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-should-not-unicode-case-fold-i.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-reverse-should-not-unicode-case-fold-s.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-should-not-case-fold-m.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-should-not-case-fold-s.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-should-not-unicode-case-fold-i.js",
+    "test/language/literals/regexp/early-err-arithmetic-modifiers-should-not-unicode-case-fold-s.js",
+    "test/language/literals/regexp/early-err-modifiers-code-point-repeat-i-1.js",
+    "test/language/literals/regexp/early-err-modifiers-code-point-repeat-i-2.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-arbitrary.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-combining-i.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-combining-m.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-combining-s.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-d.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-g.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-non-display-1.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-non-display-2.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-non-flag.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-u.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-uppercase-I.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-y.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-zwj.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-zwnbsp.js",
+    "test/language/literals/regexp/early-err-modifiers-other-code-point-zwnj.js",
+    "test/language/literals/regexp/early-err-modifiers-should-not-case-fold-m.js",
+    "test/language/literals/regexp/early-err-modifiers-should-not-case-fold-s.js",
+    "test/language/literals/regexp/early-err-modifiers-should-not-unicode-case-fold-i.js",
+    "test/language/literals/regexp/early-err-modifiers-should-not-unicode-case-fold-s.js",
+    "test/language/literals/regexp/early-err-modifiers-should-not-unicode-escape-i.js",
+    "test/language/literals/regexp/early-err-modifiers-should-not-unicode-escape-m.js",
+    "test/language/literals/regexp/early-err-modifiers-should-not-unicode-escape-s.js"
+  ],
+  "options": {},
+  "patterns": {
+    "/(?-1:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-1:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-I:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-I:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-M:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-M:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-Q:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-Q:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-S:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-S:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-d:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-d:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-g:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-g:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:(?-i:))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:(?-i:))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:.es)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:.es)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:.es)/is": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:.es)/is: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:Z\\B)/ui": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:Z\\B)/ui: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:[^ab])c/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:[^ab])c/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:[ab])c/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:[ab])c/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:\\P{Lu})/ui": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:\\P{Lu})/ui: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:\\W)/ui": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:\\W)/ui: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:\\b)/ui": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:\\b)/ui: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:\\p{Lu})/ui": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:\\p{Lu})/ui: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:\\u0061)b/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:\\u0061)b/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:\\u{0061})b/iu": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:\\u{0061})b/iu: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:\\w)/ui": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:\\w)/ui: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:\\x61)b/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:\\x61)b/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:a(?i:b))c/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:a(?i:b))c/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:aB)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:aB)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:es$)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:es$)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:es$)/im": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:es$)/im: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-i:fo)o/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?-i:fo)o/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-ii:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-ii:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-im:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-im:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-im:)/im": {
+      "error": {
+        "message": "Invalid regular expression: /(?-im:)/im: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-ims:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-ims:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-ims:)/ims": {
+      "error": {
+        "message": "Invalid regular expression: /(?-ims:)/ims: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-imsi:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-imsi:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-is:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-is:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-is:)/is": {
+      "error": {
+        "message": "Invalid regular expression: /(?-is:)/is: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-ism:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-ism:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-ism:)/ism": {
+      "error": {
+        "message": "Invalid regular expression: /(?-ism:)/ism: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-iͥ:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-iͥ:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-m:(?-m:))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-m:(?-m:))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-m:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-m:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-m:)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?-m:)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-m:es$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?-m:es$)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-m:es$)/mi": {
+      "error": {
+        "message": "Invalid regular expression: /(?-m:es$)/mi: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-m:es(?m-:$)|js$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?-m:es(?m-:$)|js$)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-m:es(?m:$)|js$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?-m:es(?m:$)|js$)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-m:es.$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?-m:es.$)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-m:es.$)/ms": {
+      "error": {
+        "message": "Invalid regular expression: /(?-m:es.$)/ms: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-mi:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-mi:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-mi:)/mi": {
+      "error": {
+        "message": "Invalid regular expression: /(?-mi:)/mi: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-mis:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-mis:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-mis:)/mis": {
+      "error": {
+        "message": "Invalid regular expression: /(?-mis:)/mis: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-ms:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-ms:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-ms:)/ms": {
+      "error": {
+        "message": "Invalid regular expression: /(?-ms:)/ms: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-msi:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-msi:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-msi:)/msi": {
+      "error": {
+        "message": "Invalid regular expression: /(?-msi:)/msi: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-mͫ:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-mͫ:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s\u0000:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s\u0000:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:(?-s:))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:(?-s:))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:(?s-:^.$))/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:(?s-:^.$))/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:(?s:^.$))/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:(?s:^.$))/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:.es$)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:.es$)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:.es$)/sm": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:.es$)/sm: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:.es)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:.es)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:.es)/si": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:.es)/si: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:^.$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:^.$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s:^.$)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s:^.$)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-si:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-si:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-si:)/si": {
+      "error": {
+        "message": "Invalid regular expression: /(?-si:)/si: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-sim:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-sim:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-sim:)/sim": {
+      "error": {
+        "message": "Invalid regular expression: /(?-sim:)/sim: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-sm:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-sm:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-sm:)/sm": {
+      "error": {
+        "message": "Invalid regular expression: /(?-sm:)/sm: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-smi:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-smi:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-smi:)/smi": {
+      "error": {
+        "message": "Invalid regular expression: /(?-smi:)/smi: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s̀:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s̀:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s‌:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s‌:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s‍:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s‍:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s‎:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s‎:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-s﻿:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-s﻿:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-u:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-u:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-y:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-y:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-İ:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-İ:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?-ſ:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-ſ:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?1-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?1-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?1:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?1:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?I-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?I-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?I:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?I:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?M-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?M-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?M:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?M:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?Q-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?Q-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?Q:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?Q:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?S-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?S-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?S:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?S:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?\\u0069:a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?\\u0069:a)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?\\u006D:a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?\\u006D:a)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?\\u0073:a)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?\\u0073:a)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?\\u{0073}-s:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?\\u{0073}-s:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?d-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?d-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?d:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?d:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?g-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?g-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?g:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?g:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:.es)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:.es)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:.es)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:.es)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:Z\\B)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:Z\\B)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:[^ab])c/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:[^ab])c/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:[ab])c/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:[ab])c/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\P{Lu})/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\P{Lu})/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\W)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\W)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\b)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\b)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\b)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\b)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\p{Lu})/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\p{Lu})/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\u0061)b/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\u0061)b/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\u{0061})b/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\u{0061})b/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\w)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\w)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\w)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\w)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:\\x61)b/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:\\x61)b/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:es$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:es$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-:es$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-:es$)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-i:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-i:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-m:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-m:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-ms:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-ms:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-s:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-s:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i-sm:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i-sm:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:(?i:))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:(?i:))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:.es)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:.es)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:.es)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:.es)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:Z\\B)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:Z\\B)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:[^ab])c/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:[^ab])c/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:[ab])c/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:[ab])c/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\P{Lu})/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\P{Lu})/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\W)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\W)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\b)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\b)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\b)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\b)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\p{Lu})/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\p{Lu})/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\u0061)b/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\u0061)b/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\u{0061})b/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\u{0061})b/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\w)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\w)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\w)/u": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\w)/u: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:\\x61)b/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:\\x61)b/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:a)b/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:a)b/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:aB)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:aB)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:es$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:es$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?i:es$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?i:es$)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ii-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ii-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ii:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ii:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?im-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?im-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?im-s:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?im-s:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?im:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?im:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ims-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ims-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ims-m:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ims-m:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ims:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ims:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ims:)/ims": {
+      "error": {
+        "message": "Invalid regular expression: /(?ims:)/ims: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?imsi-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?imsi-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?imsi:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?imsi:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?is-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?is-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?is-m:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?is-m:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?is:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?is:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ism-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ism-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ism:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ism:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?iͥ-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?iͥ-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?iͥ:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?iͥ:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-:es$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-:es$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-:es$)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-:es$)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-:es$|(?-m:js$))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-:es$|(?-m:js$))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-:es.$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-:es.$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-:es.$)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-:es.$)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-i:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-i:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-i:^a$)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-i:^a$)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-ims:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-ims:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-is:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-is:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-m:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-m:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-s:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-s:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m-si:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m-si:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:(?m:))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:(?m:))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:^(?-i:a)$)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:^(?-i:a)$)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:es$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:es$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:es$)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:es$)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:es$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:es$)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:es$|(?-m:js$))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:es$|(?-m:js$))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:es.$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:es.$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?m:es.$)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?m:es.$)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?mi-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?mi-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?mi-s:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?mi-s:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?mi:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?mi:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?mis-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?mis-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?mis:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?mis:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ms-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ms-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ms-i)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ms-i)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ms-i:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ms-i:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ms:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ms:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?msi-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?msi-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?msi:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?msi:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?mͫ-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?mͫ-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?mͫ:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?mͫ:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s\u0000-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s\u0000-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s\u0000:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s\u0000:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-:(?-s:^.$))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-:(?-s:^.$))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-:.es$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-:.es$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-:.es$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-:.es$)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-:.es)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-:.es)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-:.es)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-:.es)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-:^.$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-:^.$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-\\u{0073}:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-\\u{0073}:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-i:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-i:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-im:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-im:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-m:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-m:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-mi:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-mi:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s-s:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s-s:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:(?-s:^.$))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:(?-s:^.$))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:(?s:))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:(?s:))/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:.es$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:.es$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:.es$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:.es$)/m: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:.es)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:.es)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:.es)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:.es)/i: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:^.$)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:^.$)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s:^.$)/s": {
+      "error": {
+        "message": "Invalid regular expression: /(?s:^.$)/s: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?si-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?si-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?si-m:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?si-m:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?si:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?si:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?sim-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?sim-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?sim:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?sim:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?sm-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?sm-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?sm-i:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?sm-i:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?sm:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?sm:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?smi-:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?smi-:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?smi:)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?smi:)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s̀-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s̀-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s̀:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s̀:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s‌-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s‌-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s‌:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s‌:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s‍-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s‍-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s‍:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s‍:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s‎-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s‎-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s‎:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s‎:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s﻿-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s﻿-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?s﻿:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?s﻿:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?u-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?u-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?u:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?u:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?y-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?y-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?y:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?y:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?İ-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?İ-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?İ:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?İ:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ſ-:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ſ-:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(?ſ:a)/": {
+      "error": {
+        "message": "Invalid regular expression: /(?ſ:a)/: Invalid group",
+        "index": 3
+      }
+    },
+    "/(a)(?-i:\\1)/i": {
+      "error": {
+        "message": "Invalid regular expression: /(a)(?-i:\\1)/i: Invalid group",
+        "index": 6
+      }
+    },
+    "/(a)(?i-:\\1)/": {
+      "error": {
+        "message": "Invalid regular expression: /(a)(?i-:\\1)/: Invalid group",
+        "index": 6
+      }
+    },
+    "/(a)(?i:\\1)/": {
+      "error": {
+        "message": "Invalid regular expression: /(a)(?i:\\1)/: Invalid group",
+        "index": 6
+      }
+    },
+    "/^(?-m:es$)/": {
+      "error": {
+        "message": "Invalid regular expression: /^(?-m:es$)/: Invalid group",
+        "index": 4
+      }
+    },
+    "/^(?-m:es$)/m": {
+      "error": {
+        "message": "Invalid regular expression: /^(?-m:es$)/m: Invalid group",
+        "index": 4
+      }
+    }
+  }
+}
