@@ -32,24 +32,7 @@
                   "start": 1,
                   "end": 5,
                   "raw": "(?:)",
-                  "modifiers": {
-                    "type": "Modifiers",
-                    "parent": "♻️..",
-                    "start": 3,
-                    "end": 3,
-                    "raw": "",
-                    "add": {
-                      "type": "ModifierFlags",
-                      "parent": "♻️..",
-                      "start": 3,
-                      "end": 3,
-                      "raw": "",
-                      "ignoreCase": false,
-                      "multiline": false,
-                      "dotAll": false
-                    },
-                    "remove": null
-                  },
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
