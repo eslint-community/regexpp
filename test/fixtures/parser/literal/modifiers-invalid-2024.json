@@ -1,7 +1,7 @@
 {
   "options": {
     "strict": false,
-    "ecmaVersion": 2023
+    "ecmaVersion": 2024
   },
   "patterns": {
     "/(?ims-ims:sub_expression)/": {
