@@ -227,7 +227,16 @@
                       "start": 3,
                       "end": 7,
                       "raw": "-ims",
-                      "add": null,
+                      "add": {
+                        "type": "ModifierFlags",
+                        "parent": "♻️..",
+                        "start": 3,
+                        "end": 3,
+                        "raw": "",
+                        "ignoreCase": false,
+                        "multiline": false,
+                        "dotAll": false
+                      },
                       "remove": {
                         "type": "ModifierFlags",
                         "parent": "♻️..",
@@ -317,7 +326,24 @@
                     "start": 1,
                     "end": 17,
                     "raw": "(?:no-modifiers)",
-                    "modifiers": null,
+                    "modifiers": {
+                      "type": "Modifiers",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "add": {
+                        "type": "ModifierFlags",
+                        "parent": "♻️..",
+                        "start": 3,
+                        "end": 3,
+                        "raw": "",
+                        "ignoreCase": false,
+                        "multiline": false,
+                        "dotAll": false
+                      },
+                      "remove": null
+                    },
                     "alternatives": [
                       {
                         "type": "Alternative",
