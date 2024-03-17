@@ -213,7 +213,7 @@ class RegExpParserState {
             start,
             end: start,
             raw: "",
-            modifiers: null,
+            modifiers: null as never, // Set in onModifiersEnter.
             alternatives: [],
         }
         parent.elements.push(this._node)
@@ -242,7 +242,7 @@ class RegExpParserState {
             start,
             end: start,
             raw: "",
-            add: null,
+            add: null as never, // Set in onAddModifiers.
             remove: null,
         }
         parent.modifiers = this._node

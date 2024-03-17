@@ -1758,44 +1758,26 @@ export class RegExpValidator {
      */
     private consumeModifiers(): boolean {
         const start = this.index
+        this.onModifiersEnter(start)
+        const hasAddModifiers = this.eatModifiers()
+        const addModifiers = this.parseModifiers(start, this.index)
+        this.onAddModifiers(start, this.index, addModifiers)
 
-        if (this.eatModifiers()) {
-            this.onModifiersEnter(start)
-            const addModifiers = this.parseModifiers(start, this.index)
-            this.onAddModifiers(start, this.index, addModifiers)
-            if (this.eat(HYPHEN_MINUS)) {
-                const modifiersStart = this.index
-                if (this.eatModifiers()) {
-                    const modifiers = this.parseModifiers(
-                        modifiersStart,
-                        this.index,
-                        addModifiers,
-                    )
-                    this.onRemoveModifiers(
-                        modifiersStart,
-                        this.index,
-                        modifiers,
-                    )
-                }
-            }
-            this.onModifiersLeave(start, this.index)
-            return true
-        } else if (this.eat(HYPHEN_MINUS)) {
-            this.onModifiersEnter(start)
+        if (this.eat(HYPHEN_MINUS)) {
             const modifiersStart = this.index
-            if (this.eatModifiers()) {
-                const modifiers = this.parseModifiers(
-                    modifiersStart,
-                    this.index,
-                )
-                this.onRemoveModifiers(modifiersStart, this.index, modifiers)
-            } else {
+            if (!this.eatModifiers() && !hasAddModifiers) {
                 this.raise("Invalid empty flags")
             }
-            this.onModifiersLeave(start, this.index)
-            return true
+            const modifiers = this.parseModifiers(
+                modifiersStart,
+                this.index,
+                addModifiers,
+            )
+            this.onRemoveModifiers(modifiersStart, this.index, modifiers)
         }
-        return false
+
+        this.onModifiersLeave(start, this.index)
+        return true
     }
 
     /**

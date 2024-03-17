@@ -124,7 +124,7 @@ export interface Alternative extends NodeBase {
 export interface Group extends NodeBase {
     type: "Group"
     parent: Alternative | Quantifier
-    modifiers: Modifiers | null
+    modifiers: Modifiers
     alternatives: Alternative[]
 }
 
@@ -455,7 +455,16 @@ export interface UnambiguousBackreference extends BaseBackreference {
 export interface Modifiers extends NodeBase {
     type: "Modifiers"
     parent: Group
-    add: ModifierFlags | null
+    /**
+     * The add modifier flags.
+     */
+    add: ModifierFlags
+    /**
+     * The remove modifier flags.
+     *
+     * `null` means no remove modifier flags. e.g. `(?ims:x)`
+     * The reason for `null` is that there is no position where the remove modifier flags appears. Must be behind the minus mark.
+     */
     remove: ModifierFlags | null
 }
 

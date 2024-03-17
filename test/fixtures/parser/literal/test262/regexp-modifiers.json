@@ -219,7 +219,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -251,7 +260,16 @@
                             "start": 8,
                             "end": 10,
                             "raw": "-i",
-                            "add": null,
+                            "add": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 8,
+                              "end": 8,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            },
                             "remove": {
                               "type": "ModifierFlags",
                               "parent": "♻️..",
@@ -332,7 +350,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -409,7 +436,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -486,7 +522,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -588,7 +633,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -690,7 +744,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -785,7 +848,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -898,7 +970,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1011,7 +1092,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1101,7 +1191,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1188,7 +1287,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1275,7 +1383,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1365,7 +1482,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1459,7 +1585,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1553,7 +1688,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1640,7 +1784,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1734,7 +1887,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1872,7 +2034,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -1966,7 +2137,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2068,7 +2248,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2170,7 +2359,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2278,7 +2476,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-im",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2355,7 +2562,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-im",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2432,7 +2648,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-ims",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2509,7 +2734,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-ims",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2592,7 +2826,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-is",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2669,7 +2912,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-is",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2746,7 +2998,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-ism",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2823,7 +3084,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-ism",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2906,7 +3176,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -2938,7 +3217,16 @@
                             "start": 8,
                             "end": 10,
                             "raw": "-m",
-                            "add": null,
+                            "add": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 8,
+                              "end": 8,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            },
                             "remove": {
                               "type": "ModifierFlags",
                               "parent": "♻️..",
@@ -3019,7 +3307,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -3096,7 +3393,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -3173,7 +3479,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -3275,7 +3590,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -3377,7 +3701,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -3435,7 +3768,16 @@
                               "multiline": true,
                               "dotAll": false
                             },
-                            "remove": null
+                            "remove": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 12,
+                              "end": 12,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            }
                           },
                           "alternatives": [
                             {
@@ -3548,7 +3890,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -3719,7 +4070,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -3829,7 +4189,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -3939,7 +4308,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-mi",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4016,7 +4394,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-mi",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4093,7 +4480,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-mis",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4170,7 +4566,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-mis",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4247,7 +4652,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-ms",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4324,7 +4738,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-ms",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4401,7 +4824,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-msi",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4478,7 +4910,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-msi",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4573,7 +5014,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4605,7 +5055,16 @@
                             "start": 8,
                             "end": 10,
                             "raw": "-s",
-                            "add": null,
+                            "add": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 8,
+                              "end": 8,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            },
                             "remove": {
                               "type": "ModifierFlags",
                               "parent": "♻️..",
@@ -4686,7 +5145,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4728,7 +5196,16 @@
                               "multiline": false,
                               "dotAll": true
                             },
-                            "remove": null
+                            "remove": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 10,
+                              "end": 10,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            }
                           },
                           "alternatives": [
                             {
@@ -4824,7 +5301,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -4962,7 +5448,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5039,7 +5534,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5116,7 +5620,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5226,7 +5739,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5336,7 +5858,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5438,7 +5969,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5540,7 +6080,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5642,7 +6191,16 @@
                     "start": 3,
                     "end": 5,
                     "raw": "-s",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5744,7 +6302,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-si",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5821,7 +6388,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-si",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5898,7 +6474,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-sim",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -5975,7 +6560,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-sim",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -6052,7 +6646,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-sm",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -6129,7 +6732,16 @@
                     "start": 3,
                     "end": 6,
                     "raw": "-sm",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -6206,7 +6818,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-smi",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -6283,7 +6904,16 @@
                     "start": 3,
                     "end": 7,
                     "raw": "-smi",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -6538,7 +7168,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -6615,7 +7254,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -6717,7 +7365,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -6819,7 +7476,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -6914,7 +7580,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7027,7 +7702,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7140,7 +7824,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7230,7 +7923,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7317,7 +8019,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7404,7 +8115,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7491,7 +8211,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7581,7 +8310,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7675,7 +8413,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7769,7 +8516,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7856,7 +8612,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -7943,7 +8708,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -8037,7 +8811,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -8139,7 +8922,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -10684,7 +11476,16 @@
                       "multiline": true,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 6,
+                      "end": 6,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -10924,7 +11725,16 @@
                       "multiline": true,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 7,
+                      "end": 7,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -11173,7 +11983,16 @@
                       "multiline": false,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 6,
+                      "end": 6,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -11413,7 +12232,16 @@
                       "multiline": true,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 7,
+                      "end": 7,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -11579,7 +12407,16 @@
                       "multiline": true,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -11656,7 +12493,16 @@
                       "multiline": true,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -11758,7 +12604,16 @@
                       "multiline": true,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -11860,7 +12715,16 @@
                       "multiline": true,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -11915,7 +12779,16 @@
                             "start": 12,
                             "end": 14,
                             "raw": "-m",
-                            "add": null,
+                            "add": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 12,
+                              "end": 12,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            },
                             "remove": {
                               "type": "ModifierFlags",
                               "parent": "♻️..",
@@ -12031,7 +12904,16 @@
                       "multiline": true,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -12141,7 +13023,16 @@
                       "multiline": true,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -13015,7 +13906,16 @@
                             "start": 8,
                             "end": 10,
                             "raw": "-i",
-                            "add": null,
+                            "add": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 8,
+                              "end": 8,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            },
                             "remove": {
                               "type": "ModifierFlags",
                               "parent": "♻️..",
@@ -13484,7 +14384,16 @@
                             "start": 11,
                             "end": 13,
                             "raw": "-m",
-                            "add": null,
+                            "add": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 11,
+                              "end": 11,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            },
                             "remove": {
                               "type": "ModifierFlags",
                               "parent": "♻️..",
@@ -13820,7 +14729,16 @@
                       "multiline": true,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 6,
+                      "end": 6,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -14060,7 +14978,16 @@
                       "multiline": true,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 7,
+                      "end": 7,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -14214,7 +15141,16 @@
                       "multiline": true,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 6,
+                      "end": 6,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -14460,7 +15396,16 @@
                       "multiline": true,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 7,
+                      "end": 7,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -14638,7 +15583,16 @@
                       "multiline": false,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -14660,7 +15614,16 @@
                             "start": 8,
                             "end": 10,
                             "raw": "-s",
-                            "add": null,
+                            "add": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 8,
+                              "end": 8,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            },
                             "remove": {
                               "type": "ModifierFlags",
                               "parent": "♻️..",
@@ -14776,7 +15739,16 @@
                       "multiline": false,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -14853,7 +15825,16 @@
                       "multiline": false,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -14963,7 +15944,16 @@
                       "multiline": false,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -15073,7 +16063,16 @@
                       "multiline": false,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -15175,7 +16174,16 @@
                       "multiline": false,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -15277,7 +16285,16 @@
                       "multiline": false,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 5,
+                      "end": 5,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -15757,7 +16774,16 @@
                             "start": 7,
                             "end": 9,
                             "raw": "-s",
-                            "add": null,
+                            "add": {
+                              "type": "ModifierFlags",
+                              "parent": "♻️..",
+                              "start": 7,
+                              "end": 7,
+                              "raw": "",
+                              "ignoreCase": false,
+                              "multiline": false,
+                              "dotAll": false
+                            },
                             "remove": {
                               "type": "ModifierFlags",
                               "parent": "♻️..",
@@ -16768,7 +17794,16 @@
                       "multiline": false,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 6,
+                      "end": 6,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -17008,7 +18043,16 @@
                       "multiline": true,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 7,
+                      "end": 7,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -17162,7 +18206,16 @@
                       "multiline": true,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 6,
+                      "end": 6,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -17402,7 +18455,16 @@
                       "multiline": true,
                       "dotAll": true
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 7,
+                      "end": 7,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -17684,7 +18746,16 @@
                     "start": 6,
                     "end": 8,
                     "raw": "-i",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 6,
+                      "end": 6,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -17812,7 +18883,16 @@
                       "multiline": false,
                       "dotAll": false
                     },
-                    "remove": null
+                    "remove": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 8,
+                      "end": 8,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    }
                   },
                   "alternatives": [
                     {
@@ -18016,7 +19096,16 @@
                     "start": 4,
                     "end": 6,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 4,
+                      "end": 4,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
@@ -18126,7 +19215,16 @@
                     "start": 4,
                     "end": 6,
                     "raw": "-m",
-                    "add": null,
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 4,
+                      "end": 4,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
                     "remove": {
                       "type": "ModifierFlags",
                       "parent": "♻️..",
