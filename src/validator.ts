@@ -1758,12 +1758,17 @@ export class RegExpValidator {
      */
     private consumeModifiers(): boolean {
         const start = this.index
-        this.onModifiersEnter(start)
         const hasAddModifiers = this.eatModifiers()
-        const addModifiers = this.parseModifiers(start, this.index)
-        this.onAddModifiers(start, this.index, addModifiers)
+        const addModifiersEnd = this.index
+        const hasHyphen = this.eat(HYPHEN_MINUS)
+        if (!hasAddModifiers && !hasHyphen) {
+            return false
+        }
+        this.onModifiersEnter(start)
+        const addModifiers = this.parseModifiers(start, addModifiersEnd)
+        this.onAddModifiers(start, addModifiersEnd, addModifiers)
 
-        if (this.eat(HYPHEN_MINUS)) {
+        if (hasHyphen) {
             const modifiersStart = this.index
             if (!this.eatModifiers() && !hasAddModifiers) {
                 this.raise("Invalid empty flags")

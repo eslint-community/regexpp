@@ -124,7 +124,7 @@ export interface Alternative extends NodeBase {
 export interface Group extends NodeBase {
     type: "Group"
     parent: Alternative | Quantifier
-    modifiers: Modifiers
+    modifiers: Modifiers | null
     alternatives: Alternative[]
 }
 

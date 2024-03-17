@@ -3933,24 +3933,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
-                  "modifiers": {
-                    "type": "Modifiers",
-                    "parent": "♻️..",
-                    "start": 3,
-                    "end": 3,
-                    "raw": "",
-                    "add": {
-                      "type": "ModifierFlags",
-                      "parent": "♻️..",
-                      "start": 3,
-                      "end": 3,
-                      "raw": "",
-                      "ignoreCase": false,
-                      "multiline": false,
-                      "dotAll": false
-                    },
-                    "remove": null
-                  },
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -4105,24 +4088,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
-                  "modifiers": {
-                    "type": "Modifiers",
-                    "parent": "♻️..",
-                    "start": 3,
-                    "end": 3,
-                    "raw": "",
-                    "add": {
-                      "type": "ModifierFlags",
-                      "parent": "♻️..",
-                      "start": 3,
-                      "end": 3,
-                      "raw": "",
-                      "ignoreCase": false,
-                      "multiline": false,
-                      "dotAll": false
-                    },
-                    "remove": null
-                  },
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -5225,24 +5191,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
-                  "modifiers": {
-                    "type": "Modifiers",
-                    "parent": "♻️..",
-                    "start": 3,
-                    "end": 3,
-                    "raw": "",
-                    "add": {
-                      "type": "ModifierFlags",
-                      "parent": "♻️..",
-                      "start": 3,
-                      "end": 3,
-                      "raw": "",
-                      "ignoreCase": false,
-                      "multiline": false,
-                      "dotAll": false
-                    },
-                    "remove": null
-                  },
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -17064,24 +17013,7 @@
                     "start": 48,
                     "end": 67,
                     "raw": "(?:\\.[a-zA-Z0-9-]+)",
-                    "modifiers": {
-                      "type": "Modifiers",
-                      "parent": "♻️..",
-                      "start": 50,
-                      "end": 50,
-                      "raw": "",
-                      "add": {
-                        "type": "ModifierFlags",
-                        "parent": "♻️..",
-                        "start": 50,
-                        "end": 50,
-                        "raw": "",
-                        "ignoreCase": false,
-                        "multiline": false,
-                        "dotAll": false
-                      },
-                      "remove": null
-                    },
+                    "modifiers": null,
                     "alternatives": [
                       {
                         "type": "Alternative",

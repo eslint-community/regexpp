@@ -816,24 +816,7 @@
                   "start": 9,
                   "end": 20,
                   "raw": "(?:zy\\k<a>)",
-                  "modifiers": {
-                    "type": "Modifiers",
-                    "parent": "♻️..",
-                    "start": 11,
-                    "end": 11,
-                    "raw": "",
-                    "add": {
-                      "type": "ModifierFlags",
-                      "parent": "♻️..",
-                      "start": 11,
-                      "end": 11,
-                      "raw": "",
-                      "ignoreCase": false,
-                      "multiline": false,
-                      "dotAll": false
-                    },
-                    "remove": null
-                  },
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
