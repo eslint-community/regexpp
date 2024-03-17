@@ -101,7 +101,24 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
-                  "modifiers": null,
+                  "modifiers": {
+                    "type": "Modifiers",
+                    "parent": "♻️..",
+                    "start": 3,
+                    "end": 3,
+                    "raw": "",
+                    "add": {
+                      "type": "ModifierFlags",
+                      "parent": "♻️..",
+                      "start": 3,
+                      "end": 3,
+                      "raw": "",
+                      "ignoreCase": false,
+                      "multiline": false,
+                      "dotAll": false
+                    },
+                    "remove": null
+                  },
                   "alternatives": [
                     {
                       "type": "Alternative",

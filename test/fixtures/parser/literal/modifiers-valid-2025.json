@@ -1,7 +1,7 @@
 {
   "options": {
     "strict": false,
-    "ecmaVersion": 2024
+    "ecmaVersion": 2025
   },
   "patterns": {
     "/(?i-m:p)/": {
