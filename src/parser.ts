@@ -19,6 +19,7 @@ import type {
     ExpressionCharacterClass,
     StringAlternative,
     Modifiers,
+    ModifierFlags,
 } from "./ast"
 import type { EcmaVersion } from "./ecma-versions"
 import { latestEcmaVersion } from "./ecma-versions"
@@ -207,15 +208,41 @@ class RegExpParserState {
             throw new Error("UnknownError")
         }
 
-        this._node = {
+        const modifiersStart = start + 2 /* offset `(?` */
+        const addModifiers: ModifierFlags = {
+            type: "ModifierFlags",
+            parent: null as never,
+            start: modifiersStart,
+            end: modifiersStart,
+            raw: "",
+            ignoreCase: false,
+            multiline: false,
+            dotAll: false,
+        }
+
+        const modifiers: Modifiers = {
+            type: "Modifiers",
+            parent: null as never,
+            start: modifiersStart,
+            end: modifiersStart,
+            raw: "",
+            add: addModifiers,
+            remove: null,
+        }
+        addModifiers.parent = modifiers
+
+        const group: Group = {
             type: "Group",
             parent,
             start,
             end: start,
             raw: "",
-            modifiers: null as never, // Set in onModifiersEnter.
+            modifiers,
             alternatives: [],
         }
+        modifiers.parent = group
+
+        this._node = group
         parent.elements.push(this._node)
     }
 
@@ -242,7 +269,7 @@ class RegExpParserState {
             start,
             end: start,
             raw: "",
-            add: null as never, // Set in onAddModifiers.
+            add: parent.modifiers.add,
             remove: null,
         }
         parent.modifiers = this._node

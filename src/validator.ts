@@ -1731,7 +1731,7 @@ export class RegExpValidator {
         const start = this.index
         if (this.eat2(LEFT_PARENTHESIS, QUESTION_MARK)) {
             this.onGroupEnter(start)
-            if (this.ecmaVersion >= 2024) {
+            if (this.ecmaVersion >= 2025) {
                 this.consumeModifiers()
             }
 
