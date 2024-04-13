@@ -1,0 +1,291 @@
+{
+  "options": {
+    "strict": false,
+    "ecmaVersion": 2025
+  },
+  "patterns": {
+    "/(?<year>[0-9]{4})-[0-9]{2}|[0-9]{2}-(?<year>[0-9]{4})/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 55,
+        "raw": "/(?<year>[0-9]{4})-[0-9]{2}|[0-9]{2}-(?<year>[0-9]{4})/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 54,
+          "raw": "(?<year>[0-9]{4})-[0-9]{2}|[0-9]{2}-(?<year>[0-9]{4})",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 27,
+              "raw": "(?<year>[0-9]{4})-[0-9]{2}",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 18,
+                  "raw": "(?<year>[0-9]{4})",
+                  "name": "year",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 9,
+                      "end": 17,
+                      "raw": "[0-9]{4}",
+                      "elements": [
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 9,
+                          "end": 17,
+                          "raw": "[0-9]{4}",
+                          "min": 4,
+                          "max": 4,
+                          "greedy": true,
+                          "element": {
+                            "type": "CharacterClass",
+                            "parent": "♻️..",
+                            "start": 9,
+                            "end": 14,
+                            "raw": "[0-9]",
+                            "unicodeSets": false,
+                            "negate": false,
+                            "elements": [
+                              {
+                                "type": "CharacterClassRange",
+                                "parent": "♻️../..",
+                                "start": 10,
+                                "end": 13,
+                                "raw": "0-9",
+                                "min": {
+                                  "type": "Character",
+                                  "parent": "♻️..",
+                                  "start": 10,
+                                  "end": 11,
+                                  "raw": "0",
+                                  "value": 48
+                                },
+                                "max": {
+                                  "type": "Character",
+                                  "parent": "♻️..",
+                                  "start": 12,
+                                  "end": 13,
+                                  "raw": "9",
+                                  "value": 57
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 18,
+                  "end": 19,
+                  "raw": "-",
+                  "value": 45
+                },
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 19,
+                  "end": 27,
+                  "raw": "[0-9]{2}",
+                  "min": 2,
+                  "max": 2,
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterClass",
+                    "parent": "♻️..",
+                    "start": 19,
+                    "end": 24,
+                    "raw": "[0-9]",
+                    "unicodeSets": false,
+                    "negate": false,
+                    "elements": [
+                      {
+                        "type": "CharacterClassRange",
+                        "parent": "♻️../..",
+                        "start": 20,
+                        "end": 23,
+                        "raw": "0-9",
+                        "min": {
+                          "type": "Character",
+                          "parent": "♻️..",
+                          "start": 20,
+                          "end": 21,
+                          "raw": "0",
+                          "value": 48
+                        },
+                        "max": {
+                          "type": "Character",
+                          "parent": "♻️..",
+                          "start": 22,
+                          "end": 23,
+                          "raw": "9",
+                          "value": 57
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 28,
+              "end": 54,
+              "raw": "[0-9]{2}-(?<year>[0-9]{4})",
+              "elements": [
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 28,
+                  "end": 36,
+                  "raw": "[0-9]{2}",
+                  "min": 2,
+                  "max": 2,
+                  "greedy": true,
+                  "element": {
+                    "type": "CharacterClass",
+                    "parent": "♻️..",
+                    "start": 28,
+                    "end": 33,
+                    "raw": "[0-9]",
+                    "unicodeSets": false,
+                    "negate": false,
+                    "elements": [
+                      {
+                        "type": "CharacterClassRange",
+                        "parent": "♻️../..",
+                        "start": 29,
+                        "end": 32,
+                        "raw": "0-9",
+                        "min": {
+                          "type": "Character",
+                          "parent": "♻️..",
+                          "start": 29,
+                          "end": 30,
+                          "raw": "0",
+                          "value": 48
+                        },
+                        "max": {
+                          "type": "Character",
+                          "parent": "♻️..",
+                          "start": 31,
+                          "end": 32,
+                          "raw": "9",
+                          "value": 57
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "Character",
+                  "parent": "♻️../..",
+                  "start": 36,
+                  "end": 37,
+                  "raw": "-",
+                  "value": 45
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 37,
+                  "end": 54,
+                  "raw": "(?<year>[0-9]{4})",
+                  "name": "year",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 45,
+                      "end": 53,
+                      "raw": "[0-9]{4}",
+                      "elements": [
+                        {
+                          "type": "Quantifier",
+                          "parent": "♻️../..",
+                          "start": 45,
+                          "end": 53,
+                          "raw": "[0-9]{4}",
+                          "min": 4,
+                          "max": 4,
+                          "greedy": true,
+                          "element": {
+                            "type": "CharacterClass",
+                            "parent": "♻️..",
+                            "start": 45,
+                            "end": 50,
+                            "raw": "[0-9]",
+                            "unicodeSets": false,
+                            "negate": false,
+                            "elements": [
+                              {
+                                "type": "CharacterClassRange",
+                                "parent": "♻️../..",
+                                "start": 46,
+                                "end": 49,
+                                "raw": "0-9",
+                                "min": {
+                                  "type": "Character",
+                                  "parent": "♻️..",
+                                  "start": 46,
+                                  "end": 47,
+                                  "raw": "0",
+                                  "value": 48
+                                },
+                                "max": {
+                                  "type": "Character",
+                                  "parent": "♻️..",
+                                  "start": 48,
+                                  "end": 49,
+                                  "raw": "9",
+                                  "value": 57
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 55,
+          "end": 55,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
+      }
+    }
+  }
+}

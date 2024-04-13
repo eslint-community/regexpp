@@ -9,27 +9,735 @@
   "options": {},
   "patterns": {
     "/(?:(?:(?<x>a)|(?<x>b))\\k<x>){2}/": {
-      "error": {
-        "message": "Invalid regular expression: /(?:(?:(?<x>a)|(?<x>b))\\k<x>){2}/: Duplicate capture group name",
-        "index": 20
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 33,
+        "raw": "/(?:(?:(?<x>a)|(?<x>b))\\k<x>){2}/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 32,
+          "raw": "(?:(?:(?<x>a)|(?<x>b))\\k<x>){2}",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 32,
+              "raw": "(?:(?:(?<x>a)|(?<x>b))\\k<x>){2}",
+              "elements": [
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 32,
+                  "raw": "(?:(?:(?<x>a)|(?<x>b))\\k<x>){2}",
+                  "min": 2,
+                  "max": 2,
+                  "greedy": true,
+                  "element": {
+                    "type": "Group",
+                    "parent": "♻️..",
+                    "start": 1,
+                    "end": 29,
+                    "raw": "(?:(?:(?<x>a)|(?<x>b))\\k<x>)",
+                    "alternatives": [
+                      {
+                        "type": "Alternative",
+                        "parent": "♻️../..",
+                        "start": 4,
+                        "end": 28,
+                        "raw": "(?:(?<x>a)|(?<x>b))\\k<x>",
+                        "elements": [
+                          {
+                            "type": "Group",
+                            "parent": "♻️../..",
+                            "start": 4,
+                            "end": 23,
+                            "raw": "(?:(?<x>a)|(?<x>b))",
+                            "alternatives": [
+                              {
+                                "type": "Alternative",
+                                "parent": "♻️../..",
+                                "start": 7,
+                                "end": 14,
+                                "raw": "(?<x>a)",
+                                "elements": [
+                                  {
+                                    "type": "CapturingGroup",
+                                    "parent": "♻️../..",
+                                    "start": 7,
+                                    "end": 14,
+                                    "raw": "(?<x>a)",
+                                    "name": "x",
+                                    "alternatives": [
+                                      {
+                                        "type": "Alternative",
+                                        "parent": "♻️../..",
+                                        "start": 12,
+                                        "end": 13,
+                                        "raw": "a",
+                                        "elements": [
+                                          {
+                                            "type": "Character",
+                                            "parent": "♻️../..",
+                                            "start": 12,
+                                            "end": 13,
+                                            "raw": "a",
+                                            "value": 97
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "references": [
+                                      "♻️../../../../../1"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "Alternative",
+                                "parent": "♻️../..",
+                                "start": 15,
+                                "end": 22,
+                                "raw": "(?<x>b)",
+                                "elements": [
+                                  {
+                                    "type": "CapturingGroup",
+                                    "parent": "♻️../..",
+                                    "start": 15,
+                                    "end": 22,
+                                    "raw": "(?<x>b)",
+                                    "name": "x",
+                                    "alternatives": [
+                                      {
+                                        "type": "Alternative",
+                                        "parent": "♻️../..",
+                                        "start": 20,
+                                        "end": 21,
+                                        "raw": "b",
+                                        "elements": [
+                                          {
+                                            "type": "Character",
+                                            "parent": "♻️../..",
+                                            "start": 20,
+                                            "end": 21,
+                                            "raw": "b",
+                                            "value": 98
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "references": [
+                                      "♻️../../../../../1"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Backreference",
+                            "parent": "♻️../..",
+                            "start": 23,
+                            "end": 28,
+                            "raw": "\\k<x>",
+                            "ref": "x",
+                            "resolved": [
+                              "♻️../0/alternatives/0/elements/0",
+                              "♻️../0/alternatives/1/elements/0"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 33,
+          "end": 33,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}/": {
-      "error": {
-        "message": "Invalid regular expression: /(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}/: Duplicate capture group name",
-        "index": 20
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 35,
+        "raw": "/(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 34,
+          "raw": "(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 34,
+              "raw": "(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}",
+              "elements": [
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 34,
+                  "raw": "(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>){2}",
+                  "min": 2,
+                  "max": 2,
+                  "greedy": true,
+                  "element": {
+                    "type": "Group",
+                    "parent": "♻️..",
+                    "start": 1,
+                    "end": 31,
+                    "raw": "(?:(?:(?<x>a)|(?<x>b)|c)\\k<x>)",
+                    "alternatives": [
+                      {
+                        "type": "Alternative",
+                        "parent": "♻️../..",
+                        "start": 4,
+                        "end": 30,
+                        "raw": "(?:(?<x>a)|(?<x>b)|c)\\k<x>",
+                        "elements": [
+                          {
+                            "type": "Group",
+                            "parent": "♻️../..",
+                            "start": 4,
+                            "end": 25,
+                            "raw": "(?:(?<x>a)|(?<x>b)|c)",
+                            "alternatives": [
+                              {
+                                "type": "Alternative",
+                                "parent": "♻️../..",
+                                "start": 7,
+                                "end": 14,
+                                "raw": "(?<x>a)",
+                                "elements": [
+                                  {
+                                    "type": "CapturingGroup",
+                                    "parent": "♻️../..",
+                                    "start": 7,
+                                    "end": 14,
+                                    "raw": "(?<x>a)",
+                                    "name": "x",
+                                    "alternatives": [
+                                      {
+                                        "type": "Alternative",
+                                        "parent": "♻️../..",
+                                        "start": 12,
+                                        "end": 13,
+                                        "raw": "a",
+                                        "elements": [
+                                          {
+                                            "type": "Character",
+                                            "parent": "♻️../..",
+                                            "start": 12,
+                                            "end": 13,
+                                            "raw": "a",
+                                            "value": 97
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "references": [
+                                      "♻️../../../../../1"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "Alternative",
+                                "parent": "♻️../..",
+                                "start": 15,
+                                "end": 22,
+                                "raw": "(?<x>b)",
+                                "elements": [
+                                  {
+                                    "type": "CapturingGroup",
+                                    "parent": "♻️../..",
+                                    "start": 15,
+                                    "end": 22,
+                                    "raw": "(?<x>b)",
+                                    "name": "x",
+                                    "alternatives": [
+                                      {
+                                        "type": "Alternative",
+                                        "parent": "♻️../..",
+                                        "start": 20,
+                                        "end": 21,
+                                        "raw": "b",
+                                        "elements": [
+                                          {
+                                            "type": "Character",
+                                            "parent": "♻️../..",
+                                            "start": 20,
+                                            "end": 21,
+                                            "raw": "b",
+                                            "value": 98
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "references": [
+                                      "♻️../../../../../1"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "Alternative",
+                                "parent": "♻️../..",
+                                "start": 23,
+                                "end": 24,
+                                "raw": "c",
+                                "elements": [
+                                  {
+                                    "type": "Character",
+                                    "parent": "♻️../..",
+                                    "start": 23,
+                                    "end": 24,
+                                    "raw": "c",
+                                    "value": 99
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Backreference",
+                            "parent": "♻️../..",
+                            "start": 25,
+                            "end": 30,
+                            "raw": "\\k<x>",
+                            "ref": "x",
+                            "resolved": [
+                              "♻️../0/alternatives/0/elements/0",
+                              "♻️../0/alternatives/1/elements/0"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 35,
+          "end": 35,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/(?:(?<x>a)|(?<x>b))\\k<x>/": {
-      "error": {
-        "message": "Invalid regular expression: /(?:(?<x>a)|(?<x>b))\\k<x>/: Duplicate capture group name",
-        "index": 17
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 26,
+        "raw": "/(?:(?<x>a)|(?<x>b))\\k<x>/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 25,
+          "raw": "(?:(?<x>a)|(?<x>b))\\k<x>",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 25,
+              "raw": "(?:(?<x>a)|(?<x>b))\\k<x>",
+              "elements": [
+                {
+                  "type": "Group",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 20,
+                  "raw": "(?:(?<x>a)|(?<x>b))",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 4,
+                      "end": 11,
+                      "raw": "(?<x>a)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 4,
+                          "end": 11,
+                          "raw": "(?<x>a)",
+                          "name": "x",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 9,
+                              "end": 10,
+                              "raw": "a",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 9,
+                                  "end": 10,
+                                  "raw": "a",
+                                  "value": 97
+                                }
+                              ]
+                            }
+                          ],
+                          "references": [
+                            "♻️../../../../../1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 12,
+                      "end": 19,
+                      "raw": "(?<x>b)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 19,
+                          "raw": "(?<x>b)",
+                          "name": "x",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 17,
+                              "end": 18,
+                              "raw": "b",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 17,
+                                  "end": 18,
+                                  "raw": "b",
+                                  "value": 98
+                                }
+                              ]
+                            }
+                          ],
+                          "references": [
+                            "♻️../../../../../1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 20,
+                  "end": 25,
+                  "raw": "\\k<x>",
+                  "ref": "x",
+                  "resolved": [
+                    "♻️../0/alternatives/0/elements/0",
+                    "♻️../0/alternatives/1/elements/0"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 26,
+          "end": 26,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))/": {
-      "error": {
-        "message": "Invalid regular expression: /(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))/: Duplicate capture group name",
-        "index": 24
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 47,
+        "raw": "/(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 46,
+          "raw": "(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 46,
+              "raw": "(?:(?<x>a)|(?<y>a)(?<x>b))(?:(?<z>c)|(?<z>d))",
+              "elements": [
+                {
+                  "type": "Group",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 27,
+                  "raw": "(?:(?<x>a)|(?<y>a)(?<x>b))",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 4,
+                      "end": 11,
+                      "raw": "(?<x>a)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 4,
+                          "end": 11,
+                          "raw": "(?<x>a)",
+                          "name": "x",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 9,
+                              "end": 10,
+                              "raw": "a",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 9,
+                                  "end": 10,
+                                  "raw": "a",
+                                  "value": 97
+                                }
+                              ]
+                            }
+                          ],
+                          "references": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 12,
+                      "end": 26,
+                      "raw": "(?<y>a)(?<x>b)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 12,
+                          "end": 19,
+                          "raw": "(?<y>a)",
+                          "name": "y",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 17,
+                              "end": 18,
+                              "raw": "a",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 17,
+                                  "end": 18,
+                                  "raw": "a",
+                                  "value": 97
+                                }
+                              ]
+                            }
+                          ],
+                          "references": []
+                        },
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 19,
+                          "end": 26,
+                          "raw": "(?<x>b)",
+                          "name": "x",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 24,
+                              "end": 25,
+                              "raw": "b",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 24,
+                                  "end": 25,
+                                  "raw": "b",
+                                  "value": 98
+                                }
+                              ]
+                            }
+                          ],
+                          "references": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Group",
+                  "parent": "♻️../..",
+                  "start": 27,
+                  "end": 46,
+                  "raw": "(?:(?<z>c)|(?<z>d))",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 30,
+                      "end": 37,
+                      "raw": "(?<z>c)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 30,
+                          "end": 37,
+                          "raw": "(?<z>c)",
+                          "name": "z",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 35,
+                              "end": 36,
+                              "raw": "c",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 35,
+                                  "end": 36,
+                                  "raw": "c",
+                                  "value": 99
+                                }
+                              ]
+                            }
+                          ],
+                          "references": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 38,
+                      "end": 45,
+                      "raw": "(?<z>d)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 38,
+                          "end": 45,
+                          "raw": "(?<z>d)",
+                          "name": "z",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 43,
+                              "end": 44,
+                              "raw": "d",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 43,
+                                  "end": 44,
+                                  "raw": "d",
+                                  "value": 100
+                                }
+                              ]
+                            }
+                          ],
+                          "references": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 47,
+          "end": 47,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/(?<a>x)|(?:zy\\k<a>)/": {
@@ -129,7 +837,9 @@
                           "end": 19,
                           "raw": "\\k<a>",
                           "ref": "a",
-                          "resolved": "♻️../../../../../../../0/elements/0"
+                          "resolved": [
+                            "♻️../../../../../../../0/elements/0"
+                          ]
                         }
                       ]
                     }
@@ -157,33 +867,594 @@
       }
     },
     "/(?<x>a)|(?<x>b)/": {
-      "error": {
-        "message": "Invalid regular expression: /(?<x>a)|(?<x>b)/: Duplicate capture group name",
-        "index": 14
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/(?<x>a)|(?<x>b)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "(?<x>a)|(?<x>b)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<x>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<x>a)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 9,
+              "end": 16,
+              "raw": "(?<x>b)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 16,
+                  "raw": "(?<x>b)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 14,
+                      "end": 15,
+                      "raw": "b",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 14,
+                          "end": 15,
+                          "raw": "b",
+                          "value": 98
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/(?<x>a)|(?<x>b)/g": {
-      "error": {
-        "message": "Invalid regular expression: /(?<x>a)|(?<x>b)/g: Duplicate capture group name",
-        "index": 14
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 18,
+        "raw": "/(?<x>a)|(?<x>b)/g",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "(?<x>a)|(?<x>b)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<x>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<x>a)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 9,
+              "end": 16,
+              "raw": "(?<x>b)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 16,
+                  "raw": "(?<x>b)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 14,
+                      "end": 15,
+                      "raw": "b",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 14,
+                          "end": 15,
+                          "raw": "b",
+                          "value": 98
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 18,
+          "raw": "g",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/(?<x>b)|(?<x>a)/": {
-      "error": {
-        "message": "Invalid regular expression: /(?<x>b)|(?<x>a)/: Duplicate capture group name",
-        "index": 14
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 17,
+        "raw": "/(?<x>b)|(?<x>a)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "(?<x>b)|(?<x>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<x>b)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<x>b)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "b",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "b",
+                          "value": 98
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 9,
+              "end": 16,
+              "raw": "(?<x>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 16,
+                  "raw": "(?<x>a)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 14,
+                      "end": 15,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 14,
+                          "end": 15,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 17,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/(?<x>b)|(?<x>a)/g": {
-      "error": {
-        "message": "Invalid regular expression: /(?<x>b)|(?<x>a)/g: Duplicate capture group name",
-        "index": 14
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 18,
+        "raw": "/(?<x>b)|(?<x>a)/g",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 16,
+          "raw": "(?<x>b)|(?<x>a)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 8,
+              "raw": "(?<x>b)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<x>b)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "b",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "b",
+                          "value": 98
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 9,
+              "end": 16,
+              "raw": "(?<x>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 9,
+                  "end": 16,
+                  "raw": "(?<x>a)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 14,
+                      "end": 15,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 14,
+                          "end": 15,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 17,
+          "end": 18,
+          "raw": "g",
+          "global": true,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/(?<y>a)(?<x>a)|(?<x>b)(?<y>b)/": {
-      "error": {
-        "message": "Invalid regular expression: /(?<y>a)(?<x>a)|(?<x>b)(?<y>b)/: Duplicate capture group name",
-        "index": 21
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 31,
+        "raw": "/(?<y>a)(?<x>a)|(?<x>b)(?<y>b)/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 30,
+          "raw": "(?<y>a)(?<x>a)|(?<x>b)(?<y>b)",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 15,
+              "raw": "(?<y>a)(?<x>a)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 8,
+                  "raw": "(?<y>a)",
+                  "name": "y",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 6,
+                      "end": 7,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 6,
+                          "end": 7,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 8,
+                  "end": 15,
+                  "raw": "(?<x>a)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 13,
+                      "end": 14,
+                      "raw": "a",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 14,
+                          "raw": "a",
+                          "value": 97
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            },
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 16,
+              "end": 30,
+              "raw": "(?<x>b)(?<y>b)",
+              "elements": [
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 16,
+                  "end": 23,
+                  "raw": "(?<x>b)",
+                  "name": "x",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 21,
+                      "end": 22,
+                      "raw": "b",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 21,
+                          "end": 22,
+                          "raw": "b",
+                          "value": 98
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                },
+                {
+                  "type": "CapturingGroup",
+                  "parent": "♻️../..",
+                  "start": 23,
+                  "end": 30,
+                  "raw": "(?<y>b)",
+                  "name": "y",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 28,
+                      "end": 29,
+                      "raw": "b",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 28,
+                          "end": 29,
+                          "raw": "b",
+                          "value": 98
+                        }
+                      ]
+                    }
+                  ],
+                  "references": []
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 31,
+          "end": 31,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/[ab]/": {
@@ -256,15 +1527,361 @@
       }
     },
     "/^(?:(?<a>x)|(?<a>y)|z)\\k<a>$/": {
-      "error": {
-        "message": "Invalid regular expression: /^(?:(?<a>x)|(?<a>y)|z)\\k<a>$/: Duplicate capture group name",
-        "index": 18
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 30,
+        "raw": "/^(?:(?<a>x)|(?<a>y)|z)\\k<a>$/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 29,
+          "raw": "^(?:(?<a>x)|(?<a>y)|z)\\k<a>$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 29,
+              "raw": "^(?:(?<a>x)|(?<a>y)|z)\\k<a>$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "Group",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 23,
+                  "raw": "(?:(?<a>x)|(?<a>y)|z)",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 5,
+                      "end": 12,
+                      "raw": "(?<a>x)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 5,
+                          "end": 12,
+                          "raw": "(?<a>x)",
+                          "name": "a",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 10,
+                              "end": 11,
+                              "raw": "x",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 10,
+                                  "end": 11,
+                                  "raw": "x",
+                                  "value": 120
+                                }
+                              ]
+                            }
+                          ],
+                          "references": [
+                            "♻️../../../../../2"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 13,
+                      "end": 20,
+                      "raw": "(?<a>y)",
+                      "elements": [
+                        {
+                          "type": "CapturingGroup",
+                          "parent": "♻️../..",
+                          "start": 13,
+                          "end": 20,
+                          "raw": "(?<a>y)",
+                          "name": "a",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 18,
+                              "end": 19,
+                              "raw": "y",
+                              "elements": [
+                                {
+                                  "type": "Character",
+                                  "parent": "♻️../..",
+                                  "start": 18,
+                                  "end": 19,
+                                  "raw": "y",
+                                  "value": 121
+                                }
+                              ]
+                            }
+                          ],
+                          "references": [
+                            "♻️../../../../../2"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 21,
+                      "end": 22,
+                      "raw": "z",
+                      "elements": [
+                        {
+                          "type": "Character",
+                          "parent": "♻️../..",
+                          "start": 21,
+                          "end": 22,
+                          "raw": "z",
+                          "value": 122
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 23,
+                  "end": 28,
+                  "raw": "\\k<a>",
+                  "ref": "a",
+                  "resolved": [
+                    "♻️../1/alternatives/0/elements/0",
+                    "♻️../1/alternatives/1/elements/0"
+                  ]
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 28,
+                  "end": 29,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 30,
+          "end": 30,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     },
     "/^(?:(?<a>x)|(?<a>y)|z){2}\\k<a>$/": {
-      "error": {
-        "message": "Invalid regular expression: /^(?:(?<a>x)|(?<a>y)|z){2}\\k<a>$/: Duplicate capture group name",
-        "index": 18
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 33,
+        "raw": "/^(?:(?<a>x)|(?<a>y)|z){2}\\k<a>$/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 32,
+          "raw": "^(?:(?<a>x)|(?<a>y)|z){2}\\k<a>$",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 32,
+              "raw": "^(?:(?<a>x)|(?<a>y)|z){2}\\k<a>$",
+              "elements": [
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 2,
+                  "raw": "^",
+                  "kind": "start"
+                },
+                {
+                  "type": "Quantifier",
+                  "parent": "♻️../..",
+                  "start": 2,
+                  "end": 26,
+                  "raw": "(?:(?<a>x)|(?<a>y)|z){2}",
+                  "min": 2,
+                  "max": 2,
+                  "greedy": true,
+                  "element": {
+                    "type": "Group",
+                    "parent": "♻️..",
+                    "start": 2,
+                    "end": 23,
+                    "raw": "(?:(?<a>x)|(?<a>y)|z)",
+                    "alternatives": [
+                      {
+                        "type": "Alternative",
+                        "parent": "♻️../..",
+                        "start": 5,
+                        "end": 12,
+                        "raw": "(?<a>x)",
+                        "elements": [
+                          {
+                            "type": "CapturingGroup",
+                            "parent": "♻️../..",
+                            "start": 5,
+                            "end": 12,
+                            "raw": "(?<a>x)",
+                            "name": "a",
+                            "alternatives": [
+                              {
+                                "type": "Alternative",
+                                "parent": "♻️../..",
+                                "start": 10,
+                                "end": 11,
+                                "raw": "x",
+                                "elements": [
+                                  {
+                                    "type": "Character",
+                                    "parent": "♻️../..",
+                                    "start": 10,
+                                    "end": 11,
+                                    "raw": "x",
+                                    "value": 120
+                                  }
+                                ]
+                              }
+                            ],
+                            "references": [
+                              "♻️../../../../../../2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Alternative",
+                        "parent": "♻️../..",
+                        "start": 13,
+                        "end": 20,
+                        "raw": "(?<a>y)",
+                        "elements": [
+                          {
+                            "type": "CapturingGroup",
+                            "parent": "♻️../..",
+                            "start": 13,
+                            "end": 20,
+                            "raw": "(?<a>y)",
+                            "name": "a",
+                            "alternatives": [
+                              {
+                                "type": "Alternative",
+                                "parent": "♻️../..",
+                                "start": 18,
+                                "end": 19,
+                                "raw": "y",
+                                "elements": [
+                                  {
+                                    "type": "Character",
+                                    "parent": "♻️../..",
+                                    "start": 18,
+                                    "end": 19,
+                                    "raw": "y",
+                                    "value": 121
+                                  }
+                                ]
+                              }
+                            ],
+                            "references": [
+                              "♻️../../../../../../2"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "Alternative",
+                        "parent": "♻️../..",
+                        "start": 21,
+                        "end": 22,
+                        "raw": "z",
+                        "elements": [
+                          {
+                            "type": "Character",
+                            "parent": "♻️../..",
+                            "start": 21,
+                            "end": 22,
+                            "raw": "z",
+                            "value": 122
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 26,
+                  "end": 31,
+                  "raw": "\\k<a>",
+                  "ref": "a",
+                  "resolved": [
+                    "♻️../1/element/alternatives/0/elements/0",
+                    "♻️../1/element/alternatives/1/elements/0"
+                  ]
+                },
+                {
+                  "type": "Assertion",
+                  "parent": "♻️../..",
+                  "start": 31,
+                  "end": 32,
+                  "raw": "$",
+                  "kind": "end"
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 33,
+          "end": 33,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
       }
     }
   }

@@ -1,5 +1,10 @@
 import type { EcmaVersion } from "./ecma-versions"
 import { latestEcmaVersion } from "./ecma-versions"
+import type { GroupSpecifiers } from "./group-specifiers"
+import {
+    GroupSpecifiersAsES2018,
+    GroupSpecifiersAsES2025,
+} from "./group-specifiers"
 import { Reader } from "./reader"
 import { newRegExpSyntaxError } from "./regexp-syntax-error"
 import {
@@ -231,7 +236,7 @@ export namespace RegExpValidator {
         strict?: boolean
 
         /**
-         * ECMAScript version. Default is `2024`.
+         * ECMAScript version. Default is `2025`.
          * - `2015` added `u` and `y` flags.
          * - `2018` added `s` flag, Named Capturing Group, Lookbehind Assertion,
          *   and Unicode Property Escape.
@@ -239,6 +244,7 @@ export namespace RegExpValidator {
          * - `2022` added `d` flag.
          * - `2023` added more valid Unicode Property Escapes.
          * - `2024` added `v` flag.
+         * - `2025` added duplicate named capturing groups.
          */
         ecmaVersion?: EcmaVersion
 
@@ -631,7 +637,7 @@ export class RegExpValidator {
 
     private _numCapturingParens = 0
 
-    private _groupNames = new Set<string>()
+    private _groupSpecifiers: GroupSpecifiers
 
     private _backreferenceNames = new Set<string>()
 
@@ -643,6 +649,10 @@ export class RegExpValidator {
      */
     public constructor(options?: RegExpValidator.Options) {
         this._options = options ?? {}
+        this._groupSpecifiers =
+            this.ecmaVersion >= 2025
+                ? new GroupSpecifiersAsES2025()
+                : new GroupSpecifiersAsES2018()
     }
 
     /**
@@ -763,7 +773,7 @@ export class RegExpValidator {
         if (
             !this._nFlag &&
             this.ecmaVersion >= 2018 &&
-            this._groupNames.size > 0
+            !this._groupSpecifiers.isEmpty()
         ) {
             this._nFlag = true
             this.rewind(start)
@@ -1301,7 +1311,7 @@ export class RegExpValidator {
     private consumePattern(): void {
         const start = this.index
         this._numCapturingParens = this.countCapturingParens()
-        this._groupNames.clear()
+        this._groupSpecifiers.clear()
         this._backreferenceNames.clear()
 
         this.onPatternEnter(start)
@@ -1322,7 +1332,7 @@ export class RegExpValidator {
             this.raise(`Unexpected character '${c}'`)
         }
         for (const name of this._backreferenceNames) {
-            if (!this._groupNames.has(name)) {
+            if (!this._groupSpecifiers.hasInPattern(name)) {
                 this.raise("Invalid named capture referenced")
             }
         }
@@ -1380,7 +1390,9 @@ export class RegExpValidator {
 
         this.onDisjunctionEnter(start)
         do {
+            this._groupSpecifiers.enterAlternative()
             this.consumeAlternative(i++)
+            this._groupSpecifiers.leaveAlternative()
         } while (this.eat(VERTICAL_LINE))
 
         if (this.consumeQuantifier(true)) {
@@ -1846,8 +1858,8 @@ export class RegExpValidator {
     private consumeGroupSpecifier(): boolean {
         if (this.eat(QUESTION_MARK)) {
             if (this.eatGroupName()) {
-                if (!this._groupNames.has(this._lastStrValue)) {
-                    this._groupNames.add(this._lastStrValue)
+                if (!this._groupSpecifiers.hasInScope(this._lastStrValue)) {
+                    this._groupSpecifiers.addToScope(this._lastStrValue)
                     return true
                 }
                 this.raise("Duplicate capture group name")

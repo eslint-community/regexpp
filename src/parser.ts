@@ -36,7 +36,6 @@ type AppendableNode =
 
 const DUMMY_PATTERN: Pattern = {} as Pattern
 const DUMMY_FLAGS: Flags = {} as Flags
-const DUMMY_CAPTURING_GROUP: CapturingGroup = {} as CapturingGroup
 
 function isClassSetOperand(
     node: UnicodeSetsCharacterClassElement,
@@ -148,12 +147,12 @@ class RegExpParserState {
 
         for (const reference of this._backreferences) {
             const ref = reference.ref
-            const group =
-                typeof ref === "number"
-                    ? this._capturingGroups[ref - 1]
-                    : this._capturingGroups.find((g) => g.name === ref)!
-            reference.resolved = group
-            group.references.push(reference)
+            for (const group of typeof ref === "number"
+                ? [this._capturingGroups[ref - 1]]
+                : this._capturingGroups.filter((g) => g.name === ref)) {
+                reference.resolved.push(group)
+                group.references.push(reference)
+            }
         }
     }
 
@@ -480,7 +479,7 @@ class RegExpParserState {
             end,
             raw: this.source.slice(start, end),
             ref,
-            resolved: DUMMY_CAPTURING_GROUP,
+            resolved: [],
         }
         parent.elements.push(node)
         this._backreferences.push(node)
@@ -747,7 +746,7 @@ export namespace RegExpParser {
         strict?: boolean
 
         /**
-         * ECMAScript version. Default is `2024`.
+         * ECMAScript version. Default is `2025`.
          * - `2015` added `u` and `y` flags.
          * - `2018` added `s` flag, Named Capturing Group, Lookbehind Assertion,
          *   and Unicode Property Escape.
@@ -755,6 +754,7 @@ export namespace RegExpParser {
          * - `2022` added `d` flag.
          * - `2023` added more valid Unicode Property Escapes.
          * - `2024` added `v` flag.
+         * - `2025` added duplicate named capturing groups.
          */
         ecmaVersion?: EcmaVersion
     }

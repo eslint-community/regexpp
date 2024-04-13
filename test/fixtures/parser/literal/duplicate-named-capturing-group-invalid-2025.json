@@ -1,0 +1,14 @@
+{
+  "options": {
+    "strict": false,
+    "ecmaVersion": 2025
+  },
+  "patterns": {
+    "/(?<year>[0-9]{4})-(?<year>[0-9]{2})/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<year>[0-9]{4})-(?<year>[0-9]{2})/: Duplicate capture group name",
+        "index": 27
+      }
+    }
+  }
+}

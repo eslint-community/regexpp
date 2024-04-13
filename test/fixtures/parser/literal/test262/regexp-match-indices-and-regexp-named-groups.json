@@ -617,7 +617,9 @@
                   "end": 27,
                   "raw": "\\k<c>",
                   "ref": "c",
-                  "resolved": "♻️../2"
+                  "resolved": [
+                    "♻️../2"
+                  ]
                 },
                 {
                   "type": "Backreference",
@@ -626,7 +628,9 @@
                   "end": 32,
                   "raw": "\\k<b>",
                   "ref": "b",
-                  "resolved": "♻️../1"
+                  "resolved": [
+                    "♻️../1"
+                  ]
                 },
                 {
                   "type": "Backreference",
@@ -635,7 +639,9 @@
                   "end": 37,
                   "raw": "\\k<a>",
                   "ref": "a",
-                  "resolved": "♻️../0"
+                  "resolved": [
+                    "♻️../0"
+                  ]
                 }
               ]
             }
@@ -776,7 +782,9 @@
                   "end": 27,
                   "raw": "\\k<c>",
                   "ref": "c",
-                  "resolved": "♻️../2"
+                  "resolved": [
+                    "♻️../2"
+                  ]
                 },
                 {
                   "type": "Backreference",
@@ -785,7 +793,9 @@
                   "end": 32,
                   "raw": "\\k<b>",
                   "ref": "b",
-                  "resolved": "♻️../1"
+                  "resolved": [
+                    "♻️../1"
+                  ]
                 },
                 {
                   "type": "Backreference",
@@ -794,7 +804,9 @@
                   "end": 37,
                   "raw": "\\k<a>",
                   "ref": "a",
-                  "resolved": "♻️../0"
+                  "resolved": [
+                    "♻️../0"
+                  ]
                 }
               ]
             }

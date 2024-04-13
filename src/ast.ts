@@ -432,7 +432,7 @@ export interface Backreference extends NodeBase {
     type: "Backreference"
     parent: Alternative | Quantifier
     ref: number | string
-    resolved: CapturingGroup
+    resolved: CapturingGroup[]
 }
 
 /**
