@@ -1,11 +1,16 @@
 name: cron
 on:
+  workflow_dispatch: null
   schedule:
     - cron: 0 0 * * 0
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
-  check-resource-update:
-    name: check-resource-update
+  update-unicode-resource:
+    name: update-unicode-resource
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,12 +23,15 @@ jobs:
         run: npm install
       - name: Update
         run: npm run update:unicode
-      - name: Check changes
-        run: |
-            git add --all && \
-            git diff-index --cached HEAD --stat --exit-code
-  check-extract-test262:
-    name: check-extract-test262
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "fix: updates unicode resource with latest"
+          branch: update-unicode-resource
+          branch-suffix: timestamp
+          title: "fix: updates unicode resource with latest"
+
+  update-test262:
+    name: update-test262
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,7 +44,9 @@ jobs:
         run: npm install
       - name: Update
         run: npm run update:test262:extract
-      - name: Check changes
-        run: |
-            git add --all && \
-            git diff-index --cached HEAD --stat --exit-code
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "test: updates test cases extracted from test262"
+          branch: update-test262
+          branch-suffix: timestamp
+          title: "test: updates test cases extracted from test262"
