@@ -1388,11 +1388,10 @@ export class RegExpValidator {
         const start = this.index
         let i = 0
 
+        this._groupSpecifiers.enterDisjunction()
         this.onDisjunctionEnter(start)
         do {
-            this._groupSpecifiers.enterAlternative()
             this.consumeAlternative(i++)
-            this._groupSpecifiers.leaveAlternative()
         } while (this.eat(VERTICAL_LINE))
 
         if (this.consumeQuantifier(true)) {
@@ -1402,6 +1401,7 @@ export class RegExpValidator {
             this.raise("Lone quantifier brackets")
         }
         this.onDisjunctionLeave(start, this.index)
+        this._groupSpecifiers.leaveDisjunction()
     }
 
     /**
@@ -1415,11 +1415,13 @@ export class RegExpValidator {
     private consumeAlternative(i: number): void {
         const start = this.index
 
+        this._groupSpecifiers.enterAlternative()
         this.onAlternativeEnter(start, i)
         while (this.currentCodePoint !== -1 && this.consumeTerm()) {
             // do nothing.
         }
         this.onAlternativeLeave(start, this.index, i)
+        this._groupSpecifiers.leaveAlternative()
     }
 
     /**

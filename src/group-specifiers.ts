@@ -8,6 +8,11 @@ export interface GroupSpecifiers {
     isEmpty: () => boolean
     clear: () => void
     /**
+     * Called when visiting the Disjunction.
+     * For ES2025, manage nesting with new Disjunction scopes.
+     */
+    enterDisjunction: () => void
+    /**
      * Called when visiting the Alternative.
      * For ES2025, manage nesting with new Alternative scopes.
      */
@@ -16,6 +21,10 @@ export interface GroupSpecifiers {
      * Called when leaving the Alternative.
      */
     leaveAlternative: () => void
+    /**
+     * Called when leaving the Disjunction.
+     */
+    leaveDisjunction: () => unknown
     /**
      * Checks whether the given group name is within the pattern.
      */
@@ -54,6 +63,11 @@ export class GroupSpecifiersAsES2018 implements GroupSpecifiers {
     }
 
     // eslint-disable-next-line class-methods-use-this
+    public enterDisjunction(): void {
+        // Prior to ES2025, it does not manage disjunction scopes.
+    }
+
+    // eslint-disable-next-line class-methods-use-this
     public enterAlternative(): void {
         // Prior to ES2025, it does not manage alternative scopes.
     }
@@ -62,17 +76,26 @@ export class GroupSpecifiersAsES2018 implements GroupSpecifiers {
     public leaveAlternative(): void {
         // Prior to ES2025, it does not manage alternative scopes.
     }
+
+    // eslint-disable-next-line class-methods-use-this
+    public leaveDisjunction(): void {
+        // Prior to ES2025, it does not manage disjunction scopes.
+    }
 }
 
 export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
+    private groupNamesInDisjunction = new Set<string>()
+    private groupNamesInDisjunctionStack: Set<string>[] = []
     private groupNamesInAlternative = new Set<string>()
-    private upperGroupNamesStack: Set<string>[] = []
+    private groupNamesInAlternativeStack: Set<string>[] = []
 
     private groupNamesInPattern = new Set<string>()
 
     public clear(): void {
+        this.groupNamesInDisjunction.clear()
+        this.groupNamesInDisjunctionStack.length = 0
         this.groupNamesInAlternative.clear()
-        this.upperGroupNamesStack.length = 0
+        this.groupNamesInAlternativeStack.length = 0
         this.groupNamesInPattern.clear()
     }
 
@@ -80,13 +103,29 @@ export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
         return !this.groupNamesInPattern.size
     }
 
+    public enterDisjunction(): void {
+        this.groupNamesInDisjunctionStack.push(this.groupNamesInDisjunction)
+        this.groupNamesInDisjunction = new Set()
+    }
+
     public enterAlternative(): void {
-        this.upperGroupNamesStack.push(this.groupNamesInAlternative)
+        this.groupNamesInAlternativeStack.push(this.groupNamesInAlternative)
         this.groupNamesInAlternative = new Set(this.groupNamesInAlternative)
     }
 
     public leaveAlternative(): void {
-        this.groupNamesInAlternative = this.upperGroupNamesStack.pop()!
+        for (const groupName of this.groupNamesInAlternative) {
+            this.groupNamesInDisjunction.add(groupName)
+        }
+        this.groupNamesInAlternative = this.groupNamesInAlternativeStack.pop()!
+    }
+
+    public leaveDisjunction(): void {
+        for (const groupName of this.groupNamesInDisjunction) {
+            this.groupNamesInAlternative.add(groupName)
+            this.groupNamesInPattern.add(groupName)
+        }
+        this.groupNamesInDisjunction = this.groupNamesInDisjunctionStack.pop()!
     }
 
     public hasInPattern(name: string): boolean {
@@ -99,6 +138,5 @@ export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
 
     public addToScope(name: string): void {
         this.groupNamesInAlternative.add(name)
-        this.groupNamesInPattern.add(name)
     }
 }
