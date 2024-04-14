@@ -114,16 +114,12 @@ export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
     }
 
     public leaveAlternative(): void {
-        for (const groupName of this.groupNamesInAlternative) {
-            this.groupNamesInDisjunction.add(groupName)
-        }
         this.groupNamesInAlternative = this.groupNamesInAlternativeStack.pop()!
     }
 
     public leaveDisjunction(): void {
         for (const groupName of this.groupNamesInDisjunction) {
             this.groupNamesInAlternative.add(groupName)
-            this.groupNamesInPattern.add(groupName)
         }
         this.groupNamesInDisjunction = this.groupNamesInDisjunctionStack.pop()!
     }
@@ -138,5 +134,7 @@ export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
 
     public addToScope(name: string): void {
         this.groupNamesInAlternative.add(name)
+        this.groupNamesInDisjunction.add(name)
+        this.groupNamesInPattern.add(name)
     }
 }
