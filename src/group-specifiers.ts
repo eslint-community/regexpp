@@ -118,10 +118,12 @@ export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
     }
 
     public leaveDisjunction(): void {
-        for (const groupName of this.groupNamesInDisjunction) {
+        const child = this.groupNamesInDisjunction
+        this.groupNamesInDisjunction = this.groupNamesInDisjunctionStack.pop()!
+        for (const groupName of child) {
+            this.groupNamesInDisjunction.add(groupName)
             this.groupNamesInAlternative.add(groupName)
         }
-        this.groupNamesInDisjunction = this.groupNamesInDisjunctionStack.pop()!
     }
 
     public hasInPattern(name: string): boolean {
