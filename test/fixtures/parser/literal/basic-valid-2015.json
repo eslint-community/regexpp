@@ -3800,9 +3800,8 @@
                   "end": 6,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -3853,9 +3852,8 @@
                   "end": 3,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../1"
                 },
                 {
                   "type": "CapturingGroup",
@@ -4448,9 +4446,8 @@
                   "end": 34,
                   "raw": "\\10",
                   "ref": 10,
-                  "resolved": [
-                    "♻️../9"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../9"
                 }
               ]
             }
@@ -5141,9 +5138,8 @@
                   "end": 37,
                   "raw": "\\11",
                   "ref": 11,
-                  "resolved": [
-                    "♻️../10"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../10"
                 }
               ]
             }

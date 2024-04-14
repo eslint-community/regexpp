@@ -36,6 +36,7 @@ type AppendableNode =
 
 const DUMMY_PATTERN: Pattern = {} as Pattern
 const DUMMY_FLAGS: Flags = {} as Flags
+const DUMMY_CAPTURING_GROUP: CapturingGroup = {} as CapturingGroup
 
 function isClassSetOperand(
     node: UnicodeSetsCharacterClassElement,
@@ -147,10 +148,19 @@ class RegExpParserState {
 
         for (const reference of this._backreferences) {
             const ref = reference.ref
-            for (const group of typeof ref === "number"
-                ? [this._capturingGroups[ref - 1]]
-                : this._capturingGroups.filter((g) => g.name === ref)) {
-                reference.resolved.push(group)
+            const groups =
+                typeof ref === "number"
+                    ? [this._capturingGroups[ref - 1]]
+                    : this._capturingGroups.filter((g) => g.name === ref)
+            if (groups.length === 1) {
+                const group = groups[0]
+                reference.ambiguous = false
+                reference.resolved = group
+            } else {
+                reference.ambiguous = true
+                reference.resolved = groups
+            }
+            for (const group of groups) {
                 group.references.push(reference)
             }
         }
@@ -479,7 +489,8 @@ class RegExpParserState {
             end,
             raw: this.source.slice(start, end),
             ref,
-            resolved: [],
+            ambiguous: false,
+            resolved: DUMMY_CAPTURING_GROUP,
         }
         parent.elements.push(node)
         this._backreferences.push(node)

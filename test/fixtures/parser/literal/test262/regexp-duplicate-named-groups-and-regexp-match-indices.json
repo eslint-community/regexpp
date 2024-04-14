@@ -160,6 +160,7 @@
                             "end": 30,
                             "raw": "\\k<x>",
                             "ref": "x",
+                            "ambiguous": true,
                             "resolved": [
                               "♻️../0/alternatives/0/elements/0",
                               "♻️../0/alternatives/1/elements/0"

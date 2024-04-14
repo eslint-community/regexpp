@@ -375,6 +375,7 @@
                                   "end": 19,
                                   "raw": "\\k<x>",
                                   "ref": "x",
+                                  "ambiguous": true,
                                   "resolved": [
                                     "♻️../0",
                                     "♻️../../../1/elements/0"
@@ -428,6 +429,7 @@
                                   "end": 32,
                                   "raw": "\\k<x>",
                                   "ref": "x",
+                                  "ambiguous": true,
                                   "resolved": [
                                     "♻️../../../0/elements/0",
                                     "♻️../0"
@@ -474,6 +476,7 @@
                   "end": 44,
                   "raw": "\\k<x>",
                   "ref": "x",
+                  "ambiguous": true,
                   "resolved": [
                     "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0",
                     "♻️../0/alternatives/0/elements/0/alternatives/1/elements/0"
@@ -579,6 +582,7 @@
                                           "end": 18,
                                           "raw": "\\k<x>",
                                           "ref": "x",
+                                          "ambiguous": true,
                                           "resolved": [
                                             "♻️../../../..",
                                             "♻️../../../../../../../1/elements/0"
@@ -632,6 +636,7 @@
                                           "end": 31,
                                           "raw": "\\k<x>",
                                           "ref": "x",
+                                          "ambiguous": true,
                                           "resolved": [
                                             "♻️../../../../../../../0/elements/0",
                                             "♻️../../../.."
@@ -687,6 +692,7 @@
                   "end": 44,
                   "raw": "\\k<x>",
                   "ref": "x",
+                  "ambiguous": true,
                   "resolved": [
                     "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0",
                     "♻️../0/alternatives/0/elements/0/alternatives/1/elements/0"

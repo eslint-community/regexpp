@@ -146,6 +146,7 @@
                             "end": 28,
                             "raw": "\\k<x>",
                             "ref": "x",
+                            "ambiguous": true,
                             "resolved": [
                               "♻️../0/alternatives/0/elements/0",
                               "♻️../0/alternatives/1/elements/0"
@@ -332,6 +333,7 @@
                             "end": 30,
                             "raw": "\\k<x>",
                             "ref": "x",
+                            "ambiguous": true,
                             "resolved": [
                               "♻️../0/alternatives/0/elements/0",
                               "♻️../0/alternatives/1/elements/0"
@@ -478,6 +480,7 @@
                   "end": 25,
                   "raw": "\\k<x>",
                   "ref": "x",
+                  "ambiguous": true,
                   "resolved": [
                     "♻️../0/alternatives/0/elements/0",
                     "♻️../0/alternatives/1/elements/0"
@@ -837,9 +840,8 @@
                           "end": 19,
                           "raw": "\\k<a>",
                           "ref": "a",
-                          "resolved": [
-                            "♻️../../../../../../../0/elements/0"
-                          ]
+                          "ambiguous": false,
+                          "resolved": "♻️../../../../../../../0/elements/0"
                         }
                       ]
                     }
@@ -1666,6 +1668,7 @@
                   "end": 28,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": true,
                   "resolved": [
                     "♻️../1/alternatives/0/elements/0",
                     "♻️../1/alternatives/1/elements/0"
@@ -1850,6 +1853,7 @@
                   "end": 31,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": true,
                   "resolved": [
                     "♻️../1/element/alternatives/0/elements/0",
                     "♻️../1/element/alternatives/1/elements/0"

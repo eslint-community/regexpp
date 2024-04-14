@@ -62,9 +62,8 @@
                   "end": 17,
                   "raw": "\\k<foo>",
                   "ref": "foo",
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -145,9 +144,8 @@
                   "end": 17,
                   "raw": "\\k<foo>",
                   "ref": "foo",
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }

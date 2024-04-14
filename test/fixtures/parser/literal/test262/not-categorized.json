@@ -664,9 +664,8 @@
                   "end": 25,
                   "raw": "\\10",
                   "ref": 10,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -675,9 +674,8 @@
                   "end": 27,
                   "raw": "\\9",
                   "ref": 9,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -686,9 +684,8 @@
                   "end": 29,
                   "raw": "\\8",
                   "ref": 8,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -697,9 +694,8 @@
                   "end": 31,
                   "raw": "\\7",
                   "ref": 7,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -708,9 +704,8 @@
                   "end": 33,
                   "raw": "\\6",
                   "ref": 6,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -719,9 +714,8 @@
                   "end": 35,
                   "raw": "\\5",
                   "ref": 5,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -730,9 +724,8 @@
                   "end": 37,
                   "raw": "\\4",
                   "ref": 4,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -741,9 +734,8 @@
                   "end": 39,
                   "raw": "\\3",
                   "ref": 3,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -752,9 +744,8 @@
                   "end": 41,
                   "raw": "\\2",
                   "ref": 2,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -763,9 +754,8 @@
                   "end": 43,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -1044,9 +1034,8 @@
                   "end": 24,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 },
                 {
                   "type": "Backreference",
@@ -1055,9 +1044,8 @@
                   "end": 26,
                   "raw": "\\2",
                   "ref": 2,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -1066,9 +1054,8 @@
                   "end": 28,
                   "raw": "\\3",
                   "ref": 3,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -1077,9 +1064,8 @@
                   "end": 30,
                   "raw": "\\4",
                   "ref": 4,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -1088,9 +1074,8 @@
                   "end": 32,
                   "raw": "\\5",
                   "ref": 5,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -1099,9 +1084,8 @@
                   "end": 34,
                   "raw": "\\6",
                   "ref": 6,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -1110,9 +1094,8 @@
                   "end": 36,
                   "raw": "\\7",
                   "ref": 7,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -1121,9 +1104,8 @@
                   "end": 38,
                   "raw": "\\8",
                   "ref": 8,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -1132,9 +1114,8 @@
                   "end": 40,
                   "raw": "\\9",
                   "ref": 9,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
                   "type": "Backreference",
@@ -1143,9 +1124,8 @@
                   "end": 43,
                   "raw": "\\10",
                   "ref": 10,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 }
               ]
             }
@@ -2037,9 +2017,8 @@
                   "end": 30,
                   "raw": "\\9",
                   "ref": 9,
-                  "resolved": [
-                    "♻️../8"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../8"
                 },
                 {
                   "type": "Backreference",
@@ -2048,9 +2027,8 @@
                   "end": 32,
                   "raw": "\\9",
                   "ref": 9,
-                  "resolved": [
-                    "♻️../8"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../8"
                 }
               ]
             }
@@ -2328,9 +2306,8 @@
                   "end": 27,
                   "raw": "\\8",
                   "ref": 8,
-                  "resolved": [
-                    "♻️../7"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../7"
                 },
                 {
                   "type": "Backreference",
@@ -2339,9 +2316,8 @@
                   "end": 29,
                   "raw": "\\8",
                   "ref": 8,
-                  "resolved": [
-                    "♻️../7"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../7"
                 }
               ]
             }
@@ -2541,9 +2517,8 @@
                   "end": 6,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -2705,9 +2680,8 @@
                           "end": 17,
                           "raw": "\\2",
                           "ref": 2,
-                          "resolved": [
-                            "♻️../0"
-                          ]
+                          "ambiguous": false,
+                          "resolved": "♻️../0"
                         },
                         {
                           "type": "Character",
@@ -2728,9 +2702,8 @@
                   "end": 21,
                   "raw": "\\2",
                   "ref": 2,
-                  "resolved": [
-                    "♻️../2/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../2/alternatives/0/elements/0"
                 },
                 {
                   "type": "CapturingGroup",
@@ -2877,9 +2850,8 @@
                   "end": 9,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -3074,9 +3046,8 @@
                   "end": 11,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -3405,9 +3376,8 @@
                   "end": 13,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0/element"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/element"
                 }
               ]
             }
@@ -4004,9 +3974,8 @@
                   "end": 14,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/0"
                 }
               ]
             }
@@ -4213,9 +4182,8 @@
                   "end": 6,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 },
                 {
                   "type": "CapturingGroup",
@@ -4254,9 +4222,8 @@
                   "end": 11,
                   "raw": "\\2",
                   "ref": 2,
-                  "resolved": [
-                    "♻️../2"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../2"
                 }
               ]
             }
@@ -4337,9 +4304,8 @@
                   "end": 6,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -5711,9 +5677,8 @@
                   "end": 25,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -6340,9 +6305,8 @@
                   "end": 17,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 },
                 {
                   "type": "Backreference",
@@ -6351,9 +6315,8 @@
                   "end": 19,
                   "raw": "\\2",
                   "ref": 2,
-                  "resolved": [
-                    "♻️../1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../1"
                 }
               ]
             }
@@ -7161,9 +7124,8 @@
                   "end": 21,
                   "raw": "\\2",
                   "ref": 2,
-                  "resolved": [
-                    "♻️../0/alternatives/0/elements/1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0/alternatives/0/elements/1"
                 },
                 {
                   "type": "Backreference",
@@ -7172,9 +7134,8 @@
                   "end": 23,
                   "raw": "\\5",
                   "ref": 5,
-                  "resolved": [
-                    "♻️../1/alternatives/0/elements/1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../1/alternatives/0/elements/1"
                 }
               ]
             }
@@ -7478,9 +7439,8 @@
                     "end": 8,
                     "raw": "\\1",
                     "ref": 1,
-                    "resolved": [
-                      "♻️../../0"
-                    ]
+                    "ambiguous": false,
+                    "resolved": "♻️../../0"
                   }
                 }
               ]
@@ -7588,9 +7548,8 @@
                   "end": 9,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -7703,9 +7662,8 @@
                   "end": 10,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../0"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../0"
                 }
               ]
             }
@@ -20539,9 +20497,8 @@
                   "end": 3,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../1"
                 },
                 {
                   "type": "CapturingGroup",
@@ -20610,9 +20567,8 @@
                   "end": 11,
                   "raw": "\\2",
                   "ref": 2,
-                  "resolved": [
-                    "♻️../2"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../2"
                 }
               ]
             }
@@ -20663,9 +20619,8 @@
                   "end": 3,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../1"
                 },
                 {
                   "type": "CapturingGroup",
@@ -22929,9 +22884,8 @@
                   "end": 11,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../1"
                 },
                 {
                   "type": "Assertion",
@@ -29556,9 +29510,8 @@
                   "end": 9,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../1"
                 },
                 {
                   "type": "Character",
@@ -29575,9 +29528,8 @@
                   "end": 12,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../1"
                 },
                 {
                   "type": "Character",
@@ -29594,9 +29546,8 @@
                   "end": 15,
                   "raw": "\\1",
                   "ref": 1,
-                  "resolved": [
-                    "♻️../1"
-                  ]
+                  "ambiguous": false,
+                  "resolved": "♻️../1"
                 }
               ]
             }
