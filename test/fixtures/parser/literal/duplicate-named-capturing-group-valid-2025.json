@@ -286,6 +286,432 @@
           "unicodeSets": false
         }
       }
+    },
+    "/(?:(?:(?<x>a)\\k<x>|(?<x>b)\\k<x>)|(?:))\\k<x>/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 45,
+        "raw": "/(?:(?:(?<x>a)\\k<x>|(?<x>b)\\k<x>)|(?:))\\k<x>/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 44,
+          "raw": "(?:(?:(?<x>a)\\k<x>|(?<x>b)\\k<x>)|(?:))\\k<x>",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 44,
+              "raw": "(?:(?:(?<x>a)\\k<x>|(?<x>b)\\k<x>)|(?:))\\k<x>",
+              "elements": [
+                {
+                  "type": "Group",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 39,
+                  "raw": "(?:(?:(?<x>a)\\k<x>|(?<x>b)\\k<x>)|(?:))",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 4,
+                      "end": 33,
+                      "raw": "(?:(?<x>a)\\k<x>|(?<x>b)\\k<x>)",
+                      "elements": [
+                        {
+                          "type": "Group",
+                          "parent": "♻️../..",
+                          "start": 4,
+                          "end": 33,
+                          "raw": "(?:(?<x>a)\\k<x>|(?<x>b)\\k<x>)",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 7,
+                              "end": 19,
+                              "raw": "(?<x>a)\\k<x>",
+                              "elements": [
+                                {
+                                  "type": "CapturingGroup",
+                                  "parent": "♻️../..",
+                                  "start": 7,
+                                  "end": 14,
+                                  "raw": "(?<x>a)",
+                                  "name": "x",
+                                  "alternatives": [
+                                    {
+                                      "type": "Alternative",
+                                      "parent": "♻️../..",
+                                      "start": 12,
+                                      "end": 13,
+                                      "raw": "a",
+                                      "elements": [
+                                        {
+                                          "type": "Character",
+                                          "parent": "♻️../..",
+                                          "start": 12,
+                                          "end": 13,
+                                          "raw": "a",
+                                          "value": 97
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "references": [
+                                    "♻️../1",
+                                    "♻️../../../1/elements/1",
+                                    "♻️../../../../../../../../../1"
+                                  ]
+                                },
+                                {
+                                  "type": "Backreference",
+                                  "parent": "♻️../..",
+                                  "start": 14,
+                                  "end": 19,
+                                  "raw": "\\k<x>",
+                                  "ref": "x",
+                                  "resolved": [
+                                    "♻️../0",
+                                    "♻️../../../1/elements/0"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 20,
+                              "end": 32,
+                              "raw": "(?<x>b)\\k<x>",
+                              "elements": [
+                                {
+                                  "type": "CapturingGroup",
+                                  "parent": "♻️../..",
+                                  "start": 20,
+                                  "end": 27,
+                                  "raw": "(?<x>b)",
+                                  "name": "x",
+                                  "alternatives": [
+                                    {
+                                      "type": "Alternative",
+                                      "parent": "♻️../..",
+                                      "start": 25,
+                                      "end": 26,
+                                      "raw": "b",
+                                      "elements": [
+                                        {
+                                          "type": "Character",
+                                          "parent": "♻️../..",
+                                          "start": 25,
+                                          "end": 26,
+                                          "raw": "b",
+                                          "value": 98
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "references": [
+                                    "♻️../../../0/elements/1",
+                                    "♻️../1",
+                                    "♻️../../../../../../../../../1"
+                                  ]
+                                },
+                                {
+                                  "type": "Backreference",
+                                  "parent": "♻️../..",
+                                  "start": 27,
+                                  "end": 32,
+                                  "raw": "\\k<x>",
+                                  "ref": "x",
+                                  "resolved": [
+                                    "♻️../../../0/elements/0",
+                                    "♻️../0"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 34,
+                      "end": 38,
+                      "raw": "(?:)",
+                      "elements": [
+                        {
+                          "type": "Group",
+                          "parent": "♻️../..",
+                          "start": 34,
+                          "end": 38,
+                          "raw": "(?:)",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 37,
+                              "end": 37,
+                              "raw": "",
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 39,
+                  "end": 44,
+                  "raw": "\\k<x>",
+                  "ref": "x",
+                  "resolved": [
+                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0",
+                    "♻️../0/alternatives/0/elements/0/alternatives/1/elements/0"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 45,
+          "end": 45,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
+      }
+    },
+    "/(?:(?:(?<x>a\\k<x>)|(?<x>b\\k<x>))|(?:))\\k<x>/": {
+      "ast": {
+        "type": "RegExpLiteral",
+        "parent": null,
+        "start": 0,
+        "end": 45,
+        "raw": "/(?:(?:(?<x>a\\k<x>)|(?<x>b\\k<x>))|(?:))\\k<x>/",
+        "pattern": {
+          "type": "Pattern",
+          "parent": "♻️..",
+          "start": 1,
+          "end": 44,
+          "raw": "(?:(?:(?<x>a\\k<x>)|(?<x>b\\k<x>))|(?:))\\k<x>",
+          "alternatives": [
+            {
+              "type": "Alternative",
+              "parent": "♻️../..",
+              "start": 1,
+              "end": 44,
+              "raw": "(?:(?:(?<x>a\\k<x>)|(?<x>b\\k<x>))|(?:))\\k<x>",
+              "elements": [
+                {
+                  "type": "Group",
+                  "parent": "♻️../..",
+                  "start": 1,
+                  "end": 39,
+                  "raw": "(?:(?:(?<x>a\\k<x>)|(?<x>b\\k<x>))|(?:))",
+                  "alternatives": [
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 4,
+                      "end": 33,
+                      "raw": "(?:(?<x>a\\k<x>)|(?<x>b\\k<x>))",
+                      "elements": [
+                        {
+                          "type": "Group",
+                          "parent": "♻️../..",
+                          "start": 4,
+                          "end": 33,
+                          "raw": "(?:(?<x>a\\k<x>)|(?<x>b\\k<x>))",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 7,
+                              "end": 19,
+                              "raw": "(?<x>a\\k<x>)",
+                              "elements": [
+                                {
+                                  "type": "CapturingGroup",
+                                  "parent": "♻️../..",
+                                  "start": 7,
+                                  "end": 19,
+                                  "raw": "(?<x>a\\k<x>)",
+                                  "name": "x",
+                                  "alternatives": [
+                                    {
+                                      "type": "Alternative",
+                                      "parent": "♻️../..",
+                                      "start": 12,
+                                      "end": 18,
+                                      "raw": "a\\k<x>",
+                                      "elements": [
+                                        {
+                                          "type": "Character",
+                                          "parent": "♻️../..",
+                                          "start": 12,
+                                          "end": 13,
+                                          "raw": "a",
+                                          "value": 97
+                                        },
+                                        {
+                                          "type": "Backreference",
+                                          "parent": "♻️../..",
+                                          "start": 13,
+                                          "end": 18,
+                                          "raw": "\\k<x>",
+                                          "ref": "x",
+                                          "resolved": [
+                                            "♻️../../../..",
+                                            "♻️../../../../../../../1/elements/0"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "references": [
+                                    "♻️alternatives/0/elements/1",
+                                    "♻️../../../1/elements/0/alternatives/0/elements/1",
+                                    "♻️../../../../../../../../../1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 20,
+                              "end": 32,
+                              "raw": "(?<x>b\\k<x>)",
+                              "elements": [
+                                {
+                                  "type": "CapturingGroup",
+                                  "parent": "♻️../..",
+                                  "start": 20,
+                                  "end": 32,
+                                  "raw": "(?<x>b\\k<x>)",
+                                  "name": "x",
+                                  "alternatives": [
+                                    {
+                                      "type": "Alternative",
+                                      "parent": "♻️../..",
+                                      "start": 25,
+                                      "end": 31,
+                                      "raw": "b\\k<x>",
+                                      "elements": [
+                                        {
+                                          "type": "Character",
+                                          "parent": "♻️../..",
+                                          "start": 25,
+                                          "end": 26,
+                                          "raw": "b",
+                                          "value": 98
+                                        },
+                                        {
+                                          "type": "Backreference",
+                                          "parent": "♻️../..",
+                                          "start": 26,
+                                          "end": 31,
+                                          "raw": "\\k<x>",
+                                          "ref": "x",
+                                          "resolved": [
+                                            "♻️../../../../../../../0/elements/0",
+                                            "♻️../../../.."
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "references": [
+                                    "♻️../../../0/elements/0/alternatives/0/elements/1",
+                                    "♻️alternatives/0/elements/1",
+                                    "♻️../../../../../../../../../1"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Alternative",
+                      "parent": "♻️../..",
+                      "start": 34,
+                      "end": 38,
+                      "raw": "(?:)",
+                      "elements": [
+                        {
+                          "type": "Group",
+                          "parent": "♻️../..",
+                          "start": 34,
+                          "end": 38,
+                          "raw": "(?:)",
+                          "alternatives": [
+                            {
+                              "type": "Alternative",
+                              "parent": "♻️../..",
+                              "start": 37,
+                              "end": 37,
+                              "raw": "",
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Backreference",
+                  "parent": "♻️../..",
+                  "start": 39,
+                  "end": 44,
+                  "raw": "\\k<x>",
+                  "ref": "x",
+                  "resolved": [
+                    "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0",
+                    "♻️../0/alternatives/0/elements/0/alternatives/1/elements/0"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "flags": {
+          "type": "Flags",
+          "parent": "♻️..",
+          "start": 45,
+          "end": 45,
+          "raw": "",
+          "global": false,
+          "ignoreCase": false,
+          "multiline": false,
+          "unicode": false,
+          "sticky": false,
+          "dotAll": false,
+          "hasIndices": false,
+          "unicodeSets": false
+        }
+      }
     }
   }
 }
