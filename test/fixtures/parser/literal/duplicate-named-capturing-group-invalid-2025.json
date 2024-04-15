@@ -22,6 +22,12 @@
         "index": 25
       }
     },
+    "/(?<x>a)(?:(?<x>b)|(?<x>c))/": {
+      "error": {
+        "message": "Invalid regular expression: /(?<x>a)(?:(?<x>b)|(?<x>c))/: Duplicate capture group name",
+        "index": 16
+      }
+    },
     "/(?:(?:(?<x>a)|(?<x>b)))(?<x>c)/": {
       "error": {
         "message": "Invalid regular expression: /(?:(?:(?<x>a)|(?<x>b)))(?<x>c)/: Duplicate capture group name",
