@@ -84,18 +84,18 @@ export class GroupSpecifiersAsES2018 implements GroupSpecifiers {
 }
 
 export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
-    private groupNamesInDisjunction = new Set<string>()
-    private groupNamesInDisjunctionStack: Set<string>[] = []
-    private groupNamesInAlternative = new Set<string>()
-    private groupNamesInAlternativeStack: Set<string>[] = []
+    private groupNamesAddedInDisjunction = new Set<string>()
+    private groupNamesAddedInUpperDisjunctionStack: Set<string>[] = []
+    private groupNamesInScope = new Set<string>()
+    private groupNamesInUpperScopeStack: Set<string>[] = []
 
     private groupNamesInPattern = new Set<string>()
 
     public clear(): void {
-        this.groupNamesInDisjunction.clear()
-        this.groupNamesInDisjunctionStack.length = 0
-        this.groupNamesInAlternative.clear()
-        this.groupNamesInAlternativeStack.length = 0
+        this.groupNamesAddedInDisjunction.clear()
+        this.groupNamesAddedInUpperDisjunctionStack.length = 0
+        this.groupNamesInScope.clear()
+        this.groupNamesInUpperScopeStack.length = 0
         this.groupNamesInPattern.clear()
     }
 
@@ -104,25 +104,31 @@ export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
     }
 
     public enterDisjunction(): void {
-        this.groupNamesInDisjunctionStack.push(this.groupNamesInDisjunction)
-        this.groupNamesInDisjunction = new Set()
+        this.groupNamesAddedInUpperDisjunctionStack.push(
+            this.groupNamesAddedInDisjunction,
+        )
+        // Clear groupNamesAddedInDisjunction to store the groupName added in this Disjunction.
+        this.groupNamesAddedInDisjunction = new Set()
     }
 
     public enterAlternative(): void {
-        this.groupNamesInAlternativeStack.push(this.groupNamesInAlternative)
-        this.groupNamesInAlternative = new Set(this.groupNamesInAlternative)
+        this.groupNamesInUpperScopeStack.push(this.groupNamesInScope)
+        this.groupNamesInScope = new Set(this.groupNamesInScope)
     }
 
     public leaveAlternative(): void {
-        this.groupNamesInAlternative = this.groupNamesInAlternativeStack.pop()!
+        this.groupNamesInScope = this.groupNamesInUpperScopeStack.pop()!
     }
 
     public leaveDisjunction(): void {
-        const child = this.groupNamesInDisjunction
-        this.groupNamesInDisjunction = this.groupNamesInDisjunctionStack.pop()!
-        for (const groupName of child) {
-            this.groupNamesInDisjunction.add(groupName)
-            this.groupNamesInAlternative.add(groupName)
+        const groupNamesAddedInDisjunction = this.groupNamesAddedInDisjunction
+        this.groupNamesAddedInDisjunction =
+            this.groupNamesAddedInUpperDisjunctionStack.pop()!
+        for (const groupName of groupNamesAddedInDisjunction) {
+            // Adds the groupName added in Disjunction to groupNamesInScope.
+            this.groupNamesInScope.add(groupName)
+            // Adds the groupName added in Disjunction to the upper Disjunction.
+            this.groupNamesAddedInDisjunction.add(groupName)
         }
     }
 
@@ -131,12 +137,12 @@ export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
     }
 
     public hasInScope(name: string): boolean {
-        return this.groupNamesInAlternative.has(name)
+        return this.groupNamesInScope.has(name)
     }
 
     public addToScope(name: string): void {
-        this.groupNamesInAlternative.add(name)
-        this.groupNamesInDisjunction.add(name)
+        this.groupNamesInScope.add(name)
+        this.groupNamesAddedInDisjunction.add(name)
         this.groupNamesInPattern.add(name)
     }
 }
