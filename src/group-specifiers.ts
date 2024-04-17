@@ -16,11 +16,7 @@ export interface GroupSpecifiers {
      * Called when visiting the Alternative.
      * For ES2025, manage nesting with new Alternative scopes.
      */
-    enterAlternative: () => void
-    /**
-     * Called when leaving the Alternative.
-     */
-    leaveAlternative: () => void
+    enterAlternative: (index: number) => void
     /**
      * Called when leaving the Disjunction.
      */
@@ -40,7 +36,7 @@ export interface GroupSpecifiers {
 }
 
 export class GroupSpecifiersAsES2018 implements GroupSpecifiers {
-    private groupName = new Set<string>()
+    private readonly groupName = new Set<string>()
 
     public clear(): void {
         this.groupName.clear()
@@ -73,76 +69,99 @@ export class GroupSpecifiersAsES2018 implements GroupSpecifiers {
     }
 
     // eslint-disable-next-line class-methods-use-this
-    public leaveAlternative(): void {
-        // Prior to ES2025, it does not manage alternative scopes.
-    }
-
-    // eslint-disable-next-line class-methods-use-this
     public leaveDisjunction(): void {
         // Prior to ES2025, it does not manage disjunction scopes.
     }
 }
 
-export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
-    private groupNamesAddedInDisjunction = new Set<string>()
-    private groupNamesAddedInUpperDisjunctionStack: Set<string>[] = []
-    private groupNamesInScope = new Set<string>()
-    private groupNamesInUpperScopeStack: Set<string>[] = []
+/**
+ * Track disjunction structure to determine whether a duplicate
+ * capture group name is allowed because it is in a separate branch.
+ */
+class BranchID {
+    public readonly parent: BranchID | null
+    private readonly base: BranchID
+    public constructor(parent: BranchID | null, base: BranchID | null) {
+        // Parent disjunction branch
+        this.parent = parent
+        // Identifies this set of sibling branches
+        this.base = base ?? this
+    }
 
-    private groupNamesInPattern = new Set<string>()
+    /**
+     * A branch is separate from another branch if they or any of
+     * their parents are siblings in a given disjunction
+     */
+    public separatedFrom(other: BranchID): boolean {
+        if (this.base === other.base && this !== other) {
+            return true
+        }
+        if (other.parent && this.separatedFrom(other.parent)) {
+            return true
+        }
+        return this.parent?.separatedFrom(other) ?? false
+    }
+
+    public child() {
+        return new BranchID(this, null)
+    }
+
+    public sibling() {
+        return new BranchID(this.parent, this.base)
+    }
+}
+
+export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
+    private branchID = new BranchID(null, null)
+    private readonly groupNames = new Map<string, BranchID[]>()
 
     public clear(): void {
-        this.groupNamesAddedInDisjunction.clear()
-        this.groupNamesAddedInUpperDisjunctionStack.length = 0
-        this.groupNamesInScope.clear()
-        this.groupNamesInUpperScopeStack.length = 0
-        this.groupNamesInPattern.clear()
+        this.branchID = new BranchID(null, null)
+        this.groupNames.clear()
     }
 
     public isEmpty(): boolean {
-        return !this.groupNamesInPattern.size
+        return !this.groupNames.size
     }
 
     public enterDisjunction(): void {
-        this.groupNamesAddedInUpperDisjunctionStack.push(
-            this.groupNamesAddedInDisjunction,
-        )
-        // Clear groupNamesAddedInDisjunction to store the groupName added in this Disjunction.
-        this.groupNamesAddedInDisjunction = new Set()
+        this.branchID = this.branchID.child()
     }
 
-    public enterAlternative(): void {
-        this.groupNamesInUpperScopeStack.push(this.groupNamesInScope)
-        this.groupNamesInScope = new Set(this.groupNamesInScope)
-    }
-
-    public leaveAlternative(): void {
-        this.groupNamesInScope = this.groupNamesInUpperScopeStack.pop()!
+    public enterAlternative(index: number): void {
+        if (index === 0) {
+            return
+        }
+        this.branchID = this.branchID.sibling()
     }
 
     public leaveDisjunction(): void {
-        const groupNamesAddedInDisjunction = this.groupNamesAddedInDisjunction
-        this.groupNamesAddedInDisjunction =
-            this.groupNamesAddedInUpperDisjunctionStack.pop()!
-        for (const groupName of groupNamesAddedInDisjunction) {
-            // Adds the groupName added in Disjunction to groupNamesInScope.
-            this.groupNamesInScope.add(groupName)
-            // Adds the groupName added in Disjunction to the upper Disjunction.
-            this.groupNamesAddedInDisjunction.add(groupName)
-        }
+        this.branchID = this.branchID.parent!
     }
 
     public hasInPattern(name: string): boolean {
-        return this.groupNamesInPattern.has(name)
+        return this.groupNames.has(name)
     }
 
     public hasInScope(name: string): boolean {
-        return this.groupNamesInScope.has(name)
+        const branches = this.groupNames.get(name)
+        if (!branches) {
+            return false
+        }
+        for (const branch of branches) {
+            if (!branch.separatedFrom(this.branchID)) {
+                return true
+            }
+        }
+        return false
     }
 
     public addToScope(name: string): void {
-        this.groupNamesInScope.add(name)
-        this.groupNamesAddedInDisjunction.add(name)
-        this.groupNamesInPattern.add(name)
+        const branches = this.groupNames.get(name)
+        if (branches) {
+            branches.push(this.branchID)
+            return
+        }
+        this.groupNames.set(name, [this.branchID])
     }
 }

@@ -1415,13 +1415,12 @@ export class RegExpValidator {
     private consumeAlternative(i: number): void {
         const start = this.index
 
-        this._groupSpecifiers.enterAlternative()
+        this._groupSpecifiers.enterAlternative(i)
         this.onAlternativeEnter(start, i)
         while (this.currentCodePoint !== -1 && this.consumeTerm()) {
             // do nothing.
         }
         this.onAlternativeLeave(start, this.index, i)
-        this._groupSpecifiers.leaveAlternative()
     }
 
     /**
