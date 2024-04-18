@@ -56,6 +56,9 @@ module.exports = {
                 "@eslint-community/mysticatea/ts/ban-ts-comment": "off",
                 "@eslint-community/mysticatea/ts/no-unsafe-assignment": "off",
                 "@eslint-community/mysticatea/ts/no-unsafe-call": "off",
+                "@eslint-community/mysticatea/ts/naming-convention": "off",
+                "@eslint-community/mysticatea/ts/no-require-imports": "off",
+                "@eslint-community/mysticatea/ts/no-var-requires": "off",
             },
         },
 
