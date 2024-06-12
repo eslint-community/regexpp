@@ -13,6 +13,8 @@ import type {
     ExpressionCharacterClass,
     Flags,
     Group,
+    ModifierFlags,
+    Modifiers,
     Node,
     Pattern,
     Quantifier,
@@ -82,6 +84,12 @@ export class RegExpVisitor {
                 break
             case "Group":
                 this.visitGroup(node)
+                break
+            case "Modifiers":
+                this.visitModifiers(node)
+                break
+            case "ModifierFlags":
+                this.visitModifierFlags(node)
                 break
             case "Pattern":
                 this.visitPattern(node)
@@ -239,9 +247,36 @@ export class RegExpVisitor {
         if (this._handlers.onGroupEnter) {
             this._handlers.onGroupEnter(node)
         }
+        if (node.modifiers) {
+            this.visit(node.modifiers)
+        }
         node.alternatives.forEach(this.visit, this)
         if (this._handlers.onGroupLeave) {
             this._handlers.onGroupLeave(node)
+        }
+    }
+
+    private visitModifiers(node: Modifiers): void {
+        if (this._handlers.onModifiersEnter) {
+            this._handlers.onModifiersEnter(node)
+        }
+        if (node.add) {
+            this.visit(node.add)
+        }
+        if (node.remove) {
+            this.visit(node.remove)
+        }
+        if (this._handlers.onModifiersLeave) {
+            this._handlers.onModifiersLeave(node)
+        }
+    }
+
+    private visitModifierFlags(node: ModifierFlags): void {
+        if (this._handlers.onModifierFlagsEnter) {
+            this._handlers.onModifierFlagsEnter(node)
+        }
+        if (this._handlers.onModifierFlagsLeave) {
+            this._handlers.onModifierFlagsLeave(node)
         }
     }
 
@@ -321,6 +356,10 @@ export namespace RegExpVisitor {
         onFlagsLeave?: (node: Flags) => void
         onGroupEnter?: (node: Group) => void
         onGroupLeave?: (node: Group) => void
+        onModifierFlagsEnter?: (node: ModifierFlags) => void
+        onModifierFlagsLeave?: (node: ModifierFlags) => void
+        onModifiersEnter?: (node: Modifiers) => void
+        onModifiersLeave?: (node: Modifiers) => void
         onPatternEnter?: (node: Pattern) => void
         onPatternLeave?: (node: Pattern) => void
         onQuantifierEnter?: (node: Quantifier) => void
