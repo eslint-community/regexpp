@@ -1800,10 +1800,12 @@ export class RegExpValidator {
                 if (this.consumeGroupSpecifier()) {
                     name = this._lastStrValue
                 } else if (this.currentCodePoint === QUESTION_MARK) {
+                    // Maybe Group with modifiers
                     this.rewind(start)
                     return false
                 }
             } else if (this.currentCodePoint === QUESTION_MARK) {
+                // Maybe Group with modifiers
                 this.rewind(start)
                 return false
             }
@@ -1962,6 +1964,7 @@ export class RegExpValidator {
                 }
                 this.raise("Duplicate capture group name")
             }
+            // Maybe Group with modifiers
             this.rewind(start)
         }
         return false
