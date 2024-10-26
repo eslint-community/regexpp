@@ -237,6 +237,20 @@ function isUnicodePropertyValueCharacter(cp: number): boolean {
     return isUnicodePropertyNameCharacter(cp) || isDecimalDigit(cp)
 }
 
+/**
+ * ```
+ * RegularExpressionModifier :: one of
+ *   `i` `m` `s`
+ * ```
+ */
+function isRegularExpressionModifier(ch: number): boolean {
+    return (
+        ch === LATIN_SMALL_LETTER_I ||
+        ch === LATIN_SMALL_LETTER_M ||
+        ch === LATIN_SMALL_LETTER_S
+    )
+}
+
 export type RegExpValidatorSourceContext = {
     readonly source: string
     readonly start: number
@@ -3486,13 +3500,13 @@ export class RegExpValidator {
      * ```
      * RegularExpressionFlags ::
      *      [empty]
-     *      RegularExpressionFlags IdentifierPartChar
+     *      RegularExpressionFlags RegularExpressionModifier
      * ```
      * @returns `true` if it ate the next characters successfully.
      */
     private eatModifiers(): boolean {
         let ate = false
-        while (isIdentifierPartChar(this.currentCodePoint)) {
+        while (isRegularExpressionModifier(this.currentCodePoint)) {
             this.advance()
             ate = true
         }
