@@ -12,14 +12,14 @@
     },
     "/(?unknown:sub_expression)?/": {
       "error": {
-        "message": "Invalid regular expression: /(?unknown:sub_expression)?/: Invalid flag 'u'",
-        "index": 3
+        "message": "Invalid regular expression: /(?unknown:sub_expression)?/: Invalid group",
+        "index": 2
       }
     },
     "/(?i-unknown:sub_expression)?/": {
       "error": {
-        "message": "Invalid regular expression: /(?i-unknown:sub_expression)?/: Invalid flag 'u'",
-        "index": 5
+        "message": "Invalid regular expression: /(?i-unknown:sub_expression)?/: Invalid group",
+        "index": 2
       }
     },
     "/(?ii:sub_expression)?/": {
@@ -37,7 +37,19 @@
     "/(?i-i:sub_expression)?/": {
       "error": {
         "message": "Invalid regular expression: /(?i-i:sub_expression)?/: Duplicated flag 'i'",
-        "index": 5
+        "index": 6
+      }
+    },
+    "/(?iu:sub_expression)?/": {
+      "error": {
+        "message": "Invalid regular expression: /(?iu:sub_expression)?/: Invalid group",
+        "index": 2
+      }
+    },
+    "/(?-iu:sub_expression)?/": {
+      "error": {
+        "message": "Invalid regular expression: /(?-iu:sub_expression)?/: Invalid group",
+        "index": 2
       }
     }
   }

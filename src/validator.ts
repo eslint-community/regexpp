@@ -1784,14 +1784,25 @@ export class RegExpValidator {
 
         if (hasHyphen) {
             const modifiersStart = this.index
-            if (!this.eatModifiers() && !hasAddModifiers) {
+            if (
+                !this.eatModifiers() &&
+                !hasAddModifiers &&
+                this.currentCodePoint === COLON
+            ) {
                 this.raise("Invalid empty flags")
             }
-            const modifiers = this.parseModifiers(
-                modifiersStart,
-                this.index,
-                addModifiers,
-            )
+            const modifiers = this.parseModifiers(modifiersStart, this.index)
+            for (const [flagName] of Object.entries(modifiers).filter(
+                ([, enable]) => enable,
+            ) as [keyof typeof modifiers, boolean][]) {
+                if (addModifiers[flagName]) {
+                    this.raise(
+                        `Duplicated flag '${String.fromCodePoint(
+                            FLAG_PROP_TO_CODEPOINT[flagName],
+                        )}'`,
+                    )
+                }
+            }
             this.onRemoveModifiers(modifiersStart, this.index, modifiers)
         }
 
@@ -3518,23 +3529,11 @@ export class RegExpValidator {
      * @param start The start index in the source code.
      * @param end The end index in the source code.
      */
-    private parseModifiers(
-        start: number,
-        end: number,
-        alreadyUsedFlags?: {
-            ignoreCase: boolean
-            multiline: boolean
-            dotAll: boolean
-        },
-    ) {
+    private parseModifiers(start: number, end: number) {
         const { ignoreCase, multiline, dotAll } = this.parseFlags(
             this._reader.source,
             start,
             end,
-            {
-                modifiers: true,
-                alreadyUsedFlags,
-            },
         )
 
         return { ignoreCase, multiline, dotAll }
@@ -3549,10 +3548,6 @@ export class RegExpValidator {
         source: string,
         start: number,
         end: number,
-        options?: {
-            modifiers?: boolean
-            alreadyUsedFlags?: Partial<FlagsRecord>
-        },
     ): FlagsRecord {
         const flags = {
             global: false,
@@ -3565,42 +3560,29 @@ export class RegExpValidator {
             unicodeSets: false,
         }
 
-        const alreadyUsedFlags = new Set<FlagCodePoint>()
         const validFlags = new Set<FlagCodePoint>()
-        if (options?.modifiers) {
-            if (options?.alreadyUsedFlags) {
-                for (const [flagProp] of Object.entries(
-                    options.alreadyUsedFlags,
-                ).filter(([, enable]) => enable) as [FlagProp, boolean][]) {
-                    alreadyUsedFlags.add(FLAG_PROP_TO_CODEPOINT[flagProp])
-                }
-            }
-            validFlags.add(LATIN_SMALL_LETTER_I)
-            validFlags.add(LATIN_SMALL_LETTER_M)
-            validFlags.add(LATIN_SMALL_LETTER_S)
-        } else {
-            validFlags.add(LATIN_SMALL_LETTER_G)
-            validFlags.add(LATIN_SMALL_LETTER_I)
-            validFlags.add(LATIN_SMALL_LETTER_M)
-            if (this.ecmaVersion >= 2015) {
-                validFlags.add(LATIN_SMALL_LETTER_U)
-                validFlags.add(LATIN_SMALL_LETTER_Y)
-                if (this.ecmaVersion >= 2018) {
-                    validFlags.add(LATIN_SMALL_LETTER_S)
-                    if (this.ecmaVersion >= 2021) {
-                        validFlags.add(LATIN_SMALL_LETTER_D)
-                        if (this.ecmaVersion >= 2024) {
-                            validFlags.add(LATIN_SMALL_LETTER_V)
-                        }
+        validFlags.add(LATIN_SMALL_LETTER_G)
+        validFlags.add(LATIN_SMALL_LETTER_I)
+        validFlags.add(LATIN_SMALL_LETTER_M)
+        if (this.ecmaVersion >= 2015) {
+            validFlags.add(LATIN_SMALL_LETTER_U)
+            validFlags.add(LATIN_SMALL_LETTER_Y)
+            if (this.ecmaVersion >= 2018) {
+                validFlags.add(LATIN_SMALL_LETTER_S)
+                if (this.ecmaVersion >= 2021) {
+                    validFlags.add(LATIN_SMALL_LETTER_D)
+                    if (this.ecmaVersion >= 2024) {
+                        validFlags.add(LATIN_SMALL_LETTER_V)
                     }
                 }
             }
         }
+
         for (let i = start; i < end; ++i) {
             const flag = source.charCodeAt(i) as FlagCodePoint
             if (validFlags.has(flag)) {
                 const prop = FLAG_CODEPOINT_TO_PROP[flag]
-                if (flags[prop] || alreadyUsedFlags.has(flag)) {
+                if (flags[prop]) {
                     this.raise(`Duplicated flag '${source[i]}'`, {
                         index: start,
                     })

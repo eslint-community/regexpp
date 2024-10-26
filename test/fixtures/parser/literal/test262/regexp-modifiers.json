@@ -140,8 +140,8 @@
   "patterns": {
     "/(?-1:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-1:a)/: Invalid flag '1'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-1:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-:a)/": {
@@ -152,38 +152,38 @@
     },
     "/(?-I:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-I:a)/: Invalid flag 'I'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-I:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-M:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-M:a)/: Invalid flag 'M'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-M:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-Q:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-Q:a)/: Invalid flag 'Q'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-Q:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-S:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-S:a)/: Invalid flag 'S'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-S:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-d:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-d:a)/: Invalid flag 'd'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-d:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-g:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-g:a)/: Invalid flag 'g'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-g:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-i:(?-i:))/": {
@@ -3139,8 +3139,8 @@
     },
     "/(?-iͥ:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-iͥ:a)/: Invalid flag 'ͥ'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-iͥ:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-m:(?-m:))/": {
@@ -4965,8 +4965,8 @@
     },
     "/(?-mͫ:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-mͫ:a)/: Invalid flag 'ͫ'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-mͫ:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-s\u0000:a)/": {
@@ -6959,20 +6959,20 @@
     },
     "/(?-s̀:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-s̀:a)/: Invalid flag '̀'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-s̀:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-s‌:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-s‌:a)/: Invalid flag '‌'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-s‌:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-s‍:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-s‍:a)/: Invalid flag '‍'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-s‍:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-s‎:a)/": {
@@ -6989,86 +6989,86 @@
     },
     "/(?-u:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-u:a)/: Invalid flag 'u'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-u:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-y:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-y:a)/: Invalid flag 'y'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-y:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-İ:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-İ:a)/: Invalid flag 'İ'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-İ:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?-ſ:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?-ſ:a)/: Invalid flag 'ſ'",
-        "index": 4
+        "message": "Invalid regular expression: /(?-ſ:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?1-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?1-:a)/: Invalid flag '1'",
-        "index": 3
+        "message": "Invalid regular expression: /(?1-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?1:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?1:a)/: Invalid flag '1'",
-        "index": 3
+        "message": "Invalid regular expression: /(?1:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?I-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?I-:a)/: Invalid flag 'I'",
-        "index": 3
+        "message": "Invalid regular expression: /(?I-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?I:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?I:a)/: Invalid flag 'I'",
-        "index": 3
+        "message": "Invalid regular expression: /(?I:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?M-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?M-:a)/: Invalid flag 'M'",
-        "index": 3
+        "message": "Invalid regular expression: /(?M-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?M:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?M:a)/: Invalid flag 'M'",
-        "index": 3
+        "message": "Invalid regular expression: /(?M:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?Q-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?Q-:a)/: Invalid flag 'Q'",
-        "index": 3
+        "message": "Invalid regular expression: /(?Q-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?Q:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?Q:a)/: Invalid flag 'Q'",
-        "index": 3
+        "message": "Invalid regular expression: /(?Q:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?S-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?S-:a)/: Invalid flag 'S'",
-        "index": 3
+        "message": "Invalid regular expression: /(?S-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?S:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?S:a)/: Invalid flag 'S'",
-        "index": 3
+        "message": "Invalid regular expression: /(?S:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?\\u0069:a)/u": {
@@ -7097,26 +7097,26 @@
     },
     "/(?d-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?d-:a)/: Invalid flag 'd'",
-        "index": 3
+        "message": "Invalid regular expression: /(?d-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?d:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?d:a)/: Invalid flag 'd'",
-        "index": 3
+        "message": "Invalid regular expression: /(?d:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?g-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?g-:a)/: Invalid flag 'g'",
-        "index": 3
+        "message": "Invalid regular expression: /(?g-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?g:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?g:a)/: Invalid flag 'g'",
-        "index": 3
+        "message": "Invalid regular expression: /(?g:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?i-)/": {
@@ -8993,7 +8993,7 @@
     "/(?i-i:a)/": {
       "error": {
         "message": "Invalid regular expression: /(?i-i:a)/: Duplicated flag 'i'",
-        "index": 5
+        "index": 6
       }
     },
     "/(?i-m:)/": {
@@ -11771,7 +11771,7 @@
     "/(?ims-m:a)/": {
       "error": {
         "message": "Invalid regular expression: /(?ims-m:a)/: Duplicated flag 'm'",
-        "index": 7
+        "index": 8
       }
     },
     "/(?ims:)/": {
@@ -12354,14 +12354,14 @@
     },
     "/(?iͥ-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?iͥ-:a)/: Invalid flag 'ͥ'",
-        "index": 3
+        "message": "Invalid regular expression: /(?iͥ-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?iͥ:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?iͥ:a)/: Invalid flag 'ͥ'",
-        "index": 3
+        "message": "Invalid regular expression: /(?iͥ:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?m-:)/": {
@@ -13299,7 +13299,7 @@
     "/(?m-ims:a)/": {
       "error": {
         "message": "Invalid regular expression: /(?m-ims:a)/: Duplicated flag 'm'",
-        "index": 5
+        "index": 8
       }
     },
     "/(?m-is:)/": {
@@ -13391,7 +13391,7 @@
     "/(?m-m:a)/": {
       "error": {
         "message": "Invalid regular expression: /(?m-m:a)/: Duplicated flag 'm'",
-        "index": 5
+        "index": 6
       }
     },
     "/(?m-s:)/": {
@@ -15518,14 +15518,14 @@
     },
     "/(?mͫ-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?mͫ-:a)/: Invalid flag 'ͫ'",
-        "index": 3
+        "message": "Invalid regular expression: /(?mͫ-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?mͫ:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?mͫ:a)/: Invalid flag 'ͫ'",
-        "index": 3
+        "message": "Invalid regular expression: /(?mͫ:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?s\u0000-:a)/": {
@@ -16706,7 +16706,7 @@
     "/(?s-s:a)/": {
       "error": {
         "message": "Invalid regular expression: /(?s-s:a)/: Duplicated flag 's'",
-        "index": 5
+        "index": 6
       }
     },
     "/(?s:(?-s:^.$))/": {
@@ -18577,38 +18577,38 @@
     },
     "/(?s̀-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?s̀-:a)/: Invalid flag '̀'",
-        "index": 3
+        "message": "Invalid regular expression: /(?s̀-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?s̀:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?s̀:a)/: Invalid flag '̀'",
-        "index": 3
+        "message": "Invalid regular expression: /(?s̀:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?s‌-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?s‌-:a)/: Invalid flag '‌'",
-        "index": 3
+        "message": "Invalid regular expression: /(?s‌-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?s‌:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?s‌:a)/: Invalid flag '‌'",
-        "index": 3
+        "message": "Invalid regular expression: /(?s‌:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?s‍-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?s‍-:a)/: Invalid flag '‍'",
-        "index": 3
+        "message": "Invalid regular expression: /(?s‍-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?s‍:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?s‍:a)/: Invalid flag '‍'",
-        "index": 3
+        "message": "Invalid regular expression: /(?s‍:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?s‎-:a)/": {
@@ -18637,50 +18637,50 @@
     },
     "/(?u-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?u-:a)/: Invalid flag 'u'",
-        "index": 3
+        "message": "Invalid regular expression: /(?u-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?u:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?u:a)/: Invalid flag 'u'",
-        "index": 3
+        "message": "Invalid regular expression: /(?u:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?y-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?y-:a)/: Invalid flag 'y'",
-        "index": 3
+        "message": "Invalid regular expression: /(?y-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?y:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?y:a)/: Invalid flag 'y'",
-        "index": 3
+        "message": "Invalid regular expression: /(?y:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?İ-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?İ-:a)/: Invalid flag 'İ'",
-        "index": 3
+        "message": "Invalid regular expression: /(?İ-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?İ:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?İ:a)/: Invalid flag 'İ'",
-        "index": 3
+        "message": "Invalid regular expression: /(?İ:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?ſ-:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?ſ-:a)/: Invalid flag 'ſ'",
-        "index": 3
+        "message": "Invalid regular expression: /(?ſ-:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(?ſ:a)/": {
       "error": {
-        "message": "Invalid regular expression: /(?ſ:a)/: Invalid flag 'ſ'",
-        "index": 3
+        "message": "Invalid regular expression: /(?ſ:a)/: Invalid group",
+        "index": 2
       }
     },
     "/(a)(?-i:\\1)/i": {
