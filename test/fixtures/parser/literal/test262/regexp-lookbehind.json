@@ -2844,6 +2844,7 @@
                                     "start": 6,
                                     "end": 16,
                                     "raw": "(?:b\\d{2})",
+                                    "modifiers": null,
                                     "alternatives": [
                                       {
                                         "type": "Alternative",
@@ -3126,6 +3127,7 @@
                           "start": 5,
                           "end": 12,
                           "raw": "(?:\\1b)",
+                          "modifiers": null,
                           "alternatives": [
                             {
                               "type": "Alternative",
@@ -3270,6 +3272,7 @@
                           "start": 5,
                           "end": 13,
                           "raw": "(?:\\1|b)",
+                          "modifiers": null,
                           "alternatives": [
                             {
                               "type": "Alternative",

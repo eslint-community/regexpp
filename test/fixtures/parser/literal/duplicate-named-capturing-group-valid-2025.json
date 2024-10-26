@@ -314,6 +314,7 @@
                   "start": 1,
                   "end": 39,
                   "raw": "(?:(?:(?<x>a)\\k<x>|(?<x>b)\\k<x>)|(?:))",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -328,6 +329,7 @@
                           "start": 4,
                           "end": 33,
                           "raw": "(?:(?<x>a)\\k<x>|(?<x>b)\\k<x>)",
+                          "modifiers": null,
                           "alternatives": [
                             {
                               "type": "Alternative",
@@ -454,6 +456,7 @@
                           "start": 34,
                           "end": 38,
                           "raw": "(?:)",
+                          "modifiers": null,
                           "alternatives": [
                             {
                               "type": "Alternative",
@@ -530,6 +533,7 @@
                   "start": 1,
                   "end": 39,
                   "raw": "(?:(?:(?<x>a\\k<x>)|(?<x>b\\k<x>))|(?:))",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -544,6 +548,7 @@
                           "start": 4,
                           "end": 33,
                           "raw": "(?:(?<x>a\\k<x>)|(?<x>b\\k<x>))",
+                          "modifiers": null,
                           "alternatives": [
                             {
                               "type": "Alternative",
@@ -670,6 +675,7 @@
                           "start": 34,
                           "end": 38,
                           "raw": "(?:)",
+                          "modifiers": null,
                           "alternatives": [
                             {
                               "type": "Alternative",

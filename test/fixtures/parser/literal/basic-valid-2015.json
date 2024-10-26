@@ -3933,6 +3933,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -4087,6 +4088,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -5189,6 +5191,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -17010,6 +17013,7 @@
                     "start": 48,
                     "end": 67,
                     "raw": "(?:\\.[a-zA-Z0-9-]+)",
+                    "modifiers": null,
                     "alternatives": [
                       {
                         "type": "Alternative",
