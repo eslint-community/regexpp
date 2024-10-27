@@ -1,0 +1,14 @@
+{
+  "options": {
+    "strict": true,
+    "ecmaVersion": 2017
+  },
+  "patterns": {
+    "/./s": {
+      "error": {
+        "message": "Invalid regular expression: /./s: Invalid flag 's'",
+        "index": 3
+      }
+    }
+  }
+}

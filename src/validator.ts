@@ -3569,7 +3569,7 @@ export class RegExpValidator {
             validFlags.add(LATIN_SMALL_LETTER_Y)
             if (this.ecmaVersion >= 2018) {
                 validFlags.add(LATIN_SMALL_LETTER_S)
-                if (this.ecmaVersion >= 2021) {
+                if (this.ecmaVersion >= 2022) {
                     validFlags.add(LATIN_SMALL_LETTER_D)
                     if (this.ecmaVersion >= 2024) {
                         validFlags.add(LATIN_SMALL_LETTER_V)

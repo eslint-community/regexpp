@@ -1,0 +1,20 @@
+{
+  "options": {
+    "strict": true,
+    "ecmaVersion": 5
+  },
+  "patterns": {
+    "/./u": {
+      "error": {
+        "message": "Invalid regular expression: /./u: Invalid flag 'u'",
+        "index": 3
+      }
+    },
+    "/./y": {
+      "error": {
+        "message": "Invalid regular expression: /./y: Invalid flag 'y'",
+        "index": 3
+      }
+    }
+  }
+}
