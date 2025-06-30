@@ -57,8 +57,16 @@ const DATA_SOURCES = [
         binPropertiesOfStrings: "#table-binary-unicode-properties-of-strings",
     },
     {
-        url: "https://tc39.es/ecma262/multipage/text-processing.html",
+        url: "https://tc39.es/ecma262/2025/multipage/text-processing.html",
         version: 2025,
+        binProperties: "#table-binary-unicode-properties",
+        gcValues: getLatestUnicodeGeneralCategoryValues,
+        scValues: getLatestUnicodeScriptValues,
+        binPropertiesOfStrings: "#table-binary-unicode-properties-of-strings",
+    },
+    {
+        url: "https://tc39.es/ecma262/multipage/text-processing.html",
+        version: 2026,
         binProperties: "#table-binary-unicode-properties",
         gcValues: getLatestUnicodeGeneralCategoryValues,
         scValues: getLatestUnicodeScriptValues,
