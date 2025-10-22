@@ -80,7 +80,9 @@ jobs:
       - name: ⎔ Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          # node 24 is required for semantic-release@v25.
+          # However, `lts/*` may point to v24 in the near future, so it's better to use `lts/*`.
+          node-version: 24
 
       # npm 11.5.1 or later is required so update to latest to be sure
       - name: Update npm
@@ -92,7 +94,9 @@ jobs:
       - name: 🚀 Release
         uses: cycjimmy/semantic-release-action@v5
         with:
-          semantic_version: 19
+          # semantic-release@v25 is required for trusted publishing.
+          # https://github.com/semantic-release/semantic-release/releases/tag/v25.0.1
+          semantic_version: 25
           branches: |
             [
               '+([0-9])?(.{+([0-9]),x}).x',
