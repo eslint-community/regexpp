@@ -617,6 +617,7 @@
                   "end": 27,
                   "raw": "\\k<c>",
                   "ref": "c",
+                  "ambiguous": false,
                   "resolved": "♻️../2"
                 },
                 {
@@ -626,6 +627,7 @@
                   "end": 32,
                   "raw": "\\k<b>",
                   "ref": "b",
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -635,6 +637,7 @@
                   "end": 37,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -776,6 +779,7 @@
                   "end": 27,
                   "raw": "\\k<c>",
                   "ref": "c",
+                  "ambiguous": false,
                   "resolved": "♻️../2"
                 },
                 {
@@ -785,6 +789,7 @@
                   "end": 32,
                   "raw": "\\k<b>",
                   "ref": "b",
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -794,6 +799,7 @@
                   "end": 37,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]

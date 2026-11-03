@@ -431,6 +431,7 @@
                           "end": 15,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         },
                         {
@@ -440,6 +441,7 @@
                           "end": 17,
                           "raw": "\\2",
                           "ref": 2,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0/alternatives/0/elements/0"
                         },
                         {
@@ -449,6 +451,7 @@
                           "end": 19,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -566,6 +569,7 @@
                                   "end": 11,
                                   "raw": "\\1",
                                   "ref": 1,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../../../../../0"
                                 },
                                 {
@@ -575,6 +579,7 @@
                                   "end": 13,
                                   "raw": "\\1",
                                   "ref": 1,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../../../../../0"
                                 }
                               ]
@@ -697,6 +702,7 @@
                                   "end": 11,
                                   "raw": "\\1",
                                   "ref": 1,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../../../../../0"
                                 },
                                 {
@@ -706,6 +712,7 @@
                                   "end": 13,
                                   "raw": "\\1",
                                   "ref": 1,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../../../../../0"
                                 }
                               ]
@@ -814,6 +821,7 @@
                           "end": 10,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         },
                         {
@@ -823,6 +831,7 @@
                           "end": 12,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         },
                         {
@@ -832,6 +841,7 @@
                           "end": 14,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -943,6 +953,7 @@
                           "end": 11,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         },
                         {
@@ -952,6 +963,7 @@
                           "end": 13,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         },
                         {
@@ -961,6 +973,7 @@
                           "end": 15,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -2831,6 +2844,7 @@
                                     "start": 6,
                                     "end": 16,
                                     "raw": "(?:b\\d{2})",
+                                    "modifiers": null,
                                     "alternatives": [
                                       {
                                         "type": "Alternative",
@@ -3042,6 +3056,7 @@
                           "end": 19,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0/alternatives/0/elements/0"
                         }
                       ]
@@ -3112,6 +3127,7 @@
                           "start": 5,
                           "end": 12,
                           "raw": "(?:\\1b)",
+                          "modifiers": null,
                           "alternatives": [
                             {
                               "type": "Alternative",
@@ -3127,6 +3143,7 @@
                                   "end": 10,
                                   "raw": "\\1",
                                   "ref": 1,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../1"
                                 },
                                 {
@@ -3255,6 +3272,7 @@
                           "start": 5,
                           "end": 13,
                           "raw": "(?:\\1|b)",
+                          "modifiers": null,
                           "alternatives": [
                             {
                               "type": "Alternative",
@@ -3270,6 +3288,7 @@
                                   "end": 10,
                                   "raw": "\\1",
                                   "ref": 1,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../1"
                                 }
                               ]
@@ -3677,6 +3696,7 @@
                   "end": 17,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0"
                 }
               ]
@@ -4054,6 +4074,7 @@
                           "end": 12,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../0"
                         }
                       ]
@@ -5047,6 +5068,7 @@
                           "end": 7,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../1"
                         },
                         {
@@ -5183,6 +5205,7 @@
                           "end": 7,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../1"
                         },
                         {
@@ -5293,6 +5316,7 @@
                           "end": 7,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../1"
                         },
                         {
@@ -7035,6 +7059,7 @@
                                   "end": 10,
                                   "raw": "\\2",
                                   "ref": 2,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../3"
                                 }
                               ]
@@ -7074,6 +7099,7 @@
                                   "end": 15,
                                   "raw": "\\1",
                                   "ref": 1,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../1"
                                 }
                               ]
@@ -7837,6 +7863,7 @@
                                   "end": 9,
                                   "raw": "\\2",
                                   "ref": 2,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../3"
                                 }
                               ]
@@ -7892,6 +7919,7 @@
                                   "end": 16,
                                   "raw": "\\1",
                                   "ref": 1,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../1"
                                 }
                               ]
@@ -9441,6 +9469,7 @@
                                   "end": 16,
                                   "raw": "\\1",
                                   "ref": 1,
+                                  "ambiguous": false,
                                   "resolved": "♻️../../../../../../../../../0/alternatives/0/elements/0"
                                 }
                               ]
@@ -9623,6 +9652,7 @@
                           "end": 20,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0/alternatives/0/elements/0"
                         }
                       ]
@@ -9848,6 +9878,7 @@
                           "end": 27,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0/alternatives/0/elements/0"
                         }
                       ]
@@ -10081,6 +10112,7 @@
                           "end": 27,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0/alternatives/0/elements/0"
                         }
                       ]
@@ -10223,6 +10255,7 @@
                           "end": 15,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         },
                         {
@@ -10232,6 +10265,7 @@
                           "end": 17,
                           "raw": "\\2",
                           "ref": 2,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0/alternatives/0/elements/1"
                         },
                         {
@@ -10241,6 +10275,7 @@
                           "end": 19,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -10335,6 +10370,7 @@
                           "end": 7,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../.."
                         }
                       ]
@@ -10432,6 +10468,7 @@
                           "end": 7,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../.."
                         }
                       ]
@@ -11719,6 +11756,7 @@
                           "end": 14,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../1"
                         },
                         {
@@ -11878,6 +11916,7 @@
                           "end": 14,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../1"
                         },
                         {
@@ -12037,6 +12076,7 @@
                           "end": 14,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../1"
                         },
                         {

@@ -1,0 +1,14 @@
+{
+  "options": {
+    "strict": true,
+    "ecmaVersion": 2021
+  },
+  "patterns": {
+    "/./d": {
+      "error": {
+        "message": "Invalid regular expression: /./d: Invalid flag 'd'",
+        "index": 3
+      }
+    }
+  }
+}

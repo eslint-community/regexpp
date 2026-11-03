@@ -3800,6 +3800,7 @@
                   "end": 6,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -3851,6 +3852,7 @@
                   "end": 3,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -3931,6 +3933,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -4085,6 +4088,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -4444,6 +4448,7 @@
                   "end": 34,
                   "raw": "\\10",
                   "ref": 10,
+                  "ambiguous": false,
                   "resolved": "♻️../9"
                 }
               ]
@@ -5135,6 +5140,7 @@
                   "end": 37,
                   "raw": "\\11",
                   "ref": 11,
+                  "ambiguous": false,
                   "resolved": "♻️../10"
                 }
               ]
@@ -5185,6 +5191,7 @@
                   "start": 1,
                   "end": 6,
                   "raw": "(?:a)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -17006,6 +17013,7 @@
                     "start": 48,
                     "end": 67,
                     "raw": "(?:\\.[a-zA-Z0-9-]+)",
+                    "modifiers": null,
                     "alternatives": [
                       {
                         "type": "Alternative",

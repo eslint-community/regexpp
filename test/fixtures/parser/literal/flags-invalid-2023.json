@@ -1,0 +1,14 @@
+{
+  "options": {
+    "strict": true,
+    "ecmaVersion": 2023
+  },
+  "patterns": {
+    "/./v": {
+      "error": {
+        "message": "Invalid regular expression: /./v: Invalid flag 'v'",
+        "index": 3
+      }
+    }
+  }
+}

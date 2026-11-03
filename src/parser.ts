@@ -18,6 +18,7 @@ import type {
     UnicodeSetsCharacterClass,
     ExpressionCharacterClass,
     StringAlternative,
+    Modifiers,
 } from "./ast"
 import type { EcmaVersion } from "./ecma-versions"
 import { latestEcmaVersion } from "./ecma-versions"
@@ -31,6 +32,7 @@ type AppendableNode =
     | ClassStringDisjunction
     | Group
     | LookaroundAssertion
+    | Modifiers
     | Pattern
     | StringAlternative
 
@@ -148,12 +150,21 @@ class RegExpParserState {
 
         for (const reference of this._backreferences) {
             const ref = reference.ref
-            const group =
+            const groups =
                 typeof ref === "number"
-                    ? this._capturingGroups[ref - 1]
-                    : this._capturingGroups.find((g) => g.name === ref)!
-            reference.resolved = group
-            group.references.push(reference)
+                    ? [this._capturingGroups[ref - 1]]
+                    : this._capturingGroups.filter((g) => g.name === ref)
+            if (groups.length === 1) {
+                const group = groups[0]
+                reference.ambiguous = false
+                reference.resolved = group
+            } else {
+                reference.ambiguous = true
+                reference.resolved = groups
+            }
+            for (const group of groups) {
+                group.references.push(reference)
+            }
         }
     }
 
@@ -196,14 +207,17 @@ class RegExpParserState {
             throw new Error("UnknownError")
         }
 
-        this._node = {
+        const group: Group = {
             type: "Group",
             parent,
             start,
             end: start,
             raw: "",
+            modifiers: null,
             alternatives: [],
         }
+
+        this._node = group
         parent.elements.push(this._node)
     }
 
@@ -216,6 +230,85 @@ class RegExpParserState {
         node.end = end
         node.raw = this.source.slice(start, end)
         this._node = node.parent
+    }
+
+    public onModifiersEnter(start: number): void {
+        const parent = this._node
+        if (parent.type !== "Group") {
+            throw new Error("UnknownError")
+        }
+
+        this._node = {
+            type: "Modifiers",
+            parent,
+            start,
+            end: start,
+            raw: "",
+            add: null as never, // Set in onAddModifiers.
+            remove: null,
+        }
+        parent.modifiers = this._node
+    }
+
+    public onModifiersLeave(start: number, end: number): void {
+        const node = this._node
+        if (node.type !== "Modifiers" || node.parent.type !== "Group") {
+            throw new Error("UnknownError")
+        }
+
+        node.end = end
+        node.raw = this.source.slice(start, end)
+        this._node = node.parent
+    }
+
+    public onAddModifiers(
+        start: number,
+        end: number,
+        {
+            ignoreCase,
+            multiline,
+            dotAll,
+        }: { ignoreCase: boolean; multiline: boolean; dotAll: boolean },
+    ): void {
+        const parent = this._node
+        if (parent.type !== "Modifiers") {
+            throw new Error("UnknownError")
+        }
+        parent.add = {
+            type: "ModifierFlags",
+            parent,
+            start,
+            end,
+            raw: this.source.slice(start, end),
+            ignoreCase,
+            multiline,
+            dotAll,
+        }
+    }
+
+    public onRemoveModifiers(
+        start: number,
+        end: number,
+        {
+            ignoreCase,
+            multiline,
+            dotAll,
+        }: { ignoreCase: boolean; multiline: boolean; dotAll: boolean },
+    ): void {
+        const parent = this._node
+        if (parent.type !== "Modifiers") {
+            throw new Error("UnknownError")
+        }
+        parent.remove = {
+            type: "ModifierFlags",
+            parent,
+            start,
+            end,
+            raw: this.source.slice(start, end),
+            ignoreCase,
+            multiline,
+            dotAll,
+        }
     }
 
     public onCapturingGroupEnter(start: number, name: string | null): void {
@@ -419,10 +512,12 @@ class RegExpParserState {
 
         const base = {
             type: "CharacterSet",
+            parent: null,
             start,
             end,
             raw: this.source.slice(start, end),
             kind,
+            strings: null,
             key,
         } as const
 
@@ -478,6 +573,7 @@ class RegExpParserState {
             end,
             raw: this.source.slice(start, end),
             ref,
+            ambiguous: false,
             resolved: DUMMY_CAPTURING_GROUP,
         }
         parent.elements.push(node)
@@ -745,7 +841,7 @@ export namespace RegExpParser {
         strict?: boolean
 
         /**
-         * ECMAScript version. Default is `2024`.
+         * ECMAScript version. Default is `2025`.
          * - `2015` added `u` and `y` flags.
          * - `2018` added `s` flag, Named Capturing Group, Lookbehind Assertion,
          *   and Unicode Property Escape.
@@ -753,6 +849,7 @@ export namespace RegExpParser {
          * - `2022` added `d` flag.
          * - `2023` added more valid Unicode Property Escapes.
          * - `2024` added `v` flag.
+         * - `2025` added duplicate named capturing groups, modifiers.
          */
         ecmaVersion?: EcmaVersion
     }

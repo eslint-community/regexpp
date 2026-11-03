@@ -664,6 +664,7 @@
                   "end": 25,
                   "raw": "\\10",
                   "ref": 10,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -673,6 +674,7 @@
                   "end": 27,
                   "raw": "\\9",
                   "ref": 9,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -682,6 +684,7 @@
                   "end": 29,
                   "raw": "\\8",
                   "ref": 8,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -691,6 +694,7 @@
                   "end": 31,
                   "raw": "\\7",
                   "ref": 7,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -700,6 +704,7 @@
                   "end": 33,
                   "raw": "\\6",
                   "ref": 6,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -709,6 +714,7 @@
                   "end": 35,
                   "raw": "\\5",
                   "ref": 5,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -718,6 +724,7 @@
                   "end": 37,
                   "raw": "\\4",
                   "ref": 4,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -727,6 +734,7 @@
                   "end": 39,
                   "raw": "\\3",
                   "ref": 3,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -736,6 +744,7 @@
                   "end": 41,
                   "raw": "\\2",
                   "ref": 2,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0"
                 },
                 {
@@ -745,6 +754,7 @@
                   "end": 43,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -1024,6 +1034,7 @@
                   "end": 24,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 },
                 {
@@ -1033,6 +1044,7 @@
                   "end": 26,
                   "raw": "\\2",
                   "ref": 2,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0"
                 },
                 {
@@ -1042,6 +1054,7 @@
                   "end": 28,
                   "raw": "\\3",
                   "ref": 3,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -1051,6 +1064,7 @@
                   "end": 30,
                   "raw": "\\4",
                   "ref": 4,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -1060,6 +1074,7 @@
                   "end": 32,
                   "raw": "\\5",
                   "ref": 5,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -1069,6 +1084,7 @@
                   "end": 34,
                   "raw": "\\6",
                   "ref": 6,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -1078,6 +1094,7 @@
                   "end": 36,
                   "raw": "\\7",
                   "ref": 7,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -1087,6 +1104,7 @@
                   "end": 38,
                   "raw": "\\8",
                   "ref": 8,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -1096,6 +1114,7 @@
                   "end": 40,
                   "raw": "\\9",
                   "ref": 9,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 },
                 {
@@ -1105,6 +1124,7 @@
                   "end": 43,
                   "raw": "\\10",
                   "ref": 10,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0/alternatives/0/elements/0"
                 }
               ]
@@ -1997,6 +2017,7 @@
                   "end": 30,
                   "raw": "\\9",
                   "ref": 9,
+                  "ambiguous": false,
                   "resolved": "♻️../8"
                 },
                 {
@@ -2006,6 +2027,7 @@
                   "end": 32,
                   "raw": "\\9",
                   "ref": 9,
+                  "ambiguous": false,
                   "resolved": "♻️../8"
                 }
               ]
@@ -2284,6 +2306,7 @@
                   "end": 27,
                   "raw": "\\8",
                   "ref": 8,
+                  "ambiguous": false,
                   "resolved": "♻️../7"
                 },
                 {
@@ -2293,6 +2316,7 @@
                   "end": 29,
                   "raw": "\\8",
                   "ref": 8,
+                  "ambiguous": false,
                   "resolved": "♻️../7"
                 }
               ]
@@ -2493,6 +2517,7 @@
                   "end": 6,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -2655,6 +2680,7 @@
                           "end": 17,
                           "raw": "\\2",
                           "ref": 2,
+                          "ambiguous": false,
                           "resolved": "♻️../0"
                         },
                         {
@@ -2676,6 +2702,7 @@
                   "end": 21,
                   "raw": "\\2",
                   "ref": 2,
+                  "ambiguous": false,
                   "resolved": "♻️../2/alternatives/0/elements/0"
                 },
                 {
@@ -2823,6 +2850,7 @@
                   "end": 9,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -3018,6 +3046,7 @@
                   "end": 11,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -3347,6 +3376,7 @@
                   "end": 13,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0/element"
                 }
               ]
@@ -3510,6 +3540,7 @@
                     "start": 1,
                     "end": 10,
                     "raw": "(?:ab|cd)",
+                    "modifiers": null,
                     "alternatives": [
                       {
                         "type": "Alternative",
@@ -3637,6 +3668,7 @@
                   "start": 1,
                   "end": 10,
                   "raw": "(?:ab|cd)",
+                  "modifiers": null,
                   "alternatives": [
                     {
                       "type": "Alternative",
@@ -3944,6 +3976,7 @@
                   "end": 14,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/0"
                 }
               ]
@@ -4151,6 +4184,7 @@
                   "end": 6,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 },
                 {
@@ -4190,6 +4224,7 @@
                   "end": 11,
                   "raw": "\\2",
                   "ref": 2,
+                  "ambiguous": false,
                   "resolved": "♻️../2"
                 }
               ]
@@ -4271,6 +4306,7 @@
                   "end": 6,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -5643,6 +5679,7 @@
                   "end": 25,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -6270,6 +6307,7 @@
                   "end": 17,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 },
                 {
@@ -6279,6 +6317,7 @@
                   "end": 19,
                   "raw": "\\2",
                   "ref": 2,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 }
               ]
@@ -7087,6 +7126,7 @@
                   "end": 21,
                   "raw": "\\2",
                   "ref": 2,
+                  "ambiguous": false,
                   "resolved": "♻️../0/alternatives/0/elements/1"
                 },
                 {
@@ -7096,6 +7136,7 @@
                   "end": 23,
                   "raw": "\\5",
                   "ref": 5,
+                  "ambiguous": false,
                   "resolved": "♻️../1/alternatives/0/elements/1"
                 }
               ]
@@ -7400,6 +7441,7 @@
                     "end": 8,
                     "raw": "\\1",
                     "ref": 1,
+                    "ambiguous": false,
                     "resolved": "♻️../../0"
                   }
                 }
@@ -7508,6 +7550,7 @@
                   "end": 9,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -7621,6 +7664,7 @@
                   "end": 10,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -20455,6 +20499,7 @@
                   "end": 3,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -20524,6 +20569,7 @@
                   "end": 11,
                   "raw": "\\2",
                   "ref": 2,
+                  "ambiguous": false,
                   "resolved": "♻️../2"
                 }
               ]
@@ -20575,6 +20621,7 @@
                   "end": 3,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -22839,6 +22886,7 @@
                   "end": 11,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -29464,6 +29512,7 @@
                   "end": 9,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -29481,6 +29530,7 @@
                   "end": 12,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -29498,6 +29548,7 @@
                   "end": 15,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 }
               ]

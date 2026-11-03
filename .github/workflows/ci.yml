@@ -17,6 +17,12 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: write # to be able to publish a GitHub release
+  id-token: write # to enable use of OIDC for npm provenance
+  issues: write # to be able to comment on released issues
+  pull-requests: write # to be able to comment on released pull requests
+
 jobs:
   lint:
     name: ⬣ Lint
@@ -74,15 +80,21 @@ jobs:
       - name: ⎔ Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: lts/*
+
+      # npm 11.5.1 or later is required so update to latest to be sure
+      - name: Update npm
+        run: npm install -g npm@latest
 
       - name: 📥 Install dependencies
         run: npm install
 
       - name: 🚀 Release
-        uses: cycjimmy/semantic-release-action@v4
+        uses: cycjimmy/semantic-release-action@v5
         with:
-          semantic_version: 19
+          # semantic-release@v25 is required for trusted publishing.
+          # https://github.com/semantic-release/semantic-release/releases/tag/v25.0.1
+          semantic_version: 25
           branches: |
             [
               '+([0-9])?(.{+([0-9]),x}).x',
@@ -94,4 +106,4 @@ jobs:
             ]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true

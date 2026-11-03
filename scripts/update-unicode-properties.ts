@@ -49,8 +49,24 @@ const DATA_SOURCES = [
         scValues: getLatestUnicodeScriptValues,
     },
     {
-        url: "https://tc39.es/ecma262/multipage/text-processing.html",
+        url: "https://tc39.es/ecma262/2024/multipage/text-processing.html",
         version: 2024,
+        binProperties: "#table-binary-unicode-properties",
+        gcValues: getLatestUnicodeGeneralCategoryValues,
+        scValues: getLatestUnicodeScriptValues,
+        binPropertiesOfStrings: "#table-binary-unicode-properties-of-strings",
+    },
+    {
+        url: "https://tc39.es/ecma262/2025/multipage/text-processing.html",
+        version: 2025,
+        binProperties: "#table-binary-unicode-properties",
+        gcValues: getLatestUnicodeGeneralCategoryValues,
+        scValues: getLatestUnicodeScriptValues,
+        binPropertiesOfStrings: "#table-binary-unicode-properties-of-strings",
+    },
+    {
+        url: "https://tc39.es/ecma262/multipage/text-processing.html",
+        version: 2026,
         binProperties: "#table-binary-unicode-properties",
         gcValues: getLatestUnicodeGeneralCategoryValues,
         scValues: getLatestUnicodeScriptValues,
@@ -269,9 +285,9 @@ function makeClassDeclarationCode(versions: string[]): string {
     const fields = versions
         .map(
             (v) =>
-                `private _raw${v}: string\nprivate _set${v}: Set<string> | undefined`,
+                `private _raw${v}: string\n\nprivate _set${v}: Set<string> | undefined`,
         )
-        .join("\n")
+        .join("\n\n")
     const parameters = versions.map((v) => `raw${v}: string`).join(", ")
     const init = versions.map((v) => `this._raw${v} = raw${v}`).join("\n")
     const getters = versions
@@ -279,14 +295,16 @@ function makeClassDeclarationCode(versions: string[]): string {
             (v) =>
                 `public get es${v}(): Set<string> { return this._set${v} ?? (this._set${v} = new Set(this._raw${v}.split(" "))) }`,
         )
-        .join("\n")
+        .join("\n\n")
 
     return `
         class DataSet {
             ${fields}
+
             public constructor(${parameters}) {
                 ${init}
             }
+
             ${getters}
         }
     `

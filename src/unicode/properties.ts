@@ -29,6 +29,14 @@ class DataSet {
 
     private _set2024: Set<string> | undefined
 
+    private _raw2025: string
+
+    private _set2025: Set<string> | undefined
+
+    private _raw2026: string
+
+    private _set2026: Set<string> | undefined
+
     public constructor(
         raw2018: string,
         raw2019: string,
@@ -37,6 +45,8 @@ class DataSet {
         raw2022: string,
         raw2023: string,
         raw2024: string,
+        raw2025: string,
+        raw2026: string,
     ) {
         this._raw2018 = raw2018
         this._raw2019 = raw2019
@@ -45,6 +55,8 @@ class DataSet {
         this._raw2022 = raw2022
         this._raw2023 = raw2023
         this._raw2024 = raw2024
+        this._raw2025 = raw2025
+        this._raw2026 = raw2026
     }
 
     public get es2018(): Set<string> {
@@ -88,12 +100,26 @@ class DataSet {
             this._set2024 ?? (this._set2024 = new Set(this._raw2024.split(" ")))
         )
     }
+
+    public get es2025(): Set<string> {
+        return (
+            this._set2025 ?? (this._set2025 = new Set(this._raw2025.split(" ")))
+        )
+    }
+
+    public get es2026(): Set<string> {
+        return (
+            this._set2026 ?? (this._set2026 = new Set(this._raw2026.split(" ")))
+        )
+    }
 }
 
 const gcNameSet = new Set(["General_Category", "gc"])
 const scNameSet = new Set(["Script", "Script_Extensions", "sc", "scx"])
 const gcValueSets = new DataSet(
     "C Cased_Letter Cc Cf Close_Punctuation Cn Co Combining_Mark Connector_Punctuation Control Cs Currency_Symbol Dash_Punctuation Decimal_Number Enclosing_Mark Final_Punctuation Format Initial_Punctuation L LC Letter Letter_Number Line_Separator Ll Lm Lo Lowercase_Letter Lt Lu M Mark Math_Symbol Mc Me Mn Modifier_Letter Modifier_Symbol N Nd Nl No Nonspacing_Mark Number Open_Punctuation Other Other_Letter Other_Number Other_Punctuation Other_Symbol P Paragraph_Separator Pc Pd Pe Pf Pi Po Private_Use Ps Punctuation S Sc Separator Sk Sm So Space_Separator Spacing_Mark Surrogate Symbol Titlecase_Letter Unassigned Uppercase_Letter Z Zl Zp Zs cntrl digit punct",
+    "",
+    "",
     "",
     "",
     "",
@@ -107,7 +133,9 @@ const scValueSets = new DataSet(
     "Elym Elymaic Hmnp Nand Nandinagari Nyiakeng_Puachue_Hmong Wancho Wcho",
     "Chorasmian Chrs Diak Dives_Akuru Khitan_Small_Script Kits Yezi Yezidi",
     "Cpmn Cypro_Minoan Old_Uyghur Ougr Tangsa Tnsa Toto Vith Vithkuqi",
-    "Hrkt Katakana_Or_Hiragana Kawi Nag_Mundari Nagm Unknown Zzzz",
+    "Berf Beria_Erfe Gara Garay Gukh Gurung_Khema Hrkt Katakana_Or_Hiragana Kawi Kirat_Rai Krai Nag_Mundari Nagm Ol_Onal Onao Sidetic Sidt Sunu Sunuwar Tai_Yo Tayo Todhri Todr Tolong_Siki Tols Tulu_Tigalari Tutg Unknown Zzzz",
+    "",
+    "",
     "",
 )
 const binPropertySets = new DataSet(
@@ -115,6 +143,8 @@ const binPropertySets = new DataSet(
     "Extended_Pictographic",
     "",
     "EBase EComp EMod EPres ExtPict",
+    "",
+    "",
     "",
     "",
     "",
@@ -127,6 +157,8 @@ const binPropertyOfStringsSets = new DataSet(
     "",
     "",
     "Basic_Emoji Emoji_Keycap_Sequence RGI_Emoji RGI_Emoji_Flag_Sequence RGI_Emoji_Modifier_Sequence RGI_Emoji_Tag_Sequence RGI_Emoji_ZWJ_Sequence",
+    "",
+    "",
 )
 
 export function isValidUnicodeProperty(

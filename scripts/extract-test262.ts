@@ -1,5 +1,3 @@
-// @ts-ignore -- ignore
-import TestStream from "test262-stream"
 import path from "path"
 import { promises as fs } from "fs"
 import { parseRegExpLiteral } from "../src/index"
@@ -8,6 +6,16 @@ import { cloneWithoutCircular } from "./clone-without-circular"
 import type { RegExpSyntaxError } from "../src/regexp-syntax-error"
 import { fixturesData } from "../test/fixtures/parser/literal"
 import type { Readable } from "stream"
+import { execSync } from "child_process"
+
+console.log("Installing test262 and test262-stream...")
+
+execSync(
+    "npm install --no-save git+https://github.com/tc39/test262.git test262-stream",
+    { stdio: "inherit" },
+)
+
+console.log("Extracting test262 fixtures...")
 
 const fixturesRoot = path.join(
     __dirname,
@@ -15,6 +23,8 @@ const fixturesRoot = path.join(
 )
 
 const test262Root = path.dirname(require.resolve("test262/package.json"))
+
+const TestStream = require("test262-stream")
 
 const stream: Readable = new TestStream(test262Root, { omitRuntime: true })
 

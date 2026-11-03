@@ -7,13 +7,13 @@
     "/(?a/": {
       "error": {
         "message": "Invalid regular expression: /(?a/: Invalid group",
-        "index": 3
+        "index": 2
       }
     },
     "/(?a)/": {
       "error": {
         "message": "Invalid regular expression: /(?a)/: Invalid group",
-        "index": 3
+        "index": 2
       }
     },
     "/(?</": {

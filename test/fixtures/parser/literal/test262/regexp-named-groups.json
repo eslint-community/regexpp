@@ -169,6 +169,7 @@
                           "end": 18,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -198,6 +199,7 @@
                           "end": 22,
                           "raw": "\\2",
                           "ref": 2,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../1"
                         }
                       ]
@@ -329,6 +331,7 @@
                           "end": 18,
                           "raw": "\\1",
                           "ref": 1,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -358,6 +361,7 @@
                           "end": 22,
                           "raw": "\\2",
                           "ref": 2,
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../1"
                         }
                       ]
@@ -474,6 +478,7 @@
                   "end": 13,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 },
                 {
@@ -483,6 +488,7 @@
                   "end": 15,
                   "raw": "\\2",
                   "ref": 2,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 }
               ]
@@ -594,6 +600,7 @@
                   "end": 13,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 },
                 {
@@ -603,6 +610,7 @@
                   "end": 15,
                   "raw": "\\2",
                   "ref": 2,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 }
               ]
@@ -3624,6 +3632,7 @@
                   "end": 27,
                   "raw": "\\k<c>",
                   "ref": "c",
+                  "ambiguous": false,
                   "resolved": "♻️../2"
                 },
                 {
@@ -3633,6 +3642,7 @@
                   "end": 32,
                   "raw": "\\k<b>",
                   "ref": "b",
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -3642,6 +3652,7 @@
                   "end": 37,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -3783,6 +3794,7 @@
                   "end": 27,
                   "raw": "\\k<c>",
                   "ref": "c",
+                  "ambiguous": false,
                   "resolved": "♻️../2"
                 },
                 {
@@ -3792,6 +3804,7 @@
                   "end": 32,
                   "raw": "\\k<b>",
                   "ref": "b",
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -3801,6 +3814,7 @@
                   "end": 37,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -3991,6 +4005,7 @@
                           "end": 11,
                           "raw": "\\k<a>",
                           "ref": "a",
+                          "ambiguous": false,
                           "resolved": "♻️../../../.."
                         },
                         {
@@ -4089,6 +4104,7 @@
                           "end": 11,
                           "raw": "\\k<a>",
                           "ref": "a",
+                          "ambiguous": false,
                           "resolved": "♻️../../../.."
                         },
                         {
@@ -4638,6 +4654,7 @@
                   "end": 20,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -4747,6 +4764,7 @@
                   "end": 20,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -4856,6 +4874,7 @@
                   "end": 20,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -5002,6 +5021,7 @@
                   "end": 20,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -5857,6 +5877,7 @@
                   "end": 14,
                   "raw": "\\k<b>",
                   "ref": "b",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -5946,6 +5967,7 @@
                   "end": 14,
                   "raw": "\\k<b>",
                   "ref": "b",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -6035,6 +6057,7 @@
                   "end": 11,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -6124,6 +6147,7 @@
                   "end": 11,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -6205,6 +6229,7 @@
                   "end": 13,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../2"
                 },
                 {
@@ -6244,6 +6269,7 @@
                   "end": 25,
                   "raw": "\\k<b>",
                   "ref": "b",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -6325,6 +6351,7 @@
                   "end": 13,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../2"
                 },
                 {
@@ -6364,6 +6391,7 @@
                   "end": 25,
                   "raw": "\\k<b>",
                   "ref": "b",
+                  "ambiguous": false,
                   "resolved": "♻️../0"
                 }
               ]
@@ -6514,6 +6542,7 @@
                           "end": 25,
                           "raw": "\\k<dog>",
                           "ref": "dog",
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -6669,6 +6698,7 @@
                           "end": 25,
                           "raw": "\\k<dog>",
                           "ref": "dog",
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -8207,6 +8237,7 @@
                           "end": 21,
                           "raw": "\\k<狗>",
                           "ref": "狗",
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -8362,6 +8393,7 @@
                           "end": 21,
                           "raw": "\\k<狗>",
                           "ref": "狗",
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -9325,6 +9357,7 @@
                           "end": 31,
                           "raw": "\\k<𝓓𝓸𝓰>",
                           "ref": "𝓓𝓸𝓰",
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -9480,6 +9513,7 @@
                           "end": 31,
                           "raw": "\\k<𝓓𝓸𝓰>",
                           "ref": "𝓓𝓸𝓰",
+                          "ambiguous": false,
                           "resolved": "♻️../../../../../0"
                         }
                       ]
@@ -12494,6 +12528,7 @@
                   "end": 3,
                   "raw": "\\1",
                   "ref": 1,
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -12903,6 +12938,7 @@
                   "end": 6,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -12952,6 +12988,7 @@
                   "end": 20,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 }
               ]
@@ -13003,6 +13040,7 @@
                   "end": 6,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
@@ -13052,6 +13090,7 @@
                   "end": 20,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 }
               ]
@@ -13103,6 +13142,7 @@
                   "end": 6,
                   "raw": "\\k<a>",
                   "ref": "a",
+                  "ambiguous": false,
                   "resolved": "♻️../1"
                 },
                 {
