@@ -327,6 +327,38 @@
         "message": "Invalid regular expression: /\\q{a}/v: Invalid escape",
         "index": 2
       }
-    }
+    },
+
+"/[^a-b\\q{ab}]/v": {
+  "error": {
+    "message": "Invalid regular expression: /[^a-b\\q{ab}]/v: Negated character class may contain strings",
+    "index": 13
+  }
+},
+"/[^\\q{ab}a-b]/v": {
+  "error": {
+    "message": "Invalid regular expression: /[^\\q{ab}a-b]/v: Negated character class may contain strings",
+    "index": 13
+  }
+},
+"/[^a-b\\p{RGI_Emoji}]/v": {
+  "error": {
+    "message": "Invalid regular expression: /[^a-b\\p{RGI_Emoji}]/v: Negated character class may contain strings",
+    "index": 20
+  }
+},
+"/[^a-b[\\q{ab}]]/v": {
+  "error": {
+    "message": "Invalid regular expression: /[^a-b[\\q{ab}]]/v: Negated character class may contain strings",
+    "index": 15
+  }
+},
+"/[[^a-b\\q{ab}]]/v": {
+  "error": {
+    "message": "Invalid regular expression: /[[^a-b\\q{ab}]]/v: Negated character class may contain strings",
+    "index": 14
+  }
+}
+
   }
 }
