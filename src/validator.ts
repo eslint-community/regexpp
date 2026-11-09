@@ -2485,8 +2485,7 @@ export class RegExpValidator {
         if (this.consumeClassSetCharacter()) {
             if (this.consumeClassSetRangeFromOperator(start)) {
                 // ClassUnion
-                this.consumeClassUnionRight({})
-                return {}
+                return this.consumeClassUnionRight({})
             }
             // ClassSetOperand
 
