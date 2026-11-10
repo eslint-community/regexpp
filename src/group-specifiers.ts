@@ -81,25 +81,37 @@ export class GroupSpecifiersAsES2018 implements GroupSpecifiers {
 class BranchID {
     public readonly parent: BranchID | null
     private readonly base: BranchID
+    private readonly depth: number
     public constructor(parent: BranchID | null, base: BranchID | null) {
         // Parent disjunction branch
         this.parent = parent
         // Identifies this set of sibling branches
         this.base = base ?? this
+        this.depth = parent ? parent.depth + 1 : 0
     }
 
     /**
      * A branch is separate from another branch if they or any of
      * their parents are siblings in a given disjunction
      */
-    public separatedFrom(other: BranchID): boolean {
-        if (this.base === other.base && this !== other) {
-            return true
+    public static areSeparated(first: BranchID, second: BranchID): boolean {
+        let left: BranchID | null = first
+        let right: BranchID | null = second
+        // Only branches at the same depth can belong to the same disjunction.
+        while (left && right && left !== right) {
+            if (left.depth > right.depth) {
+                left = left.parent
+            } else if (right.depth > left.depth) {
+                right = right.parent
+            } else {
+                if (left.base === right.base) {
+                    return true
+                }
+                left = left.parent
+                right = right.parent
+            }
         }
-        if (other.parent && this.separatedFrom(other.parent)) {
-            return true
-        }
-        return this.parent?.separatedFrom(other) ?? false
+        return false
     }
 
     public child() {
@@ -149,7 +161,7 @@ export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
             return false
         }
         for (const branch of branches) {
-            if (!branch.separatedFrom(this.branchID)) {
+            if (!BranchID.areSeparated(branch, this.branchID)) {
                 return true
             }
         }
