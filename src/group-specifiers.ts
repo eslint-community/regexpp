@@ -81,6 +81,8 @@ export class GroupSpecifiersAsES2018 implements GroupSpecifiers {
 class BranchID {
     public readonly parent: BranchID | null
     private readonly base: BranchID
+    private mark: BranchID | null = null
+    private markedChild: BranchID | null = null
     public constructor(parent: BranchID | null, base: BranchID | null) {
         // Parent disjunction branch
         this.parent = parent
@@ -92,14 +94,33 @@ class BranchID {
      * A branch is separate from another branch if they or any of
      * their parents are siblings in a given disjunction
      */
-    public separatedFrom(other: BranchID): boolean {
-        if (this.base === other.base && this !== other) {
-            return true
+    public static areSeparated(first: BranchID, second: BranchID): boolean {
+        // Mark the first branch's ancestor chain and record the child below each mark.
+        let child: BranchID | null = null
+        for (
+            let branch: BranchID | null = first;
+            branch;
+            branch = branch.parent
+        ) {
+            branch.mark = first
+            branch.markedChild = child
+            child = branch
         }
-        if (other.parent && this.separatedFrom(other.parent)) {
-            return true
+
+        child = null
+        for (
+            let branch: BranchID | null = second;
+            branch;
+            branch = branch.parent
+        ) {
+            if (branch.mark === first) {
+                // At the nearest shared ancestor, both children must belong to
+                // the same disjunction.
+                return child !== null && branch.markedChild?.base === child.base
+            }
+            child = branch
         }
-        return this.parent?.separatedFrom(other) ?? false
+        return false
     }
 
     public child() {
@@ -149,7 +170,7 @@ export class GroupSpecifiersAsES2025 implements GroupSpecifiers {
             return false
         }
         for (const branch of branches) {
-            if (!branch.separatedFrom(this.branchID)) {
+            if (!BranchID.areSeparated(branch, this.branchID)) {
                 return true
             }
         }

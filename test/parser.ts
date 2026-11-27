@@ -125,6 +125,14 @@ describe("RegExpParser:", () => {
                 /\\ at end of pattern/u,
             )
         })
+
+        it("should parse duplicate group names in deeply nested alternatives", () => {
+            const depth = 16
+            const open = "(?:".repeat(depth)
+            const close = ")".repeat(depth)
+            const pattern = `${open}(?:(?<x>a))|(?:(?:(?<x>b)))${close}`
+            new RegExpParser({ ecmaVersion: 2025 }).parsePattern(pattern)
+        })
     })
 })
 
